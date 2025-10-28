@@ -68,25 +68,34 @@ export interface AffiliateClickDocument {
 
 /**
  * Get itineraries collection
+ * Returns null if MongoDB is not configured
  */
 export async function getItinerariesCollection() {
   const db = await getDatabase();
+  if (!db) return null;
   return db.collection<ItineraryDocument>('itineraries');
 }
 
 /**
  * Get affiliate clicks collection
+ * Returns null if MongoDB is not configured
  */
 export async function getAffiliateClicksCollection() {
   const db = await getDatabase();
+  if (!db) return null;
   return db.collection<AffiliateClickDocument>('affiliate_clicks');
 }
 
 /**
  * Save a new itinerary to MongoDB
+ * Throws error if MongoDB is not configured (caller should handle with try-catch)
  */
 export async function saveItinerary(itineraryData: Omit<ItineraryDocument, '_id' | 'createdAt' | 'updatedAt'>): Promise<string> {
   const collection = await getItinerariesCollection();
+
+  if (!collection) {
+    throw new Error('MongoDB not configured');
+  }
 
   const document: ItineraryDocument = {
     ...itineraryData,
@@ -106,6 +115,9 @@ export async function saveItinerary(itineraryData: Omit<ItineraryDocument, '_id'
  */
 export async function getItineraryById(itineraryId: string): Promise<ItineraryDocument | null> {
   const collection = await getItinerariesCollection();
+  if (!collection) {
+    throw new Error('MongoDB not configured');
+  }
   return await collection.findOne({ itineraryId });
 }
 
@@ -114,6 +126,9 @@ export async function getItineraryById(itineraryId: string): Promise<ItineraryDo
  */
 export async function incrementItineraryViews(itineraryId: string): Promise<void> {
   const collection = await getItinerariesCollection();
+  if (!collection) {
+    throw new Error('MongoDB not configured');
+  }
   await collection.updateOne(
     { itineraryId },
     {
@@ -128,6 +143,9 @@ export async function incrementItineraryViews(itineraryId: string): Promise<void
  */
 export async function markItineraryAsDownloaded(itineraryId: string): Promise<void> {
   const collection = await getItinerariesCollection();
+  if (!collection) {
+    throw new Error('MongoDB not configured');
+  }
   await collection.updateOne(
     { itineraryId },
     {
@@ -142,6 +160,10 @@ export async function markItineraryAsDownloaded(itineraryId: string): Promise<vo
 export async function logAffiliateClick(clickData: Omit<AffiliateClickDocument, '_id' | 'createdAt'>): Promise<string> {
   const collection = await getAffiliateClicksCollection();
 
+  if (!collection) {
+    throw new Error('MongoDB not configured');
+  }
+
   const document: AffiliateClickDocument = {
     ...clickData,
     clicked: true,
@@ -153,13 +175,15 @@ export async function logAffiliateClick(clickData: Omit<AffiliateClickDocument, 
   // Increment affiliate click count on itinerary if itineraryId exists
   if (clickData.itineraryId) {
     const itinerariesCollection = await getItinerariesCollection();
-    await itinerariesCollection.updateOne(
-      { itineraryId: clickData.itineraryId },
-      {
-        $inc: { affiliateClicks: 1 },
-        $set: { updatedAt: new Date() }
-      }
-    );
+    if (itinerariesCollection) {
+      await itinerariesCollection.updateOne(
+        { itineraryId: clickData.itineraryId },
+        {
+          $inc: { affiliateClicks: 1 },
+          $set: { updatedAt: new Date() }
+        }
+      );
+    }
   }
 
   return result.insertedId.toString();
@@ -173,6 +197,10 @@ export async function getItineraryAnalytics(itineraryId: string) {
   if (!itinerary) return null;
 
   const clicksCollection = await getAffiliateClicksCollection();
+  if (!clicksCollection) {
+    throw new Error('MongoDB not configured');
+  }
+
   const clicks = await clicksCollection.find({ itineraryId }).toArray();
 
   return {
@@ -192,6 +220,9 @@ export async function getItineraryAnalytics(itineraryId: string) {
  */
 export async function getRecentItineraries(limit: number = 10) {
   const collection = await getItinerariesCollection();
+  if (!collection) {
+    throw new Error('MongoDB not configured');
+  }
   return await collection
     .find()
     .sort({ createdAt: -1 })
@@ -204,6 +235,10 @@ export async function getRecentItineraries(limit: number = 10) {
  */
 export async function getAffiliateStats(days: number = 30) {
   const collection = await getAffiliateClicksCollection();
+  if (!collection) {
+    throw new Error('MongoDB not configured');
+  }
+
   const startDate = new Date();
   startDate.setDate(startDate.getDate() - days);
 
