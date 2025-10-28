@@ -1,0 +1,808 @@
+{
+  "dubai": [
+    {
+      "id": "desert-safari-1",
+      "title": "Desert Safari Adventure",
+      "description": "Thrilling 4x4 dune bashing through red sand dunes, camel rides, and traditional Bedouin camp experience with BBQ dinner under the stars",
+      "category": "adventure",
+      "duration": "6 hours",
+      "price": 80,
+      "currency": "USD",
+      "rating": 4.9,
+      "reviewCount": 4321,
+      "imageUrl": "/images/activities/desert-safari.jpg",
+      "companionSuitability": {
+        "solo": 8,
+        "couple": 9,
+        "family": 7,
+        "friends": 10,
+        "business": 4
+      },
+      "interestTags": ["adventure", "culture", "food"],
+      "timeOfDay": "evening",
+      "affiliateLinks": {
+        "getyourguide": {
+          "url": "https://getyourguide.com/desert-safari-dubai",
+          "partnerId": "YOUR_ID",
+          "commission": 10
+        }
+      },
+      "bestPrice": "getyourguide"
+    },
+    {
+      "id": "burj-khalifa-1",
+      "title": "Burj Khalifa At The Top",
+      "description": "Visit the world's tallest building. Access to 124th & 125th floor observation decks with stunning 360-degree views of Dubai",
+      "category": "sightseeing",
+      "duration": "2 hours",
+      "price": 40,
+      "currency": "USD",
+      "rating": 4.7,
+      "reviewCount": 12543,
+      "imageUrl": "/images/activities/burj-khalifa.jpg",
+      "companionSuitability": {
+        "solo": 7,
+        "couple": 10,
+        "family": 9,
+        "friends": 8,
+        "business": 6
+      },
+      "interestTags": ["culture", "art"],
+      "timeOfDay": "evening",
+      "affiliateLinks": {
+        "viator": {
+          "url": "https://viator.com/burj-khalifa",
+          "partnerId": "YOUR_ID",
+          "commission": 8
+        }
+      },
+      "bestPrice": "viator"
+    },
+    {
+      "id": "gold-souk-1",
+      "title": "Gold Souk Traditional Market",
+      "description": "Explore Dubai's famous traditional gold market with hundreds of shops displaying intricate jewelry. Free to visit, shopping optional",
+      "category": "culture",
+      "duration": "2 hours",
+      "price": 0,
+      "currency": "USD",
+      "rating": 4.5,
+      "reviewCount": 3210,
+      "imageUrl": "/images/activities/gold-souk.jpg",
+      "companionSuitability": {
+        "solo": 6,
+        "couple": 7,
+        "family": 8,
+        "friends": 7,
+        "business": 5
+      },
+      "interestTags": ["culture", "hidden"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {},
+      "bestPrice": "free"
+    },
+    {
+      "id": "dubai-mall-1",
+      "title": "Dubai Mall & Aquarium",
+      "description": "World's largest mall with over 1200 shops, Dubai Aquarium with 33,000 marine animals, ice rink, and entertainment",
+      "category": "sightseeing",
+      "duration": "3-4 hours",
+      "price": 35,
+      "currency": "USD",
+      "rating": 4.6,
+      "reviewCount": 8900,
+      "imageUrl": "/images/activities/dubai-mall.jpg",
+      "companionSuitability": {
+        "solo": 6,
+        "couple": 8,
+        "family": 10,
+        "friends": 8,
+        "business": 5
+      },
+      "interestTags": ["culture", "art"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {
+        "getyourguide": {
+          "url": "https://getyourguide.com/dubai-aquarium",
+          "partnerId": "YOUR_ID",
+          "commission": 8
+        }
+      },
+      "bestPrice": "getyourguide"
+    },
+    {
+      "id": "dubai-fountain-1",
+      "title": "Dubai Fountain Show",
+      "description": "World's largest choreographed fountain system with water jets up to 500 feet, synchronized to music and lights",
+      "category": "sightseeing",
+      "duration": "30 minutes",
+      "price": 0,
+      "currency": "USD",
+      "rating": 4.8,
+      "reviewCount": 15234,
+      "imageUrl": "/images/activities/dubai-fountain.jpg",
+      "companionSuitability": {
+        "solo": 7,
+        "couple": 10,
+        "family": 9,
+        "friends": 8,
+        "business": 6
+      },
+      "interestTags": ["culture", "art"],
+      "timeOfDay": "evening",
+      "affiliateLinks": {},
+      "bestPrice": "free"
+    },
+    {
+      "id": "dhow-cruise-1",
+      "title": "Dubai Marina Dhow Cruise Dinner",
+      "description": "Traditional wooden dhow boat cruise with international buffet dinner, live entertainment, and stunning marina skyline views",
+      "category": "food",
+      "duration": "2 hours",
+      "price": 65,
+      "currency": "USD",
+      "rating": 4.6,
+      "reviewCount": 5623,
+      "imageUrl": "/images/activities/dhow-cruise.jpg",
+      "companionSuitability": {
+        "solo": 6,
+        "couple": 10,
+        "family": 8,
+        "friends": 9,
+        "business": 7
+      },
+      "interestTags": ["food", "culture"],
+      "timeOfDay": "evening",
+      "affiliateLinks": {
+        "viator": {
+          "url": "https://viator.com/dhow-cruise-dubai",
+          "partnerId": "YOUR_ID",
+          "commission": 10
+        }
+      },
+      "bestPrice": "viator"
+    },
+    {
+      "id": "jumeirah-beach-1",
+      "title": "Jumeirah Public Beach",
+      "description": "Free public beach with white sand, clear water, perfect views of Burj Al Arab, water sports available for rent",
+      "category": "beach",
+      "duration": "2-3 hours",
+      "price": 0,
+      "currency": "USD",
+      "rating": 4.5,
+      "reviewCount": 6789,
+      "imageUrl": "/images/activities/jumeirah-beach.jpg",
+      "companionSuitability": {
+        "solo": 7,
+        "couple": 9,
+        "family": 10,
+        "friends": 9,
+        "business": 3
+      },
+      "interestTags": ["beach", "wellness"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {},
+      "bestPrice": "free"
+    },
+    {
+      "id": "spice-souk-1",
+      "title": "Spice Souk & Old Dubai Walk",
+      "description": "Historic spice market with aromatic herbs, traditional souks, and authentic Dubai heritage architecture",
+      "category": "culture",
+      "duration": "1.5 hours",
+      "price": 0,
+      "currency": "USD",
+      "rating": 4.4,
+      "reviewCount": 4123,
+      "imageUrl": "/images/activities/spice-souk.jpg",
+      "companionSuitability": {
+        "solo": 8,
+        "couple": 7,
+        "family": 7,
+        "friends": 7,
+        "business": 5
+      },
+      "interestTags": ["culture", "food", "hidden"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {},
+      "bestPrice": "free"
+    },
+    {
+      "id": "dubai-frame-1",
+      "title": "Dubai Frame Observatory",
+      "description": "Iconic 150m high frame structure with sky bridge, panoramic views of old and new Dubai, interactive museum",
+      "category": "sightseeing",
+      "duration": "1-2 hours",
+      "price": 14,
+      "currency": "USD",
+      "rating": 4.5,
+      "reviewCount": 7234,
+      "imageUrl": "/images/activities/dubai-frame.jpg",
+      "companionSuitability": {
+        "solo": 7,
+        "couple": 8,
+        "family": 9,
+        "friends": 7,
+        "business": 6
+      },
+      "interestTags": ["culture", "art"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {
+        "getyourguide": {
+          "url": "https://getyourguide.com/dubai-frame",
+          "partnerId": "YOUR_ID",
+          "commission": 8
+        }
+      },
+      "bestPrice": "getyourguide"
+    },
+    {
+      "id": "ski-dubai-1",
+      "title": "Ski Dubai Indoor Snow Park",
+      "description": "Indoor ski resort with real snow, 5 slopes of varying difficulty, penguin encounters, snow park activities",
+      "category": "adventure",
+      "duration": "2-3 hours",
+      "price": 70,
+      "currency": "USD",
+      "rating": 4.6,
+      "reviewCount": 8921,
+      "imageUrl": "/images/activities/ski-dubai.jpg",
+      "companionSuitability": {
+        "solo": 6,
+        "couple": 8,
+        "family": 10,
+        "friends": 9,
+        "business": 4
+      },
+      "interestTags": ["adventure"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {
+        "viator": {
+          "url": "https://viator.com/ski-dubai",
+          "partnerId": "YOUR_ID",
+          "commission": 9
+        }
+      },
+      "bestPrice": "viator"
+    },
+    {
+      "id": "palm-atlantis-1",
+      "title": "Atlantis Aquaventure Waterpark",
+      "description": "Dubai's largest waterpark with thrilling slides, lazy river, private beach, shark lagoon, and marine exhibits",
+      "category": "adventure",
+      "duration": "Full day",
+      "price": 85,
+      "currency": "USD",
+      "rating": 4.7,
+      "reviewCount": 12456,
+      "imageUrl": "/images/activities/atlantis-aquaventure.jpg",
+      "companionSuitability": {
+        "solo": 5,
+        "couple": 7,
+        "family": 10,
+        "friends": 10,
+        "business": 3
+      },
+      "interestTags": ["adventure", "beach"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {
+        "getyourguide": {
+          "url": "https://getyourguide.com/atlantis-aquaventure",
+          "partnerId": "YOUR_ID",
+          "commission": 10
+        }
+      },
+      "bestPrice": "getyourguide"
+    },
+    {
+      "id": "dubai-museum-1",
+      "title": "Dubai Museum Al Fahidi Fort",
+      "description": "Oldest building in Dubai (1787), showcases Emirati heritage, traditional life, archaeological artifacts",
+      "category": "culture",
+      "duration": "1 hour",
+      "price": 1,
+      "currency": "USD",
+      "rating": 4.3,
+      "reviewCount": 5678,
+      "imageUrl": "/images/activities/dubai-museum.jpg",
+      "companionSuitability": {
+        "solo": 8,
+        "couple": 6,
+        "family": 8,
+        "friends": 5,
+        "business": 6
+      },
+      "interestTags": ["culture", "hidden"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {},
+      "bestPrice": "direct"
+    },
+    {
+      "id": "miracle-garden-1",
+      "title": "Dubai Miracle Garden",
+      "description": "World's largest flower garden with 150 million flowers, stunning floral structures, Instagram-worthy displays",
+      "category": "nature",
+      "duration": "2 hours",
+      "price": 15,
+      "currency": "USD",
+      "rating": 4.8,
+      "reviewCount": 9876,
+      "imageUrl": "/images/activities/miracle-garden.jpg",
+      "companionSuitability": {
+        "solo": 7,
+        "couple": 10,
+        "family": 9,
+        "friends": 7,
+        "business": 4
+      },
+      "interestTags": ["art", "culture", "sustainable"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {
+        "viator": {
+          "url": "https://viator.com/miracle-garden",
+          "partnerId": "YOUR_ID",
+          "commission": 8
+        }
+      },
+      "bestPrice": "viator"
+    },
+    {
+      "id": "global-village-1",
+      "title": "Global Village Cultural Festival",
+      "description": "Seasonal cultural extravaganza with pavilions from 90 countries, shopping, food, live shows, rides",
+      "category": "culture",
+      "duration": "3-4 hours",
+      "price": 5,
+      "currency": "USD",
+      "rating": 4.6,
+      "reviewCount": 11234,
+      "imageUrl": "/images/activities/global-village.jpg",
+      "companionSuitability": {
+        "solo": 6,
+        "couple": 8,
+        "family": 10,
+        "friends": 9,
+        "business": 5
+      },
+      "interestTags": ["culture", "food"],
+      "timeOfDay": "evening",
+      "affiliateLinks": {},
+      "bestPrice": "direct"
+    },
+    {
+      "id": "abra-creek-1",
+      "title": "Traditional Abra Boat Ride",
+      "description": "Authentic wooden water taxi across Dubai Creek, connects old souks, local experience for minimal cost",
+      "category": "culture",
+      "duration": "15 minutes",
+      "price": 0.3,
+      "currency": "USD",
+      "rating": 4.7,
+      "reviewCount": 8765,
+      "imageUrl": "/images/activities/abra-ride.jpg",
+      "companionSuitability": {
+        "solo": 9,
+        "couple": 8,
+        "family": 8,
+        "friends": 7,
+        "business": 6
+      },
+      "interestTags": ["culture", "hidden"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {},
+      "bestPrice": "direct"
+    },
+    {
+      "id": "hot-air-balloon-1",
+      "title": "Dubai Desert Hot Air Balloon",
+      "description": "Sunrise hot air balloon flight over Arabian desert, wildlife spotting, champagne breakfast, breathtaking views",
+      "category": "adventure",
+      "duration": "4 hours",
+      "price": 275,
+      "currency": "USD",
+      "rating": 4.9,
+      "reviewCount": 3456,
+      "imageUrl": "/images/activities/hot-air-balloon.jpg",
+      "companionSuitability": {
+        "solo": 7,
+        "couple": 10,
+        "family": 6,
+        "friends": 8,
+        "business": 5
+      },
+      "interestTags": ["adventure", "wildlife"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {
+        "getyourguide": {
+          "url": "https://getyourguide.com/dubai-hot-air-balloon",
+          "partnerId": "YOUR_ID",
+          "commission": 12
+        }
+      },
+      "bestPrice": "getyourguide"
+    },
+    {
+      "id": "spa-talise-1",
+      "title": "Talise Ottoman Spa Experience",
+      "description": "Luxury Turkish hammam with traditional treatments, oceanfront spa, aromatherapy, full relaxation",
+      "category": "wellness",
+      "duration": "2 hours",
+      "price": 180,
+      "currency": "USD",
+      "rating": 4.8,
+      "reviewCount": 2134,
+      "imageUrl": "/images/activities/talise-spa.jpg",
+      "companionSuitability": {
+        "solo": 8,
+        "couple": 10,
+        "family": 5,
+        "friends": 7,
+        "business": 7
+      },
+      "interestTags": ["wellness"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {
+        "viator": {
+          "url": "https://viator.com/talise-spa",
+          "partnerId": "YOUR_ID",
+          "commission": 10
+        }
+      },
+      "bestPrice": "viator"
+    },
+    {
+      "id": "cooking-class-1",
+      "title": "Emirati Cooking Class",
+      "description": "Learn traditional Emirati dishes with local chef, hands-on cooking, cultural insights, full meal included",
+      "category": "food",
+      "duration": "3 hours",
+      "price": 95,
+      "currency": "USD",
+      "rating": 4.9,
+      "reviewCount": 1876,
+      "imageUrl": "/images/activities/cooking-class.jpg",
+      "companionSuitability": {
+        "solo": 9,
+        "couple": 9,
+        "family": 7,
+        "friends": 8,
+        "business": 6
+      },
+      "interestTags": ["food", "culture"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {
+        "getyourguide": {
+          "url": "https://getyourguide.com/emirati-cooking",
+          "partnerId": "YOUR_ID",
+          "commission": 10
+        }
+      },
+      "bestPrice": "getyourguide"
+    },
+    {
+      "id": "skydive-dubai-1",
+      "title": "Skydive Dubai Palm Jumeirah",
+      "description": "Tandem skydiving from 13,000 feet over Palm Jumeirah, professional instructors, video package available",
+      "category": "adventure",
+      "duration": "3 hours",
+      "price": 599,
+      "currency": "USD",
+      "rating": 5.0,
+      "reviewCount": 2345,
+      "imageUrl": "/images/activities/skydive-dubai.jpg",
+      "companionSuitability": {
+        "solo": 9,
+        "couple": 9,
+        "family": 3,
+        "friends": 10,
+        "business": 4
+      },
+      "interestTags": ["adventure"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {
+        "viator": {
+          "url": "https://viator.com/skydive-dubai",
+          "partnerId": "YOUR_ID",
+          "commission": 8
+        }
+      },
+      "bestPrice": "viator"
+    },
+    {
+      "id": "marina-walk-1",
+      "title": "Dubai Marina Walk & JBR Beach",
+      "description": "Waterfront promenade with restaurants, cafes, shopping, street performers, beach access, free to explore",
+      "category": "sightseeing",
+      "duration": "2 hours",
+      "price": 0,
+      "currency": "USD",
+      "rating": 4.6,
+      "reviewCount": 7890,
+      "imageUrl": "/images/activities/marina-walk.jpg",
+      "companionSuitability": {
+        "solo": 8,
+        "couple": 9,
+        "family": 8,
+        "friends": 9,
+        "business": 6
+      },
+      "interestTags": ["beach", "food"],
+      "timeOfDay": "evening",
+      "affiliateLinks": {},
+      "bestPrice": "free"
+    },
+    {
+      "id": "camel-racing-1",
+      "title": "Camel Racing Experience",
+      "description": "Watch traditional camel racing with robot jockeys, authentic Emirati sport, unique cultural experience",
+      "category": "culture",
+      "duration": "2 hours",
+      "price": 0,
+      "currency": "USD",
+      "rating": 4.4,
+      "reviewCount": 1234,
+      "imageUrl": "/images/activities/camel-racing.jpg",
+      "companionSuitability": {
+        "solo": 7,
+        "couple": 6,
+        "family": 8,
+        "friends": 7,
+        "business": 5
+      },
+      "interestTags": ["culture", "hidden", "wildlife"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {},
+      "bestPrice": "free"
+    },
+    {
+      "id": "yacht-cruise-1",
+      "title": "Luxury Yacht Marina Cruise",
+      "description": "Private yacht charter with captain, tour Dubai Marina and Palm Jumeirah, swimming stop, refreshments",
+      "category": "adventure",
+      "duration": "2 hours",
+      "price": 350,
+      "currency": "USD",
+      "rating": 4.9,
+      "reviewCount": 876,
+      "imageUrl": "/images/activities/yacht-cruise.jpg",
+      "companionSuitability": {
+        "solo": 5,
+        "couple": 10,
+        "family": 8,
+        "friends": 10,
+        "business": 8
+      },
+      "interestTags": ["adventure", "beach"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {
+        "getyourguide": {
+          "url": "https://getyourguide.com/yacht-dubai",
+          "partnerId": "YOUR_ID",
+          "commission": 12
+        }
+      },
+      "bestPrice": "getyourguide"
+    },
+    {
+      "id": "food-tour-1",
+      "title": "Old Dubai Food Walking Tour",
+      "description": "Guided culinary tour through historic neighborhoods, 10+ tastings, local eateries, cultural stories",
+      "category": "food",
+      "duration": "3 hours",
+      "price": 89,
+      "currency": "USD",
+      "rating": 4.8,
+      "reviewCount": 3456,
+      "imageUrl": "/images/activities/food-tour.jpg",
+      "companionSuitability": {
+        "solo": 9,
+        "couple": 8,
+        "family": 6,
+        "friends": 9,
+        "business": 6
+      },
+      "interestTags": ["food", "culture", "hidden"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {
+        "viator": {
+          "url": "https://viator.com/dubai-food-tour",
+          "partnerId": "YOUR_ID",
+          "commission": 10
+        }
+      },
+      "bestPrice": "viator"
+    },
+    {
+      "id": "img-worlds-1",
+      "title": "IMG Worlds of Adventure",
+      "description": "World's largest indoor theme park with Marvel, Cartoon Network zones, thrilling rides, all-weather fun",
+      "category": "adventure",
+      "duration": "4-5 hours",
+      "price": 85,
+      "currency": "USD",
+      "rating": 4.5,
+      "reviewCount": 9876,
+      "imageUrl": "/images/activities/img-worlds.jpg",
+      "companionSuitability": {
+        "solo": 5,
+        "couple": 7,
+        "family": 10,
+        "friends": 9,
+        "business": 3
+      },
+      "interestTags": ["adventure"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {
+        "getyourguide": {
+          "url": "https://getyourguide.com/img-worlds",
+          "partnerId": "YOUR_ID",
+          "commission": 9
+        }
+      },
+      "bestPrice": "getyourguide"
+    },
+    {
+      "id": "hatta-kayak-1",
+      "title": "Hatta Dam Kayaking Adventure",
+      "description": "Kayaking in turquoise mountain waters, scenic Hajar Mountains, peaceful nature escape from city",
+      "category": "adventure",
+      "duration": "Half day",
+      "price": 45,
+      "currency": "USD",
+      "rating": 4.7,
+      "reviewCount": 2345,
+      "imageUrl": "/images/activities/hatta-kayak.jpg",
+      "companionSuitability": {
+        "solo": 8,
+        "couple": 9,
+        "family": 7,
+        "friends": 9,
+        "business": 4
+      },
+      "interestTags": ["adventure", "wildlife", "sustainable"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {
+        "viator": {
+          "url": "https://viator.com/hatta-kayaking",
+          "partnerId": "YOUR_ID",
+          "commission": 10
+        }
+      },
+      "bestPrice": "viator"
+    },
+    {
+      "id": "opera-show-1",
+      "title": "Dubai Opera Performance",
+      "description": "World-class opera, ballet, theater, and concerts in stunning dhow-shaped venue, premium cultural experience",
+      "category": "art",
+      "duration": "2-3 hours",
+      "price": 75,
+      "currency": "USD",
+      "rating": 4.8,
+      "reviewCount": 1876,
+      "imageUrl": "/images/activities/dubai-opera.jpg",
+      "companionSuitability": {
+        "solo": 7,
+        "couple": 10,
+        "family": 6,
+        "friends": 7,
+        "business": 8
+      },
+      "interestTags": ["art", "culture"],
+      "timeOfDay": "evening",
+      "affiliateLinks": {
+        "getyourguide": {
+          "url": "https://getyourguide.com/dubai-opera",
+          "partnerId": "YOUR_ID",
+          "commission": 8
+        }
+      },
+      "bestPrice": "getyourguide"
+    },
+    {
+      "id": "parasailing-1",
+      "title": "JBR Beach Parasailing",
+      "description": "Parasailing over Dubai coastline, 15-minute flight, stunning aerial views, professional equipment and instructors",
+      "category": "adventure",
+      "duration": "1 hour",
+      "price": 90,
+      "currency": "USD",
+      "rating": 4.7,
+      "reviewCount": 3456,
+      "imageUrl": "/images/activities/parasailing.jpg",
+      "companionSuitability": {
+        "solo": 8,
+        "couple": 9,
+        "family": 6,
+        "friends": 10,
+        "business": 4
+      },
+      "interestTags": ["adventure", "beach"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {
+        "viator": {
+          "url": "https://viator.com/parasailing-dubai",
+          "partnerId": "YOUR_ID",
+          "commission": 10
+        }
+      },
+      "bestPrice": "viator"
+    },
+    {
+      "id": "zip-line-1",
+      "title": "XLine Dubai Marina Zipline",
+      "description": "World's longest urban zipline, 1km flight across Dubai Marina, speeds up to 80km/h, thrilling views",
+      "category": "adventure",
+      "duration": "1.5 hours",
+      "price": 135,
+      "currency": "USD",
+      "rating": 4.9,
+      "reviewCount": 2987,
+      "imageUrl": "/images/activities/xline-zipline.jpg",
+      "companionSuitability": {
+        "solo": 9,
+        "couple": 8,
+        "family": 5,
+        "friends": 10,
+        "business": 5
+      },
+      "interestTags": ["adventure"],
+      "timeOfDay": "afternoon",
+      "affiliateLinks": {
+        "getyourguide": {
+          "url": "https://getyourguide.com/xline-dubai",
+          "partnerId": "YOUR_ID",
+          "commission": 10
+        }
+      },
+      "bestPrice": "getyourguide"
+    },
+    {
+      "id": "al-bastakiya-1",
+      "title": "Al Fahidi Historic District Walk",
+      "description": "Wander through preserved heritage area, wind towers, art galleries, traditional architecture, free entry",
+      "category": "culture",
+      "duration": "1-2 hours",
+      "price": 0,
+      "currency": "USD",
+      "rating": 4.5,
+      "reviewCount": 4567,
+      "imageUrl": "/images/activities/al-bastakiya.jpg",
+      "companionSuitability": {
+        "solo": 9,
+        "couple": 8,
+        "family": 7,
+        "friends": 6,
+        "business": 6
+      },
+      "interestTags": ["culture", "art", "hidden"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {},
+      "bestPrice": "free"
+    },
+    {
+      "id": "kite-beach-1",
+      "title": "Kite Beach Water Sports",
+      "description": "Active beach with kitesurfing, paddleboarding, beach volleyball, food trucks, Burj Al Arab views",
+      "category": "adventure",
+      "duration": "2-3 hours",
+      "price": 0,
+      "currency": "USD",
+      "rating": 4.6,
+      "reviewCount": 5678,
+      "imageUrl": "/images/activities/kite-beach.jpg",
+      "companionSuitability": {
+        "solo": 8,
+        "couple": 8,
+        "family": 8,
+        "friends": 10,
+        "business": 4
+      },
+      "interestTags": ["adventure", "beach", "wellness"],
+      "timeOfDay": "morning",
+      "affiliateLinks": {},
+      "bestPrice": "free"
+    }
+  ]
+}

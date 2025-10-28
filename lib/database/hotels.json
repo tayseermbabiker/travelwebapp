@@ -1,0 +1,379 @@
+{
+  "dubai": [
+    {
+      "id": "hampton-inn-downtown",
+      "name": "Hampton Inn Dubai Downtown",
+      "stars": 3,
+      "pricePerNight": 145,
+      "currency": "USD",
+      "rating": 8.7,
+      "reviewCount": 2341,
+      "imageUrl": "/images/hotels/hampton-inn.jpg",
+      "lifestyle": ["couples", "business"],
+      "budgetCategory": "midscale",
+      "amenities": ["wifi", "pool", "gym", "breakfast"],
+      "location": {
+        "lat": 25.2048,
+        "lng": 55.2708,
+        "address": "Downtown Dubai, 0.5km from Dubai Mall"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/hampton-inn-dubai",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "rove-downtown",
+      "name": "Rove Downtown Dubai",
+      "stars": 3,
+      "pricePerNight": 120,
+      "currency": "USD",
+      "rating": 8.5,
+      "reviewCount": 1876,
+      "imageUrl": "/images/hotels/rove-downtown.jpg",
+      "lifestyle": ["solo", "friends"],
+      "budgetCategory": "midscale",
+      "amenities": ["wifi", "pool", "cafe", "parking"],
+      "location": {
+        "lat": 25.2010,
+        "lng": 55.2730,
+        "address": "Downtown Dubai, walking distance to metro"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/rove-downtown",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "ibis-mall-emirates",
+      "name": "Ibis Mall of the Emirates",
+      "stars": 2,
+      "pricePerNight": 65,
+      "currency": "USD",
+      "rating": 8.0,
+      "reviewCount": 3421,
+      "imageUrl": "/images/hotels/ibis-emirates.jpg",
+      "lifestyle": ["solo", "business"],
+      "budgetCategory": "budget",
+      "amenities": ["wifi", "24h-reception", "cafe"],
+      "location": {
+        "lat": 25.1175,
+        "lng": 55.2008,
+        "address": "Al Barsha, near Mall of the Emirates metro"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/ibis-mall-emirates",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "citymax-bur-dubai",
+      "name": "CityMax Hotel Bur Dubai",
+      "stars": 3,
+      "pricePerNight": 75,
+      "currency": "USD",
+      "rating": 7.8,
+      "reviewCount": 2156,
+      "imageUrl": "/images/hotels/citymax-bur.jpg",
+      "lifestyle": ["solo", "friends"],
+      "budgetCategory": "budget",
+      "amenities": ["wifi", "pool", "gym", "breakfast"],
+      "location": {
+        "lat": 25.2587,
+        "lng": 55.3048,
+        "address": "Bur Dubai, near Gold Souk and Old Dubai"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/citymax-bur-dubai",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "hilton-garden-inn-mall",
+      "name": "Hilton Garden Inn Mall",
+      "stars": 4,
+      "pricePerNight": 155,
+      "currency": "USD",
+      "rating": 8.9,
+      "reviewCount": 1987,
+      "imageUrl": "/images/hotels/hilton-garden.jpg",
+      "lifestyle": ["family", "business"],
+      "budgetCategory": "midscale",
+      "amenities": ["wifi", "pool", "gym", "breakfast", "kids-club"],
+      "location": {
+        "lat": 25.1977,
+        "lng": 55.2799,
+        "address": "Downtown Dubai, direct access to Dubai Mall"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/hilton-garden-inn-mall",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "vida-downtown",
+      "name": "Vida Downtown Dubai",
+      "stars": 4,
+      "pricePerNight": 195,
+      "currency": "USD",
+      "rating": 9.1,
+      "reviewCount": 2543,
+      "imageUrl": "/images/hotels/vida-downtown.jpg",
+      "lifestyle": ["couples", "friends"],
+      "budgetCategory": "upscale",
+      "amenities": ["wifi", "pool", "spa", "gym", "restaurant"],
+      "location": {
+        "lat": 25.1965,
+        "lng": 55.2764,
+        "address": "Downtown Dubai, Burj Khalifa views"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/vida-downtown",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "jw-marriott-marquis",
+      "name": "JW Marriott Marquis",
+      "stars": 5,
+      "pricePerNight": 245,
+      "currency": "USD",
+      "rating": 9.3,
+      "reviewCount": 4231,
+      "imageUrl": "/images/hotels/jw-marriott.jpg",
+      "lifestyle": ["business", "couples"],
+      "budgetCategory": "upscale",
+      "amenities": ["wifi", "pool", "spa", "gym", "restaurant", "executive-lounge"],
+      "location": {
+        "lat": 25.1855,
+        "lng": 55.2608,
+        "address": "Business Bay, world's tallest hotel"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/jw-marriott-marquis",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "ritz-carlton-marina",
+      "name": "The Ritz-Carlton Dubai Marina",
+      "stars": 5,
+      "pricePerNight": 320,
+      "currency": "USD",
+      "rating": 9.4,
+      "reviewCount": 3654,
+      "imageUrl": "/images/hotels/ritz-marina.jpg",
+      "lifestyle": ["couples", "family"],
+      "budgetCategory": "luxury",
+      "amenities": ["wifi", "beach-access", "spa", "gym", "kids-club", "restaurant", "butler"],
+      "location": {
+        "lat": 25.0825,
+        "lng": 55.1393,
+        "address": "Dubai Marina, beachfront location"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/ritz-carlton-marina",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "jumeirah-beach-hotel",
+      "name": "Jumeirah Beach Hotel",
+      "stars": 5,
+      "pricePerNight": 385,
+      "currency": "USD",
+      "rating": 9.2,
+      "reviewCount": 5123,
+      "imageUrl": "/images/hotels/jumeirah-beach.jpg",
+      "lifestyle": ["family", "couples"],
+      "budgetCategory": "luxury",
+      "amenities": ["wifi", "private-beach", "pool", "spa", "kids-club", "restaurant", "water-sports"],
+      "location": {
+        "lat": 25.1410,
+        "lng": 55.1859,
+        "address": "Jumeirah Beach, views of Burj Al Arab"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/jumeirah-beach",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "atlantis-palm",
+      "name": "Atlantis The Palm",
+      "stars": 5,
+      "pricePerNight": 425,
+      "currency": "USD",
+      "rating": 9.0,
+      "reviewCount": 8765,
+      "imageUrl": "/images/hotels/atlantis-palm.jpg",
+      "lifestyle": ["family", "friends"],
+      "budgetCategory": "luxury",
+      "amenities": ["wifi", "waterpark", "aquarium", "pool", "spa", "kids-club", "restaurant", "beach-access"],
+      "location": {
+        "lat": 25.1308,
+        "lng": 55.1172,
+        "address": "Palm Jumeirah, iconic resort destination"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/atlantis-palm",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "address-dubai-mall",
+      "name": "The Address Dubai Mall",
+      "stars": 5,
+      "pricePerNight": 295,
+      "currency": "USD",
+      "rating": 9.2,
+      "reviewCount": 3987,
+      "imageUrl": "/images/hotels/address-mall.jpg",
+      "lifestyle": ["couples", "business"],
+      "budgetCategory": "luxury",
+      "amenities": ["wifi", "pool", "spa", "gym", "restaurant", "fountain-views"],
+      "location": {
+        "lat": 25.1982,
+        "lng": 55.2796,
+        "address": "Downtown Dubai, connected to Dubai Mall"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/address-dubai-mall",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "premier-inn-silicon-oasis",
+      "name": "Premier Inn Silicon Oasis",
+      "stars": 3,
+      "pricePerNight": 70,
+      "currency": "USD",
+      "rating": 8.3,
+      "reviewCount": 1654,
+      "imageUrl": "/images/hotels/premier-silicon.jpg",
+      "lifestyle": ["business", "solo"],
+      "budgetCategory": "budget",
+      "amenities": ["wifi", "gym", "breakfast", "parking"],
+      "location": {
+        "lat": 25.1256,
+        "lng": 55.3797,
+        "address": "Silicon Oasis, near tech hub and IMG Worlds"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/premier-inn-silicon",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "hawthorn-jbr",
+      "name": "Hawthorn Suites JBR",
+      "stars": 4,
+      "pricePerNight": 175,
+      "currency": "USD",
+      "rating": 8.6,
+      "reviewCount": 2134,
+      "imageUrl": "/images/hotels/hawthorn-jbr.jpg",
+      "lifestyle": ["family", "friends"],
+      "budgetCategory": "upscale",
+      "amenities": ["wifi", "kitchenette", "pool", "gym", "beach-nearby"],
+      "location": {
+        "lat": 25.0777,
+        "lng": 55.1371,
+        "address": "Jumeirah Beach Residence, apartment-style suites"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/hawthorn-jbr",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "rose-rayhaan-rotana",
+      "name": "Rose Rayhaan by Rotana",
+      "stars": 5,
+      "pricePerNight": 165,
+      "currency": "USD",
+      "rating": 8.7,
+      "reviewCount": 2876,
+      "imageUrl": "/images/hotels/rose-rayhaan.jpg",
+      "lifestyle": ["business", "couples"],
+      "budgetCategory": "midscale",
+      "amenities": ["wifi", "pool", "spa", "gym", "restaurant", "executive-lounge"],
+      "location": {
+        "lat": 25.2343,
+        "lng": 55.2853,
+        "address": "Deira, world's tallest all-suite hotel"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/rose-rayhaan-rotana",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    },
+    {
+      "id": "arabian-courtyard-bur-dubai",
+      "name": "Arabian Courtyard Hotel",
+      "stars": 4,
+      "pricePerNight": 95,
+      "currency": "USD",
+      "rating": 8.4,
+      "reviewCount": 3254,
+      "imageUrl": "/images/hotels/arabian-courtyard.jpg",
+      "lifestyle": ["couples", "solo"],
+      "budgetCategory": "midscale",
+      "amenities": ["wifi", "pool", "restaurant", "traditional-decor"],
+      "location": {
+        "lat": 25.2627,
+        "lng": 55.3015,
+        "address": "Bur Dubai, near Dubai Museum and souks"
+      },
+      "affiliateLinks": {
+        "booking": {
+          "url": "https://booking.com/hotel/arabian-courtyard",
+          "partnerId": "YOUR_ID",
+          "commission": 5
+        }
+      }
+    }
+  ]
+}

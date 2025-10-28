@@ -1,0 +1,274 @@
+{
+  "UAE": {
+    "name": "United Arab Emirates",
+    "code": "AE",
+    "cities": [
+      {
+        "name": "Dubai",
+        "importance": 9,
+        "recommendedDays": "3-5",
+        "hasData": true,
+        "activitiesCount": 30,
+        "hotelsCount": 15,
+        "costLevel": "high",
+        "description": "Modern metropolis with luxury shopping, ultramodern architecture and a lively nightlife scene"
+      },
+      {
+        "name": "Sharjah",
+        "importance": 6,
+        "recommendedDays": "1-2",
+        "hasData": true,
+        "activitiesCount": 8,
+        "hotelsCount": 5,
+        "costLevel": "medium",
+        "description": "Cultural capital with museums, traditional souks, and Islamic architecture",
+        "travelFromMain": {
+          "city": "Dubai",
+          "duration": "30-45 min",
+          "method": "car/bus",
+          "cost": 15
+        }
+      },
+      {
+        "name": "Ajman",
+        "importance": 5,
+        "recommendedDays": "1-2",
+        "hasData": true,
+        "activitiesCount": 5,
+        "hotelsCount": 3,
+        "costLevel": "low",
+        "description": "Quiet beach destination with relaxed atmosphere and local charm",
+        "travelFromMain": {
+          "city": "Dubai",
+          "duration": "45-60 min",
+          "method": "car/bus",
+          "cost": 20
+        }
+      },
+      {
+        "name": "Abu Dhabi",
+        "importance": 8,
+        "recommendedDays": "2-3",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "high",
+        "description": "Capital city with Sheikh Zayed Grand Mosque and Ferrari World"
+      },
+      {
+        "name": "Ras Al Khaimah",
+        "importance": 5,
+        "recommendedDays": "1-2",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "medium",
+        "description": "Mountain and beach destination with adventure activities"
+      }
+    ]
+  },
+  "Italy": {
+    "name": "Italy",
+    "code": "IT",
+    "cities": [
+      {
+        "name": "Rome",
+        "importance": 10,
+        "recommendedDays": "3-4",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "high",
+        "description": "Eternal city with ancient ruins, Vatican City, and world-class cuisine"
+      },
+      {
+        "name": "Florence",
+        "importance": 8,
+        "recommendedDays": "2-3",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "high",
+        "description": "Renaissance capital with art galleries, Duomo, and Tuscan culture"
+      },
+      {
+        "name": "Venice",
+        "importance": 8,
+        "recommendedDays": "2-3",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "high",
+        "description": "Floating city with canals, gondolas, and stunning architecture"
+      },
+      {
+        "name": "Milan",
+        "importance": 7,
+        "recommendedDays": "2-3",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "high",
+        "description": "Fashion capital with Duomo, shopping, and modern art scene"
+      },
+      {
+        "name": "Naples",
+        "importance": 6,
+        "recommendedDays": "1-2",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "medium",
+        "description": "Pizza birthplace with Pompeii access and authentic Italian culture"
+      },
+      {
+        "name": "Bologna",
+        "importance": 5,
+        "recommendedDays": "1-2",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "medium",
+        "description": "Food capital with medieval towers and vibrant student culture"
+      }
+    ]
+  },
+  "France": {
+    "name": "France",
+    "code": "FR",
+    "cities": [
+      {
+        "name": "Paris",
+        "importance": 10,
+        "recommendedDays": "4-5",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "high",
+        "description": "City of lights with Eiffel Tower, Louvre, and romantic atmosphere"
+      },
+      {
+        "name": "Nice",
+        "importance": 7,
+        "recommendedDays": "2-3",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "high",
+        "description": "French Riviera gem with beaches, markets, and Mediterranean charm"
+      },
+      {
+        "name": "Lyon",
+        "importance": 6,
+        "recommendedDays": "1-2",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "medium",
+        "description": "Gastronomic capital with old town and Rhône River views"
+      },
+      {
+        "name": "Bordeaux",
+        "importance": 6,
+        "recommendedDays": "1-2",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "medium",
+        "description": "Wine region with historic architecture and vineyard tours"
+      }
+    ]
+  },
+  "Spain": {
+    "name": "Spain",
+    "code": "ES",
+    "cities": [
+      {
+        "name": "Barcelona",
+        "importance": 10,
+        "recommendedDays": "3-4",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "high",
+        "description": "Gaudí's masterpiece city with beaches, Gothic Quarter, and tapas"
+      },
+      {
+        "name": "Madrid",
+        "importance": 9,
+        "recommendedDays": "3-4",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "medium",
+        "description": "Spanish capital with museums, royal palace, and vibrant nightlife"
+      },
+      {
+        "name": "Seville",
+        "importance": 7,
+        "recommendedDays": "2-3",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "medium",
+        "description": "Flamenco heart with Moorish architecture and authentic Andalusian culture"
+      },
+      {
+        "name": "Valencia",
+        "importance": 6,
+        "recommendedDays": "1-2",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "medium",
+        "description": "Paella birthplace with futuristic architecture and beach life"
+      }
+    ]
+  },
+  "Thailand": {
+    "name": "Thailand",
+    "code": "TH",
+    "cities": [
+      {
+        "name": "Bangkok",
+        "importance": 10,
+        "recommendedDays": "3-4",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "low",
+        "description": "Bustling capital with temples, street food, and vibrant markets"
+      },
+      {
+        "name": "Chiang Mai",
+        "importance": 8,
+        "recommendedDays": "2-3",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "low",
+        "description": "Northern cultural hub with mountains, temples, and night bazaar"
+      },
+      {
+        "name": "Phuket",
+        "importance": 7,
+        "recommendedDays": "2-3",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "medium",
+        "description": "Beach paradise with islands, water sports, and nightlife"
+      },
+      {
+        "name": "Krabi",
+        "importance": 6,
+        "recommendedDays": "2-3",
+        "hasData": false,
+        "activitiesCount": 0,
+        "hotelsCount": 0,
+        "costLevel": "low",
+        "description": "Limestone cliffs, pristine beaches, and island hopping"
+      }
+    ]
+  }
+}
