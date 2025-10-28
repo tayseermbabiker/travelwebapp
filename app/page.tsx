@@ -227,8 +227,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="py-8 text-center text-sm text-gray-600">
-          <p>Built with AI-powered travel planning technology</p>
-          <p className="mt-2">© 2025 Wander. All rights reserved.</p>
+          <p>© 2025 Wander. All rights reserved.</p>
         </footer>
       </div>
 
