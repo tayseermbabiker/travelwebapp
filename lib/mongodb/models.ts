@@ -17,7 +17,8 @@ export interface ItineraryDocument {
     start: string;
     end: string;
   };
-  budget: number;
+  hotelTier: string;
+  experienceRange: string;
   companionType: string;
   interests: string[];
 

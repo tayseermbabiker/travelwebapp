@@ -4,10 +4,12 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import HeroSection from '@/components/landing/HeroSection';
 import CompanionSelector from '@/components/landing/CompanionSelector';
+import HotelTierSelector from '@/components/landing/HotelTierSelector';
+import ExperienceRangeSelector from '@/components/landing/ExperienceRangeSelector';
 import InterestsSelector from '@/components/landing/InterestsSelector';
 import TripBasicsForm from '@/components/landing/TripBasicsForm';
 import Toast from '@/components/ui/Toast';
-import { CompanionType, InterestType, TripBasics } from '@/types';
+import { CompanionType, InterestType, TripBasics, HotelTier, ExperienceRange } from '@/types';
 
 export default function Home() {
   const router = useRouter();
@@ -16,7 +18,8 @@ export default function Home() {
   const [tripBasics, setTripBasics] = useState<TripBasics>({
     destination: '',
     dateRange: { start: null, end: null },
-    budget: 1500,
+    hotelTier: null,
+    experienceRange: null,
   });
 
   const [companionType, setCompanionType] = useState<CompanionType | null>(null);
@@ -48,7 +51,8 @@ export default function Home() {
       hasDestination &&
       tripBasics.dateRange.start &&
       tripBasics.dateRange.end &&
-      tripBasics.budget >= 500 &&
+      tripBasics.hotelTier &&
+      tripBasics.experienceRange &&
       companionType &&
       interests.length >= 1 &&
       interests.length <= 3
@@ -63,7 +67,7 @@ export default function Home() {
   };
 
   const handleGenerateItinerary = async () => {
-    if (!isFormValid() || !companionType) return;
+    if (!isFormValid() || !companionType || !tripBasics.hotelTier || !tripBasics.experienceRange) return;
 
     setIsGenerating(true);
     setGenerationError(null);
@@ -85,7 +89,8 @@ export default function Home() {
             start: tripBasics.dateRange.start?.toISOString(),
             end: tripBasics.dateRange.end?.toISOString(),
           },
-          budget: tripBasics.budget,
+          hotelTier: tripBasics.hotelTier,
+          experienceRange: tripBasics.experienceRange,
           companionType,
           interests,
           flyingFrom: undefined, // Can add later
@@ -148,6 +153,22 @@ export default function Home() {
           />
         </section>
 
+        {/* Section 4: Hotel Tier */}
+        <section className="rounded-2xl bg-white p-6 shadow-md sm:p-8">
+          <HotelTierSelector
+            selected={tripBasics.hotelTier}
+            onSelect={(tier) => setTripBasics({ ...tripBasics, hotelTier: tier })}
+          />
+        </section>
+
+        {/* Section 5: Experience Range */}
+        <section className="rounded-2xl bg-white p-6 shadow-md sm:p-8">
+          <ExperienceRangeSelector
+            selected={tripBasics.experienceRange}
+            onSelect={(range) => setTripBasics({ ...tripBasics, experienceRange: range })}
+          />
+        </section>
+
         {/* Generate Button */}
         <section className="rounded-2xl bg-gradient-to-r from-teal-500 to-teal-600 p-8 text-center text-white shadow-lg">
           <h2 className="mb-4 text-2xl font-bold sm:text-3xl">
@@ -170,9 +191,14 @@ export default function Home() {
                 📅 {getTripDuration()} days
               </span>
             )}
-            {tripBasics.budget > 0 && (
+            {tripBasics.hotelTier && (
               <span className="rounded-full bg-white/20 px-3 py-1">
-                💰 ${tripBasics.budget.toLocaleString()}
+                🏨 {tripBasics.hotelTier.charAt(0).toUpperCase() + tripBasics.hotelTier.slice(1)} Hotel
+              </span>
+            )}
+            {tripBasics.experienceRange && (
+              <span className="rounded-full bg-white/20 px-3 py-1">
+                ✨ {tripBasics.experienceRange.charAt(0).toUpperCase() + tripBasics.experienceRange.slice(1)} Experiences
               </span>
             )}
             {companionType && (
@@ -220,7 +246,9 @@ export default function Home() {
               {!tripBasics.dateRange.start && '• Select start date '}
               {!tripBasics.dateRange.end && '• Select end date '}
               {!companionType && '• Select who\'s traveling '}
-              {interests.length === 0 && '• Select at least 1 interest'}
+              {interests.length === 0 && '• Select at least 1 interest '}
+              {!tripBasics.hotelTier && '• Select hotel tier '}
+              {!tripBasics.experienceRange && '• Select experience range'}
             </p>
           )}
         </section>

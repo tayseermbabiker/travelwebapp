@@ -1,7 +1,7 @@
 import { optimizeCompanion, CompanionOptimizerInput } from './companion-optimizer';
 import { allocateBudget } from './budget-allocator';
 import { generateItinerary, DiscoveryEngineInput } from './discovery-engine';
-import { Activity, Hotel, CompanionType, InterestType } from '@/types';
+import { Activity, Hotel, CompanionType, InterestType, HotelTier, ExperienceRange } from '@/types';
 
 export interface OrchestratorInput {
   // From user form
@@ -12,7 +12,8 @@ export interface OrchestratorInput {
     start: Date;
     end: Date;
   };
-  budget: number;
+  hotelTier: HotelTier;
+  experienceRange: ExperienceRange;
   companionType: CompanionType;
   interests: InterestType[];
   flyingFrom?: string;
@@ -31,6 +32,36 @@ export interface OrchestratorOutput {
 }
 
 /**
+ * Estimate budget from hotel tier and experience range
+ */
+function estimateBudgetFromTiers(hotelTier: HotelTier, experienceRange: ExperienceRange, days: number): number {
+  // Base daily rates by hotel tier
+  const hotelDailyRates = {
+    budget: 50,
+    comfort: 120,
+    premium: 250,
+    luxury: 500,
+  };
+
+  // Activity/food multipliers by experience range
+  const experienceMultipliers = {
+    budget: 40,      // Free tours, street food
+    balanced: 100,   // Mix of free and paid
+    premium: 200,    // Premium tours, nice dining
+    luxury: 400,     // VIP experiences, fine dining
+  };
+
+  const hotelDaily = hotelDailyRates[hotelTier];
+  const experienceDaily = experienceMultipliers[experienceRange];
+
+  // Total = (hotel + experiences + transport) * days + flights buffer
+  const dailyTotal = hotelDaily + experienceDaily + 30; // +30 for transport
+  const flightBuffer = 500; // Average flight cost estimate
+
+  return Math.round((dailyTotal * days) + flightBuffer);
+}
+
+/**
  * Main orchestrator that runs all 3 AI agents in sequence
  */
 export async function generateCompleteItinerary(
@@ -43,7 +74,11 @@ export async function generateCompleteItinerary(
     (input.dateRange.end.getTime() - input.dateRange.start.getTime()) / (1000 * 60 * 60 * 24)
   );
 
+  // Estimate budget from hotel tier and experience range
+  const estimatedBudget = estimateBudgetFromTiers(input.hotelTier, input.experienceRange, days);
+
   console.log(`📅 Trip duration: ${days} days`);
+  console.log(`💰 Estimated budget (derived from tiers): $${estimatedBudget}`);
 
   // STEP 1 & 2: Run in Parallel (they don't depend on each other)
   console.log('🚀 Step 1 & 2: Analyzing travel profile and budget in parallel...');
@@ -54,11 +89,11 @@ export async function generateCompleteItinerary(
       companionType: input.companionType,
       interests: input.interests,
       destination: input.destination,
-      budget: input.budget,
+      budget: estimatedBudget,
     }),
     // Agent 2: Budget Allocator (initially without companion profile)
     allocateBudget({
-      totalBudget: input.budget,
+      totalBudget: estimatedBudget,
       days,
       destination: input.destination,
       companionProfile: {
@@ -91,6 +126,8 @@ export async function generateCompleteItinerary(
       start: input.dateRange.start.toISOString().split('T')[0],
       end: input.dateRange.end.toISOString().split('T')[0],
     },
+    hotelTier: input.hotelTier,
+    experienceRange: input.experienceRange,
     companionProfile,
     budgetAllocation,
     availableActivities: input.availableActivities,

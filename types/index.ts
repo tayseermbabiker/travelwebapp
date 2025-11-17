@@ -1,6 +1,12 @@
 // Companion Types
 export type CompanionType = 'solo' | 'couple' | 'family' | 'friends' | 'business' | 'group';
 
+// Hotel Tier Types
+export type HotelTier = 'budget' | 'comfort' | 'premium' | 'luxury';
+
+// Experience Range Types
+export type ExperienceRange = 'budget' | 'balanced' | 'premium' | 'luxury';
+
 // Interest Categories
 export type InterestType =
   | 'food'
@@ -23,7 +29,8 @@ export interface TripBasics {
     start: Date | null;
     end: Date | null;
   };
-  budget: number;
+  hotelTier: HotelTier | null;
+  experienceRange: ExperienceRange | null;
 }
 
 // City Destination (for multi-city trips)
@@ -149,7 +156,8 @@ export interface Itinerary {
   };
   companionType: CompanionType;
   interests: InterestType[];
-  budget: number;
+  hotelTier: HotelTier;
+  experienceRange: ExperienceRange;
   budgetBreakdown: BudgetAllocation;
   days: ItineraryDay[];
   grandTotal: number;
@@ -160,7 +168,8 @@ export interface Itinerary {
 export interface GenerateItineraryRequest {
   destination: string;
   dateRange: { start: string; end: string };
-  budget: number;
+  hotelTier: HotelTier;
+  experienceRange: ExperienceRange;
   companionType: CompanionType;
   interests: InterestType[];
   flyingFrom?: string;

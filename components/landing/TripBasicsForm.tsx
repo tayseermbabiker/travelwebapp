@@ -90,11 +90,6 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
     });
   };
 
-  const handleBudgetChange = (value: string) => {
-    const budget = parseInt(value) || 0;
-    onChange({ ...data, budget });
-  };
-
   // Format date for input (YYYY-MM-DD)
   const formatDateForInput = (date: Date | null) => {
     if (!date) return '';
@@ -272,51 +267,6 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
               {totalDays} {totalDays === 1 ? 'day' : 'days'} trip
             </p>
           )}
-        </div>
-      </div>
-
-      {/* Budget Slider */}
-      <div>
-        <label htmlFor="budget" className="mb-2 block text-sm font-medium text-gray-700">
-          Total Budget (USD)
-        </label>
-        <div className="flex items-center space-x-4">
-          <span className="text-sm font-medium text-gray-500">$500</span>
-          <input
-            id="budget"
-            type="range"
-            min="500"
-            max="10000"
-            step="100"
-            value={data.budget}
-            onChange={(e) => handleBudgetChange(e.target.value)}
-            className="flex-1 accent-teal-500"
-          />
-          <span className="text-sm font-medium text-gray-500">$10,000</span>
-        </div>
-        <div className="mt-3 text-center">
-          <span className="text-3xl font-bold text-teal-600">
-            ${data.budget.toLocaleString()}
-          </span>
-          <p className="mt-1 text-xs text-gray-600">
-            Includes flights, hotels, activities & food
-          </p>
-        </div>
-
-        {/* Budget Indicator */}
-        <div className="mt-4 grid grid-cols-4 gap-2 text-center text-xs">
-          <div className={data.budget < 1500 ? 'font-bold text-teal-600' : 'text-gray-400'}>
-            Budget<br/>$500-1.5K
-          </div>
-          <div className={data.budget >= 1500 && data.budget < 3000 ? 'font-bold text-teal-600' : 'text-gray-400'}>
-            Moderate<br/>$1.5-3K
-          </div>
-          <div className={data.budget >= 3000 && data.budget < 6000 ? 'font-bold text-teal-600' : 'text-gray-400'}>
-            Comfort<br/>$3-6K
-          </div>
-          <div className={data.budget >= 6000 ? 'font-bold text-teal-600' : 'text-gray-400'}>
-            Luxury<br/>$6K+
-          </div>
         </div>
       </div>
     </div>

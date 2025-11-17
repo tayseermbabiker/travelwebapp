@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { generateCompleteItinerary } from '@/lib/ai/orchestrator';
-import { CompanionType, InterestType } from '@/types';
+import { CompanionType, InterestType, HotelTier, ExperienceRange } from '@/types';
 import { saveItinerary } from '@/lib/mongodb/models';
 
 // Import curated databases
@@ -24,7 +24,8 @@ export async function POST(request: NextRequest) {
       country,
       cities,
       dateRange,
-      budget,
+      hotelTier,
+      experienceRange,
       companionType,
       interests,
       flyingFrom,
@@ -34,9 +35,27 @@ export async function POST(request: NextRequest) {
     // Support both old (destination) and new (country + cities) format
     const hasDestination = destination || (country && cities && cities.length > 0);
 
-    if (!hasDestination || !dateRange || !budget || !companionType || !interests) {
+    if (!hasDestination || !dateRange || !hotelTier || !experienceRange || !companionType || !interests) {
       return NextResponse.json(
         { error: 'Missing required fields' },
+        { status: 400 }
+      );
+    }
+
+    // Validate hotel tier
+    const validHotelTiers: HotelTier[] = ['budget', 'comfort', 'premium', 'luxury'];
+    if (!validHotelTiers.includes(hotelTier)) {
+      return NextResponse.json(
+        { error: 'Invalid hotel tier' },
+        { status: 400 }
+      );
+    }
+
+    // Validate experience range
+    const validExperienceRanges: ExperienceRange[] = ['budget', 'balanced', 'premium', 'luxury'];
+    if (!validExperienceRanges.includes(experienceRange)) {
+      return NextResponse.json(
+        { error: 'Invalid experience range' },
         { status: 400 }
       );
     }
@@ -121,7 +140,8 @@ export async function POST(request: NextRequest) {
     console.log(`📍 Destination: ${destination || `${cities.join(', ')} (${country})`}`);
     console.log(`👥 Companion: ${companionType}`);
     console.log(`⭐ Interests: ${interests.join(', ')}`);
-    console.log(`💰 Budget: $${budget}`);
+    console.log(`🏨 Hotel Tier: ${hotelTier}`);
+    console.log(`✨ Experience Range: ${experienceRange}`);
     console.log(`📅 Dates: ${startDate.toISOString()} to ${endDate.toISOString()}`);
 
     // Generate complete itinerary using AI orchestrator
@@ -133,7 +153,8 @@ export async function POST(request: NextRequest) {
         start: startDate,
         end: endDate,
       },
-      budget,
+      hotelTier,
+      experienceRange,
       companionType,
       interests,
       flyingFrom,
@@ -155,7 +176,8 @@ export async function POST(request: NextRequest) {
           start: startDate.toISOString(),
           end: endDate.toISOString(),
         },
-        budget,
+        hotelTier,
+        experienceRange,
         companionType,
         interests,
         companionProfile: result.companionProfile,

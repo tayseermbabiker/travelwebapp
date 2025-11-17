@@ -2,7 +2,7 @@ import { openai, MODEL, TEMPERATURES } from './openai';
 import { DISCOVERY_ENGINE_PROMPT } from './prompts';
 import { CompanionOptimizerOutput } from './companion-optimizer';
 import { BudgetAllocatorOutput } from './budget-allocator';
-import { Activity, Hotel } from '@/types';
+import { Activity, Hotel, HotelTier, ExperienceRange } from '@/types';
 
 export interface DiscoveryEngineInput {
   days: number;
@@ -12,6 +12,8 @@ export interface DiscoveryEngineInput {
     start: string;
     end: string;
   };
+  hotelTier: HotelTier;
+  experienceRange: ExperienceRange;
   companionProfile: CompanionOptimizerOutput;
   budgetAllocation: BudgetAllocatorOutput;
   availableActivities: Activity[];
@@ -126,6 +128,8 @@ export async function generateItinerary(
       destination: input.destination,
       cities: input.cities, // NEW: Include multi-city data
       dateRange: input.dateRange,
+      hotelTier: input.hotelTier,
+      experienceRange: input.experienceRange,
       companionProfile: input.companionProfile,
       budgetAllocation: input.budgetAllocation,
       availableActivities: simplifiedActivities.slice(0, 30), // Limit to prevent token overflow
