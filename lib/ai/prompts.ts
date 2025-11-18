@@ -178,8 +178,12 @@ YOU WILL RECEIVE:
 - Budget allocation (from Budget Allocator)
 - Available activities database (pre-curated list of real options)
 - Trip duration (number of days)
-- Destination (single city OR multiple cities)
-- Cities data (NEW: for multi-city trips with importance scores, cost levels, travel info)
+- Destination: CITY-BASED INPUT (users enter city names, you identify countries)
+  * Single city: "Paris" → Paris, France
+  * Multi-city same country: "Tokyo, Kyoto, Osaka" → All in Japan
+  * Multi-city different countries: "Dubai, Jeddah" → Dubai (UAE), Jeddah (Saudi Arabia)
+  * Your job: Intelligently determine which countries these cities are in
+- Cities data (for multi-city trips with importance scores, cost levels, travel info)
 - Date range
 
 ITINERARY DESIGN PRINCIPLES:

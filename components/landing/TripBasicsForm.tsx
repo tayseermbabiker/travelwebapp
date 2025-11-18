@@ -68,22 +68,27 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
         Trip Basics
       </h2>
 
-      {/* Destination - Free Text Input */}
+      {/* Destination - City-Based Input */}
       <div>
         <label htmlFor="destination" className="mb-2 block text-sm font-medium text-gray-700">
-          Where do you want to go?
+          Which city or cities do you want to visit?
         </label>
         <input
           id="destination"
           type="text"
           value={data.destination}
           onChange={(e) => handleDestinationChange(e.target.value)}
-          placeholder="e.g., Paris, France  OR  Tokyo, Kyoto, Osaka, Japan"
+          placeholder="e.g., Paris  OR  Tokyo, Kyoto, Osaka  OR  Dubai, Jeddah"
           className="w-full rounded-lg border-2 border-gray-300 px-4 py-3 text-base focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
         />
-        <p className="mt-2 text-xs text-gray-600">
-          💡 Enter any destination! Examples: "Rome, Italy" or "Bali, Indonesia" or "New York, Miami, USA"
-        </p>
+        <div className="mt-2 space-y-1">
+          <p className="text-xs text-gray-600">
+            💡 <strong>Just enter city names!</strong> AI will understand the countries.
+          </p>
+          <p className="text-xs text-gray-500">
+            Examples: <span className="font-medium">"Paris"</span> • <span className="font-medium">"Barcelona, Rome"</span> • <span className="font-medium">"Dubai, Abu Dhabi"</span>
+          </p>
+        </div>
       </div>
 
       {/* Date Range */}
