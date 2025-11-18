@@ -21,21 +21,16 @@ export async function POST(request: NextRequest) {
     // Validate required fields
     const {
       destination,
-      country,
-      cities,
       dateRange,
       hotelTier,
-      experienceRange,
+      experienceRanges,
       companionType,
       interests,
       flyingFrom,
       skipFlights,
     } = body;
 
-    // Support both old (destination) and new (country + cities) format
-    const hasDestination = destination || (country && cities && cities.length > 0);
-
-    if (!hasDestination || !dateRange || !hotelTier || !experienceRange || !companionType || !interests) {
+    if (!destination || !dateRange || !hotelTier || !experienceRanges || !companionType || !interests) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -51,13 +46,21 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Validate experience range
+    // Validate experience ranges
     const validExperienceRanges: ExperienceRange[] = ['budget', 'balanced', 'premium', 'luxury'];
-    if (!validExperienceRanges.includes(experienceRange)) {
+    if (!Array.isArray(experienceRanges) || experienceRanges.length === 0) {
       return NextResponse.json(
-        { error: 'Invalid experience range' },
+        { error: 'experienceRanges must be a non-empty array' },
         { status: 400 }
       );
+    }
+    for (const range of experienceRanges) {
+      if (!validExperienceRanges.includes(range)) {
+        return NextResponse.json(
+          { error: `Invalid experience range: ${range}` },
+          { status: 400 }
+        );
+      }
     }
 
     // Validate companion type
@@ -95,66 +98,27 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Load appropriate destination database
-    // For multi-city, we need activities/hotels for all selected cities
-    let availableActivities: any[] = [];
-    let availableHotels: any[] = [];
-    let cityDestinations: any[] = [];
+    // AI will generate itinerary based on free-text destination
+    // We'll use empty activity/hotel arrays - AI will create custom recommendations
+    const availableActivities: any[] = [];
+    const availableHotels: any[] = [];
 
-    if (country && cities && cities.length > 0) {
-      // Multi-city format
-      console.log(`📍 Multi-city trip: ${cities.join(', ')} (${country})`);
-
-      // Get city data from destinations database
-      const countryData = (destinationsData as any)[country];
-      if (countryData) {
-        cityDestinations = cities.map((cityName: string) => {
-          const cityInfo = countryData.cities.find((c: any) => c.name === cityName);
-          return cityInfo;
-        }).filter(Boolean);
-      }
-
-      // Load activities and hotels for all selected cities
-      for (const cityName of cities) {
-        const cityKey = cityName.toLowerCase();
-        const cityActivities = (activitiesData as any)[cityKey] || [];
-        const cityHotels = (hotelsData as any)[cityKey] || [];
-
-        availableActivities = [...availableActivities, ...cityActivities];
-        availableHotels = [...availableHotels, ...cityHotels];
-      }
-    } else {
-      // Legacy single destination format
-      const destinationKey = destination.toLowerCase().includes('dubai') ? 'dubai' : 'dubai';
-      availableActivities = (activitiesData as any)[destinationKey] || [];
-      availableHotels = (hotelsData as any)[destinationKey] || [];
-    }
-
-    if (availableActivities.length === 0) {
-      return NextResponse.json(
-        { error: 'No activities available for this destination yet' },
-        { status: 404 }
-      );
-    }
-
-    console.log(`📍 Destination: ${destination || `${cities.join(', ')} (${country})`}`);
+    console.log(`📍 Destination: ${destination}`);
     console.log(`👥 Companion: ${companionType}`);
     console.log(`⭐ Interests: ${interests.join(', ')}`);
     console.log(`🏨 Hotel Tier: ${hotelTier}`);
-    console.log(`✨ Experience Range: ${experienceRange}`);
+    console.log(`✨ Experience Ranges: ${experienceRanges.join(' + ')}`);
     console.log(`📅 Dates: ${startDate.toISOString()} to ${endDate.toISOString()}`);
 
     // Generate complete itinerary using AI orchestrator
     const result = await generateCompleteItinerary({
-      destination: destination || `${cities.join(', ')}, ${country}`,
-      country,
-      cities: cityDestinations,
+      destination,
       dateRange: {
         start: startDate,
         end: endDate,
       },
       hotelTier,
-      experienceRange,
+      experienceRanges,
       companionType,
       interests,
       flyingFrom,
@@ -169,15 +133,13 @@ export async function POST(request: NextRequest) {
     try {
       await saveItinerary({
         itineraryId: result.itinerary.itineraryId,
-        destination: destination || `${cities.join(', ')}, ${country}`,
-        country,
-        cities,
+        destination,
         dateRange: {
           start: startDate.toISOString(),
           end: endDate.toISOString(),
         },
         hotelTier,
-        experienceRange,
+        experienceRanges: experienceRanges.join(','), // Store as comma-separated string
         companionType,
         interests,
         companionProfile: result.companionProfile,

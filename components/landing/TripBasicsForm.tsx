@@ -22,57 +22,15 @@ interface City {
 }
 
 export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) {
-  const [selectedCities, setSelectedCities] = useState<string[]>(data.cities || []);
-  const [availableCities, setAvailableCities] = useState<City[]>([]);
+  const [cityInput, setCityInput] = useState('');
 
-  const countries = Object.keys(destinationsData);
-  const MAX_RECOMMENDED = 3;
-  const MAX_ALLOWED = 5;
-
-  // Update available cities when country changes
-  useEffect(() => {
-    if (data.country) {
-      const countryData = destinationsData[data.country as keyof typeof destinationsData];
-      if (countryData) {
-        setAvailableCities(countryData.cities);
-      }
-    } else {
-      setAvailableCities([]);
-      setSelectedCities([]);
-    }
-  }, [data.country]);
-
-  const handleCountryChange = (country: string) => {
+  const handleDestinationChange = (value: string) => {
     onChange({
       ...data,
-      country,
-      cities: [], // Reset cities when country changes
-      destination: '', // Clear old destination field
-    });
-    setSelectedCities([]);
-  };
-
-  const handleCityToggle = (cityName: string) => {
-    let newSelectedCities: string[];
-
-    if (selectedCities.includes(cityName)) {
-      // Deselect city
-      newSelectedCities = selectedCities.filter(c => c !== cityName);
-    } else if (selectedCities.length < MAX_ALLOWED) {
-      // Select city (up to max)
-      newSelectedCities = [...selectedCities, cityName];
-    } else {
-      // Max reached
-      alert(`Maximum ${MAX_ALLOWED} cities allowed for quality itinerary planning`);
-      return;
-    }
-
-    setSelectedCities(newSelectedCities);
-    onChange({
-      ...data,
-      cities: newSelectedCities,
+      destination: value,
     });
   };
+
 
   const handleStartDateChange = (value: string) => {
     const date = value ? new Date(value) : null;
@@ -104,135 +62,29 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
     ? Math.ceil((data.dateRange.end.getTime() - data.dateRange.start.getTime()) / (1000 * 60 * 60 * 24))
     : 0;
 
-  // Get recommended days based on selected cities
-  const getRecommendedDays = () => {
-    if (selectedCities.length === 0) return '';
-    const cityData = availableCities.filter(c => selectedCities.includes(c.name));
-    const minDays = cityData.reduce((sum, c) => sum + parseInt(c.recommendedDays.split('-')[0]), 0);
-    const maxDays = cityData.reduce((sum, c) => sum + parseInt(c.recommendedDays.split('-')[1]), 0);
-    return `${minDays}-${maxDays} days`;
-  };
-
   return (
     <div className="w-full space-y-6">
       <h2 className="mb-6 text-center text-2xl font-bold text-gray-800 sm:text-3xl">
         Trip Basics
       </h2>
 
-      {/* Country Selection */}
+      {/* Destination - Free Text Input */}
       <div>
-        <label htmlFor="country" className="mb-2 block text-sm font-medium text-gray-700">
-          Select Country
+        <label htmlFor="destination" className="mb-2 block text-sm font-medium text-gray-700">
+          Where do you want to go?
         </label>
-        <select
-          id="country"
-          value={data.country || ''}
-          onChange={(e) => handleCountryChange(e.target.value)}
+        <input
+          id="destination"
+          type="text"
+          value={data.destination}
+          onChange={(e) => handleDestinationChange(e.target.value)}
+          placeholder="e.g., Paris, France  OR  Tokyo, Kyoto, Osaka, Japan"
           className="w-full rounded-lg border-2 border-gray-300 px-4 py-3 text-base focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
-        >
-          <option value="">Choose a country...</option>
-          {countries.map((country) => {
-            const countryData = destinationsData[country as keyof typeof destinationsData];
-            return (
-              <option key={country} value={country}>
-                {countryData.name}
-              </option>
-            );
-          })}
-        </select>
+        />
+        <p className="mt-2 text-xs text-gray-600">
+          💡 Enter any destination! Examples: "Rome, Italy" or "Bali, Indonesia" or "New York, Miami, USA"
+        </p>
       </div>
-
-      {/* City Selection */}
-      {data.country && availableCities.length > 0 && (
-        <div>
-          <label className="mb-2 block text-sm font-medium text-gray-700">
-            Select Cities to Visit (Max {MAX_ALLOWED})
-          </label>
-
-          {/* Selection Status */}
-          {selectedCities.length > 0 && (
-            <div className="mb-3">
-              {selectedCities.length <= MAX_RECOMMENDED && (
-                <p className="text-sm text-green-600 flex items-center gap-1">
-                  <span>✓</span>
-                  <span>{selectedCities.length} {selectedCities.length === 1 ? 'city' : 'cities'} selected (optimal)</span>
-                </p>
-              )}
-              {selectedCities.length === 4 && (
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
-                  <p className="text-sm text-yellow-800">
-                    ⚠️ 4 cities selected. Generation may take 60+ seconds. Consider reducing to 3 for best experience.
-                  </p>
-                </div>
-              )}
-              {selectedCities.length === 5 && (
-                <div className="bg-orange-50 border border-orange-200 rounded-lg p-3">
-                  <p className="text-sm text-orange-800">
-                    ⚠️ 5 cities is maximum. This will create a fast-paced itinerary. Expect 90+ second generation time.
-                  </p>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* City Checkboxes */}
-          <div className="space-y-3">
-            {availableCities.map((city) => (
-              <label
-                key={city.name}
-                className={`
-                  flex items-start gap-3 p-4 rounded-lg border-2 transition cursor-pointer
-                  ${city.hasData
-                    ? selectedCities.includes(city.name)
-                      ? 'border-teal-500 bg-teal-50'
-                      : 'border-gray-200 hover:border-teal-300 hover:bg-teal-50/30'
-                    : 'border-gray-200 bg-gray-50 opacity-60 cursor-not-allowed'
-                  }
-                `}
-              >
-                <input
-                  type="checkbox"
-                  checked={selectedCities.includes(city.name)}
-                  onChange={() => handleCityToggle(city.name)}
-                  disabled={!city.hasData}
-                  className="mt-1 w-5 h-5 text-teal-600 rounded focus:ring-teal-500 disabled:opacity-50"
-                />
-
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between gap-2 mb-1">
-                    <h4 className="font-semibold text-gray-800">{city.name}</h4>
-                    {city.hasData ? (
-                      <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full whitespace-nowrap">
-                        {city.activitiesCount} activities
-                      </span>
-                    ) : (
-                      <span className="text-xs bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full whitespace-nowrap">
-                        Coming soon
-                      </span>
-                    )}
-                  </div>
-
-                  <p className="text-xs text-gray-600 leading-relaxed">{city.description}</p>
-
-                  <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
-                    <span>📅 {city.recommendedDays} days</span>
-                    <span>💵 {city.costLevel}</span>
-                  </div>
-                </div>
-              </label>
-            ))}
-          </div>
-
-          {/* Recommended Days Hint */}
-          {selectedCities.length > 0 && (
-            <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-              <p className="text-sm text-blue-800">
-                💡 <strong>Recommended duration:</strong> {getRecommendedDays()} for {selectedCities.join(', ')}
-              </p>
-            </div>
-          )}
-        </div>
-      )}
 
       {/* Date Range */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

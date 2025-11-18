@@ -7,13 +7,13 @@ import { Activity, Hotel, HotelTier, ExperienceRange } from '@/types';
 export interface DiscoveryEngineInput {
   days: number;
   destination: string;
-  cities?: any[]; // NEW: Multi-city data
+  cities?: any[];
   dateRange: {
     start: string;
     end: string;
   };
   hotelTier: HotelTier;
-  experienceRange: ExperienceRange;
+  experienceRanges: ExperienceRange[];
   companionProfile: CompanionOptimizerOutput;
   budgetAllocation: BudgetAllocatorOutput;
   availableActivities: Activity[];
@@ -126,10 +126,10 @@ export async function generateItinerary(
     const userMessage = JSON.stringify({
       days: input.days,
       destination: input.destination,
-      cities: input.cities, // NEW: Include multi-city data
+      cities: input.cities,
       dateRange: input.dateRange,
       hotelTier: input.hotelTier,
-      experienceRange: input.experienceRange,
+      experienceRanges: input.experienceRanges,
       companionProfile: input.companionProfile,
       budgetAllocation: input.budgetAllocation,
       availableActivities: simplifiedActivities.slice(0, 30), // Limit to prevent token overflow

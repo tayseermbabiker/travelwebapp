@@ -19,7 +19,7 @@ export default function Home() {
     destination: '',
     dateRange: { start: null, end: null },
     hotelTier: null,
-    experienceRange: null,
+    experienceRanges: [],
   });
 
   const [companionType, setCompanionType] = useState<CompanionType | null>(null);
@@ -41,18 +41,26 @@ export default function Home() {
     });
   };
 
+  // Toggle experience range selection
+  const toggleExperienceRange = (range: ExperienceRange) => {
+    setTripBasics((prev) => {
+      const newRanges = prev.experienceRanges.includes(range)
+        ? prev.experienceRanges.filter((r) => r !== range)
+        : [...prev.experienceRanges, range];
+      return { ...prev, experienceRanges: newRanges };
+    });
+  };
+
   // Validation
   const isFormValid = () => {
-    // Support both old (destination) and new (country + cities) format
-    const hasDestination = tripBasics.destination?.length >= 3 ||
-                          (tripBasics.country && tripBasics.cities && tripBasics.cities.length > 0);
+    const hasDestination = tripBasics.destination?.length >= 3;
 
     return (
       hasDestination &&
       tripBasics.dateRange.start &&
       tripBasics.dateRange.end &&
       tripBasics.hotelTier &&
-      tripBasics.experienceRange &&
+      tripBasics.experienceRanges.length >= 1 &&
       companionType &&
       interests.length >= 1 &&
       interests.length <= 3
@@ -67,7 +75,7 @@ export default function Home() {
   };
 
   const handleGenerateItinerary = async () => {
-    if (!isFormValid() || !companionType || !tripBasics.hotelTier || !tripBasics.experienceRange) return;
+    if (!isFormValid() || !companionType || !tripBasics.hotelTier || tripBasics.experienceRanges.length === 0) return;
 
     setIsGenerating(true);
     setGenerationError(null);
@@ -81,16 +89,13 @@ export default function Home() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          // Support multi-city format (prioritize new format)
-          destination: tripBasics.destination || `${tripBasics.cities?.join(', ')}, ${tripBasics.country}`,
-          country: tripBasics.country,
-          cities: tripBasics.cities,
+          destination: tripBasics.destination,
           dateRange: {
             start: tripBasics.dateRange.start?.toISOString(),
             end: tripBasics.dateRange.end?.toISOString(),
           },
           hotelTier: tripBasics.hotelTier,
-          experienceRange: tripBasics.experienceRange,
+          experienceRanges: tripBasics.experienceRanges,
           companionType,
           interests,
           flyingFrom: undefined, // Can add later
@@ -164,8 +169,8 @@ export default function Home() {
         {/* Section 5: Experience Range */}
         <section className="rounded-2xl bg-white p-6 shadow-md sm:p-8">
           <ExperienceRangeSelector
-            selected={tripBasics.experienceRange}
-            onSelect={(range) => setTripBasics({ ...tripBasics, experienceRange: range })}
+            selected={tripBasics.experienceRanges}
+            onToggle={toggleExperienceRange}
           />
         </section>
 
@@ -181,9 +186,9 @@ export default function Home() {
 
           {/* Form Summary */}
           <div className="mb-6 flex flex-wrap justify-center gap-2 text-sm">
-            {(tripBasics.destination || (tripBasics.cities && tripBasics.cities.length > 0)) && (
+            {tripBasics.destination && (
               <span className="rounded-full bg-white/20 px-3 py-1">
-                📍 {tripBasics.destination || `${tripBasics.cities?.join(', ')} (${tripBasics.country})`}
+                📍 {tripBasics.destination}
               </span>
             )}
             {getTripDuration() > 0 && (
@@ -196,9 +201,9 @@ export default function Home() {
                 🏨 {tripBasics.hotelTier.charAt(0).toUpperCase() + tripBasics.hotelTier.slice(1)} Hotel
               </span>
             )}
-            {tripBasics.experienceRange && (
+            {tripBasics.experienceRanges.length > 0 && (
               <span className="rounded-full bg-white/20 px-3 py-1">
-                ✨ {tripBasics.experienceRange.charAt(0).toUpperCase() + tripBasics.experienceRange.slice(1)} Experiences
+                ✨ {tripBasics.experienceRanges.map(r => r.charAt(0).toUpperCase() + r.slice(1)).join(' + ')}
               </span>
             )}
             {companionType && (
@@ -242,13 +247,13 @@ export default function Home() {
 
           {!isFormValid() && (
             <p className="mt-4 text-xs opacity-75">
-              {!(tripBasics.destination || (tripBasics.country && tripBasics.cities?.length)) && '• Choose country and cities '}
+              {tripBasics.destination.length < 3 && '• Enter destination '}
               {!tripBasics.dateRange.start && '• Select start date '}
               {!tripBasics.dateRange.end && '• Select end date '}
               {!companionType && '• Select who\'s traveling '}
               {interests.length === 0 && '• Select at least 1 interest '}
               {!tripBasics.hotelTier && '• Select hotel tier '}
-              {!tripBasics.experienceRange && '• Select experience range'}
+              {tripBasics.experienceRanges.length === 0 && '• Select at least 1 experience style'}
             </p>
           )}
         </section>

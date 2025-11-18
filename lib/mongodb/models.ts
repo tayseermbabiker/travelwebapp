@@ -18,7 +18,7 @@ export interface ItineraryDocument {
     end: string;
   };
   hotelTier: string;
-  experienceRange: string;
+  experienceRanges: string; // Comma-separated string
   companionType: string;
   interests: string[];
 

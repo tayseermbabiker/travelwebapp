@@ -6,14 +6,14 @@ import { Activity, Hotel, CompanionType, InterestType, HotelTier, ExperienceRang
 export interface OrchestratorInput {
   // From user form
   destination: string;
-  country?: string; // NEW: For multi-city trips
-  cities?: any[]; // NEW: Array of city data with importance, days, etc.
+  country?: string; // Deprecated
+  cities?: any[]; // Deprecated
   dateRange: {
     start: Date;
     end: Date;
   };
   hotelTier: HotelTier;
-  experienceRange: ExperienceRange;
+  experienceRanges: ExperienceRange[];
   companionType: CompanionType;
   interests: InterestType[];
   flyingFrom?: string;
@@ -32,9 +32,9 @@ export interface OrchestratorOutput {
 }
 
 /**
- * Estimate budget from hotel tier and experience range
+ * Estimate budget from hotel tier and experience ranges
  */
-function estimateBudgetFromTiers(hotelTier: HotelTier, experienceRange: ExperienceRange, days: number): number {
+function estimateBudgetFromTiers(hotelTier: HotelTier, experienceRanges: ExperienceRange[], days: number): number {
   // Base daily rates by hotel tier
   const hotelDailyRates = {
     budget: 50,
@@ -43,8 +43,8 @@ function estimateBudgetFromTiers(hotelTier: HotelTier, experienceRange: Experien
     luxury: 500,
   };
 
-  // Activity/food multipliers by experience range
-  const experienceMultipliers = {
+  // Activity/food daily costs by experience range
+  const experienceDailyCosts = {
     budget: 40,      // Free tours, street food
     balanced: 100,   // Mix of free and paid
     premium: 200,    // Premium tours, nice dining
@@ -52,10 +52,14 @@ function estimateBudgetFromTiers(hotelTier: HotelTier, experienceRange: Experien
   };
 
   const hotelDaily = hotelDailyRates[hotelTier];
-  const experienceDaily = experienceMultipliers[experienceRange];
+
+  // Average the experience ranges for budget calculation
+  const avgExperienceDaily = experienceRanges.length > 0
+    ? experienceRanges.reduce((sum, range) => sum + experienceDailyCosts[range], 0) / experienceRanges.length
+    : 100;
 
   // Total = (hotel + experiences + transport) * days + flights buffer
-  const dailyTotal = hotelDaily + experienceDaily + 30; // +30 for transport
+  const dailyTotal = hotelDaily + avgExperienceDaily + 30; // +30 for transport
   const flightBuffer = 500; // Average flight cost estimate
 
   return Math.round((dailyTotal * days) + flightBuffer);
@@ -74,8 +78,8 @@ export async function generateCompleteItinerary(
     (input.dateRange.end.getTime() - input.dateRange.start.getTime()) / (1000 * 60 * 60 * 24)
   );
 
-  // Estimate budget from hotel tier and experience range
-  const estimatedBudget = estimateBudgetFromTiers(input.hotelTier, input.experienceRange, days);
+  // Estimate budget from hotel tier and experience ranges
+  const estimatedBudget = estimateBudgetFromTiers(input.hotelTier, input.experienceRanges, days);
 
   console.log(`📅 Trip duration: ${days} days`);
   console.log(`💰 Estimated budget (derived from tiers): $${estimatedBudget}`);
@@ -121,13 +125,13 @@ export async function generateCompleteItinerary(
   const itinerary = await generateItinerary({
     days,
     destination: input.destination,
-    cities: input.cities, // NEW: Pass multi-city data to Discovery Engine
+    cities: input.cities,
     dateRange: {
       start: input.dateRange.start.toISOString().split('T')[0],
       end: input.dateRange.end.toISOString().split('T')[0],
     },
     hotelTier: input.hotelTier,
-    experienceRange: input.experienceRange,
+    experienceRanges: input.experienceRanges,
     companionProfile,
     budgetAllocation,
     availableActivities: input.availableActivities,

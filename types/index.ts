@@ -22,15 +22,15 @@ export type InterestType =
 
 // Trip Basics
 export interface TripBasics {
-  destination: string; // Deprecated - use country + cities instead
-  country?: string; // NEW: Country selection
-  cities?: string[]; // NEW: Multiple city selection
+  destination: string; // Free text destination
+  country?: string; // Deprecated
+  cities?: string[]; // Deprecated
   dateRange: {
     start: Date | null;
     end: Date | null;
   };
   hotelTier: HotelTier | null;
-  experienceRange: ExperienceRange | null;
+  experienceRanges: ExperienceRange[]; // Multiple experience ranges allowed
 }
 
 // City Destination (for multi-city trips)
@@ -157,7 +157,7 @@ export interface Itinerary {
   companionType: CompanionType;
   interests: InterestType[];
   hotelTier: HotelTier;
-  experienceRange: ExperienceRange;
+  experienceRanges: ExperienceRange[];
   budgetBreakdown: BudgetAllocation;
   days: ItineraryDay[];
   grandTotal: number;
@@ -169,7 +169,7 @@ export interface GenerateItineraryRequest {
   destination: string;
   dateRange: { start: string; end: string };
   hotelTier: HotelTier;
-  experienceRange: ExperienceRange;
+  experienceRanges: ExperienceRange[];
   companionType: CompanionType;
   interests: InterestType[];
   flyingFrom?: string;
