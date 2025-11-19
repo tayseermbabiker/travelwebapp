@@ -1,6 +1,7 @@
 'use client';
 
 import { ExperienceRange } from '@/types';
+import { Coins, Target, Sparkles, Crown } from 'lucide-react';
 
 interface ExperienceRangeSelectorProps {
   selected: ExperienceRange[];
@@ -10,25 +11,25 @@ interface ExperienceRangeSelectorProps {
 const experienceRanges = [
   {
     id: 'budget' as ExperienceRange,
-    emoji: '💰',
+    Icon: Coins,
     label: 'Budget Explorer',
     description: 'Free tours, street food, local transport'
   },
   {
     id: 'balanced' as ExperienceRange,
-    emoji: '🎯',
+    Icon: Target,
     label: 'Balanced Mix',
     description: 'Mix of free & paid activities'
   },
   {
     id: 'premium' as ExperienceRange,
-    emoji: '✨',
+    Icon: Sparkles,
     label: 'Premium Experiences',
     description: 'Skip-the-line tours, nice dining'
   },
   {
     id: 'luxury' as ExperienceRange,
-    emoji: '👑',
+    Icon: Crown,
     label: 'Luxury Adventures',
     description: 'VIP tours, fine dining, private guides'
   },
@@ -66,9 +67,9 @@ export default function ExperienceRangeSelector({ selected, onToggle }: Experien
               aria-label={`Toggle ${range.label}`}
               aria-pressed={isSelected}
             >
-              {/* Emoji Icon */}
-              <div className="mb-2 text-4xl sm:text-5xl transition-transform group-hover:scale-110 drop-shadow">
-                {range.emoji}
+              {/* Icon */}
+              <div className="mb-2 transition-transform group-hover:scale-110">
+                <range.Icon className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600" strokeWidth={1.5} />
               </div>
 
               {/* Label */}

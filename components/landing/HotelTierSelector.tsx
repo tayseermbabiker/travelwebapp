@@ -1,6 +1,7 @@
 'use client';
 
 import { HotelTier } from '@/types';
+import { Home, Building, Building2, Castle } from 'lucide-react';
 
 interface HotelTierSelectorProps {
   selected: HotelTier | null;
@@ -10,28 +11,28 @@ interface HotelTierSelectorProps {
 const hotelTiers = [
   {
     id: 'budget' as HotelTier,
-    icon: '🏨',
+    Icon: Home,
     label: 'Budget',
     stars: '2★',
     description: 'Hostels & budget hotels'
   },
   {
     id: 'comfort' as HotelTier,
-    icon: '🏨',
+    Icon: Building,
     label: 'Comfort',
     stars: '3★',
     description: 'Mid-range hotels'
   },
   {
     id: 'premium' as HotelTier,
-    icon: '🏨',
+    Icon: Building2,
     label: 'Premium',
     stars: '4★',
     description: 'Upscale hotels'
   },
   {
     id: 'luxury' as HotelTier,
-    icon: '🏨',
+    Icon: Castle,
     label: 'Luxury',
     stars: '5★',
     description: '5-star resorts'
@@ -64,8 +65,8 @@ export default function HotelTierSelector({ selected, onSelect }: HotelTierSelec
             aria-pressed={selected === tier.id}
           >
             {/* Icon */}
-            <div className="mb-2 text-4xl sm:text-5xl transition-transform group-hover:scale-110 drop-shadow">
-              {tier.icon}
+            <div className="mb-2 transition-transform group-hover:scale-110">
+              <tier.Icon className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600" strokeWidth={1.5} />
             </div>
 
             {/* Label */}

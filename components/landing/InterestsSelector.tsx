@@ -1,6 +1,7 @@
 'use client';
 
 import { InterestType } from '@/types';
+import { Utensils, Landmark, Mountain, Palmtree, Waves, HeartPulse, PartyPopper, MapPin, Palette, Sprout } from 'lucide-react';
 
 interface InterestsSelectorProps {
   selected: InterestType[];
@@ -9,16 +10,16 @@ interface InterestsSelectorProps {
 }
 
 const interests = [
-  { id: 'food' as InterestType, icon: '🍜', label: 'Food & Culinary', trending: true },
-  { id: 'culture' as InterestType, icon: '🏛️', label: 'Culture & History' },
-  { id: 'adventure' as InterestType, icon: '🏔️', label: 'Adventure & Outdoors' },
-  { id: 'wildlife' as InterestType, icon: '🦁', label: 'Wildlife & Nature' },
-  { id: 'beach' as InterestType, icon: '🏖️', label: 'Beach & Relaxation' },
-  { id: 'wellness' as InterestType, icon: '🧘', label: 'Wellness & Spiritual' },
-  { id: 'nightlife' as InterestType, icon: '🎭', label: 'Nightlife & Entertainment' },
-  { id: 'hidden' as InterestType, icon: '💎', label: 'Hidden Gems & Local Life' },
-  { id: 'art' as InterestType, icon: '🎨', label: 'Art & Architecture' },
-  { id: 'sustainable' as InterestType, icon: '🌱', label: 'Sustainable Tourism' },
+  { id: 'food' as InterestType, Icon: Utensils, label: 'Food & Culinary', trending: true },
+  { id: 'culture' as InterestType, Icon: Landmark, label: 'Culture & History' },
+  { id: 'adventure' as InterestType, Icon: Mountain, label: 'Adventure & Outdoors' },
+  { id: 'wildlife' as InterestType, Icon: Palmtree, label: 'Wildlife & Nature' },
+  { id: 'beach' as InterestType, Icon: Waves, label: 'Beach & Relaxation' },
+  { id: 'wellness' as InterestType, Icon: HeartPulse, label: 'Wellness & Spiritual' },
+  { id: 'nightlife' as InterestType, Icon: PartyPopper, label: 'Nightlife & Entertainment' },
+  { id: 'hidden' as InterestType, Icon: MapPin, label: 'Hidden Gems & Local Life' },
+  { id: 'art' as InterestType, Icon: Palette, label: 'Art & Architecture' },
+  { id: 'sustainable' as InterestType, Icon: Sprout, label: 'Sustainable Tourism' },
 ];
 
 export default function InterestsSelector({
@@ -80,12 +81,14 @@ export default function InterestsSelector({
               {/* Icon */}
               <div
                 className={`
-                  mb-2 text-3xl transition-transform drop-shadow
+                  mb-2 transition-transform
                   ${selected ? 'scale-110' : 'group-hover:scale-110'}
-                  ${disabled ? 'grayscale' : ''}
                 `}
               >
-                {interest.icon}
+                <interest.Icon
+                  className={`w-8 h-8 ${disabled ? 'text-gray-400' : 'text-teal-600'}`}
+                  strokeWidth={1.5}
+                />
               </div>
 
               {/* Label */}

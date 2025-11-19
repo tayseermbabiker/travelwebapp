@@ -183,7 +183,7 @@ export default function Home() {
             {/* Form Title */}
             <div className="mb-10 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
-                ✨ Plan Your Perfect Trip
+                Plan Your Perfect Trip
               </h2>
               <p className="text-base text-gray-200 mt-3 drop-shadow-md">
                 Fill in the details below to get your personalized itinerary
@@ -242,32 +242,32 @@ export default function Home() {
                 <div className="mb-6 flex flex-wrap justify-center gap-2 text-xs">
                   {tripBasics.destination && (
                     <span className="rounded-full bg-white/20 px-3 py-1">
-                      📍 {tripBasics.destination}
+                      {tripBasics.destination}
                     </span>
                   )}
                   {getTripDuration() > 0 && (
                     <span className="rounded-full bg-white/20 px-3 py-1">
-                      📅 {getTripDuration()} days
+                      {getTripDuration()} days
                     </span>
                   )}
                   {tripBasics.hotelTier && (
                     <span className="rounded-full bg-white/20 px-3 py-1">
-                      🏨 {tripBasics.hotelTier.charAt(0).toUpperCase() + tripBasics.hotelTier.slice(1)}
+                      {tripBasics.hotelTier.charAt(0).toUpperCase() + tripBasics.hotelTier.slice(1)}
                     </span>
                   )}
                   {tripBasics.experienceRanges.length > 0 && (
                     <span className="rounded-full bg-white/20 px-3 py-1">
-                      ✨ {tripBasics.experienceRanges.map(r => r.charAt(0).toUpperCase() + r.slice(1)).join(' + ')}
+                      {tripBasics.experienceRanges.map(r => r.charAt(0).toUpperCase() + r.slice(1)).join(' + ')}
                     </span>
                   )}
                   {companionType && (
                     <span className="rounded-full bg-white/20 px-3 py-1">
-                      👤 {companionType}
+                      {companionType}
                     </span>
                   )}
                   {interests.length > 0 && (
                     <span className="rounded-full bg-white/20 px-3 py-1">
-                      ⭐ {interests.length}
+                      {interests.length} interests
                     </span>
                   )}
                 </div>
@@ -293,7 +293,7 @@ export default function Home() {
                       Creating Your Adventure...
                     </span>
                   ) : isFormValid() ? (
-                    '🚀 Create My Adventure'
+                    'Create My Adventure'
                   ) : (
                     'Complete All Fields Above'
                   )}

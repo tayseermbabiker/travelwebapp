@@ -1,6 +1,7 @@
 'use client';
 
 import { CompanionType } from '@/types';
+import { Backpack, Heart, Users, UserCircle, Briefcase, UsersRound } from 'lucide-react';
 
 interface CompanionSelectorProps {
   selected: CompanionType | null;
@@ -8,12 +9,12 @@ interface CompanionSelectorProps {
 }
 
 const companions = [
-  { id: 'solo' as CompanionType, icon: '🎒', label: 'Solo', description: 'Adventure on your own terms' },
-  { id: 'couple' as CompanionType, icon: '💑', label: 'Couple', description: 'Romantic getaways' },
-  { id: 'family' as CompanionType, icon: '👨‍👩‍👧', label: 'Family', description: 'Fun for all ages' },
-  { id: 'friends' as CompanionType, icon: '👥', label: 'Friends', description: 'Group adventures' },
-  { id: 'business' as CompanionType, icon: '💼', label: 'Business', description: 'Work and explore' },
-  { id: 'group' as CompanionType, icon: '👨‍👨‍👧‍👦', label: 'Large Group', description: 'Big group travel' },
+  { id: 'solo' as CompanionType, Icon: Backpack, label: 'Solo', description: 'Adventure on your own terms' },
+  { id: 'couple' as CompanionType, Icon: Heart, label: 'Couple', description: 'Romantic getaways' },
+  { id: 'family' as CompanionType, Icon: Users, label: 'Family', description: 'Fun for all ages' },
+  { id: 'friends' as CompanionType, Icon: UserCircle, label: 'Friends', description: 'Group adventures' },
+  { id: 'business' as CompanionType, Icon: Briefcase, label: 'Business', description: 'Work and explore' },
+  { id: 'group' as CompanionType, Icon: UsersRound, label: 'Large Group', description: 'Big group travel' },
 ];
 
 export default function CompanionSelector({ selected, onSelect }: CompanionSelectorProps) {
@@ -42,8 +43,8 @@ export default function CompanionSelector({ selected, onSelect }: CompanionSelec
             aria-pressed={selected === companion.id}
           >
             {/* Icon */}
-            <div className="mb-2 text-4xl sm:text-5xl transition-transform group-hover:scale-110 drop-shadow">
-              {companion.icon}
+            <div className="mb-2 transition-transform group-hover:scale-110">
+              <companion.Icon className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600" strokeWidth={1.5} />
             </div>
 
             {/* Label */}
