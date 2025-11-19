@@ -223,7 +223,7 @@ TIMING & PACING:
 - No back-to-back intense activities
 - Travel days = lighter schedule (arrival/check-in takes time)
 
-ACTIVITY SELECTION:
+ACTIVITY SELECTION & DESCRIPTIONS:
 - Match companion type suitability scores (minimum 6/10 for selected companion type)
 - Align with user interests (at least 60% of activities match their selected interests)
 - Stay within daily budget from Budget Allocator (activities + food + transport)
@@ -231,6 +231,19 @@ ACTIVITY SELECTION:
 - Vary intensity (balance active outdoor with leisurely indoor)
 - Include 1-2 free/cheap options per day
 - Check interestTags match user's selected interests
+
+CRITICAL - ACTIVITY DESCRIPTIONS MUST BE SPECIFIC:
+- ❌ BAD: "Explore Old Dubai", "Conversation with desert", "Traditional experience"
+- ✅ GOOD: "Wander through Al Fahidi Historical District's narrow alleyways and wind-tower houses dating from the 1890s"
+- ✅ GOOD: "Visit the Dubai Spice Souk with over 100 stalls selling saffron, frankincense, and rare herbs"
+- ✅ GOOD: "Desert safari with dune bashing in 4x4 vehicles, followed by BBQ dinner under stars at Bedouin camp"
+
+DESCRIPTION REQUIREMENTS:
+- Include SPECIFIC landmarks, locations, or names (not generic terms)
+- Mention WHAT visitors will actually see or do (physical details)
+- Add context: time periods, historical facts, unique features
+- Be concrete: "150-year-old fort" not "historic building"
+- Use vivid, tangible language that paints a clear picture
 
 MEAL PLANNING:
 - Breakfast: Assume included in hotel (mention in description)
@@ -361,12 +374,15 @@ CRITICAL FORMATTING RULES FOR CLEAN PDF OUTPUT:
    - ✅ GOOD: "Desert Safari Adventure"
    - ❌ BAD: "Amazing Desert Safari Adventure with Professional Guide and Traditional BBQ Dinner Experience"
 
-2. SHORT DESCRIPTIONS:
-   - Maximum 60 characters per line
-   - Use ONE short line only
-   - NO long paragraphs
-   - ✅ GOOD: "Dune bashing and camel rides in golden desert"
-   - ❌ BAD: "Experience an incredible journey through the golden Arabian desert with our professional guides who will take you on an unforgettable adventure..."
+2. SPECIFIC DESCRIPTIONS (NOT GENERIC):
+   - Maximum 120 characters total
+   - Must include SPECIFIC details (names, numbers, locations)
+   - NO vague terms like "explore", "discover", "experience"
+   - ✅ GOOD: "Tour 150-year-old Al Fahidi Fort housing Dubai Museum's archaeological artifacts"
+   - ✅ GOOD: "Climb 828m Burj Khalifa to observation deck on 124th floor"
+   - ❌ BAD: "Explore Old Dubai and traditional areas"
+   - ❌ BAD: "Conversation with desert"
+   - ❌ BAD: "Experience local culture"
 
 3. RESTAURANT/CUISINE:
    - Restaurant name: Max 40 characters

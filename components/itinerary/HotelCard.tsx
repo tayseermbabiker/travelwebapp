@@ -25,21 +25,6 @@ interface HotelCardProps {
 export default function HotelCard({ hotel, totalNights }: HotelCardProps) {
   const totalCost = hotel.pricePerNight * totalNights;
 
-  const getAmenityEmoji = (amenity: string) => {
-    const emojiMap: { [key: string]: string } = {
-      wifi: '📶',
-      pool: '🏊',
-      gym: '💪',
-      breakfast: '🍳',
-      parking: '🅿️',
-      spa: '💆',
-      restaurant: '🍽️',
-      bar: '🍸',
-      cafe: '☕',
-    };
-    return emojiMap[amenity.toLowerCase()] || '✓';
-  };
-
   const handleBookNow = () => {
     if (hotel.affiliateLinks && hotel.affiliateLinks.booking) {
       // Use affiliate proxy for security and analytics
@@ -53,13 +38,11 @@ export default function HotelCard({ hotel, totalNights }: HotelCardProps) {
       {/* Hotel Image Placeholder */}
       <div className="relative h-48 sm:h-64 bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center">
         <div className="text-white text-center">
-          <div className="text-6xl mb-2">🏨</div>
-          <p className="text-sm opacity-90">Hotel Image</p>
+          <p className="text-lg font-semibold">Hotel Image</p>
         </div>
         {/* Rating Badge */}
         <div className="absolute top-4 right-4 bg-white rounded-lg px-3 py-2 shadow-lg">
           <div className="flex items-center gap-1">
-            <span className="text-yellow-500 text-lg">⭐</span>
             <span className="font-bold text-gray-800">{hotel.rating}</span>
             <span className="text-xs text-gray-600">/10</span>
           </div>
@@ -79,9 +62,6 @@ export default function HotelCard({ hotel, totalNights }: HotelCardProps) {
             {hotel.name}
           </h3>
           <div className="flex items-center gap-2">
-            <div className="text-yellow-500">
-              {'⭐'.repeat(hotel.stars)}
-            </div>
             <span className="text-sm text-gray-600">
               {hotel.stars}-Star Hotel
             </span>
@@ -89,8 +69,7 @@ export default function HotelCard({ hotel, totalNights }: HotelCardProps) {
         </div>
 
         {/* Location */}
-        <div className="mb-4 flex items-start gap-2 text-gray-600">
-          <span className="text-lg">📍</span>
+        <div className="mb-4 text-gray-600">
           <p className="text-sm">{hotel.location.address}</p>
         </div>
 
@@ -101,10 +80,9 @@ export default function HotelCard({ hotel, totalNights }: HotelCardProps) {
             {hotel.amenities.map((amenity, index) => (
               <span
                 key={index}
-                className="bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1"
+                className="bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-xs font-medium capitalize"
               >
-                <span>{getAmenityEmoji(amenity)}</span>
-                <span className="capitalize">{amenity}</span>
+                {amenity}
               </span>
             ))}
           </div>
