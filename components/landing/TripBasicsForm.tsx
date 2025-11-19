@@ -81,14 +81,9 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
           placeholder="e.g., Paris  OR  Tokyo, Kyoto, Osaka  OR  Dubai, Jeddah"
           className="w-full rounded-lg border-2 border-white/30 bg-white/90 px-4 py-3 text-base text-gray-800 placeholder-gray-500 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
         />
-        <div className="mt-2 space-y-1">
-          <p className="text-xs text-gray-200 drop-shadow">
-            <strong>Tip:</strong> Just enter city names! We'll understand the countries.
-          </p>
-          <p className="text-xs text-gray-300 drop-shadow">
-            Examples: <span className="font-medium">"Paris"</span> • <span className="font-medium">"Barcelona, Rome"</span> • <span className="font-medium">"Dubai, Abu Dhabi"</span>
-          </p>
-        </div>
+        <p className="mt-2 text-xs text-gray-300 drop-shadow">
+          Examples: <span className="font-medium">"Paris"</span> • <span className="font-medium">"Barcelona, Rome"</span> • <span className="font-medium">"Dubai, Abu Dhabi"</span>
+        </p>
       </div>
 
       {/* Date Range */}
