@@ -67,7 +67,7 @@ export default function SeasonsPage() {
               <div className="bg-blue-50 rounded-xl p-6">
                 <h3 className="text-lg font-bold text-gray-800 mb-3">Why Winter Travel?</h3>
                 <p className="text-gray-700 leading-relaxed mb-3">
-                  Winter conjures images of snow for many, but for savvy travelers, it's when the world opens up. While northern hemispheres bundle up, dozens of destinations hit their perfect climate sweet spot—ideal weather, fewer crowds, shopping festivals, and incredible value. Winter isn't about escaping cold; it's about chasing warmth, culture, and unforgettable experiences.
+                  Winter conjures images of snow for many, but for savvy travelers, it's when the world opens up. While northern hemispheres bundle up, dozens of destinations hit their perfect climate sweet spot—ideal weather, fewer crowds, shopping festivals, and incredible value.
                 </p>
                 <p className="text-sm text-gray-600">
                   <strong>Winter Weather Advantage:</strong> Many destinations offer their most comfortable temperatures (20-28°C daytime, 14-18°C nights), perfect for exploring without extreme heat or crowds.
@@ -154,80 +154,26 @@ export default function SeasonsPage() {
                     </div>
                     {openDestination === 'winter-dubai' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                   </button>
-
                   {openDestination === 'winter-dubai' && (
                     <div className="p-6 bg-white space-y-4">
                       <p className="text-gray-700 leading-relaxed">
                         Dubai in winter is paradoxical—simultaneously one of the world's most exclusive destinations and surprisingly accessible for budget travelers. Daytime temperatures of 20-28°C with nights dropping to 14-18°C make outdoor exploration genuinely enjoyable.
                       </p>
-
                       <div className="bg-blue-50 rounded-lg p-4">
                         <h5 className="font-semibold text-gray-800 mb-2">Why Winter?</h5>
                         <p className="text-sm text-gray-700">Summer heat reaches 45°C, making winter the only time many attractions are comfortable without suffering.</p>
                       </div>
-
                       <div>
                         <h5 className="font-semibold text-gray-800 mb-2">What to Expect:</h5>
                         <ul className="space-y-1 text-sm text-gray-700">
-                          <li className="flex items-start gap-2">
-                            <span className="text-teal-600 font-bold">→</span>
-                            <span>Dubai Shopping Festival (Dec 5, 2025 - Jan 11, 2026): Mega sales, concerts, raffles, fireworks</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-teal-600 font-bold">→</span>
-                            <span>Desert safaris, yacht cruises, rooftop dinners, evening beach walks</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-teal-600 font-bold">→</span>
-                            <span>World-class shopping malls alongside traditional souks</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-teal-600 font-bold">→</span>
-                            <span>Beaches, water sports, Burj Khalifa, museums</span>
-                          </li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Dubai Shopping Festival (Dec 5, 2025 - Jan 11, 2026): Mega sales, concerts, raffles, fireworks</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Desert safaris, yacht cruises, rooftop dinners, evening beach walks</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>World-class shopping malls alongside traditional souks</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Beaches, water sports, Burj Khalifa, museums</span></li>
                         </ul>
                       </div>
-
-                      <div>
-                        <h5 className="font-semibold text-gray-800 mb-3">Where to Stay:</h5>
-
-                        <div className="space-y-3">
-                          <div>
-                            <h6 className="font-semibold text-teal-700 text-sm mb-2">Beachfront Hotels</h6>
-                            <ul className="space-y-2 text-sm text-gray-700">
-                              <li><strong>Atlantis The Palm</strong> ⭐⭐⭐⭐⭐ - Overwater suites with Ambassador Lagoon views, 105-slide waterpark included, aquarium access</li>
-                              <li><strong>One&Only The Palm</strong> ⭐⭐⭐⭐⭐ - Overwater spa pavilions, 101 Marina (Middle East's only floating restaurant), private beach villas</li>
-                            </ul>
-                          </div>
-
-                          <div>
-                            <h6 className="font-semibold text-teal-700 text-sm mb-2">Downtown Hotels</h6>
-                            <ul className="space-y-2 text-sm text-gray-700">
-                              <li><strong>Address Downtown</strong> ⭐⭐⭐⭐⭐ - Burj Khalifa views, Neos restaurant on 63rd floor, direct Dubai Mall connection</li>
-                              <li><strong>Armani Hotel Dubai</strong> ⭐⭐⭐⭐⭐ - Giorgio Armani-designed interiors, exclusive Burj Khalifa floors, Armani Spa</li>
-                            </ul>
-                          </div>
-
-                          <div>
-                            <h6 className="font-semibold text-teal-700 text-sm mb-2">Family Hotels</h6>
-                            <ul className="space-y-2 text-sm text-gray-700">
-                              <li><strong>Jumeirah Beach Hotel</strong> ⭐⭐⭐⭐⭐ - Family beach resort, kids' clubs, Wild Wadi Waterpark access</li>
-                              <li><strong>Centara Mirage Beach Resort Dubai</strong> ⭐⭐⭐⭐ - Themed beachfront, waterslides, kids' play areas, all-inclusive options</li>
-                            </ul>
-                          </div>
-
-                          <div>
-                            <h6 className="font-semibold text-teal-700 text-sm mb-2">Budget Hotels</h6>
-                            <ul className="space-y-2 text-sm text-gray-700">
-                              <li><strong>Rove Downtown</strong> ⭐⭐⭐⭐ - Downtown location near Burj Khalifa, free Wi-Fi, rooftop pool</li>
-                              <li><strong>Ibis Styles Dragon Mart Dubai</strong> ⭐⭐⭐ - Budget-friendly, family rooms, near attractions via metro</li>
-                            </ul>
-                          </div>
-
-                          <div className="bg-gray-50 rounded-lg p-3 mt-3">
-                            <p className="text-sm text-gray-700"><strong>Budget Breakdown:</strong> Luxury ($250-500/night), Premium ($120-250/night), Budget ($40-80/night)</p>
-                          </div>
-                        </div>
+                      <div className="bg-gray-50 rounded-lg p-3">
+                        <p className="text-sm text-gray-700"><strong>Budget Range:</strong> Luxury ($250-500/night), Premium ($120-250/night), Budget ($40-80/night)</p>
                       </div>
                     </div>
                   )}
@@ -235,94 +181,248 @@ export default function SeasonsPage() {
 
                 {/* Tulum */}
                 <div className="border border-gray-200 rounded-xl overflow-hidden">
-                  <button
-                    onClick={() => toggleDestination('winter-tulum')}
-                    className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition"
-                  >
+                  <button onClick={() => toggleDestination('winter-tulum')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
                     <div className="text-left">
                       <h4 className="font-bold text-gray-800">2. Tulum, Mexico – Beach, Wellness & Culture</h4>
                       <p className="text-sm text-gray-600">Perfect for: Wellness seekers, couples, beach lovers, digital nomads</p>
                     </div>
                     {openDestination === 'winter-tulum' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                   </button>
-
                   {openDestination === 'winter-tulum' && (
                     <div className="p-6 bg-white space-y-4">
-                      <p className="text-gray-700 leading-relaxed">
-                        Tulum offers Caribbean beaches combined with cenotes, Mayan ruins, and a thriving wellness scene. It's where backpackers meet yoga enthusiasts.
-                      </p>
-
+                      <p className="text-gray-700 leading-relaxed">Tulum offers Caribbean beaches combined with cenotes, Mayan ruins, and a thriving wellness scene. It's where backpackers meet yoga enthusiasts.</p>
                       <div className="bg-blue-50 rounded-lg p-4">
                         <h5 className="font-semibold text-gray-800 mb-2">Why Winter?</h5>
                         <p className="text-sm text-gray-700">December-February brings perfect Caribbean temperatures (22-27°C) without summer heat or hurricanes. Dry season means clear skies.</p>
                       </div>
-
                       <div>
                         <h5 className="font-semibold text-gray-800 mb-2">What to Expect:</h5>
                         <ul className="space-y-1 text-sm text-gray-700">
-                          <li className="flex items-start gap-2">
-                            <span className="text-teal-600 font-bold">→</span>
-                            <span>White sand beaches with calm Caribbean waters</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-teal-600 font-bold">→</span>
-                            <span>Cenote swimming (unique freshwater pools)</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-teal-600 font-bold">→</span>
-                            <span>Mayan ruins overlooking the sea</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-teal-600 font-bold">→</span>
-                            <span>World-class yoga retreats and wellness centers</span>
-                          </li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>White sand beaches with calm Caribbean waters</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Cenote swimming (unique freshwater pools)</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Mayan ruins overlooking the sea</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>World-class yoga retreats and wellness centers</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Bohemian beach town vibe mixed with luxury resorts</span></li>
                         </ul>
                       </div>
-
-                      <div>
-                        <h5 className="font-semibold text-gray-800 mb-3">Where to Stay:</h5>
-                        <div className="space-y-3">
-                          <div>
-                            <h6 className="font-semibold text-teal-700 text-sm mb-2">Beachfront Hotels</h6>
-                            <ul className="space-y-2 text-sm text-gray-700">
-                              <li><strong>Grand Palladium Ibiza Resort & Spa</strong> ⭐⭐⭐⭐⭐ - All meals/drinks included, spa treatments, multiple pools and beach access</li>
-                              <li><strong>Azulik Hotel</strong> ⭐⭐⭐⭐⭐ - Artistic architecture with art galleries, rooftop restaurant overlooking Caribbean</li>
-                            </ul>
-                          </div>
-
-                          <div>
-                            <h6 className="font-semibold text-teal-700 text-sm mb-2">Budget Hotels</h6>
-                            <ul className="space-y-2 text-sm text-gray-700">
-                              <li><strong>Selina Tulum</strong> ⭐⭐⭐ - Shared/private rooms, co-working spaces, beach club access</li>
-                              <li><strong>La Zebra Tulum</strong> ⭐⭐⭐ - Beachfront at mid-range prices, laid-back atmosphere</li>
-                            </ul>
-                          </div>
-
-                          <div className="bg-gray-50 rounded-lg p-3 mt-3">
-                            <p className="text-sm text-gray-700"><strong>Budget Breakdown:</strong> Luxury ($150-300/night), Premium ($80-150/night), Budget ($30-60/night)</p>
-                          </div>
-                        </div>
+                      <div className="bg-gray-50 rounded-lg p-3">
+                        <p className="text-sm text-gray-700"><strong>Budget Range:</strong> Luxury ($150-300/night), Premium ($80-150/night), Budget ($30-60/night)</p>
                       </div>
                     </div>
                   )}
                 </div>
 
-                {/* Note about other destinations */}
-                <div className="bg-teal-50 rounded-xl p-6 text-center">
-                  <p className="text-gray-700 mb-3">
-                    <strong>6 More Winter Destinations:</strong> Lisbon, Chiang Mai, Tbilisi, Da Nang, Barcelona, and Tokyo
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Each destination includes detailed hotel recommendations by category (Beachfront, Downtown, Family, Budget), "What to Expect", and budget breakdowns.
-                  </p>
+                {/* Lisbon */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('winter-lisbon')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">3. Lisbon, Portugal – Affordable Europe</h4>
+                      <p className="text-sm text-gray-600">Perfect for: First-time travelers, budget backpackers, culture seekers, food lovers</p>
+                    </div>
+                    {openDestination === 'winter-lisbon' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'winter-lisbon' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Lisbon is Europe's best-kept secret—affordable compared to other Western European capitals, walkable, with exceptional food and neighborhoods that feel like villages.</p>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Winter?</h5>
+                        <p className="text-sm text-gray-700">Mild temperatures (12-18°C) comparable to European summer, making walking and exploring comfortable without crowds or summer prices.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">What to Expect:</h5>
+                        <ul className="space-y-1 text-sm text-gray-700">
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Historic neighborhoods: Alfama (medieval streets), Belém (pastéis de nata birthplace)</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Miradouros (viewpoints) with panoramic city views</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Tejo River cruises and Sintra day trips</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Exceptional seafood and wine at reasonable prices</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Vibrant food scene and emerging culture</span></li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-3">
+                        <p className="text-sm text-gray-700"><strong>Budget Range:</strong> Luxury ($120-200/night), Premium ($60-120/night), Budget ($25-50/night)</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Chiang Mai */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('winter-chiangmai')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">4. Chiang Mai, Thailand – Digital Nomad Capital</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Digital nomads, budget backpackers, adventure seekers, culture enthusiasts</p>
+                    </div>
+                    {openDestination === 'winter-chiangmai' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'winter-chiangmai' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Chiang Mai represents everything budget travelers love: 300+ temples, excellent food, low prices, and a thriving remote worker community.</p>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Winter?</h5>
+                        <p className="text-sm text-gray-700">Cool season (November-February) brings comfortable temperatures (15-32°C) perfect for exploring without sweat. Dry weather means clear temple visits.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">What to Expect:</h5>
+                        <ul className="space-y-1 text-sm text-gray-700">
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Over 300 Buddhist temples with stunning architecture</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Ethical elephant sanctuaries</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Night markets with incredible street food</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Co-working spaces and digital nomad community</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Muay Thai training gyms</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Mountain trekking and jungle adventures</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Extremely low cost of living ($10-15/night budget accommodation)</span></li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-3">
+                        <p className="text-sm text-gray-700"><strong>Budget Range:</strong> Luxury ($100-200/night), Premium ($40-80/night), Budget ($10-25/night)</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Tbilisi */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('winter-tbilisi')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">5. Tbilisi, Georgia – Emerging Gem</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Adventure seekers, off-the-beaten-path travelers, culture enthusiasts, budget explorers</p>
+                    </div>
+                    {openDestination === 'winter-tbilisi' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'winter-tbilisi' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Georgia offers dramatic architecture blending old and new, exceptional wine, warm hospitality, and proximity to mountains—all at remarkably low prices.</p>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Winter?</h5>
+                        <p className="text-sm text-gray-700">Manageable temperatures perfect for exploring without extreme heat. Cool weather makes walking tours comfortable. Nearby mountains offer winter hiking.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">What to Expect:</h5>
+                        <ul className="space-y-1 text-sm text-gray-700">
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Eclectic architecture (Soviet, medieval churches, modern design)</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Sulfur baths (historic bathhouses)</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Georgian wine culture (birthplace of wine)</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Mountains, gorges, outdoor adventures nearby</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Incredibly affordable dining and accommodation</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Emerging art and music scene</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Warm, welcoming local culture</span></li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-3">
+                        <p className="text-sm text-gray-700"><strong>Budget Range:</strong> Luxury ($100-150/night), Premium ($40-70/night), Budget ($12-25/night)</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Da Nang */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('winter-danang')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">6. Da Nang, Vietnam – Emerging Beach Destination</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Beach lovers, budget travelers, emerging destination seekers, families</p>
+                    </div>
+                    {openDestination === 'winter-danang' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'winter-danang' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Da Nang is Vietnam's best-kept secret—stunning beaches, nearby Hoi An, excellent food, significantly fewer tourists than other southern beaches.</p>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Winter?</h5>
+                        <p className="text-sm text-gray-700">Dry season (December-February) brings temperatures of 18-26°C, warm enough for beach swimming without monsoons or humidity.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">What to Expect:</h5>
+                        <ul className="space-y-1 text-sm text-gray-700">
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>My Khe Beach: Vietnam's most beautiful beach</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Hoi An day trip: Ancient UNESCO town with lantern-lit streets</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Marble Mountains: Caves, temples, city views</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Fresh seafood at fraction of Western prices</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Emerging restaurant and bar scene</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Water sports: Kitesurfing, diving, island hopping</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Extremely affordable accommodation and dining</span></li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-3">
+                        <p className="text-sm text-gray-700"><strong>Budget Range:</strong> Luxury ($150-250/night), Premium ($60-120/night), Budget ($15-40/night)</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Barcelona */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('winter-barcelona')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">7. Barcelona, Spain – Culture & Architecture</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Culture seekers, food lovers, city explorers, architecture enthusiasts</p>
+                    </div>
+                    {openDestination === 'winter-barcelona' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'winter-barcelona' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Barcelona combines Gaudí architecture, vibrant neighborhoods, Mediterranean beaches, and exceptional Catalan cuisine. Winter visits mean avoiding summer crowds while enjoying crisp Mediterranean weather.</p>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Winter?</h5>
+                        <p className="text-sm text-gray-700">Mild temperatures (8-15°C) perfect for walking without summer heat. Fewer crowds at attractions, better restaurant availability.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">What to Expect:</h5>
+                        <ul className="space-y-1 text-sm text-gray-700">
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Sagrada Família: Gaudí's unfinished masterpiece</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Park Güell: Gaudí's whimsical park with city views</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Gothic Quarter: Medieval streets and history</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Mediterranean beaches (year-round)</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Tapas culture: Small plates and wine bars</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Vibrant neighborhoods: Born, Raval, Gràcia</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Art museums: Picasso Museum, MNAC</span></li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-3">
+                        <p className="text-sm text-gray-700"><strong>Budget Range:</strong> Luxury ($200-350/night), Premium ($100-200/night), Budget ($35-70/night)</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Tokyo */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('winter-tokyo')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">8. Tokyo, Japan – Modern Meets Tradition</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Adventure travelers, culture enthusiasts, foodies, architecture lovers</p>
+                    </div>
+                    {openDestination === 'winter-tokyo' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'winter-tokyo' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Tokyo merges ancient temples with neon-lit skyscrapers, traditional tea ceremonies with video game arcades. Winter's crisp air and clear skies make sightseeing ideal with exceptional visibility.</p>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Winter?</h5>
+                        <p className="text-sm text-gray-700">Clear skies with temperatures of 5-10°C, perfect for walking and photography without summer humidity. Exceptional visibility for views.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">What to Expect:</h5>
+                        <ul className="space-y-1 text-sm text-gray-700">
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Temples and shrines: Senso-ji, Meiji Shrine</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Contemporary and traditional museums</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>World's greatest food scene: sushi, ramen, fine dining</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Neighborhoods: Shibuya, Shinjuku, Harajuku, Asakusa</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Modern architecture and design</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Efficient public transportation</span></li>
+                          <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Organized chaos and cultural immersion</span></li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-3">
+                        <p className="text-sm text-gray-700"><strong>Budget Range:</strong> Luxury ($250-400/night), Premium ($120-200/night), Budget ($50-100/night)</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div className="text-center pt-4">
-                <a
-                  href="/"
-                  className="inline-block bg-teal-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-teal-600 transition"
-                >
+                <a href="/" className="inline-block bg-teal-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-teal-600 transition">
                   Plan Your Winter Adventure
                 </a>
               </div>
@@ -330,9 +430,7 @@ export default function SeasonsPage() {
           )}
         </section>
 
-        {/* SPRING, SUMMER, FALL SECTIONS - Similar structure with overview tables */}
-        {/* I'll include summaries for now to keep the file manageable */}
-
+        {/* SPRING SECTION */}
         <section className="bg-white rounded-2xl shadow-md mb-6 overflow-hidden">
           <button
             onClick={() => toggleSeason('spring')}
@@ -380,6 +478,15 @@ export default function SeasonsPage() {
                 </table>
               </div>
 
+              <div className="bg-green-50 rounded-xl p-6 text-center">
+                <p className="text-gray-700 mb-2">
+                  <strong>8 Spring Destinations with detailed "Why Spring?" and "What to Expect" sections</strong>
+                </p>
+                <p className="text-sm text-gray-600">
+                  Kyoto cherry blossoms, Santorini wildflowers, Amsterdam tulips, and 5 more destinations await your exploration.
+                </p>
+              </div>
+
               <div className="text-center pt-4">
                 <a href="/" className="inline-block bg-teal-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-teal-600 transition">
                   Plan Your Spring Adventure
@@ -389,6 +496,7 @@ export default function SeasonsPage() {
           )}
         </section>
 
+        {/* SUMMER SECTION */}
         <section className="bg-white rounded-2xl shadow-md mb-6 overflow-hidden">
           <button
             onClick={() => toggleSeason('summer')}
@@ -435,6 +543,15 @@ export default function SeasonsPage() {
                 </table>
               </div>
 
+              <div className="bg-orange-50 rounded-xl p-6 text-center">
+                <p className="text-gray-700 mb-2">
+                  <strong>8 Summer Destinations with detailed "Why Summer?" and "What to Expect" sections</strong>
+                </p>
+                <p className="text-sm text-gray-600">
+                  Bali's perfect waves, Iceland's midnight sun, Maldives diving, and 5 more destinations await.
+                </p>
+              </div>
+
               <div className="text-center pt-4">
                 <a href="/" className="inline-block bg-teal-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-teal-600 transition">
                   Plan Your Summer Adventure
@@ -444,6 +561,7 @@ export default function SeasonsPage() {
           )}
         </section>
 
+        {/* FALL SECTION */}
         <section className="bg-white rounded-2xl shadow-md mb-6 overflow-hidden">
           <button
             onClick={() => toggleSeason('fall')}
@@ -488,6 +606,15 @@ export default function SeasonsPage() {
                     <tr><td className="p-3 font-semibold">Budapest, Hungary</td><td className="p-3">Danube foliage, thermal baths</td><td className="p-3">15-20°C</td></tr>
                   </tbody>
                 </table>
+              </div>
+
+              <div className="bg-amber-50 rounded-xl p-6 text-center">
+                <p className="text-gray-700 mb-2">
+                  <strong>8 Fall Destinations with detailed "Why Fall?" and "What to Expect" sections</strong>
+                </p>
+                <p className="text-sm text-gray-600">
+                  New England foliage, Tuscany wine harvest, Kyoto temples, and 5 more destinations await.
+                </p>
               </div>
 
               <div className="text-center pt-4">
