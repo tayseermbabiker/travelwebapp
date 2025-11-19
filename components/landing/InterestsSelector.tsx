@@ -86,7 +86,7 @@ export default function InterestsSelector({
                 `}
               >
                 <interest.Icon
-                  className={`w-8 h-8 ${disabled ? 'text-gray-400' : 'text-teal-600'}`}
+                  className={`w-6 h-6 ${disabled ? 'text-gray-400' : 'text-teal-600'}`}
                   strokeWidth={1.5}
                 />
               </div>

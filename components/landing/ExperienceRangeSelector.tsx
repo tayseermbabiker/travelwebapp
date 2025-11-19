@@ -68,8 +68,8 @@ export default function ExperienceRangeSelector({ selected, onToggle }: Experien
               aria-pressed={isSelected}
             >
               {/* Icon */}
-              <div className="mb-2 transition-transform group-hover:scale-110">
-                <range.Icon className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600" strokeWidth={1.5} />
+              <div className="mb-3 transition-transform group-hover:scale-110">
+                <range.Icon className="w-8 h-8 text-teal-600" strokeWidth={1.5} />
               </div>
 
               {/* Label */}

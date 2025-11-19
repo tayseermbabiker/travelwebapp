@@ -43,8 +43,8 @@ export default function CompanionSelector({ selected, onSelect }: CompanionSelec
             aria-pressed={selected === companion.id}
           >
             {/* Icon */}
-            <div className="mb-2 transition-transform group-hover:scale-110">
-              <companion.Icon className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600" strokeWidth={1.5} />
+            <div className="mb-3 transition-transform group-hover:scale-110">
+              <companion.Icon className="w-8 h-8 text-teal-600" strokeWidth={1.5} />
             </div>
 
             {/* Label */}
