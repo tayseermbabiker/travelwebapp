@@ -64,13 +64,13 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
 
   return (
     <div className="w-full space-y-6">
-      <h2 className="mb-6 text-center text-2xl font-bold text-gray-800 sm:text-3xl">
+      <h2 className="mb-6 text-center text-2xl font-bold text-white drop-shadow-lg sm:text-3xl">
         Trip Basics
       </h2>
 
       {/* Destination - City-Based Input */}
       <div>
-        <label htmlFor="destination" className="mb-2 block text-sm font-medium text-gray-700">
+        <label htmlFor="destination" className="mb-2 block text-sm font-medium text-gray-200">
           Which city or cities do you want to visit?
         </label>
         <input
@@ -79,13 +79,13 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
           value={data.destination}
           onChange={(e) => handleDestinationChange(e.target.value)}
           placeholder="e.g., Paris  OR  Tokyo, Kyoto, Osaka  OR  Dubai, Jeddah"
-          className="w-full rounded-lg border-2 border-gray-300 px-4 py-3 text-base focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
+          className="w-full rounded-lg border-2 border-white/30 bg-white/90 px-4 py-3 text-base text-gray-800 placeholder-gray-500 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
         />
         <div className="mt-2 space-y-1">
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-gray-200 drop-shadow">
             💡 <strong>Just enter city names!</strong> AI will understand the countries.
           </p>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-300 drop-shadow">
             Examples: <span className="font-medium">"Paris"</span> • <span className="font-medium">"Barcelona, Rome"</span> • <span className="font-medium">"Dubai, Abu Dhabi"</span>
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
       {/* Date Range */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="start-date" className="mb-2 block text-sm font-medium text-gray-700">
+          <label htmlFor="start-date" className="mb-2 block text-sm font-medium text-gray-200">
             Start Date
           </label>
           <input
@@ -103,12 +103,12 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
             value={formatDateForInput(data.dateRange.start)}
             onChange={(e) => handleStartDateChange(e.target.value)}
             min={today}
-            className="w-full rounded-lg border-2 border-gray-300 px-4 py-3 text-base focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
+            className="w-full rounded-lg border-2 border-white/30 bg-white/90 px-4 py-3 text-base text-gray-800 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
           />
         </div>
 
         <div>
-          <label htmlFor="end-date" className="mb-2 block text-sm font-medium text-gray-700">
+          <label htmlFor="end-date" className="mb-2 block text-sm font-medium text-gray-200">
             End Date
           </label>
           <input
@@ -117,10 +117,10 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
             value={formatDateForInput(data.dateRange.end)}
             onChange={(e) => handleEndDateChange(e.target.value)}
             min={formatDateForInput(data.dateRange.start) || today}
-            className="w-full rounded-lg border-2 border-gray-300 px-4 py-3 text-base focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
+            className="w-full rounded-lg border-2 border-white/30 bg-white/90 px-4 py-3 text-base text-gray-800 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
           />
           {totalDays > 0 && (
-            <p className="mt-1 text-sm text-gray-600">
+            <p className="mt-1 text-sm text-gray-200 drop-shadow">
               {totalDays} {totalDays === 1 ? 'day' : 'days'} trip
             </p>
           )}

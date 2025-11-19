@@ -32,13 +32,13 @@ export default function InterestsSelector({
   return (
     <div className="w-full">
       <div className="mb-6 text-center">
-        <h2 className="text-2xl font-bold text-gray-800 sm:text-3xl">
+        <h2 className="text-2xl font-bold text-white drop-shadow-lg sm:text-3xl">
           Pick Your Travel Style
         </h2>
-        <p className="mt-2 text-sm text-gray-600">
+        <p className="mt-2 text-sm text-gray-200 drop-shadow">
           Choose up to {maxSelections} interests
           {selected.length > 0 && (
-            <span className="ml-2 inline-block rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700">
+            <span className="ml-2 inline-block rounded-full bg-teal-500 px-3 py-1 text-xs font-semibold text-white shadow-md">
               {selected.length}/{maxSelections} selected
             </span>
           )}
@@ -60,10 +60,10 @@ export default function InterestsSelector({
                 rounded-xl border-2 p-3 transition-all duration-200
                 ${
                   selected
-                    ? 'border-teal-500 bg-teal-50 shadow-md'
+                    ? 'border-teal-400 bg-white/95 shadow-md'
                     : disabled
-                    ? 'cursor-not-allowed border-gray-200 bg-gray-50 opacity-50'
-                    : 'border-gray-300 bg-white hover:scale-105 hover:border-teal-300 hover:shadow-lg'
+                    ? 'cursor-not-allowed border-white/20 bg-white/40 opacity-50'
+                    : 'border-white/30 bg-white/80 hover:scale-105 hover:border-teal-300 hover:shadow-lg'
                 }
               `}
               aria-label={`${selected ? 'Deselect' : 'Select'} ${interest.label}`}
@@ -72,7 +72,7 @@ export default function InterestsSelector({
             >
               {/* Trending Badge */}
               {interest.trending && (
-                <div className="absolute right-1 top-1 rounded-full bg-orange-500 px-2 py-0.5 text-[10px] font-bold text-white">
+                <div className="absolute right-1 top-1 rounded-full bg-orange-500 px-2 py-0.5 text-[10px] font-bold text-white shadow">
                   Trending
                 </div>
               )}
@@ -80,7 +80,7 @@ export default function InterestsSelector({
               {/* Icon */}
               <div
                 className={`
-                  mb-2 text-3xl transition-transform
+                  mb-2 text-3xl transition-transform drop-shadow
                   ${selected ? 'scale-110' : 'group-hover:scale-110'}
                   ${disabled ? 'grayscale' : ''}
                 `}
@@ -115,7 +115,7 @@ export default function InterestsSelector({
       </div>
 
       {selected.length >= maxSelections && (
-        <p className="mt-4 text-center text-sm text-gray-600">
+        <p className="mt-4 text-center text-sm text-gray-200 drop-shadow">
           Maximum selections reached. Deselect an interest to choose another.
         </p>
       )}

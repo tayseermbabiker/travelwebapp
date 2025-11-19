@@ -131,8 +131,8 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen relative overflow-hidden">
-      {/* Background Image - Fixed */}
+    <main className="relative">
+      {/* Background Image - Fixed for both sections */}
       <div
         className="fixed inset-0 z-0"
         style={{
@@ -142,40 +142,50 @@ export default function Home() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
-      {/* Content Container */}
-      <div className="relative z-10 min-h-screen flex items-center justify-end px-4 py-8">
-        {/* Branding - Top Left */}
-        <div className="absolute top-8 left-8 text-white">
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight drop-shadow-lg">
+      {/* SECTION 1: Hero Landing Page */}
+      <section className="relative z-10 min-h-screen flex items-center justify-center px-4">
+        <div className="text-center text-white max-w-4xl">
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tight drop-shadow-2xl mb-6">
             WANDER
           </h1>
-          <p className="text-xl md:text-2xl mt-2 font-light drop-shadow-md">
+          <p className="text-2xl md:text-4xl font-light drop-shadow-lg mb-4">
             Discover Your Next Adventure
           </p>
-          <p className="text-sm md:text-base mt-1 opacity-90 drop-shadow-md">
+          <p className="text-lg md:text-xl opacity-90 drop-shadow-md mb-12">
             AI-Powered Travel Made Personal
           </p>
-        </div>
 
-        {/* Frosted Glass Form Card - Right Side */}
-        <div className="w-full max-w-2xl mr-0 md:mr-12 lg:mr-24">
+          {/* Scroll indicator */}
+          <div className="animate-bounce">
+            <svg className="w-8 h-8 mx-auto text-white drop-shadow-lg" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+            <p className="text-sm mt-2 drop-shadow-md">Scroll to plan your trip</p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2: Form Page (same background continues) */}
+      <section className="relative z-10 min-h-screen flex items-center justify-center px-4 py-12">
+        {/* Transparent/Tinted Form Container */}
+        <div className="w-full max-w-3xl">
           <div
-            className="backdrop-blur-xl bg-white/85 rounded-3xl shadow-2xl p-6 md:p-8 max-h-[85vh] overflow-y-auto"
+            className="bg-gradient-to-br from-black/60 to-black/40 rounded-3xl shadow-2xl p-8 md:p-12"
             style={{
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
             }}
           >
             {/* Form Title */}
-            <div className="mb-8 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+            <div className="mb-10 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
                 ✨ Plan Your Perfect Trip
               </h2>
-              <p className="text-sm text-gray-600 mt-2">
+              <p className="text-base text-gray-200 mt-3 drop-shadow-md">
                 Fill in the details below to get your personalized itinerary
               </p>
             </div>
@@ -184,17 +194,17 @@ export default function Home() {
             <div className="space-y-8">
 
               {/* Section 1: Trip Basics */}
-              <section className="rounded-xl bg-white/40 p-6 backdrop-blur-sm">
+              <section className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
                 <TripBasicsForm data={tripBasics} onChange={setTripBasics} />
               </section>
 
               {/* Section 2: Companion Type */}
-              <section className="rounded-xl bg-white/40 p-6 backdrop-blur-sm">
+              <section className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
                 <CompanionSelector selected={companionType} onSelect={setCompanionType} />
               </section>
 
               {/* Section 3: Travel Interests */}
-              <section className="rounded-xl bg-white/40 p-6 backdrop-blur-sm">
+              <section className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
                 <InterestsSelector
                   selected={interests}
                   onToggle={toggleInterest}
@@ -203,7 +213,7 @@ export default function Home() {
               </section>
 
               {/* Section 4: Hotel Tier */}
-              <section className="rounded-xl bg-white/40 p-6 backdrop-blur-sm">
+              <section className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
                 <HotelTierSelector
                   selected={tripBasics.hotelTier}
                   onSelect={(tier) => setTripBasics({ ...tripBasics, hotelTier: tier })}
@@ -211,7 +221,7 @@ export default function Home() {
               </section>
 
               {/* Section 5: Experience Range */}
-              <section className="rounded-xl bg-white/40 p-6 backdrop-blur-sm">
+              <section className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
                 <ExperienceRangeSelector
                   selected={tripBasics.experienceRanges}
                   onToggle={toggleExperienceRange}
@@ -303,13 +313,13 @@ export default function Home() {
               </section>
 
               {/* Footer */}
-              <footer className="py-4 text-center text-xs text-gray-600">
+              <footer className="py-4 text-center text-xs text-gray-300">
                 <p>© 2025 Wander. All rights reserved.</p>
               </footer>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Toast Notifications */}
       {toast && (

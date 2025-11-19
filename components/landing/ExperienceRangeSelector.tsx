@@ -37,11 +37,11 @@ const experienceRanges = [
 export default function ExperienceRangeSelector({ selected, onToggle }: ExperienceRangeSelectorProps) {
   return (
     <div className="w-full">
-      <h2 className="mb-6 text-center text-2xl font-bold text-gray-800 sm:text-3xl">
+      <h2 className="mb-6 text-center text-2xl font-bold text-white drop-shadow-lg sm:text-3xl">
         What Kind of Experiences?
       </h2>
 
-      <p className="mb-4 text-center text-sm text-gray-600">
+      <p className="mb-4 text-center text-sm text-gray-200 drop-shadow">
         Select one or more experience styles (mix budget + luxury, or choose all!)
       </p>
 
@@ -59,15 +59,15 @@ export default function ExperienceRangeSelector({ selected, onToggle }: Experien
                 hover:scale-105 hover:shadow-lg
                 ${
                   isSelected
-                    ? 'border-teal-500 bg-teal-50 shadow-md'
-                    : 'border-gray-300 bg-white hover:border-teal-300'
+                    ? 'border-teal-400 bg-white/95 shadow-md'
+                    : 'border-white/30 bg-white/80 hover:border-teal-300'
                 }
               `}
               aria-label={`Toggle ${range.label}`}
               aria-pressed={isSelected}
             >
               {/* Emoji Icon */}
-              <div className="mb-2 text-4xl sm:text-5xl transition-transform group-hover:scale-110">
+              <div className="mb-2 text-4xl sm:text-5xl transition-transform group-hover:scale-110 drop-shadow">
                 {range.emoji}
               </div>
 
