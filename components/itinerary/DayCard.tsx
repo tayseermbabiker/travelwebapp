@@ -38,14 +38,14 @@ export default function DayCard({ day, dayNumber }: DayCardProps) {
     });
   };
 
-  const getTimeEmoji = (timeOfDay: string) => {
-    const emojiMap: { [key: string]: string } = {
-      morning: '🌅',
-      afternoon: '☀️',
-      evening: '🌆',
-      night: '🌙',
+  const getTimeLabel = (timeOfDay: string) => {
+    const labelMap: { [key: string]: string } = {
+      morning: 'Morning',
+      afternoon: 'Afternoon',
+      evening: 'Evening',
+      night: 'Night',
     };
-    return emojiMap[timeOfDay.toLowerCase()] || '⏰';
+    return labelMap[timeOfDay.toLowerCase()] || 'Time';
   };
 
   const getCategoryColor = (category: string) => {
@@ -85,22 +85,14 @@ export default function DayCard({ day, dayNumber }: DayCardProps) {
           ? 'bg-gradient-to-r from-amber-400 to-orange-400'
           : 'bg-gradient-to-r from-teal-500 to-teal-600'
       }`}>
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="text-sm opacity-90 mb-1">
-              {isTravelDay ? '🚄 Travel Day' : `Day ${dayNumber}`}
-            </div>
-            <h3 className="text-2xl font-bold mb-1">
-              {day.theme}
-            </h3>
-            <p className="text-sm opacity-90">{formatDate(day.date)}</p>
+        <div>
+          <div className="text-sm opacity-90 mb-1">
+            {isTravelDay ? 'Travel Day' : `Day ${dayNumber}`}
           </div>
-          <div className="text-right">
-            <div className="text-xs opacity-90 mb-1">Day Budget</div>
-            <div className="text-2xl font-bold">
-              ${totalDayCost.toLocaleString()}
-            </div>
-          </div>
+          <h3 className="text-2xl font-bold mb-1">
+            {day.theme}
+          </h3>
+          <p className="text-sm opacity-90">{formatDate(day.date)}</p>
         </div>
       </div>
 
@@ -111,14 +103,14 @@ export default function DayCard({ day, dayNumber }: DayCardProps) {
             {/* Time & Category */}
             <div className="flex flex-wrap items-center gap-2 mb-2">
               <span className="text-sm font-semibold text-gray-600">
-                {getTimeEmoji(activity.timeOfDay)} {activity.timeOfDay}
+                {getTimeLabel(activity.timeOfDay)}
               </span>
               <span className={`text-xs px-2 py-1 rounded-full font-semibold ${getCategoryColor(activity.category)}`}>
                 {activity.category}
               </span>
               {activity.rating && (
                 <span className="text-xs text-gray-600">
-                  ⭐ {activity.rating}/5
+                  {activity.rating}/5 rating
                 </span>
               )}
             </div>
@@ -133,13 +125,11 @@ export default function DayCard({ day, dayNumber }: DayCardProps) {
 
             {/* Activity Details */}
             <div className="flex flex-wrap items-center gap-4 mb-3">
-              <div className="flex items-center gap-1 text-sm text-gray-600">
-                <span>⏱️</span>
-                <span>{activity.duration}</span>
+              <div className="text-sm text-gray-600">
+                Duration: {activity.duration}
               </div>
-              <div className="flex items-center gap-1 text-sm font-semibold text-teal-600">
-                <span>💵</span>
-                <span>${activity.price}</span>
+              <div className="text-sm font-semibold text-teal-600">
+                ${activity.price}
               </div>
             </div>
 
@@ -156,7 +146,7 @@ export default function DayCard({ day, dayNumber }: DayCardProps) {
             {/* Free Activity Badge */}
             {activity.price === 0 && (
               <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
-                🎉 Free Activity
+                Free Activity
               </div>
             )}
           </div>
@@ -166,7 +156,7 @@ export default function DayCard({ day, dayNumber }: DayCardProps) {
         {day.meals && (
           <div className="bg-amber-50 rounded-xl p-4 space-y-2">
             <h4 className="font-semibold text-gray-800 text-sm mb-2">
-              🍽️ Meal Suggestions
+              Meal Suggestions
             </h4>
             {day.meals.breakfast && (
               <div className="text-sm text-gray-700">

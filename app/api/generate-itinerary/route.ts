@@ -8,8 +8,8 @@ import activitiesData from '@/lib/database/activities.json';
 import hotelsData from '@/lib/database/hotels.json';
 import destinationsData from '@/lib/database/destinations.json';
 
-// Vercel Pro: 300 seconds timeout
-export const maxDuration = 300;
+// Vercel Hobby/Free Tier: 10 second timeout (needs optimization or Pro plan)
+export const maxDuration = 60;
 
 export async function POST(request: NextRequest) {
   try {

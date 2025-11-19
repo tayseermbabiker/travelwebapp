@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import ItineraryHeader from '@/components/itinerary/ItineraryHeader';
-import BudgetSummary from '@/components/itinerary/BudgetSummary';
 import DayCard from '@/components/itinerary/DayCard';
 import HotelCard from '@/components/itinerary/HotelCard';
 import LoadingSpinner from '@/components/itinerary/LoadingSpinner';
@@ -50,7 +49,6 @@ export default function ItineraryPage() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="text-center">
-          <div className="text-6xl mb-4">😕</div>
           <h1 className="text-2xl font-bold text-gray-800 mb-2">
             Oops! Something went wrong
           </h1>
@@ -159,7 +157,7 @@ export default function ItineraryPage() {
           {companionProfile.recommendations && companionProfile.recommendations.length > 0 && (
             <div className="bg-teal-50 rounded-xl p-4">
               <h3 className="font-semibold text-teal-800 mb-2">
-                ✨ Personalized Recommendations
+                Personalized Recommendations
               </h3>
               <ul className="space-y-1">
                 {companionProfile.recommendations.map((rec: string, idx: number) => (
@@ -172,14 +170,11 @@ export default function ItineraryPage() {
           )}
         </section>
 
-        {/* Budget Summary */}
-        <BudgetSummary budgetAllocation={budgetAllocation} />
-
         {/* Hotel Recommendation */}
         {hotel && (
           <section>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              🏨 Your Hotel
+              Your Hotel
             </h2>
             <HotelCard hotel={hotel} totalNights={transformedDays.length} />
           </section>
@@ -188,7 +183,7 @@ export default function ItineraryPage() {
         {/* Daily Itinerary */}
         <section>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
-            📅 Your Adventure Day by Day
+            Your Adventure Day by Day
           </h2>
           <div className="space-y-6">
             {transformedDays.length > 0 ? (
@@ -203,11 +198,11 @@ export default function ItineraryPage() {
           </div>
         </section>
 
-        {/* Budget Tips */}
+        {/* Travel Tips */}
         {budgetAllocation.savingTips && budgetAllocation.savingTips.length > 0 && (
           <section className="bg-gradient-to-r from-green-50 to-teal-50 rounded-2xl p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              💡 Money-Saving Tips
+              Travel Tips
             </h2>
             <ul className="space-y-2">
               {budgetAllocation.savingTips.map((tip: string, idx: number) => (
@@ -227,7 +222,7 @@ export default function ItineraryPage() {
             onClick={() => router.push('/')}
             className="flex-1 bg-teal-500 text-white px-6 py-4 rounded-xl font-semibold hover:bg-teal-600 transition"
           >
-            🎒 Plan Another Trip
+            Plan Another Trip
           </button>
         </section>
 
