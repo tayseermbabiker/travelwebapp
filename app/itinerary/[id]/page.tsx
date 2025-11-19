@@ -132,7 +132,7 @@ export default function ItineraryPage() {
   } : null;
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 font-sans" style={{ fontFamily: 'var(--font-poppins), var(--font-mulish), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
       {/* Header */}
       <ItineraryHeader
         destination={itinerary.destination}

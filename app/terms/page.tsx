@@ -1,6 +1,6 @@
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 font-sans" style={{ fontFamily: 'var(--font-poppins), var(--font-mulish), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
       <div className="container mx-auto max-w-4xl px-4 py-12">
         {/* Header */}
         <div className="mb-8">
