@@ -249,10 +249,6 @@ export default function Home() {
                   Ready to Discover Your Adventure?
                 </h2>
 
-                <p className="mb-4 text-sm opacity-90">
-                  Get your personalized itinerary in ~60 seconds
-                </p>
-
                 {/* Form Summary */}
                 <div className="mb-6 flex flex-wrap justify-center gap-2 text-xs">
                   {tripBasics.destination && (
@@ -328,7 +324,16 @@ export default function Home() {
               </section>
 
               {/* Footer */}
-              <footer className="py-4 text-center text-xs text-gray-300">
+              <footer className="py-6 text-center text-xs text-gray-300 space-y-3">
+                <div className="flex flex-wrap justify-center gap-4">
+                  <a href="/about" className="hover:text-white transition">About Us</a>
+                  <span>•</span>
+                  <a href="/contact" className="hover:text-white transition">Contact</a>
+                  <span>•</span>
+                  <a href="/privacy" className="hover:text-white transition">Privacy Policy</a>
+                  <span>•</span>
+                  <a href="/terms" className="hover:text-white transition">Terms of Service</a>
+                </div>
                 <p>© 2025 Wander. All rights reserved.</p>
               </footer>
             </div>
