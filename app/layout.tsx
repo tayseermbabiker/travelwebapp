@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Poppins, Mulish } from "next/font/google";
 import "./globals.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700', '800'],
-  variable: '--font-plus-jakarta'
+  variable: '--font-poppins',
+  display: 'swap',
+});
+
+const mulish = Mulish({
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-mulish',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -65,7 +73,9 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-72x72.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-72x72.png" />
       </head>
-      <body className={plusJakartaSans.className}>{children}</body>
+      <body className={`${poppins.variable} ${mulish.variable} font-sans`} style={{ fontFamily: 'var(--font-poppins), var(--font-mulish), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+        {children}
+      </body>
     </html>
   );
 }
