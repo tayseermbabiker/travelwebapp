@@ -83,7 +83,7 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
         />
         <div className="mt-2 space-y-1">
           <p className="text-xs text-gray-200 drop-shadow">
-            💡 <strong>Just enter city names!</strong> AI will understand the countries.
+            <strong>Tip:</strong> Just enter city names! We'll understand the countries.
           </p>
           <p className="text-xs text-gray-300 drop-shadow">
             Examples: <span className="font-medium">"Paris"</span> • <span className="font-medium">"Barcelona, Rome"</span> • <span className="font-medium">"Dubai, Abu Dhabi"</span>
