@@ -131,7 +131,7 @@ export default function Home() {
   };
 
   return (
-    <main className="relative">
+    <main className="relative pt-16">
       {/* Background Image - Fixed for both sections */}
       <div
         className="fixed inset-0 z-0"
