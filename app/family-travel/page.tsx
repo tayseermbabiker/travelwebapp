@@ -723,7 +723,7 @@ export default function FamilyTravelPage() {
       <section className="bg-gradient-to-r from-purple-500 to-purple-600 text-white py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Family Travel
+            Family Destinations
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-purple-100">
             The World's Best Destinations for Kids

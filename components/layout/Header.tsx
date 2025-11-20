@@ -9,14 +9,14 @@ export default function Header() {
   const [guidesDropdownOpen, setGuidesDropdownOpen] = useState(false);
 
   const travelGuides = [
-    { name: 'Seasons Travel', href: '/seasons', description: 'Best destinations by season' },
-    { name: 'Foodie Travel', href: '/foodie-destinations', description: 'World\'s top food cities' },
-    { name: 'Solo Female Travel', href: '/solo-female-travel', description: 'Safest destinations for women' },
-    { name: 'Digital Nomad Travel', href: '/digital-nomad', description: 'Remote work destinations' },
-    { name: 'Family Travel', href: '/family-travel', description: 'Kid-friendly destinations' },
-    { name: 'Adventure Travel', href: '/adventure-travel', description: 'Thrilling destinations' },
-    { name: 'Wellness Retreat Travel', href: '/wellness-retreats', description: 'Healing destinations' },
-    { name: 'Budget Travel', href: '/budget-travel', description: 'Affordable destinations' },
+    { name: 'Destinations by Season', href: '/seasons', description: 'Best destinations by season' },
+    { name: 'Foodie Destinations', href: '/foodie-destinations', description: 'World\'s top food cities' },
+    { name: 'Solo Female Destinations', href: '/solo-female-travel', description: 'Safest destinations for women' },
+    { name: 'Digital Nomad Destinations', href: '/digital-nomad', description: 'Remote work destinations' },
+    { name: 'Family Destinations', href: '/family-travel', description: 'Kid-friendly destinations' },
+    { name: 'Adventure Destinations', href: '/adventure-travel', description: 'Thrilling destinations' },
+    { name: 'Wellness Destinations', href: '/wellness-retreats', description: 'Healing destinations' },
+    { name: 'Affordable Destinations', href: '/budget-travel', description: 'Budget travel under $30/day' },
   ];
 
   const navigationLinks = [

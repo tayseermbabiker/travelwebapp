@@ -821,7 +821,7 @@ export default function DigitalNomadPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Digital Nomad Travel
+              Digital Nomad Destinations
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-teal-100">
               Work From Anywhere. Actually.

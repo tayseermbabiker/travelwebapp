@@ -684,7 +684,7 @@ const BudgetTravelPage = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-emerald-500 to-emerald-600 text-white py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Budget Travel</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Affordable Destinations</h1>
           <p className="text-2xl md:text-3xl mb-6 font-light">
             Travel Cheap. Travel Long. Travel Smart.
           </p>

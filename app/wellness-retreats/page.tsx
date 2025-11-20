@@ -986,7 +986,7 @@ export default function WellnessRetreatsPage() {
       <div className="relative bg-gradient-to-br from-green-500 to-emerald-600 text-white py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Wellness Retreat Travel
+            Wellness Destinations
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90" style={{ fontFamily: 'Mulish, sans-serif' }}>
             Discover transformational wellness experiences across 12 global destinations
