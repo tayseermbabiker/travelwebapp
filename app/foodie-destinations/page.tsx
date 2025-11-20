@@ -785,7 +785,7 @@ export default function FoodieDestinationsPage() {
                             </ul>
                           </div>
                         )}
-                        {destination.whereToEat.neighborhoods && (
+                        {destination.whereToEat.neighborhoods && Array.isArray(destination.whereToEat.neighborhoods) && (
                           <div className="bg-white p-4 rounded-lg border border-gray-200">
                             <h5 className="font-semibold text-teal-600 mb-2">Neighborhoods</h5>
                             <ul className="space-y-2">
