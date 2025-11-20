@@ -449,16 +449,19 @@ export default function SeasonsPage() {
         </section>
 
         {/* SPRING SECTION */}
-        <section className="bg-white rounded-2xl shadow-md mb-6 overflow-hidden">
+        <section className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300">
           <button
             onClick={() => toggleSeason('spring')}
-            className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white p-6 flex items-center justify-between hover:from-green-600 hover:to-green-700 transition"
+            className="w-full relative overflow-hidden bg-gradient-to-r from-green-400/80 via-green-500/80 to-emerald-500/80 backdrop-blur-sm text-white p-6 flex items-center justify-between hover:from-green-500/90 hover:via-green-600/90 hover:to-emerald-600/90 transition-all duration-300"
           >
-            <div className="text-left">
-              <h2 className="text-2xl font-bold mb-1">Spring Destinations (March-May)</h2>
-              <p className="text-sm opacity-90">Cherry blossoms, perfect weather, garden blooms</p>
+            {/* Glass shine effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
+
+            <div className="text-left relative z-10">
+              <h2 className="text-2xl font-bold mb-1 drop-shadow-lg">Spring Destinations (March-May)</h2>
+              <p className="text-sm opacity-90 drop-shadow">Cherry blossoms, perfect weather, garden blooms</p>
             </div>
-            {openSeason === 'spring' ? <ChevronUp className="w-6 h-6" /> : <ChevronDown className="w-6 h-6" />}
+            {openSeason === 'spring' ? <ChevronUp className="w-6 h-6 drop-shadow-lg" /> : <ChevronDown className="w-6 h-6 drop-shadow-lg" />}
           </button>
 
           {openSeason === 'spring' && (
@@ -946,16 +949,19 @@ export default function SeasonsPage() {
         </section>
 
         {/* SUMMER SECTION */}
-        <section className="bg-white rounded-2xl shadow-md mb-6 overflow-hidden">
+        <section className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300">
           <button
             onClick={() => toggleSeason('summer')}
-            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6 flex items-center justify-between hover:from-orange-600 hover:to-orange-700 transition"
+            className="w-full relative overflow-hidden bg-gradient-to-r from-orange-400/80 via-orange-500/80 to-yellow-500/80 backdrop-blur-sm text-white p-6 flex items-center justify-between hover:from-orange-500/90 hover:via-orange-600/90 hover:to-yellow-600/90 transition-all duration-300"
           >
-            <div className="text-left">
-              <h2 className="text-2xl font-bold mb-1">Summer Destinations (June-August)</h2>
-              <p className="text-sm opacity-90">Beach season, festivals, midnight sun</p>
+            {/* Glass shine effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
+
+            <div className="text-left relative z-10">
+              <h2 className="text-2xl font-bold mb-1 drop-shadow-lg">Summer Destinations (June-August)</h2>
+              <p className="text-sm opacity-90 drop-shadow">Beach season, festivals, midnight sun</p>
             </div>
-            {openSeason === 'summer' ? <ChevronUp className="w-6 h-6" /> : <ChevronDown className="w-6 h-6" />}
+            {openSeason === 'summer' ? <ChevronUp className="w-6 h-6 drop-shadow-lg" /> : <ChevronDown className="w-6 h-6 drop-shadow-lg" />}
           </button>
 
           {openSeason === 'summer' && (
@@ -1431,16 +1437,19 @@ export default function SeasonsPage() {
         </section>
 
         {/* FALL SECTION */}
-        <section className="bg-white rounded-2xl shadow-md mb-6 overflow-hidden">
+        <section className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300">
           <button
             onClick={() => toggleSeason('fall')}
-            className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white p-6 flex items-center justify-between hover:from-amber-600 hover:to-amber-700 transition"
+            className="w-full relative overflow-hidden bg-gradient-to-r from-amber-400/80 via-amber-500/80 to-orange-500/80 backdrop-blur-sm text-white p-6 flex items-center justify-between hover:from-amber-500/90 hover:via-amber-600/90 hover:to-orange-600/90 transition-all duration-300"
           >
-            <div className="text-left">
-              <h2 className="text-2xl font-bold mb-1">Fall Destinations (September-November)</h2>
-              <p className="text-sm opacity-90">Foliage, wine harvest, comfortable weather</p>
+            {/* Glass shine effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
+
+            <div className="text-left relative z-10">
+              <h2 className="text-2xl font-bold mb-1 drop-shadow-lg">Fall Destinations (September-November)</h2>
+              <p className="text-sm opacity-90 drop-shadow">Foliage, wine harvest, comfortable weather</p>
             </div>
-            {openSeason === 'fall' ? <ChevronUp className="w-6 h-6" /> : <ChevronDown className="w-6 h-6" />}
+            {openSeason === 'fall' ? <ChevronUp className="w-6 h-6 drop-shadow-lg" /> : <ChevronDown className="w-6 h-6 drop-shadow-lg" />}
           </button>
 
           {openSeason === 'fall' && (
