@@ -17,19 +17,34 @@ export default function SeasonsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50 font-sans pt-16" style={{ fontFamily: 'var(--font-poppins), var(--font-mulish), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-500 to-teal-600 text-white py-16 px-4">
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 font-sans pt-16 relative overflow-hidden" style={{ fontFamily: 'var(--font-poppins), var(--font-mulish), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+      {/* Gradient Mesh Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-teal-400/30 to-blue-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gradient-to-br from-orange-400/30 to-yellow-500/30 rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Hero Section - Glassmorphism */}
+      <section className="relative py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-            Destinations by Season
-          </h1>
-          <p className="text-xl md:text-2xl text-center mb-4 opacity-95">
-            Complete Year-Round Travel Guide
-          </p>
-          <p className="text-lg text-center max-w-3xl mx-auto opacity-90">
-            Travel timing isn't about luck—it's about strategy. The same destination transforms completely depending on when you visit. Choose your season below to discover 8 exceptional destinations perfect for that time of year.
-          </p>
+          {/* Glass Card */}
+          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-12 relative overflow-hidden">
+            {/* Subtle gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
+
+            <div className="relative z-10">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Destinations by Season
+              </h1>
+              <p className="text-2xl md:text-3xl text-center mb-6 text-gray-800 font-light">
+                Complete Year-Round Travel Guide
+              </p>
+              <p className="text-lg text-center max-w-3xl mx-auto text-gray-700 leading-relaxed">
+                Travel timing isn't about luck—it's about strategy. The same destination transforms completely depending on when you visit. Choose your season below to discover 8 exceptional destinations perfect for that time of year.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -37,7 +52,7 @@ export default function SeasonsPage() {
       <div className="container mx-auto max-w-6xl px-4 py-12">
 
         {/* Introduction */}
-        <section className="bg-white rounded-2xl shadow-md p-8 mb-8">
+        <section className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             Choose Your Season. Find Your Perfect Destination.
           </h2>
@@ -50,16 +65,19 @@ export default function SeasonsPage() {
         </section>
 
         {/* WINTER SECTION */}
-        <section className="bg-white rounded-2xl shadow-md mb-6 overflow-hidden">
+        <section className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300">
           <button
             onClick={() => toggleSeason('winter')}
-            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 flex items-center justify-between hover:from-blue-600 hover:to-blue-700 transition"
+            className="w-full relative overflow-hidden bg-gradient-to-r from-blue-400/80 via-blue-500/80 to-cyan-500/80 backdrop-blur-sm text-white p-6 flex items-center justify-between hover:from-blue-500/90 hover:via-blue-600/90 hover:to-cyan-600/90 transition-all duration-300"
           >
-            <div className="text-left">
-              <h2 className="text-2xl font-bold mb-1">Winter Destinations (November-February)</h2>
-              <p className="text-sm opacity-90">Perfect weather, fewer crowds, shopping festivals</p>
+            {/* Glass shine effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
+
+            <div className="text-left relative z-10">
+              <h2 className="text-2xl font-bold mb-1 drop-shadow-lg">Winter Destinations (November-February)</h2>
+              <p className="text-sm opacity-90 drop-shadow">Perfect weather, fewer crowds, shopping festivals</p>
             </div>
-            {openSeason === 'winter' ? <ChevronUp className="w-6 h-6" /> : <ChevronDown className="w-6 h-6" />}
+            {openSeason === 'winter' ? <ChevronUp className="w-6 h-6 drop-shadow-lg" /> : <ChevronDown className="w-6 h-6 drop-shadow-lg" />}
           </button>
 
           {openSeason === 'winter' && (
