@@ -924,7 +924,7 @@ export default function SoloFemaleTravelPage() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Solo Female Travel Planning Guide
+            Solo Female Travel
           </h1>
           <p className="text-2xl text-teal-600 font-semibold mb-4">
             Destinations Where Women Thrive Alone

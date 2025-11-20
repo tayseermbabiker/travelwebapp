@@ -22,7 +22,7 @@ export default function SeasonsPage() {
       <section className="bg-gradient-to-r from-teal-500 to-teal-600 text-white py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-            Best Destinations by Season
+            Seasons Travel
           </h1>
           <p className="text-xl md:text-2xl text-center mb-4 opacity-95">
             Complete Year-Round Travel Guide
