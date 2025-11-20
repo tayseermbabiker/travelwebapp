@@ -478,13 +478,444 @@ export default function SeasonsPage() {
                 </table>
               </div>
 
-              <div className="bg-green-50 rounded-xl p-6 text-center">
-                <p className="text-gray-700 mb-2">
-                  <strong>8 Spring Destinations with detailed "Why Spring?" and "What to Expect" sections</strong>
-                </p>
-                <p className="text-sm text-gray-600">
-                  Kyoto cherry blossoms, Santorini wildflowers, Amsterdam tulips, and 5 more destinations await your exploration.
-                </p>
+              {/* Detailed Destination Cards */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Spring Destination Details</h3>
+
+                {/* Kyoto */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => toggleDestination('spring-kyoto')}
+                    className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition"
+                  >
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">1. Kyoto, Japan – Cherry Blossom Season</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Cherry blossom lovers, culture enthusiasts, photographers, temple seekers</p>
+                    </div>
+                    {openDestination === 'spring-kyoto' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'spring-kyoto' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">
+                        Kyoto's spring cherry blossom season is legendary worldwide—thousands of sakura trees transform ancient temples and traditional streets into pink wonderlands. The late March to early April bloom is Japan's most celebrated natural event.
+                      </p>
+                      <div className="bg-green-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Spring?</h5>
+                        <p className="text-sm text-gray-700">World-famous cherry blossom season (late March-early April 2025), peak bloom around April 5, hanami tradition, Philosopher's Path blooms, temple gardens at their best, perfect temperatures (12-20°C).</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Four Seasons Hotel Kyoto</strong> ⭐⭐⭐⭐⭐ - Sakura season exclusive packages, luxury, cultural experiences during peak bloom</li>
+                              <li><strong>Genji Kyoto</strong> ⭐⭐⭐⭐⭐ - Kamo River banks with cherry blossoms outside your door, boutique luxury, 19 rooms with river views</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>The Millennials Kyoto</strong> ⭐⭐⭐ - High-tech capsule hotel, IoT integration, coworking lobby, 5-10 min walk to cherry blossoms</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>MACHIYA RESIDENCE INN</strong> ⭐⭐⭐⭐ - Traditional townhouses, cherry blossoms outside, spacious for families, local team provides hanami tips</li>
+                              <li><strong>Le Méridien Kyoto</strong> ⭐⭐⭐⭐⭐ - Best views for cherry blossom season, spring rooftop pool, modern luxury</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Kyoto Machiya Budget Stays</strong> ⭐⭐⭐ - Restored traditional townhouses at affordable rates, cultural immersion, family-friendly</li>
+                              <li><strong>Piece Hostel Sanjo</strong> ⭐⭐⭐ - Budget spring base, modern hostel-hotel, spring temple access</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Santorini */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('spring-santorini')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">2. Santorini, Greece – Spring Wildflowers</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Romance, sunset lovers, beach seekers, photographers</p>
+                    </div>
+                    {openDestination === 'spring-santorini' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'spring-santorini' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Santorini in spring offers warm May temperatures, spectacular wildflowers covering the volcanic landscape, and fewer tourists before the summer rush. Perfect weather for hiking volcanic trails and sunset viewing.</p>
+                      <div className="bg-green-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Spring?</h5>
+                        <p className="text-sm text-gray-700">Warm May temperatures (20-25°C), fewer tourists before summer rush, spring wildflowers, ideal weather for hiking volcanic trails, perfect for sunset viewing without peak crowds.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Nikki Beach Resort & Spa Santorini</strong> ⭐⭐⭐⭐⭐ - Private beachfront, spring-perfect water temperatures (22°C), suite pools</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Fira/Oia)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Art Maisons Oia Castle</strong> ⭐⭐⭐⭐⭐ - Oia cliff-side, spring sunset views, outdoor balcony pools for May weather</li>
+                              <li><strong>Iconic Santorini, A Boutique Cave Hotel</strong> ⭐⭐⭐⭐⭐ - Cave authenticity, spring outdoor breakfasts, sea views, private patios</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Aria Suites & Villas</strong> ⭐⭐⭐⭐⭐ - Spacious family suites, spring-perfect pools, caldera views</li>
+                              <li><strong>Santorini Princess Spa Hotel</strong> ⭐⭐⭐⭐⭐ - Spacious family rooms, spring jacuzzi patios, family spa</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Athina Luxury Suites</strong> ⭐⭐⭐⭐ - Caldera views, spring shoulder season value, swim-up bar pool</li>
+                              <li><strong>Ducato di Oia</strong> ⭐⭐⭐⭐ - Oia location, private plunge pools, May views, better rates than peak summer</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Amsterdam */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('spring-amsterdam')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">3. Amsterdam, Netherlands – Tulip Season</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Tulip lovers, culture seekers, cycling enthusiasts, photographers</p>
+                    </div>
+                    {openDestination === 'spring-amsterdam' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'spring-amsterdam' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Amsterdam's spring tulip season transforms the city and surrounding countryside into a vibrant display of color. Keukenhof Gardens peak bloom and King's Day celebrations make this the most festive time to visit.</p>
+                      <div className="bg-green-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Spring?</h5>
+                        <p className="text-sm text-gray-700">Tulip season (mid-April to early May), Keukenhof Gardens peak bloom, pleasant canal weather (10-17°C), King's Day celebrations (April 27), outdoor café season begins.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Waldorf Astoria Amsterdam</strong> ⭐⭐⭐⭐⭐ - Canal-side palatial location, spring terrace dining, tulip season luxury</li>
+                              <li><strong>The Hoxton Amsterdam</strong> ⭐⭐⭐⭐ - Herengracht canal, spring walks, boutique design</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>NH Collection Amsterdam Barbizon Palace</strong> ⭐⭐⭐⭐⭐ - Centraal Station location, conference facilities, spring business events</li>
+                              <li><strong>DoubleTree by Hilton Amsterdam Centraal Station</strong> ⭐⭐⭐⭐ - Family rooms near museums, spring tulip tour access</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>CitizenM Amsterdam South</strong> ⭐⭐⭐⭐ - Modern family-friendly design, near Vondelpark spring blooms</li>
+                              <li><strong>Meininger Hotel Amsterdam City West</strong> ⭐⭐⭐ - Budget-friendly spring rates, family rooms, near Vondelpark</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>ClinkNOORD Amsterdam</strong> ⭐⭐⭐ - Budget hostel-hotel, spring rooftop terrace, free ferry to center</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Barcelona Spring */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('spring-barcelona')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">4. Barcelona, Spain – Spring Blooms</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Culture lovers, architecture enthusiasts, food seekers, terrace dining</p>
+                    </div>
+                    {openDestination === 'spring-barcelona' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'spring-barcelona' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Barcelona in spring offers perfect Mediterranean climate, spring blooms along La Rambla, and the start of outdoor terrace dining season. Ideal weather for walking tours and exploring Gaudí architecture.</p>
+                      <div className="bg-green-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Spring?</h5>
+                        <p className="text-sm text-gray-700">Perfect Mediterranean climate (15-20°C), spring blooms along La Rambla, ideal for walking tours, outdoor dining season begins, cherry blossoms at parks.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>W Barcelona</strong> ⭐⭐⭐⭐⭐ - Iconic sail-shaped building, spring terrace dining, outdoor pools open</li>
+                              <li><strong>SLS Barcelona</strong> ⭐⭐⭐⭐⭐ - Port Forum location, three infinity pools, private balconies perfect for spring breezes</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>The Barcelona Edition</strong> ⭐⭐⭐⭐⭐ - Gothic Quarter, rooftop bar with city views, spring festival access</li>
+                              <li><strong>Duquesa Suites by Grup Duquessa</strong> ⭐⭐⭐⭐ - Heritage building, 3-minute walk to beach and city center</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Barcelona Princess Hotel</strong> ⭐⭐⭐⭐ - Business district near 22@ tech hub, after-work beach access</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hotel & Spa Villa Olimpica Suites</strong> ⭐⭐⭐⭐ - Family suites near Olympic Port, kids' spa, spring pools</li>
+                              <li><strong>Ibis Styles Barcelona City Bogatell</strong> ⭐⭐⭐⭐ - Free beach kits for kids, family rooms, playground</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hotel Acta Voraport</strong> ⭐⭐⭐ - 15-minute walk to beach, budget spring exploration</li>
+                              <li><strong>Travelodge Barcelona Poblenou</strong> ⭐⭐⭐ - Beach and transport access, spring budget rates</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Lisbon Spring */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('spring-lisbon')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">5. Lisbon, Portugal – Spring Gardens</h4>
+                      <p className="text-sm text-gray-600">Perfect for: First-timers, budget travelers, culture seekers, food lovers</p>
+                    </div>
+                    {openDestination === 'spring-lisbon' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'spring-lisbon' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Lisbon's spring brings gorgeous mild weather, fewer tourists than summer, spring festivals, and perfect conditions for exploring hilly streets and outdoor terraces.</p>
+                      <div className="bg-green-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Spring?</h5>
+                        <p className="text-sm text-gray-700">Gorgeous mild weather (16-22°C), fewer tourists than summer, spring festivals, perfect for exploring hilly streets, outdoor terrace season.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Four Seasons Hotel Ritz Lisbon</strong> ⭐⭐⭐⭐⭐ - Avenida location, spring terrace, luxury, romantic spring getaway</li>
+                              <li><strong>Sofitel Lisbon Liberdade</strong> ⭐⭐⭐⭐⭐ - Parisian elegance, rooftop panoramic views, spring city exploration</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Corpo Santo Lisbon Historical Hotel</strong> ⭐⭐⭐⭐⭐ - Historic center, conference facilities, spring meeting venues</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Martinhal Lisbon Chiado</strong> ⭐⭐⭐⭐⭐ - Family-centered suites, kids' club with spring outdoor activities</li>
+                              <li><strong>Altis Avenida Hotel</strong> ⭐⭐⭐⭐ - Family rooms, spring rooftop pool, warm atmosphere</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Casa do Jasmim by Shiadu</strong> ⭐⭐⭐ - Príncipe Real, spring exploration, sustainable ethos</li>
+                              <li><strong>Hotel White Lisboa</strong> ⭐⭐⭐ - Saldanha area, spring rooftop plunge pool, minimalist design</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Dubai Spring */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('spring-dubai')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">6. Dubai, UAE – Garden Blooms</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Shopping lovers, families, luxury travelers, outdoor enthusiasts</p>
+                    </div>
+                    {openDestination === 'spring-dubai' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'spring-dubai' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Dubai in spring offers perfect temperatures before summer heat, outdoor activities at their ideal, spring festivals and events, and pleasant beach weather with lower hotel rates than winter peak.</p>
+                      <div className="bg-green-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Spring?</h5>
+                        <p className="text-sm text-gray-700">Perfect temperatures (22-30°C) before summer heat, outdoor activities ideal, spring festivals and events, pleasant beach weather, lower hotel rates than winter peak.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Atlantis The Palm</strong> ⭐⭐⭐⭐⭐ - Palm Jumeirah, spring beach weather, waterpark and aquarium</li>
+                              <li><strong>One&Only Royal Mirage</strong> ⭐⭐⭐⭐⭐ - 1km private beach, 65 acres landscaped gardens in bloom</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Bulgari Hotel Dubai</strong> ⭐⭐⭐⭐⭐ - Downtown luxury, spring shopping season, Italian-Arabian design</li>
+                              <li><strong>Address Downtown Dubai</strong> ⭐⭐⭐⭐⭐ - Burj Khalifa views, spring outdoor terraces, luxury shopping</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Jumeirah Emirates Towers</strong> ⭐⭐⭐⭐⭐ - Business district, conference facilities, spring networking events</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Jumeirah Beach Hotel</strong> ⭐⭐⭐⭐⭐ - Family beach resort, kids' clubs, pools and villas</li>
+                              <li><strong>Centara Mirage Beach Resort Dubai</strong> ⭐⭐⭐⭐ - Themed beachfront, waterslides, all-inclusive family packages</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Rove Downtown Dubai</strong> ⭐⭐⭐ - Central location, spring budget rates, rooftop pool</li>
+                              <li><strong>Ibis Styles Dragon Mart Dubai</strong> ⭐⭐⭐ - Budget-friendly spring rates, family rooms</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Marrakech */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('spring-marrakech')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">7. Marrakech, Morocco – Majorelle Gardens</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Culture seekers, garden lovers, food enthusiasts, adventure travelers</p>
+                    </div>
+                    {openDestination === 'spring-marrakech' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'spring-marrakech' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Marrakech in spring offers pleasant March weather, Majorelle Gardens in full bloom, rooftop terraces at their perfect temperature, and fewer tourists than summer making souk exploration comfortable.</p>
+                      <div className="bg-green-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Spring?</h5>
+                        <p className="text-sm text-gray-700">Pleasant March weather (18-25°C), Majorelle Gardens in bloom, rooftop terraces perfect, fewer tourists than summer, comfortable souk exploring.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Medina/Gueliz)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Royal Mansour Marrakech</strong> ⭐⭐⭐⭐⭐ - Luxury riads near Medina, spring rooftop dining, garden courtyards</li>
+                              <li><strong>La Mamounia</strong> ⭐⭐⭐⭐⭐ - Historic luxury with spring gardens in full bloom, outdoor pools perfect for March-May</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Kenzi Tower Hotel</strong> ⭐⭐⭐⭐ - Gueliz business district, conference facilities, spring city views</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Palais Namaskar</strong> ⭐⭐⭐⭐⭐ - Family villas with private pools, spring outdoor activities, spacious</li>
+                              <li><strong>Riad Kheirredine</strong> ⭐⭐⭐⭐ - Traditional family-friendly riad, spring courtyard perfect for kids</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Riad Yasmine</strong> ⭐⭐⭐ - Traditional medina riad at budget rates, spring rooftop terrace views</li>
+                              <li><strong>Hotel Almas</strong> ⭐⭐⭐ - Gueliz budget location, spring outdoor pool, modern amenities</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Chiang Mai Spring */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('spring-chiangmai')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">8. Chiang Mai, Thailand – Songkran Festival</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Temple explorers, festival lovers, culture enthusiasts, budget travelers</p>
+                    </div>
+                    {openDestination === 'spring-chiangmai' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'spring-chiangmai' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Chiang Mai's spring features the legendary Songkran Water Festival in mid-April, peak season weather, spring temple festivals, and Lanna culture celebrations with elephant sanctuaries and waterfalls at full flow.</p>
+                      <div className="bg-green-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Spring?</h5>
+                        <p className="text-sm text-gray-700">Peak season weather (March-May), Songkran Water Festival (mid-April), spring temple festivals, Lanna culture celebrations, elephant sanctuaries at best, spring waterfalls full flow.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Old City/Night Bazaar)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Anantara Chiang Mai Resort</strong> ⭐⭐⭐⭐⭐ - Riverside luxury, spring outdoor terraces, colonial elegance</li>
+                              <li><strong>Le Meridien Chiang Mai</strong> ⭐⭐⭐⭐⭐ - Best city views for Songkran festival, spring rooftop pool</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Mövenpick Suriwongse Chiang Mai</strong> ⭐⭐⭐⭐ - Central business location, budget-friendly, spring conference facilities</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Four Seasons Resort Chiang Mai</strong> ⭐⭐⭐⭐⭐ - Luxury nature resort, family rice paddy villas, spring elephant experiences</li>
+                              <li><strong>Rainforest Chiangmai Hotel</strong> ⭐⭐⭐⭐ - Family-friendly, spring activities, near Old City for Songkran</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Bed Phrasingh - Adults Only</strong> ⭐⭐⭐⭐ - Old City for spring temple exploring, modern comfort</li>
+                              <li><strong>Goldenbell Hotel</strong> ⭐⭐⭐⭐ - Walking distance to markets and food streets, spring rates, excellent value</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="text-center pt-4">
@@ -543,13 +974,433 @@ export default function SeasonsPage() {
                 </table>
               </div>
 
-              <div className="bg-orange-50 rounded-xl p-6 text-center">
-                <p className="text-gray-700 mb-2">
-                  <strong>8 Summer Destinations with detailed "Why Summer?" and "What to Expect" sections</strong>
-                </p>
-                <p className="text-sm text-gray-600">
-                  Bali's perfect waves, Iceland's midnight sun, Maldives diving, and 5 more destinations await.
-                </p>
+              {/* Detailed Destination Cards */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Summer Destination Details</h3>
+
+                {/* Bali */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => toggleDestination('summer-bali')}
+                    className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition"
+                  >
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">1. Bali, Indonesia – Dry Season Paradise</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Beach lovers, families, surfers, wellness seekers</p>
+                    </div>
+                    {openDestination === 'summer-bali' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'summer-bali' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">
+                        Bali's summer dry season delivers perfect waves for surfing, postcard sunsets, lush green rice terraces, and beach weather without monsoon rains. This is when Bali shows its most beautiful face.
+                      </p>
+                      <div className="bg-orange-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Summer?</h5>
+                        <p className="text-sm text-gray-700">Dry season (June-August), perfect waves for surfing, postcard sunsets, lush green landscapes, rice terrace season, beach weather without monsoon rains.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Four Seasons Resort Bali at Jimbaran Bay</strong> ⭐⭐⭐⭐⭐ - Beachfront suites, direct beach access, Balinese spa, rooftop seafood dining</li>
+                              <li><strong>The Mulia, Nusa Dua</strong> ⭐⭐⭐⭐⭐ - Bali's longest infinity pool (300m), Indian Ocean access, six pools for families</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Ubud/Seminyak)</p>
+                            <ul className="space-y-1">
+                              <li><strong>St. Regis Bali Resort</strong> ⭐⭐⭐⭐⭐ - 24/7 butlers, private lagoon, Nusa Dua beach, overwater villas</li>
+                              <li><strong>Hanging Gardens of Bali</strong> ⭐⭐⭐⭐⭐ - Ubud jungle infinity pool, treetop views, summer escape from beach heat</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Ayana Resort and Spa Bali</strong> ⭐⭐⭐⭐⭐ - 222-acre estate, summer kids' activities, cascading pools, farm experiences</li>
+                              <li><strong>InterContinental Bali Resort</strong> ⭐⭐⭐⭐⭐ - Jimbaran Bay pristine sands, spacious family rooms, summer kids' club</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>POP! Hotel Kuta Beach</strong> ⭐⭐⭐ - Kuta Beach location, summer surf access, modern functional rooms</li>
+                              <li><strong>The Haven Suites Bali Berawa</strong> ⭐⭐⭐ - Canggu beach area, summer surf season, pool access</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Santorini Summer */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('summer-santorini')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">2. Santorini, Greece – Peak Summer</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Beach clubs, nightlife, sunset cruises, luxury seekers</p>
+                    </div>
+                    {openDestination === 'summer-santorini' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'summer-santorini' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Santorini in summer offers peak season sunshine, vibrant Aegean Sea, summer beach clubs, sunset cruises, and all restaurants and attractions fully open. This is the island at its most energetic.</p>
+                      <div className="bg-orange-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Summer?</h5>
+                        <p className="text-sm text-gray-700">Peak season sunshine (25-30°C), vibrant Aegean Sea (26°C), summer beach clubs, sunset cruises, all restaurants and attractions fully open.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Nikki Beach Resort & Spa</strong> ⭐⭐⭐⭐⭐ - Summer beach parties, private pools, summer DJ beach sessions</li>
+                              <li><strong>Andronis Luxury Suites</strong> ⭐⭐⭐⭐⭐ - Oia cliffside, summer sunset dining, private patio pools</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Fira/Oia)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Pezoules of Oia</strong> ⭐⭐⭐⭐⭐ - Boutique luxury, summer homemade breakfast, comfort in heat</li>
+                              <li><strong>Santorini Princess Spa Hotel</strong> ⭐⭐⭐⭐⭐ - Spacious family rooms, summer jacuzzi patios, family-welcoming spa</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Belvedere Hotel Santorini</strong> ⭐⭐⭐⭐ - Corner rooms with summer sea-facing balconies</li>
+                              <li><strong>Athinaeos Suites</strong> ⭐⭐⭐⭐ - Caldera views, summer swim-up bar, honeymoon suite options</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Dubrovnik */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('summer-dubrovnik')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">3. Dubrovnik, Croatia – Adriatic Summer</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Game of Thrones fans, beach lovers, culture seekers, island hoppers</p>
+                    </div>
+                    {openDestination === 'summer-dubrovnik' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'summer-dubrovnik' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Dubrovnik's summer brings perfect Adriatic Sea temperatures, vibrant nightlife, summer festivals, island hopping weather, and peak Game of Thrones tour season with summer beach clubs.</p>
+                      <div className="bg-orange-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Summer?</h5>
+                        <p className="text-sm text-gray-700">Perfect Adriatic Sea temperatures (23-25°C), vibrant nightlife, summer festivals, island hopping weather, Game of Thrones tour season, summer beach clubs.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hotel Bellevue Dubrovnik</strong> ⭐⭐⭐⭐⭐ - Right on water with summer swimming, Adriatic views</li>
+                              <li><strong>Rixos Premium Dubrovnik</strong> ⭐⭐⭐⭐⭐ - All-inclusive, private beach, summer pools, piano bar</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Old Town)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Pucić Palace</strong> ⭐⭐⭐⭐⭐ - Old Town historic luxury, summer terrace dining in UNESCO site</li>
+                              <li><strong>Hilton Imperial Dubrovnik</strong> ⭐⭐⭐⭐⭐ - 1913 historic villa near Old Town, summer rooftop bar</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Dubrovnik Palace Hotel</strong> ⭐⭐⭐⭐ - Business facilities, summer conference venues, Lapad Bay views</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Royal Hotel Neptun</strong> ⭐⭐⭐⭐ - Coastal location, spacious family rooms, summer sea-view balconies</li>
+                              <li><strong>Valamar Lacroma Hotel</strong> ⭐⭐⭐⭐ - Private beach peninsula, multiple pools, summer kids' activities</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hotel Ivka</strong> ⭐⭐⭐ - Budget summer rates in Lapad, near beach and bus</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Barcelona Summer */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('summer-barcelona')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">4. Barcelona, Spain – Beach Club Culture</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Beach culture, nightlife, rooftop bars, festival enthusiasts</p>
+                    </div>
+                    {openDestination === 'summer-barcelona' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'summer-barcelona' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Barcelona's summer offers peak beach club atmosphere, rooftop bars with DJ sets, waterfront pools, summer party scene, and all attractions open with vibrant festivals.</p>
+                      <div className="bg-orange-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Summer?</h5>
+                        <p className="text-sm text-gray-700">Peak summer beach club atmosphere, rooftop bars with DJ sets, waterfront pools, summer party scene, all attractions open, festivals.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>W Barcelona</strong> ⭐⭐⭐⭐⭐ - Summer beach club atmosphere, rooftop DJ sets, waterfront pools</li>
+                              <li><strong>Hotel Arts Barcelona</strong> ⭐⭐⭐⭐⭐ - Olympic Port luxury, summer terrace dining, beach access</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Majestic Hotel & Spa Barcelona</strong> ⭐⭐⭐⭐⭐ - Passeig de Gràcia luxury, summer rooftop pool and bar</li>
+                              <li><strong>The Barcelona EDITION</strong> ⭐⭐⭐⭐⭐ - Summer rooftop with panoramic views, boutique luxury</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hilton Barcelona</strong> ⭐⭐⭐⭐⭐ - Diagonal business district, summer conference facilities</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hotel & Spa Villa Olimpica Suites</strong> ⭐⭐⭐⭐ - Summer beach perfect for families, Olympic Port kids' activities</li>
+                              <li><strong>H10 Port Vell</strong> ⭐⭐⭐⭐ - Summer beach with family facilities, relaxing atmosphere</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hotel Rialto</strong> ⭐⭐⭐⭐ - 10-min walk from beach, summer budget rates</li>
+                              <li><strong>Travelodge Barcelona Poblenou</strong> ⭐⭐⭐ - Close to summer beach activities, budget-friendly</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Tokyo Summer */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('summer-tokyo')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">5. Tokyo, Japan – Summer Festivals</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Festival lovers, culture enthusiasts, foodies, nightlife seekers</p>
+                    </div>
+                    {openDestination === 'summer-tokyo' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'summer-tokyo' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Tokyo's summer features festivals like Sumida River Fireworks and Bon Odori, warm weather perfect for exploring, summer matsuri celebrations, Mount Fuji climbing season, and vibrant nightlife.</p>
+                      <div className="bg-orange-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Summer?</h5>
+                        <p className="text-sm text-gray-700">Summer festivals (Sumida River Fireworks, Bon Odori), warm weather (25-32°C), summer matsuri celebrations, Mount Fuji climbing season, vibrant nightlife.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Park Hyatt Tokyo</strong> ⭐⭐⭐⭐⭐ - Shinjuku luxury, summer city views, Lost in Translation fame</li>
+                              <li><strong>The Tokyo Station Hotel</strong> ⭐⭐⭐⭐⭐ - Historic 1915 station, family-friendly, central to summer festivals</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Keio Plaza Hotel Tokyo</strong> ⭐⭐⭐⭐⭐ - Shinjuku business district, 35th-floor rooms, summer conference facilities</li>
+                              <li><strong>Hotel Groove Shinjuku</strong> ⭐⭐⭐⭐⭐ - Parkroyal business hotel, summer meeting spaces</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Shiba Park Hotel</strong> ⭐⭐⭐⭐ - Family rooms near Tokyo Tower, 1,500+ books for kids</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Tokyo Ueno Touganeya Hotel</strong> ⭐⭐⭐⭐ - Steps from Ueno Station, excellent family rooms, summer zoo access</li>
+                              <li><strong>Remm Hibiya</strong> ⭐⭐⭐ - In-room massage chairs, Ginza location, budget to moderate rates</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Cyprus */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('summer-cyprus')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">6. Cyprus – Mediterranean Summer</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Beach holidays, resorts, water sports, wine tasting</p>
+                    </div>
+                    {openDestination === 'summer-cyprus' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'summer-cyprus' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Cyprus offers perfect beach season with crystal-clear Mediterranean waters, olive-grove villages, summer wine tasting, ancient ruins exploration, and vibrant summer beach clubs.</p>
+                      <div className="bg-orange-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Summer?</h5>
+                        <p className="text-sm text-gray-700">Perfect beach season (28-33°C), crystal-clear Mediterranean waters, olive-grove villages, summer wine tasting, ancient ruins, summer beach clubs.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Amara Hotel Limassol</strong> ⭐⭐⭐⭐⭐ - Summer luxury beachfront, private beach, infinity pool</li>
+                              <li><strong>Four Seasons Hotel Cyprus</strong> ⭐⭐⭐⭐⭐ - Summer beach resort with kids' club, multiple pools perfect for heat</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>The Almond Business Suites</strong> ⭐⭐⭐⭐ - Business location, summer corporate stays, near marina</li>
+                              <li><strong>Londa Beach Hotel</strong> ⭐⭐⭐⭐⭐ - Business-leisure beachfront, summer conference facilities</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Olympic Lagoon Resort Paphos</strong> ⭐⭐⭐⭐ - Summer all-inclusive family resort, lagoon pools, waterslides</li>
+                              <li><strong>Adams Beach Hotel</strong> ⭐⭐⭐⭐ - Ayia Napa family beachfront, summer kids' activities</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Kapetanios Limassol Hotel</strong> ⭐⭐⭐ - City beach budget option, summer beach access</li>
+                              <li><strong>Pefkos City Hotel</strong> ⭐⭐⭐ - Paphos budget summer base, near attractions and beach</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Iceland */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('summer-iceland')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">7. Iceland – Midnight Sun</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Midnight sun, hiking, waterfalls, whale watching, puffins</p>
+                    </div>
+                    {openDestination === 'summer-iceland' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'summer-iceland' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Iceland's summer brings the midnight sun, warmest weather, summer highland roads opening, puffin season, whale watching peak, waterfall season at full flow, and incredible summer hiking.</p>
+                      <div className="bg-orange-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Summer?</h5>
+                        <p className="text-sm text-gray-700">Midnight sun (June-July), warmest weather (10-15°C), summer highland roads open, puffin season, whale watching peak, waterfall season full flow, summer hiking.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Reykjavik)</p>
+                            <ul className="space-y-1">
+                              <li><strong>The Reykjavik EDITION</strong> ⭐⭐⭐⭐⭐ - Summer downtown luxury with midnight sun views, modern Icelandic design</li>
+                              <li><strong>Hotel Borg by Keahotels</strong> ⭐⭐⭐⭐⭐ - Historic 1930s Art Deco hotel, summer city center, midnight sun terraces</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hilton Reykjavik Nordica</strong> ⭐⭐⭐⭐ - Summer business district, conference facilities, summer corporate events</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Fosshotel Reykjavik</strong> ⭐⭐⭐⭐ - Family rooms with summer Golden Circle tour access</li>
+                              <li><strong>Icelandair Hotel Reykjavik Marina</strong> ⭐⭐⭐⭐ - Summer harbor location for whale watching tours</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>CenterHotel Plaza</strong> ⭐⭐⭐ - Summer budget downtown, midnight sun viewing</li>
+                              <li><strong>Kex Hostel</strong> ⭐⭐⭐ - Social hostel-hotel, summer atmosphere, budget-friendly</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Maldives */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('summer-maldives')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">8. Maldives – Diving Season</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Overwater villas, diving, snorkeling, luxury resorts, marine life</p>
+                    </div>
+                    {openDestination === 'summer-maldives' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'summer-maldives' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Maldives summer dry season offers crystal-clear visibility for diving, manta ray season, whale shark sightings, summer luxury resort season, and perfect conditions for water sports.</p>
+                      <div className="bg-orange-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Summer?</h5>
+                        <p className="text-sm text-gray-700">Dry season (June-August), crystal-clear visibility for diving, manta ray season, whale shark sightings, summer luxury resort season, perfect for water sports.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels (Resort Islands)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Gili Lankanfushi</strong> ⭐⭐⭐⭐⭐ - Summer overwater villas, no-shoes luxury, summer diving/snorkeling</li>
+                              <li><strong>Soneva Fushi</strong> ⭐⭐⭐⭐⭐ - Summer barefoot luxury, massive villas, outdoor cinema, summer marine biology experiences</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>You & Me by Cocoon Maldives</strong> ⭐⭐⭐⭐⭐ - Summer all-inclusive family resort, kids' club, snorkeling</li>
+                              <li><strong>Kurumba Maldives</strong> ⭐⭐⭐⭐⭐ - Summer family beachfront near Male, multiple pools, kids' activities</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Adaaran Select Hudhuranfushi</strong> ⭐⭐⭐⭐ - All-inclusive summer budget option, beach bungalows</li>
+                              <li><strong>Embudu Village</strong> ⭐⭐⭐ - Summer budget island resort, beach access, affordable Maldivian experience</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="text-center pt-4">
@@ -608,13 +1459,436 @@ export default function SeasonsPage() {
                 </table>
               </div>
 
-              <div className="bg-amber-50 rounded-xl p-6 text-center">
-                <p className="text-gray-700 mb-2">
-                  <strong>8 Fall Destinations with detailed "Why Fall?" and "What to Expect" sections</strong>
-                </p>
-                <p className="text-sm text-gray-600">
-                  New England foliage, Tuscany wine harvest, Kyoto temples, and 5 more destinations await.
-                </p>
+              {/* Detailed Destination Cards */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">Fall Destination Details</h3>
+
+                {/* New England */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => toggleDestination('fall-newengland')}
+                    className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition"
+                  >
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">1. New England, USA – Fall Foliage</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Foliage lovers, hikers, harvest festivals, scenic drives</p>
+                    </div>
+                    {openDestination === 'fall-newengland' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'fall-newengland' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">
+                        New England's fall is legendary for world-famous foliage with hills turning red, orange, and yellow. Peak mid-October brings scenic drives like Kancamagus Highway, apple and pumpkin harvest festivals, and crisp autumn air.
+                      </p>
+                      <div className="bg-amber-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Fall?</h5>
+                        <p className="text-sm text-gray-700">World-famous fall foliage (peak mid-October), hills turn red/orange/yellow, scenic drives like Kancamagus Highway, apple and pumpkin harvest festivals, crisp autumn air (10-20°C).</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Boston/Burlington)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Four Seasons Hotel Boston</strong> ⭐⭐⭐⭐⭐ - Fall city luxury on Public Garden, autumn foliage views, harvest dining</li>
+                              <li><strong>Hotel Vermont, Burlington</strong> ⭐⭐⭐⭐⭐ - Fall foliage headquarters, autumn craft beer, farm-to-table harvest dining</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Boston Harbor Hotel</strong> ⭐⭐⭐⭐⭐ - Waterfront business, fall conference facilities, autumn corporate retreats</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Ocean House, Rhode Island</strong> ⭐⭐⭐⭐⭐ - Fall coastal luxury, autumn beach walks, cozy interiors</li>
+                              <li><strong>Trapp Family Lodge, Vermont</strong> ⭐⭐⭐⭐ - Sound of Music family resort, fall hiking trails, autumn activities</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hilton Garden Inn Burlington</strong> ⭐⭐⭐ - Budget foliage viewing base, fall season rates</li>
+                              <li><strong>Hampton Inn Portland Downtown</strong> ⭐⭐⭐ - Maine fall budget base, autumn coastal exploration</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Tuscany */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('fall-tuscany')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">2. Tuscany, Italy – Wine Harvest</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Wine lovers, culture seekers, food enthusiasts, photographers</p>
+                    </div>
+                    {openDestination === 'fall-tuscany' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'fall-tuscany' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Tuscany's fall harvest season brings wine and olive harvesting, golden vineyard hills in September-October, fewer crowds than summer, fall harvest festivals, pleasant temperatures, and truffle season beginning.</p>
+                      <div className="bg-amber-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Fall?</h5>
+                        <p className="text-sm text-gray-700">Harvest season (wine and olive), golden vineyard hills (September-October), fewer crowds than summer, fall harvest festivals, pleasant temperatures (15-25°C), truffle season begins.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Florence/Siena)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Four Seasons Hotel Florence</strong> ⭐⭐⭐⭐⭐ - Renaissance palace, fall garden courtyards, harvest dining at Il Palagio</li>
+                              <li><strong>Hotel Brunelleschi</strong> ⭐⭐⭐⭐⭐ - Tower museum hotel, fall terrace views, autumn Florence exploration</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>The Westin Excelsior Florence</strong> ⭐⭐⭐⭐⭐ - Arno River business, fall conference facilities, autumn wine events</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Villa La Massa</strong> ⭐⭐⭐⭐⭐ - Arno riverside family villa resort, fall outdoor activities, harvest experiences</li>
+                              <li><strong>Borgo San Felice</strong> ⭐⭐⭐⭐ - Chianti family resort, fall vineyard walks, autumn kids' activities</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hotel Davanzati</strong> ⭐⭐⭐ - Florence centro storico budget option, fall sightseeing base</li>
+                              <li><strong>Hotel Minerva</strong> ⭐⭐⭐ - Rooftop terrace with fall foliage views, budget-friendly September-November</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Kyoto Fall */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('fall-kyoto')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">3. Kyoto, Japan – Autumn Illuminations</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Temple lovers, foliage seekers, photographers, culture enthusiasts</p>
+                    </div>
+                    {openDestination === 'fall-kyoto' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'fall-kyoto' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Kyoto's fall brings spectacular autumn foliage peaking in November, cool comfortable temperatures, fall temple illuminations, fewer crowds than spring, harvest festivals, and perfect temple walking weather.</p>
+                      <div className="bg-amber-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Fall?</h5>
+                        <p className="text-sm text-gray-700">Spectacular autumn foliage (November peak), cool comfortable temperatures (12-20°C), fall temple illuminations, fewer crowds than spring, harvest festivals, perfect temple walking.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Ritz-Carlton Kyoto</strong> ⭐⭐⭐⭐⭐ - Kamogawa River, fall foliage views, autumn cultural experiences, luxury onsen</li>
+                              <li><strong>Four Seasons Hotel Kyoto</strong> ⭐⭐⭐⭐⭐ - Autumn foliage packages, fall temple tour access, luxury gardens</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>The Millennials Kyoto</strong> ⭐⭐⭐ - Kawaramachi business district, fall foliage riverside walks, coworking spaces</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>MACHIYA RESIDENCE INN</strong> ⭐⭐⭐⭐ - Traditional townhouses, fall cultural immersion, family-sized</li>
+                              <li><strong>Hotel Intergate Kyoto Shijo Shinmachi</strong> ⭐⭐⭐ - Budget downtown, fall comfortable rooms, free breakfast</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Piece Hostel Sanjo</strong> ⭐⭐⭐ - Budget fall foliage base, modern hostel-hotel, autumn temple access</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Patagonia */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('fall-patagonia')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">4. Patagonia, Chile/Argentina – Southern Spring</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Hikers, glacier lovers, wildlife seekers, wilderness adventurers</p>
+                    </div>
+                    {openDestination === 'fall-patagonia' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'fall-patagonia' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Patagonia's southern hemisphere spring (September-November) brings wildflowers blooming, cooler hiking temperatures, fewer crowds than summer, penguin season beginning, baby animal season, and glaciers at their bluest.</p>
+                      <div className="bg-amber-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Fall?</h5>
+                        <p className="text-sm text-gray-700">Southern hemisphere spring (September-November), wildflowers blooming, cooler hiking temperatures (8-15°C), fewer crowds than summer, penguin season begins, baby animal season, glaciers at bluest.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (El Calafate/Puerto Natales)</p>
+                            <ul className="space-y-1">
+                              <li><strong>The Singular Patagonia</strong> ⭐⭐⭐⭐⭐ - Puerto Natales luxury, spring fjord views, historic building conversion</li>
+                              <li><strong>Los Sauces Hotel, El Calafate</strong> ⭐⭐⭐⭐ - Town center for spring glacier tours, comfortable, autumn-spring base</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Explora Patagonia</strong> ⭐⭐⭐⭐⭐ - Torres del Paine all-inclusive family adventures, guided spring hikes</li>
+                              <li><strong>Hotel Las Torres</strong> ⭐⭐⭐⭐ - Torres del Paine family base, spring hiking, guanaco viewing</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>America del Sur Hostel</strong> ⭐⭐⭐ - El Calafate budget spring base, hostel-hotel with private rooms</li>
+                              <li><strong>Hosteria Senderos</strong> ⭐⭐⭐ - Puerto Natales budget option, spring Patagonia gateway</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Morocco Fall */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('fall-morocco')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">5. Morocco – Comfortable Harvest Season</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Culture seekers, garden lovers, souk explorers, food enthusiasts</p>
+                    </div>
+                    {openDestination === 'fall-morocco' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'fall-morocco' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Morocco in fall offers fewer summer crowds, warm comfortable temperatures, pleasant fall weather for souk exploring, harvest season celebrations, and coastal activities still enjoyable.</p>
+                      <div className="bg-amber-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Fall?</h5>
+                        <p className="text-sm text-gray-700">Fewer summer crowds, warm Adriatic Sea still swimmable (September 23°C), pleasant fall temperatures (15-25°C), autumn festivals, lower hotel rates, comfortable Old Town exploring.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels (Essaouira)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Le Medina Essaouira Hotel Thalassa</strong> ⭐⭐⭐⭐⭐ - Atlantic beachfront, fall windsurfing season, coastal walks</li>
+                              <li><strong>Sofitel Essaouira Mogador Golf & Spa</strong> ⭐⭐⭐⭐⭐ - Fall beach resort, autumn golf season, spa relaxation</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Marrakech)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Royal Mansour Marrakech</strong> ⭐⭐⭐⭐⭐ - Fall riads, autumn garden courtyards, harvest dining</li>
+                              <li><strong>La Mamounia</strong> ⭐⭐⭐⭐⭐ - Historic autumn elegance, fall gardens, comfortable temperatures</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Kenzi Tower Hotel</strong> ⭐⭐⭐⭐ - Gueliz business district, fall conference season, autumn corporate events</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Palais Namaskar</strong> ⭐⭐⭐⭐⭐ - Family villas, fall private pools still warm, autumn activities</li>
+                              <li><strong>Kasbah Tamadot, Atlas Mountains</strong> ⭐⭐⭐⭐⭐ - Richard Branson's fall mountain retreat, family-friendly autumn activities</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Riad Yasmine</strong> ⭐⭐⭐ - Medina riad, fall rooftop terrace, authentic, budget</li>
+                              <li><strong>Hotel Ali</strong> ⭐⭐⭐ - Budget fall base near Jemaa el-Fnaa, autumn souk exploration</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Dubrovnik Fall */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('fall-dubrovnik')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">6. Dubrovnik, Croatia – Autumn Adriatic</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Beach lovers, culture seekers, Old Town explorers, budget travelers</p>
+                    </div>
+                    {openDestination === 'fall-dubrovnik' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'fall-dubrovnik' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Dubrovnik's fall brings September warmth with sea still at 23°C, autumn Adriatic charm, fewer crowds than summer, comfortable Old Town exploring, and significantly lower hotel rates.</p>
+                      <div className="bg-amber-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Fall?</h5>
+                        <p className="text-sm text-gray-700">September warmth (sea still 23°C), autumn Adriatic charm, fewer crowds than summer, comfortable Old Town exploring, lower hotel rates, fall festivals.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Beachfront Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hotel Bellevue Dubrovnik</strong> ⭐⭐⭐⭐⭐ - September waterfront perfect for swimming, autumn Adriatic views</li>
+                              <li><strong>Rixos Premium Dubrovnik</strong> ⭐⭐⭐⭐⭐ - Fall all-inclusive, autumn private beach, September sea still warm</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Old Town)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Pucić Palace</strong> ⭐⭐⭐⭐⭐ - Fall Old Town luxury without summer crowds, autumn terrace dining</li>
+                              <li><strong>Hilton Imperial Dubrovnik</strong> ⭐⭐⭐⭐⭐ - Fall historic villa elegance, autumn rooftop bar, September warmth</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Dubrovnik Palace Hotel</strong> ⭐⭐⭐⭐ - Fall conference facilities, autumn corporate events, Lapad Bay views</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Royal Hotel Neptun</strong> ⭐⭐⭐⭐ - September sea still warm for families, autumn beach less crowded</li>
+                              <li><strong>President Hotel, Valamar Collection</strong> ⭐⭐⭐⭐ - Fall location with Old Town access, September beach enjoyable</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hotel Ivka</strong> ⭐⭐⭐ - Fall budget rates significantly lower, Lapad location</li>
+                              <li><strong>Hotel Royal Ariston</strong> ⭐⭐⭐⭐ - September rocky beach still perfect, autumn seaside walking</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Egypt */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('fall-egypt')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">7. Egypt – Season Begins</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Ancient site explorers, Nile cruisers, history buffs, photographers</p>
+                    </div>
+                    {openDestination === 'fall-egypt' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'fall-egypt' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Egypt's fall brings pleasant November temperatures after summer heat, comfortable temple exploring, Nile cruise season beginning in November, fewer crowds, and autumn light perfect for Valley of Kings photography.</p>
+                      <div className="bg-amber-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Fall?</h5>
+                        <p className="text-sm text-gray-700">Pleasant November temperatures (20-30°C) after summer heat, comfortable temple exploring, Nile cruise season begins (November), fewer crowds, autumn light perfect for Valley of Kings, cooler desert trips.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels (Luxor)</p>
+                            <ul className="space-y-1">
+                              <li><strong>Sofitel Winter Palace Luxor</strong> ⭐⭐⭐⭐⭐ - Nile-side Victorian elegance, fall terrace, autumn temple tour base</li>
+                              <li><strong>Pavillon Winter Luxor</strong> ⭐⭐⭐⭐⭐ - Sister property, fall Nile views, autumn comfortable exploring</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Steigenberger Nile Palace Luxor</strong> ⭐⭐⭐⭐ - Fall family-friendly Nile resort, autumn pool perfect, November temple tours</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Maritim Jolie Ville Kings Island Luxor</strong> ⭐⭐⭐⭐ - Fall island resort for families, autumn Nile activities, spacious grounds</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Nefertiti Hotel Luxor</strong> ⭐⭐⭐ - Budget fall temple base, rooftop with autumn Nile views</li>
+                              <li><strong>Happy Land Hotel</strong> ⭐⭐⭐ - Budget November comfortable stay, near temples</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Budapest */}
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button onClick={() => toggleDestination('fall-budapest')} className="w-full bg-gray-50 p-4 flex items-center justify-between hover:bg-gray-100 transition">
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-800">8. Budapest, Hungary – Danube Foliage</h4>
+                      <p className="text-sm text-gray-600">Perfect for: Thermal bath lovers, foliage seekers, café culture, architecture enthusiasts</p>
+                    </div>
+                    {openDestination === 'fall-budapest' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {openDestination === 'fall-budapest' && (
+                    <div className="p-6 bg-white space-y-4">
+                      <p className="text-gray-700 leading-relaxed">Budapest's fall brings autumn foliage along the Danube in September-October, cooler thermal bath weather that's perfect at 15-20°C, fall café culture thriving, fewer summer crowds, and comfortable sightseeing conditions.</p>
+                      <div className="bg-amber-50 rounded-lg p-4">
+                        <h5 className="font-semibold text-gray-800 mb-2">Why Fall?</h5>
+                        <p className="text-sm text-gray-700">Autumn foliage along Danube (September-October), cooler thermal bath weather perfect (15-20°C), fall café culture thrives, fewer summer crowds, autumn festivals, comfortable sightseeing.</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Where to Stay:</h5>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Downtown Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Four Seasons Hotel Gresham Palace</strong> ⭐⭐⭐⭐⭐ - Fall Art Nouveau palace on Danube, autumn foliage from Chain Bridge</li>
+                              <li><strong>Aria Hotel Budapest</strong> ⭐⭐⭐⭐⭐ - Music-themed fall luxury, autumn rooftop with city views</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Business Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Kempinski Hotel Corvinus Budapest</strong> ⭐⭐⭐⭐⭐ - Business district, fall conference facilities, autumn corporate events</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Family Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Corinthia Hotel Budapest</strong> ⭐⭐⭐⭐⭐ - Fall grand hotel with family suites, autumn spa perfect for families</li>
+                              <li><strong>Hilton Budapest</strong> ⭐⭐⭐⭐ - Castle District, fall foliage views, autumn thermal baths</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-800 mb-1">Budget Hotels</p>
+                            <ul className="space-y-1">
+                              <li><strong>Hotel Moments Budapest</strong> ⭐⭐⭐ - Budget fall downtown base, autumn comfortable rates</li>
+                              <li><strong>Roombach Hotel Budapest Center</strong> ⭐⭐⭐ - September-November budget option, central, fall sightseeing access</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="text-center pt-4">
