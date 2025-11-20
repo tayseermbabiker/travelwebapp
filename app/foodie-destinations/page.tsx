@@ -733,7 +733,7 @@ export default function FoodieDestinationsPage() {
                             <p className="text-gray-700">{destination.whereToEat.michelin}</p>
                           </div>
                         )}
-                        {destination.whereToEat.pizza && (
+                        {destination.whereToEat.pizza && Array.isArray(destination.whereToEat.pizza) && (
                           <div className="bg-white p-4 rounded-lg border border-gray-200">
                             <h5 className="font-semibold text-teal-600 mb-2">Pizza</h5>
                             <ul className="space-y-2">
@@ -743,7 +743,7 @@ export default function FoodieDestinationsPage() {
                             </ul>
                           </div>
                         )}
-                        {destination.whereToEat.hawkerCenters && (
+                        {destination.whereToEat.hawkerCenters && Array.isArray(destination.whereToEat.hawkerCenters) && (
                           <div className="bg-white p-4 rounded-lg border border-gray-200">
                             <h5 className="font-semibold text-teal-600 mb-2">Hawker Centers</h5>
                             <ul className="space-y-2">
@@ -765,7 +765,7 @@ export default function FoodieDestinationsPage() {
                             <p className="text-gray-700">{destination.whereToEat.fineDining}</p>
                           </div>
                         )}
-                        {destination.whereToEat.restaurants && (
+                        {destination.whereToEat.restaurants && Array.isArray(destination.whereToEat.restaurants) && (
                           <div className="bg-white p-4 rounded-lg border border-gray-200">
                             <h5 className="font-semibold text-teal-600 mb-2">Restaurants</h5>
                             <ul className="space-y-2">
@@ -775,7 +775,7 @@ export default function FoodieDestinationsPage() {
                             </ul>
                           </div>
                         )}
-                        {destination.whereToEat.specific && (
+                        {destination.whereToEat.specific && Array.isArray(destination.whereToEat.specific) && (
                           <div className="bg-white p-4 rounded-lg border border-gray-200">
                             <h5 className="font-semibold text-teal-600 mb-2">Specific Recommendations</h5>
                             <ul className="space-y-2">
@@ -795,7 +795,7 @@ export default function FoodieDestinationsPage() {
                             </ul>
                           </div>
                         )}
-                        {destination.whereToEat.experiences && destination.whereToEat.experiences.length > 0 && (
+                        {destination.whereToEat.experiences && Array.isArray(destination.whereToEat.experiences) && destination.whereToEat.experiences.length > 0 && (
                           <div className="bg-white p-4 rounded-lg border border-gray-200">
                             <h5 className="font-semibold text-teal-600 mb-2">Food Experiences</h5>
                             <ul className="space-y-2">
