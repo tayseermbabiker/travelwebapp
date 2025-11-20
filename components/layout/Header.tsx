@@ -48,33 +48,38 @@ export default function Header() {
 
             {/* Travel Guides Dropdown */}
             <div
-              className="relative"
+              className="relative group"
               onMouseEnter={() => setGuidesDropdownOpen(true)}
               onMouseLeave={() => setGuidesDropdownOpen(false)}
             >
               <button
-                className="flex items-center gap-1 text-gray-700 hover:text-teal-600 font-medium transition"
+                className="flex items-center gap-1 text-gray-700 hover:text-teal-600 font-medium transition py-2"
               >
                 Travel Guides
                 <ChevronDown className={`w-4 h-4 transition-transform ${guidesDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
+              {/* Invisible bridge to prevent dropdown from closing */}
+              <div className="absolute top-full left-0 w-64 h-2 -mt-0.5"></div>
+
               {guidesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50">
-                  {travelGuides.map((guide) => (
-                    <Link
-                      key={guide.href}
-                      href={guide.href}
-                      className="block px-4 py-3 hover:bg-teal-50 transition group"
-                    >
-                      <div className="font-medium text-gray-800 group-hover:text-teal-600">
-                        {guide.name}
-                      </div>
-                      <div className="text-xs text-gray-500 mt-0.5">
-                        {guide.description}
-                      </div>
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 pt-2 w-64 z-50">
+                  <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2 overflow-hidden">
+                    {travelGuides.map((guide) => (
+                      <Link
+                        key={guide.href}
+                        href={guide.href}
+                        className="block px-4 py-3 hover:bg-teal-50 transition group"
+                      >
+                        <div className="font-medium text-gray-800 group-hover:text-teal-600">
+                          {guide.name}
+                        </div>
+                        <div className="text-xs text-gray-500 mt-0.5">
+                          {guide.description}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
