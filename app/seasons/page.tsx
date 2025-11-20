@@ -26,18 +26,18 @@ export default function SeasonsPage() {
       </div>
 
       {/* Hero Section - Glassmorphism */}
-      <section className="relative py-20 px-4">
+      <section className="relative py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           {/* Glass Card */}
-          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-12 relative overflow-hidden">
+          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-10 relative overflow-hidden">
             {/* Subtle gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
 
             <div className="relative z-10">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 text-center bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Destinations by Season
               </h1>
-              <p className="text-2xl md:text-3xl text-center mb-6 text-gray-800 font-light">
+              <p className="text-2xl md:text-3xl text-center mb-4 text-gray-800 font-light">
                 Complete Year-Round Travel Guide
               </p>
               <p className="text-lg text-center max-w-3xl mx-auto text-gray-700 leading-relaxed">
@@ -49,7 +49,7 @@ export default function SeasonsPage() {
       </section>
 
       {/* Main Content */}
-      <div className="container mx-auto max-w-6xl px-4 py-12">
+      <div className="container mx-auto max-w-6xl px-4 py-6">
 
         {/* Introduction */}
         <section className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300">
