@@ -10,6 +10,7 @@ export default function Header() {
   const navigationLinks = [
     { name: 'Home', href: '/' },
     { name: 'Seasonal Guide', href: '/seasons' },
+    { name: 'Foodie Destinations', href: '/foodie-destinations' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
