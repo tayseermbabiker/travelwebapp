@@ -12,6 +12,7 @@ export default function Header() {
     { name: 'Seasonal Guide', href: '/seasons' },
     { name: 'Foodie Destinations', href: '/foodie-destinations' },
     { name: 'Digital Nomad', href: '/digital-nomad' },
+    { name: 'Solo Female Travel', href: '/solo-female-travel' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
