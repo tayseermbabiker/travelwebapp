@@ -11,6 +11,7 @@ export default function Header() {
     { name: 'Home', href: '/' },
     { name: 'Seasonal Guide', href: '/seasons' },
     { name: 'Foodie Destinations', href: '/foodie-destinations' },
+    { name: 'Digital Nomad', href: '/digital-nomad' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
