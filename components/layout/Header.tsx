@@ -1,21 +1,26 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [guidesDropdownOpen, setGuidesDropdownOpen] = useState(false);
+
+  const travelGuides = [
+    { name: 'Seasons Travel', href: '/seasons', description: 'Best destinations by season' },
+    { name: 'Foodie Travel', href: '/foodie-destinations', description: 'World\'s top food cities' },
+    { name: 'Solo Female Travel', href: '/solo-female-travel', description: 'Safest destinations for women' },
+    { name: 'Digital Nomad Travel', href: '/digital-nomad', description: 'Remote work destinations' },
+    { name: 'Family Travel', href: '/family-travel', description: 'Kid-friendly destinations' },
+    { name: 'Adventure Travel', href: '/adventure-travel', description: 'Thrilling destinations' },
+    { name: 'Wellness Retreat Travel', href: '/wellness-retreats', description: 'Healing destinations' },
+    { name: 'Budget Travel', href: '/budget-travel', description: 'Affordable destinations' },
+  ];
 
   const navigationLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Seasonal Guide', href: '/seasons' },
-    { name: 'Foodie Destinations', href: '/foodie-destinations' },
-    { name: 'Digital Nomad', href: '/digital-nomad' },
-    { name: 'Solo Female Travel', href: '/solo-female-travel' },
-    { name: 'Adventure Travel', href: '/adventure-travel' },
-    { name: 'Family Travel', href: '/family-travel' },
-    { name: 'Wellness Retreats', href: '/wellness-retreats' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -30,7 +35,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navigationLinks.map((link) => (
               <Link
                 key={link.href}
@@ -40,6 +45,40 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
+
+            {/* Travel Guides Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setGuidesDropdownOpen(true)}
+              onMouseLeave={() => setGuidesDropdownOpen(false)}
+            >
+              <button
+                className="flex items-center gap-1 text-gray-700 hover:text-teal-600 font-medium transition"
+              >
+                Travel Guides
+                <ChevronDown className={`w-4 h-4 transition-transform ${guidesDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {guidesDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50">
+                  {travelGuides.map((guide) => (
+                    <Link
+                      key={guide.href}
+                      href={guide.href}
+                      className="block px-4 py-3 hover:bg-teal-50 transition group"
+                    >
+                      <div className="font-medium text-gray-800 group-hover:text-teal-600">
+                        {guide.name}
+                      </div>
+                      <div className="text-xs text-gray-500 mt-0.5">
+                        {guide.description}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               href="/"
               className="bg-teal-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-teal-600 transition"
@@ -72,6 +111,24 @@ export default function Header() {
                   {link.name}
                 </Link>
               ))}
+
+              {/* Mobile Travel Guides Section */}
+              <div className="border-t border-gray-200 pt-3 mt-3">
+                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-2 mb-2">
+                  Travel Guides
+                </div>
+                {travelGuides.map((guide) => (
+                  <Link
+                    key={guide.href}
+                    href={guide.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-2 py-2 text-gray-700 hover:text-teal-600 font-medium transition"
+                  >
+                    {guide.name}
+                  </Link>
+                ))}
+              </div>
+
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
