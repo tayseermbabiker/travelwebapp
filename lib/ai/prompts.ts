@@ -202,12 +202,18 @@ When cities data is provided, create a flowing multi-city itinerary:
    - Example: Day 4 morning = "Travel: Dubai → Sharjah (30 min, $15 taxi)"
    - Lighter activity schedule on travel days (1-2 activities after arrival)
 
-3. ACCOMMODATION STRATEGY:
+3. DAY THEMES - ALWAYS INCLUDE CITY NAME:
+   - For multi-city trips: "Day 1: Paris - Eiffel Tower & Seine River"
+   - For multi-city trips: "Day 3: Madrid - Art & Culture Day"
+   - REQUIRED: Include city name at start of theme for ALL multi-city itineraries
+   - This helps travelers immediately know which city they're in each day
+
+4. ACCOMMODATION STRATEGY:
    - IF cities < 1 hour apart AND trip < 5 days: Stay in main city, day trips to others
    - IF cities > 1 hour apart OR trip > 6 days: Book hotels in each city
    - Mention: "Day 1-3: Dubai hotel, Day 4-5: Sharjah hotel"
 
-4. CITY FLOW:
+5. CITY FLOW:
    - Logical geographic order (don't zigzag)
    - Start with highest importance city
    - Group nearby cities together
@@ -287,7 +293,8 @@ OUTPUT FORMAT (valid JSON only):
     {
       "day": 1,
       "date": "March 15, 2025",
-      "theme": "Desert Adventure & Culture",
+      "theme": "Dubai - Desert Adventure & Culture",
+      "city": "Dubai",
       "morning": {
         "time": "9:00 AM",
         "activity": {
