@@ -718,27 +718,36 @@ export default function FamilyTravelPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100" style={{ fontFamily: 'Mulish, sans-serif' }}>
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 font-sans pt-16 relative overflow-hidden">
+      {/* Gradient Mesh Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-green-400/30 to-blue-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full blur-3xl"></div>
+      </div>
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-500 to-purple-600 text-white py-20 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Family Destinations
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-purple-100">
-            The World's Best Destinations for Kids
-          </p>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Travel with kids. Actually enjoy it. Discover destinations where infrastructure supports families,
-            where kids are welcomed, where safety is non-negotiable, and where there's something for everyone.
-          </p>
+      <section className="relative py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 md:p-12 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
+              Family Destinations
+            </h1>
+            <p className="text-xl md:text-2xl mb-6 text-gray-700 font-medium">
+              The World's Best Destinations for Kids
+            </p>
+            <p className="text-base md:text-lg max-w-3xl mx-auto leading-relaxed text-gray-600">
+              Travel with kids. Actually enjoy it. Discover destinations where infrastructure supports families,
+              where kids are welcomed, where safety is non-negotiable, and where there's something for everyone.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Introduction Section */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <section className="relative max-w-6xl mx-auto px-6 py-16">
+        <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 md:p-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             How to Use This Guide
           </h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -752,49 +761,49 @@ export default function FamilyTravelPage() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mt-8">
-            <div className="bg-purple-50 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-purple-800 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            <div className="backdrop-blur-md bg-green-50/70 border border-green-100/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-green-800 mb-4">
                 Pick Your Priority
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2">•</span>
+                  <span className="text-green-600 mr-2">•</span>
                   <span><strong>Safety:</strong> Child-specific safety (healthcare, traffic, crime)</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2">•</span>
+                  <span className="text-green-600 mr-2">•</span>
                   <span><strong>Age Group:</strong> Best for toddlers? Teens? Mixed ages?</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2">•</span>
+                  <span className="text-green-600 mr-2">•</span>
                   <span><strong>Budget:</strong> Monthly cost for family of 4</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-purple-600 mr-2">•</span>
+                  <span className="text-green-600 mr-2">•</span>
                   <span><strong>Activities:</strong> What will actually entertain your kids?</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-pink-50 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-pink-800 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            <div className="backdrop-blur-md bg-blue-50/70 border border-blue-100/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-blue-800 mb-4">
                 What's Included
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-2">•</span>
+                  <span className="text-blue-600 mr-2">•</span>
                   <span><strong>Healthcare:</strong> Access to pediatric care</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-2">•</span>
+                  <span className="text-blue-600 mr-2">•</span>
                   <span><strong>Climate:</strong> Heat? Cold? Rainy season?</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-2">•</span>
+                  <span className="text-blue-600 mr-2">•</span>
                   <span><strong>Culture:</strong> How welcoming are people to families?</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-2">•</span>
+                  <span className="text-blue-600 mr-2">•</span>
                   <span><strong>Costs:</strong> Detailed monthly breakdown</span>
                 </li>
               </ul>
@@ -804,69 +813,71 @@ export default function FamilyTravelPage() {
       </section>
 
       {/* Family Travel Influencers Section */}
-      <section className="bg-gradient-to-r from-pink-500 to-pink-600 text-white py-16 px-6">
+      <section className="relative py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            The Family Travel Influencers
-          </h2>
-          <p className="text-lg text-center mb-12 text-pink-100">
-            These creators travel the world with kids and have millions of followers watching
-          </p>
+          <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 md:p-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
+              The Family Travel Influencers
+            </h2>
+            <p className="text-lg text-center mb-12 text-gray-600">
+              These creators travel the world with kids and have millions of followers watching
+            </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {influencers.map((influencer, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all">
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  {influencer.name}
-                </h3>
-                <p className="text-pink-100 mb-2">{influencer.handle}</p>
-                <p className="text-sm font-semibold mb-3 text-pink-200">{influencer.followers}</p>
-                <p className="text-sm leading-relaxed">{influencer.description}</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {influencers.map((influencer, index) => (
+                <div key={index} className="backdrop-blur-md bg-gradient-to-br from-green-50/70 via-blue-50/70 to-purple-50/70 border border-white/50 rounded-xl p-6 hover:shadow-lg transition-all">
+                  <h3 className="text-xl font-bold mb-2 text-gray-800">
+                    {influencer.name}
+                  </h3>
+                  <p className="text-gray-600 mb-2">{influencer.handle}</p>
+                  <p className="text-sm font-semibold mb-3 text-blue-600">{influencer.followers}</p>
+                  <p className="text-sm leading-relaxed text-gray-700">{influencer.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 backdrop-blur-md bg-gradient-to-br from-purple-50/70 to-blue-50/70 border border-white/50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-4 text-gray-800">
+                What They All Agree On
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-green-600 font-bold mr-2">1.</span>
+                    <span>Healthcare access is non-negotiable</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 font-bold mr-2">2.</span>
+                    <span>Kid-friendly activities matter (free parks, museums, nature)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 font-bold mr-2">3.</span>
+                    <span>Family-focused accommodations (kitchens, space, kids' clubs)</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-blue-600 font-bold mr-2">4.</span>
+                    <span>Safety is everything</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 font-bold mr-2">5.</span>
+                    <span>Local culture's attitude toward families matters</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 font-bold mr-2">6.</span>
+                    <span>Budget varies wildly—there are options at every price point</span>
+                  </li>
+                </ul>
               </div>
-            ))}
-          </div>
-
-          <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              What They All Agree On
-            </h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="text-pink-200 mr-2">1.</span>
-                  <span>Healthcare access is non-negotiable</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-pink-200 mr-2">2.</span>
-                  <span>Kid-friendly activities matter (free parks, museums, nature)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-pink-200 mr-2">3.</span>
-                  <span>Family-focused accommodations (kitchens, space, kids' clubs)</span>
-                </li>
-              </ul>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="text-pink-200 mr-2">4.</span>
-                  <span>Safety is everything</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-pink-200 mr-2">5.</span>
-                  <span>Local culture's attitude toward families matters</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-pink-200 mr-2">6.</span>
-                  <span>Budget varies wildly—there are options at every price point</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Destinations Section */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <section className="relative max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
           The 12 Best Family-Friendly Destinations
         </h2>
         <p className="text-lg text-gray-600 text-center mb-12">
@@ -875,21 +886,21 @@ export default function FamilyTravelPage() {
 
         <div className="space-y-6">
           {destinations.map((destination) => (
-            <div key={destination.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div key={destination.id} className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
               {/* Card Header - Always Visible */}
               <div className="p-6 md:p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div className="mb-4 md:mb-0">
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                       {destination.country}
                     </h3>
                     <p className="text-lg text-gray-600">{destination.location}</p>
                   </div>
                   <div className="flex flex-col items-start md:items-end">
-                    <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-full font-bold mb-2">
+                    <div className="bg-gradient-to-r from-green-400/80 via-blue-400/80 to-purple-400/80 text-white px-4 py-2 rounded-full font-bold mb-2 backdrop-blur-sm">
                       Safety: {destination.safetyScore}
                     </div>
-                    <div className="bg-gradient-to-r from-pink-500 to-pink-600 text-white px-4 py-2 rounded-full font-bold">
+                    <div className="bg-gradient-to-r from-blue-400/80 via-purple-400/80 to-green-400/80 text-white px-4 py-2 rounded-full font-bold backdrop-blur-sm">
                       {destination.monthlyCost}/month
                     </div>
                   </div>
@@ -897,12 +908,12 @@ export default function FamilyTravelPage() {
 
                 {/* Key Info Grid */}
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="bg-purple-50 rounded-lg p-4">
-                    <p className="text-sm text-purple-700 font-semibold mb-1">Best For</p>
+                  <div className="backdrop-blur-md bg-green-50/70 border border-green-100/50 rounded-lg p-4">
+                    <p className="text-sm text-green-700 font-semibold mb-1">Best For</p>
                     <p className="text-gray-800">{destination.bestFor}</p>
                   </div>
-                  <div className="bg-pink-50 rounded-lg p-4">
-                    <p className="text-sm text-pink-700 font-semibold mb-1">Best Season</p>
+                  <div className="backdrop-blur-md bg-blue-50/70 border border-blue-100/50 rounded-lg p-4">
+                    <p className="text-sm text-blue-700 font-semibold mb-1">Best Season</p>
                     <p className="text-gray-800">{destination.bestSeason}</p>
                   </div>
                 </div>
@@ -911,8 +922,8 @@ export default function FamilyTravelPage() {
                 {expandedCards.includes(destination.id) && (
                   <div className="mt-6 space-y-6 animate-fadeIn">
                     {/* Monthly Cost Breakdown */}
-                    <div className="bg-gray-50 rounded-xl p-6">
-                      <h4 className="text-xl font-bold text-gray-800 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    <div className="backdrop-blur-md bg-gradient-to-br from-green-50/70 to-blue-50/70 border border-white/50 rounded-xl p-6">
+                      <h4 className="text-xl font-bold text-gray-800 mb-4">
                         Monthly Cost Breakdown (Family of 4)
                       </h4>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -940,7 +951,7 @@ export default function FamilyTravelPage() {
 
                     {/* Why Families Love It */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-800 mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                      <h4 className="text-xl font-bold text-gray-800 mb-3">
                         Why Families Love It
                       </h4>
                       <p className="text-gray-700 leading-relaxed">{destination.whyFamiliesLoveIt}</p>
@@ -948,13 +959,13 @@ export default function FamilyTravelPage() {
 
                     {/* Top Family Activities */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-800 mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                      <h4 className="text-xl font-bold text-gray-800 mb-3">
                         Top Family Activities
                       </h4>
                       <ul className="space-y-2">
                         {destination.topActivities.map((activity, idx) => (
                           <li key={idx} className="flex items-start">
-                            <span className="text-purple-600 mr-2">•</span>
+                            <span className="text-green-600 mr-2">•</span>
                             <span className="text-gray-700">{activity}</span>
                           </li>
                         ))}
@@ -963,12 +974,12 @@ export default function FamilyTravelPage() {
 
                     {/* Family Accommodations */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-800 mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                      <h4 className="text-xl font-bold text-gray-800 mb-3">
                         Family Accommodations
                       </h4>
                       <div className="grid md:grid-cols-2 gap-4">
                         {destination.familyAccommodations.map((accommodation, idx) => (
-                          <div key={idx} className="bg-purple-50 rounded-lg p-4">
+                          <div key={idx} className="backdrop-blur-md bg-purple-50/70 border border-purple-100/50 rounded-lg p-4">
                             <p className="font-bold text-purple-800 mb-1">{accommodation.name}</p>
                             <p className="text-sm text-purple-600 mb-2">{accommodation.price}</p>
                             <p className="text-sm text-gray-700">{accommodation.features}</p>
@@ -979,65 +990,65 @@ export default function FamilyTravelPage() {
 
                     {/* Transportation */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-800 mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                      <h4 className="text-xl font-bold text-gray-800 mb-3">
                         Transportation
                       </h4>
-                      <div className="bg-pink-50 rounded-lg p-4 space-y-2">
+                      <div className="backdrop-blur-md bg-blue-50/70 border border-blue-100/50 rounded-lg p-4 space-y-2">
                         <p className="text-gray-700">
-                          <span className="font-semibold text-pink-800">Best Option:</span> {destination.transportationDetails.bestOption}
+                          <span className="font-semibold text-blue-800">Best Option:</span> {destination.transportationDetails.bestOption}
                         </p>
                         <p className="text-gray-700">
-                          <span className="font-semibold text-pink-800">Safety:</span> {destination.transportationDetails.safety}
+                          <span className="font-semibold text-blue-800">Safety:</span> {destination.transportationDetails.safety}
                         </p>
                         <p className="text-gray-700">
-                          <span className="font-semibold text-pink-800">Cost:</span> {destination.transportationDetails.cost}
+                          <span className="font-semibold text-blue-800">Cost:</span> {destination.transportationDetails.cost}
                         </p>
                       </div>
                     </div>
 
                     {/* Healthcare */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-800 mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                      <h4 className="text-xl font-bold text-gray-800 mb-3">
                         Healthcare
                       </h4>
-                      <div className="bg-purple-50 rounded-lg p-4 space-y-2">
+                      <div className="backdrop-blur-md bg-green-50/70 border border-green-100/50 rounded-lg p-4 space-y-2">
                         <p className="text-gray-700">
-                          <span className="font-semibold text-purple-800">Quality:</span> {destination.healthcare.quality}
+                          <span className="font-semibold text-green-800">Quality:</span> {destination.healthcare.quality}
                         </p>
                         <p className="text-gray-700">
-                          <span className="font-semibold text-purple-800">Pediatric:</span> {destination.healthcare.pediatric}
+                          <span className="font-semibold text-green-800">Pediatric:</span> {destination.healthcare.pediatric}
                         </p>
                         <p className="text-gray-700">
-                          <span className="font-semibold text-purple-800">Pharmacies:</span> {destination.healthcare.pharmacies}
+                          <span className="font-semibold text-green-800">Pharmacies:</span> {destination.healthcare.pharmacies}
                         </p>
                       </div>
                     </div>
 
                     {/* Food Options */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-800 mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                      <h4 className="text-xl font-bold text-gray-800 mb-3">
                         Food Options
                       </h4>
-                      <div className="bg-pink-50 rounded-lg p-4 space-y-2">
+                      <div className="backdrop-blur-md bg-purple-50/70 border border-purple-100/50 rounded-lg p-4 space-y-2">
                         <p className="text-gray-700">
-                          <span className="font-semibold text-pink-800">Kid-Friendly:</span> {destination.foodOptions.kidFriendly}
+                          <span className="font-semibold text-purple-800">Kid-Friendly:</span> {destination.foodOptions.kidFriendly}
                         </p>
                         <p className="text-gray-700">
-                          <span className="font-semibold text-pink-800">Dietary Needs:</span> {destination.foodOptions.dietary}
+                          <span className="font-semibold text-purple-800">Dietary Needs:</span> {destination.foodOptions.dietary}
                         </p>
                         <p className="text-gray-700">
-                          <span className="font-semibold text-pink-800">Restaurants:</span> {destination.foodOptions.restaurants}
+                          <span className="font-semibold text-purple-800">Restaurants:</span> {destination.foodOptions.restaurants}
                         </p>
                       </div>
                     </div>
 
                     {/* Additional Info */}
                     <div className="grid md:grid-cols-2 gap-4">
-                      <div className="bg-gray-50 rounded-lg p-4">
+                      <div className="backdrop-blur-md bg-blue-50/70 border border-blue-100/50 rounded-lg p-4">
                         <p className="font-semibold text-gray-800 mb-1">Visa Requirements</p>
                         <p className="text-gray-700">{destination.visa}</p>
                       </div>
-                      <div className="bg-gray-50 rounded-lg p-4">
+                      <div className="backdrop-blur-md bg-green-50/70 border border-green-100/50 rounded-lg p-4">
                         <p className="font-semibold text-gray-800 mb-1">Climate</p>
                         <p className="text-gray-700">{destination.climate}</p>
                       </div>
@@ -1048,7 +1059,7 @@ export default function FamilyTravelPage() {
                 {/* Expand/Collapse Button */}
                 <button
                   onClick={() => toggleCard(destination.id)}
-                  className="mt-6 w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-purple-700 transition-all flex items-center justify-center"
+                  className="mt-6 w-full bg-gradient-to-r from-green-400/80 via-blue-400/80 to-purple-400/80 backdrop-blur-sm text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center"
                 >
                   {expandedCards.includes(destination.id) ? (
                     <>

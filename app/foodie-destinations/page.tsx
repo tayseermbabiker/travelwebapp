@@ -494,37 +494,47 @@ export default function FoodieDestinationsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 via-white to-teal-50">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-teal-600 to-teal-700 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Foodie Destinations
-            </h1>
-            <p className="text-xl md:text-2xl mb-4 text-teal-100">
-              Eat Like a Local. Travel Like a Foodie.
-            </p>
-            <p className="text-lg text-teal-100 max-w-3xl mx-auto leading-relaxed">
-              Food isn't just fuel when you're traveling—it's the story of a place. It's the spice merchant in a Istanbul bazaar who's been working the same stall for 30 years. It's the 3 AM ramen bar in Tokyo where salarymen crowd around steaming bowls. It's the street vendor in Bangkok who perfects a single dish so good that Mark Wiens flew back specifically to film it.
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50 relative overflow-hidden">
+      {/* Gradient Mesh Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-orange-400/30 to-red-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-yellow-400/30 to-orange-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gradient-to-br from-red-400/30 to-pink-500/30 rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Hero Section - Glassmorphism */}
+      <section className="relative py-12 px-4 pt-20">
+        <div className="container mx-auto max-w-6xl">
+          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-10 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
+
+            <div className="relative z-10 text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
+                Foodie Destinations
+              </h1>
+              <p className="text-2xl md:text-3xl mb-4 text-gray-800 font-light">
+                Eat Like a Local. Travel Like a Foodie.
+              </p>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                Food isn't just fuel when you're traveling—it's the story of a place. It's the spice merchant in a Istanbul bazaar who's been working the same stall for 30 years. It's the 3 AM ramen bar in Tokyo where salarymen crowd around steaming bowls. It's the street vendor in Bangkok who perfects a single dish so good that Mark Wiens flew back specifically to film it.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+      <section className="relative py-12 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300">
             <p className="text-lg text-gray-700 mb-6">
               The world's best travel experiences don't always happen at famous landmarks. They happen in a Lima market at dawn, tasting ceviche made by someone's grandmother. They happen when you accidentally wander into a hole-in-the-wall Paris bistro and taste boeuf bourguignon that changes how you think about food.
             </p>
             <p className="text-lg text-gray-700 mb-6">
               This guide maps the planet's greatest foodie destinations—the places where every meal is an adventure, where food culture runs deep, and where eating is considered an art form. We've organized these destinations by how famous food YouTubers with millions of followers recommend them, so you know you're going where the real food stories are.
             </p>
-            <div className="bg-teal-50 p-6 rounded-lg border border-teal-200 mt-8">
-              <h3 className="text-xl font-bold text-teal-700 mb-3">How to Use This Guide:</h3>
+            <div className="backdrop-blur-md bg-orange-50/70 p-6 rounded-lg border border-orange-200/50 mt-8">
+              <h3 className="text-xl font-bold text-orange-700 mb-3">How to Use This Guide:</h3>
               <p className="text-gray-700">
                 Select your journey below. Explore by cuisine type, by food experience, by the YouTuber whose recommendations you trust, or by destination. Each location includes specific details on what to eat, where to eat, best seasons to visit, and budget breakdowns.
               </p>
@@ -534,11 +544,11 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* Explore by Cuisine Type */}
-      <section className="py-16 bg-teal-50">
-        <div className="container mx-auto px-6">
+      <section className="relative py-12 px-6">
+        <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Explore by Cuisine Type</h2>
-          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-xl font-bold text-teal-600 mb-4">Asian Foodie Destinations</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>Tokyo, Japan</li>
@@ -570,28 +580,28 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* Explore by Food Experience */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Explore by Food Experience</h2>
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-teal-600 mb-3">Street Food Paradise</h3>
+      <section className="relative py-12 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Explore by Food Experience</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-orange-700 mb-3">Street Food Paradise</h3>
               <p className="text-gray-700">Bangkok | Mexico City | Hanoi | Istanbul | Oaxaca</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-teal-600 mb-3">Food Market Hubs</h3>
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-orange-700 mb-3">Food Market Hubs</h3>
               <p className="text-gray-700">Barcelona (La Boqueria) | Bangkok (Or Tor Kor) | Istanbul (Spice Bazaar) | Paris (Marché des Enfants Rouges) | Tokyo (Tsukiji)</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-teal-600 mb-3">Fine Dining Capitals (Michelin Stars)</h3>
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-orange-700 mb-3">Fine Dining Capitals (Michelin Stars)</h3>
               <p className="text-gray-700">Tokyo (169 Michelin stars) | Paris (119 Michelin stars) | Lima (Maido #1 World's Best) | New York City | Barcelona</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-teal-600 mb-3">Cooking Class Destinations</h3>
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-orange-700 mb-3">Cooking Class Destinations</h3>
               <p className="text-gray-700">Bangkok (Thai curry) | Mexico City (mole) | Oaxaca (traditional) | Lima (ceviche) | Paris (croissant) | Naples (pizza)</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-teal-600 mb-3">Seafood Destinations</h3>
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 md:col-span-2">
+              <h3 className="text-xl font-bold text-orange-700 mb-3">Seafood Destinations</h3>
               <p className="text-gray-700">Barcelona (Barceloneta) | Istanbul (Bosphorus) | Lima (Pacific ceviche) | Tokyo (Tsukiji Fish Market) | Singapore</p>
             </div>
           </div>
@@ -599,37 +609,38 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* Famous Food YouTubers */}
-      <section className="py-16 bg-teal-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Explore by Famous Food YouTuber</h2>
-          <div className="max-w-5xl mx-auto space-y-4">
+      <section className="relative py-12 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Explore by Famous Food YouTuber</h2>
+          <div className="space-y-4">
             {youtubers.map((youtuber, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
                 <button
                   onClick={() => toggleYoutuber(index)}
-                  className="w-full p-6 bg-white hover:bg-teal-50 transition-colors flex items-center justify-between text-left"
+                  className="w-full relative overflow-hidden bg-gradient-to-r from-orange-400/80 via-red-400/80 to-pink-400/80 backdrop-blur-sm text-white p-6 flex items-center justify-between text-left hover:from-orange-500/90 hover:via-red-500/90 hover:to-pink-500/90 transition-all duration-300"
                 >
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-800 mb-1">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
+                  <div className="flex-1 relative z-10">
+                    <h3 className="text-xl font-bold mb-1 drop-shadow-lg">
                       {youtuber.name}
                     </h3>
-                    <p className="text-sm text-teal-600 font-medium">{youtuber.subscribers}</p>
+                    <p className="text-sm opacity-90 drop-shadow">{youtuber.subscribers}</p>
                   </div>
-                  <div className="ml-4">
+                  <div className="ml-4 relative z-10">
                     {expandedYoutuber === index ? (
-                      <ChevronUp className="w-6 h-6 text-teal-600" />
+                      <ChevronUp className="w-6 h-6 drop-shadow-lg" />
                     ) : (
-                      <ChevronDown className="w-6 h-6 text-teal-600" />
+                      <ChevronDown className="w-6 h-6 drop-shadow-lg" />
                     )}
                   </div>
                 </button>
 
                 {expandedYoutuber === index && (
-                  <div className="p-6 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-700 mb-4">{youtuber.description}</p>
-                    <div className="bg-white p-4 rounded-lg border border-gray-200">
-                      <p className="text-sm text-gray-600 font-semibold mb-2">Top Destinations:</p>
-                      <p className="text-gray-700">{youtuber.destinations}</p>
+                  <div className="p-6 backdrop-blur-sm bg-white/60">
+                    <p className="text-gray-800 mb-4">{youtuber.description}</p>
+                    <div className="backdrop-blur-lg bg-white/80 p-4 rounded-lg border border-white/60 shadow-lg">
+                      <p className="text-sm text-gray-700 font-semibold mb-2">Top Destinations:</p>
+                      <p className="text-gray-800">{youtuber.destinations}</p>
                     </div>
                   </div>
                 )}
@@ -640,21 +651,22 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* The 12 Destinations */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">The 12 Global Foodie Destinations</h2>
-          <div className="max-w-5xl mx-auto space-y-4">
+      <section className="relative py-12 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>The 12 Global Foodie Destinations</h2>
+          <div className="space-y-4">
             {destinations.map((destination, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
                 <button
                   onClick={() => toggleDestination(index)}
-                  className="w-full p-6 bg-white hover:bg-teal-50 transition-colors flex items-center justify-between text-left"
+                  className="w-full relative overflow-hidden bg-gradient-to-r from-orange-400/80 via-red-400/80 to-pink-400/80 backdrop-blur-sm text-white p-6 flex items-center justify-between text-left hover:from-orange-500/90 hover:via-red-500/90 hover:to-pink-500/90 transition-all duration-300"
                 >
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
+                  <div className="flex-1 relative z-10">
+                    <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">
                       {index + 1}. {destination.name}
                     </h3>
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                    <div className="flex flex-wrap gap-4 text-sm opacity-90 drop-shadow">
                       <span className="flex items-center gap-1">
                         <MapPin className="w-4 h-4" /> {destination.region}
                       </span>
@@ -666,17 +678,17 @@ export default function FoodieDestinationsPage() {
                       </span>
                     </div>
                   </div>
-                  <div className="ml-4">
+                  <div className="ml-4 relative z-10">
                     {expandedDestination === index ? (
-                      <ChevronUp className="w-6 h-6 text-teal-600" />
+                      <ChevronUp className="w-6 h-6 drop-shadow-lg" />
                     ) : (
-                      <ChevronDown className="w-6 h-6 text-teal-600" />
+                      <ChevronDown className="w-6 h-6 drop-shadow-lg" />
                     )}
                   </div>
                 </button>
 
                 {expandedDestination === index && (
-                  <div className="p-6 bg-gray-50 border-t border-gray-200">
+                  <div className="p-6 backdrop-blur-sm bg-white/60">
                     {/* Why This City for Foodies */}
                     <div className="mb-6">
                       <h4 className="text-lg font-bold text-gray-800 mb-3">Why This City for Foodies</h4>
@@ -844,23 +856,23 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* Where to Stay */}
-      <section className="py-16 bg-teal-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Where to Stay: Finding the Right Accommodation</h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700 mb-6">
-              Every destination in this guide has accommodation options across all budgets and styles. The key isn't the hotel price—it's the neighborhood location.
-            </p>
+      <section className="relative py-12 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Where to Stay: Finding the Right Accommodation</h2>
+          <p className="text-lg text-gray-800 mb-6 text-center">
+            Every destination in this guide has accommodation options across all budgets and styles. The key isn't the hotel price—it's the neighborhood location.
+          </p>
 
-            <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-              <h3 className="text-xl font-bold text-teal-600 mb-3">Neighborhood Matters More Than Hotel Name</h3>
+          <div className="space-y-4">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-orange-700 mb-3">Neighborhood Matters More Than Hotel Name</h3>
               <p className="text-gray-700">
                 A $30/night hostel in Trastevere puts you in the middle of Rome's best food culture. A $300/night luxury hotel in a business district means you're isolated from real food. Location determines your food experience.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-              <h3 className="text-xl font-bold text-teal-600 mb-3">How to Pick Your Neighborhood</h3>
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-orange-700 mb-3">How to Pick Your Neighborhood</h3>
               <ul className="space-y-3 text-gray-700">
                 <li><strong>For Street Food:</strong> Stay where locals live and eat, not in tourist zones. Look for neighborhoods with markets (Ben Thanh, Or Tor Kor, La Boqueria). Budget options cluster here.</li>
                 <li><strong>For Fine Dining:</strong> Stay near business districts or upscale neighborhoods (Polanco, Miraflores, Michelin-star areas). Mid-range to luxury hotels.</li>
@@ -868,8 +880,8 @@ export default function FoodieDestinationsPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-              <h3 className="text-xl font-bold text-teal-600 mb-3">General Booking Strategy</h3>
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-orange-700 mb-3">General Booking Strategy</h3>
               <ol className="space-y-2 text-gray-700 list-decimal list-inside">
                 <li>Identify the neighborhood you want to experience</li>
                 <li>Search hotels in that neighborhood on booking platforms</li>
@@ -879,8 +891,8 @@ export default function FoodieDestinationsPage() {
               </ol>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold text-teal-600 mb-3">Pro Tips</h3>
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-orange-700 mb-3">Pro Tips</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>Book near a public market if you want authentic food access</li>
                 <li>Avoid booking in major chain hotel areas—they're isolated from real neighborhoods</li>
@@ -888,7 +900,7 @@ export default function FoodieDestinationsPage() {
                 <li>Read recent reviews mentioning nearby restaurants</li>
                 <li>Stay in neighborhoods that have foot traffic at night—means locals eat there</li>
               </ul>
-              <p className="text-gray-700 mt-4 font-semibold">
+              <p className="text-gray-800 mt-4 font-semibold">
                 The best food experiences happen when you live like a local, not like a tourist. Pick your neighborhood first. The hotel is secondary.
               </p>
             </div>
@@ -897,67 +909,67 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* FAQs */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Frequently Asked Questions</h2>
-          <div className="max-w-4xl mx-auto space-y-6">
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+      <section className="relative py-12 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-lg font-bold text-gray-800 mb-2">When should I visit these destinations for the best food?</h3>
               <p className="text-gray-700">
                 Every destination has an ideal season. Generally: Spring/Fall are best for walking, markets, and outdoor eating. Summer is crowded but warm. Winter varies by location (perfect in Bangkok, rough in Paris). See each destination's "Best Season" section.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-lg font-bold text-gray-800 mb-2">Do I need to speak the language to enjoy street food?</h3>
               <p className="text-gray-700">
                 No. Point and eat. Watch other people order. Use your phone. Smile. Language barrier is half the fun.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-lg font-bold text-gray-800 mb-2">How much does street food cost?</h3>
               <p className="text-gray-700">
                 Expect $1-5 per meal in most destinations. Fine dining is $50-300+ per person.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-lg font-bold text-gray-800 mb-2">Are cooking classes worth it?</h3>
               <p className="text-gray-700">
                 Absolutely. You learn technique while supporting locals. Plus you have a skill to take home.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-lg font-bold text-gray-800 mb-2">How do I know if street food is safe?</h3>
               <p className="text-gray-700">
                 Simple rule: If locals are eating there and there's a line, it's safe. High turnover = fresh food.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-lg font-bold text-gray-800 mb-2">What's the best hotel for foodies?</h3>
               <p className="text-gray-700">
                 It depends on your style. Downtown hotels put you near markets and neighborhoods. Business hotels offer convenience. Budget hotels get you in the food scene. Pick what matches your travel style.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-lg font-bold text-gray-800 mb-2">Can I get food allergies accommodated?</h3>
               <p className="text-gray-700">
                 Easier in fine dining. For street food, learn key words in the local language: "no peanuts," "no shellfish," etc.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-lg font-bold text-gray-800 mb-2">How many days should I spend in each city?</h3>
               <p className="text-gray-700">
                 Minimum 3 days (breakfast, lunch, dinner × 3 minimum). Ideally 5-7 days to really know a place.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-lg font-bold text-gray-800 mb-2">Should I book restaurants in advance?</h3>
               <p className="text-gray-700">
                 Michelin-starred and famous restaurants: yes, sometimes months ahead. Street food: never, just go. Local trattorias: depends on popularity.

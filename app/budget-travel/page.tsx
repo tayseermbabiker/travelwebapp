@@ -680,15 +680,22 @@ const BudgetTravelPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50" style={{ fontFamily: "'Poppins', 'Mulish', sans-serif" }}>
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 font-sans pt-16 relative overflow-hidden">
+      {/* Gradient Mesh Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-amber-400/30 to-yellow-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-yellow-400/30 to-orange-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gradient-to-br from-orange-400/30 to-red-500/30 rounded-full blur-3xl"></div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-emerald-500 to-emerald-600 text-white py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Affordable Destinations</h1>
-          <p className="text-2xl md:text-3xl mb-6 font-light">
+      <section className="relative py-24 px-6">
+        <div className="max-w-6xl mx-auto backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-2xl p-12">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Affordable Destinations</h1>
+          <p className="text-2xl md:text-3xl mb-6 font-light text-gray-800">
             Travel Cheap. Travel Long. Travel Smart.
           </p>
-          <p className="text-lg md:text-xl max-w-4xl leading-relaxed">
+          <p className="text-lg md:text-xl max-w-4xl leading-relaxed text-gray-700">
             Budget travel is not about deprivation. It is about strategy. It is about choosing destinations where your money stretches.
             It is about understanding where to splurge and where to save. It is about eating amazing food for $2. It is about staying
             in clean dorms instead of hotels. It is about buses instead of flights.
@@ -697,8 +704,8 @@ const BudgetTravelPage = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-16 px-6">
+        <div className="max-w-6xl mx-auto backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-10">
           <div className="prose max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Budget travelers visit more countries, stay longer, and have richer experiences than luxury travelers. They eat street
@@ -713,7 +720,7 @@ const BudgetTravelPage = () => {
               strategies, and what to realistically expect.
             </p>
 
-            <div className="bg-emerald-50 border-l-4 border-emerald-500 p-6 mb-8">
+            <div className="backdrop-blur-md bg-amber-50/70 border-l-4 border-amber-500 p-6 mb-8 rounded-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">How to Use This Guide</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -741,28 +748,28 @@ const BudgetTravelPage = () => {
       </section>
 
       {/* Budget Travel Influencers Section */}
-      <section className="py-16 px-6 bg-gradient-to-r from-green-500 to-green-600 text-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Budget Travel Influencers</h2>
+      <section className="relative py-16 px-6">
+        <div className="max-w-6xl mx-auto backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Budget Travel Influencers</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {influencers.map((influencer, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition">
-                <h3 className="text-xl font-bold mb-2">{influencer.name}</h3>
-                <p className="text-emerald-100 mb-1">{influencer.handle}</p>
-                <p className="text-sm text-emerald-200 mb-3">{influencer.followers} followers</p>
-                <p className="text-white/90">{influencer.description}</p>
+              <div key={index} className="backdrop-blur-md bg-gradient-to-br from-amber-100/40 to-yellow-100/40 border border-white/40 rounded-lg p-6 hover:from-amber-100/60 hover:to-yellow-100/60 transition shadow-lg">
+                <h3 className="text-xl font-bold mb-2 text-gray-900">{influencer.name}</h3>
+                <p className="text-amber-700 mb-1">{influencer.handle}</p>
+                <p className="text-sm text-amber-600 mb-3">{influencer.followers} followers</p>
+                <p className="text-gray-700">{influencer.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">What They All Agree On:</h3>
+          <div className="backdrop-blur-md bg-orange-50/70 border border-white/40 rounded-lg p-8 shadow-lg">
+            <h3 className="text-2xl font-bold mb-6 text-center text-gray-900">What They All Agree On:</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {budgetPrinciples.map((principle, index) => (
                 <div key={index} className="flex items-start">
-                  <span className="text-emerald-200 mr-3 font-bold">{index + 1}.</span>
-                  <p className="text-white">{principle}</p>
+                  <span className="text-amber-600 mr-3 font-bold">{index + 1}.</span>
+                  <p className="text-gray-700">{principle}</p>
                 </div>
               ))}
             </div>
@@ -771,12 +778,12 @@ const BudgetTravelPage = () => {
       </section>
 
       {/* Destinations Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="relative py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             The 12 Best Budget Destinations Under $30/Day
           </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
+          <p className="text-center text-gray-700 mb-12 text-lg">
             Click any destination to see full details including budget breakdown, accommodation, food costs, and insider tips
           </p>
 
@@ -787,29 +794,29 @@ const BudgetTravelPage = () => {
               return (
                 <div
                   key={destination.id}
-                  className="bg-white border-2 border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
+                  className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
                 >
                   {/* Card Header - Always Visible */}
                   <div
-                    className="p-6 cursor-pointer bg-gradient-to-r from-emerald-50 to-green-50 hover:from-emerald-100 hover:to-green-100 transition"
+                    className="p-6 cursor-pointer bg-gradient-to-r from-amber-400/80 via-yellow-400/80 to-orange-400/80 hover:from-amber-500/80 hover:via-yellow-500/80 hover:to-orange-500/80 transition"
                     onClick={() => toggleCard(destination.id)}
                   >
                     <div className="flex justify-between items-start">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
                           <h3 className="text-3xl font-bold text-gray-900">{destination.name}</h3>
-                          <span className="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                          <span className="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                             {destination.monthlyBudget.total}
                           </span>
                         </div>
-                        <p className="text-lg text-gray-600 mb-3">{destination.location}</p>
-                        <p className="text-gray-700 leading-relaxed">{destination.whySpecial}</p>
+                        <p className="text-lg text-gray-800 mb-3">{destination.location}</p>
+                        <p className="text-gray-900 leading-relaxed">{destination.whySpecial}</p>
                       </div>
-                      <button className="ml-4 p-2 hover:bg-emerald-200 rounded-full transition">
+                      <button className="ml-4 p-2 hover:bg-amber-600/30 rounded-full transition">
                         {isExpanded ? (
-                          <ChevronUp className="w-6 h-6 text-emerald-600" />
+                          <ChevronUp className="w-6 h-6 text-amber-900" />
                         ) : (
-                          <ChevronDown className="w-6 h-6 text-emerald-600" />
+                          <ChevronDown className="w-6 h-6 text-amber-900" />
                         )}
                       </button>
                     </div>
@@ -960,15 +967,15 @@ const BudgetTravelPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-6 bg-gray-100">
+      <section className="relative py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             Frequently Asked Questions
           </h2>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+              <div key={index} className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-lg shadow-md p-6 hover:shadow-lg transition">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
               </div>
@@ -978,12 +985,12 @@ const BudgetTravelPage = () => {
       </section>
 
       {/* Budget Travel Realities */}
-      <section className="py-16 px-6 bg-white">
+      <section className="relative py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-center text-gray-900">Budget Travel Realities</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Budget Travel Realities</h2>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-green-50 border-2 border-green-200 rounded-lg p-8">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-lg shadow-lg p-8">
               <h3 className="text-2xl font-bold text-green-800 mb-4">What You Gain</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
@@ -1013,7 +1020,7 @@ const BudgetTravelPage = () => {
               </ul>
             </div>
 
-            <div className="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-8">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-lg shadow-lg p-8">
               <h3 className="text-2xl font-bold text-yellow-800 mb-4">What You Sacrifice</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
@@ -1044,7 +1051,7 @@ const BudgetTravelPage = () => {
             </div>
           </div>
 
-          <div className="bg-gray-50 border-l-4 border-emerald-600 p-8 rounded-lg">
+          <div className="backdrop-blur-lg bg-white/60 border border-white/60 border-l-4 border-l-amber-600 p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Reality Check</h3>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
               Budget travel is achievable at $30/day. But it requires flexibility, acceptance of discomfort, willingness to eat street

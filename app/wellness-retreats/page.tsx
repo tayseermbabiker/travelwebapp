@@ -981,26 +981,33 @@ export default function WellnessRetreatsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 font-sans pt-16 relative overflow-hidden">
+      {/* Gradient Mesh Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-emerald-400/30 to-teal-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-teal-400/30 to-cyan-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gradient-to-br from-cyan-400/30 to-blue-500/30 rounded-full blur-3xl"></div>
+      </div>
+
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-green-500 to-emerald-600 text-white py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <div className="relative py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-12">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.02em' }}>
             Wellness Destinations
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90" style={{ fontFamily: 'Mulish, sans-serif' }}>
+          <p className="text-xl md:text-2xl mb-8 text-gray-700" style={{ fontFamily: 'Mulish, sans-serif' }}>
             Discover transformational wellness experiences across 12 global destinations
           </p>
-          <p className="text-lg max-w-3xl mx-auto opacity-80" style={{ fontFamily: 'Mulish, sans-serif' }}>
+          <p className="text-lg max-w-3xl mx-auto text-gray-600" style={{ fontFamily: 'Mulish, sans-serif' }}>
             From yoga in Bali to longevity clinics in Switzerland, this comprehensive guide maps authentic retreats, honest costs, instructor qualifications, and what actually happens during transformation.
           </p>
         </div>
       </div>
 
       {/* Introduction Section */}
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        <div className="prose prose-lg max-w-none">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <div className="max-w-6xl mx-auto px-4 py-16 relative">
+        <div className="prose prose-lg max-w-none backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.02em' }}>
             Wellness Travel Isn't a Luxury. It's an Investment in You.
           </h2>
           <p className="text-gray-700 mb-4" style={{ fontFamily: 'Mulish, sans-serif' }}>
@@ -1010,8 +1017,8 @@ export default function WellnessRetreatsPage() {
             The challenge: knowing which retreat matches your actual needs, how much to budget, where to go, and what to realistically expect.
           </p>
 
-          <div className="bg-emerald-50 border-l-4 border-emerald-500 p-6 mb-8">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <div className="backdrop-blur-lg bg-emerald-100/50 border-l-4 border-emerald-500 p-6 mb-8 rounded-lg">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.02em' }}>
               Pick Your Wellness Goal:
             </h3>
             <ul className="grid md:grid-cols-2 gap-3 text-gray-700" style={{ fontFamily: 'Mulish, sans-serif' }}>
@@ -1029,38 +1036,38 @@ export default function WellnessRetreatsPage() {
       </div>
 
       {/* Wellness Travel Influencers Section */}
-      <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <div className="py-16 px-4 relative">
+        <div className="max-w-6xl mx-auto backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.02em' }}>
             The Wellness Travel Influencers
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {influencers.map((influencer, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all">
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <div key={index} className="backdrop-blur-lg bg-gradient-to-br from-emerald-50/80 to-teal-50/80 border border-white/60 rounded-lg p-6 hover:shadow-lg transition-all">
+                <h3 className="text-xl font-bold mb-2 text-gray-800" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   {influencer.name}
                 </h3>
-                <p className="text-sm opacity-90 mb-1" style={{ fontFamily: 'Mulish, sans-serif' }}>
+                <p className="text-sm text-gray-600 mb-1" style={{ fontFamily: 'Mulish, sans-serif' }}>
                   {influencer.handle}
                 </p>
-                <p className="text-sm font-semibold mb-3 opacity-95" style={{ fontFamily: 'Mulish, sans-serif' }}>
+                <p className="text-sm font-semibold mb-3 text-emerald-600" style={{ fontFamily: 'Mulish, sans-serif' }}>
                   {influencer.followers}
                 </p>
-                <p className="text-sm opacity-80" style={{ fontFamily: 'Mulish, sans-serif' }}>
+                <p className="text-sm text-gray-700" style={{ fontFamily: 'Mulish, sans-serif' }}>
                   {influencer.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-4 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <div className="backdrop-blur-lg bg-gradient-to-br from-teal-50/80 to-cyan-50/80 border border-white/60 rounded-lg p-8">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-center bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.02em' }}>
               What They All Agree On:
             </h3>
-            <ul className="space-y-2 max-w-3xl mx-auto" style={{ fontFamily: 'Mulish, sans-serif' }}>
+            <ul className="space-y-2 max-w-3xl mx-auto text-gray-700" style={{ fontFamily: 'Mulish, sans-serif' }}>
               {wellnessPrinciples.map((principle, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-yellow-300 mr-2">{index + 1}.</span>
+                  <span className="text-emerald-600 font-semibold mr-2">{index + 1}.</span>
                   <span>{principle}</span>
                 </li>
               ))}
@@ -1070,8 +1077,8 @@ export default function WellnessRetreatsPage() {
       </div>
 
       {/* Destinations Section */}
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold mb-12 text-center text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <div className="max-w-6xl mx-auto px-4 py-16 relative">
+        <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.02em' }}>
           The 12 Best Wellness Retreat Destinations
         </h2>
 
@@ -1079,10 +1086,10 @@ export default function WellnessRetreatsPage() {
           {destinations.map((destination, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+              className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
               <div
-                className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white p-6 cursor-pointer flex justify-between items-center"
+                className="bg-gradient-to-r from-emerald-400/80 via-teal-400/80 to-cyan-400/80 backdrop-blur-sm text-white p-6 cursor-pointer flex justify-between items-center"
                 onClick={() => toggleCard(index)}
               >
                 <div>
@@ -1103,10 +1110,10 @@ export default function WellnessRetreatsPage() {
               </div>
 
               {expandedCard === index && (
-                <div className="p-6 bg-white">
+                <div className="p-6 backdrop-blur-lg bg-white/40">
                   {/* Monthly Cost */}
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold mb-3 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    <h4 className="text-lg md:text-xl font-bold mb-3 text-gray-800" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       Monthly Cost
                     </h4>
                     <div className="grid md:grid-cols-3 gap-4">
@@ -1139,7 +1146,7 @@ export default function WellnessRetreatsPage() {
 
                   {/* Why Special */}
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold mb-3 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    <h4 className="text-lg md:text-xl font-bold mb-3 text-gray-800" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       Why It's Special for Wellness
                     </h4>
                     <p className="text-gray-700" style={{ fontFamily: 'Mulish, sans-serif' }}>
@@ -1149,7 +1156,7 @@ export default function WellnessRetreatsPage() {
 
                   {/* Top Retreats */}
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold mb-3 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    <h4 className="text-lg md:text-xl font-bold mb-3 text-gray-800" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       Top Wellness Retreats
                     </h4>
                     <div className="space-y-4">
@@ -1181,7 +1188,7 @@ export default function WellnessRetreatsPage() {
 
                   {/* Types of Wellness */}
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold mb-3 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    <h4 className="text-lg md:text-xl font-bold mb-3 text-gray-800" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       Types of Wellness Available
                     </h4>
                     <ul className="grid md:grid-cols-2 gap-2" style={{ fontFamily: 'Mulish, sans-serif' }}>
@@ -1196,7 +1203,7 @@ export default function WellnessRetreatsPage() {
 
                   {/* Instructors */}
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold mb-3 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    <h4 className="text-lg md:text-xl font-bold mb-3 text-gray-800" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       Instructor Qualifications
                     </h4>
                     <div className="bg-emerald-50 p-4 rounded-lg space-y-2" style={{ fontFamily: 'Mulish, sans-serif' }}>
@@ -1214,7 +1221,7 @@ export default function WellnessRetreatsPage() {
 
                   {/* Accommodation */}
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold mb-3 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    <h4 className="text-lg md:text-xl font-bold mb-3 text-gray-800" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       Accommodation Options
                     </h4>
                     <div className="grid md:grid-cols-3 gap-4" style={{ fontFamily: 'Mulish, sans-serif' }}>
@@ -1235,7 +1242,7 @@ export default function WellnessRetreatsPage() {
 
                   {/* Food */}
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold mb-3 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    <h4 className="text-lg md:text-xl font-bold mb-3 text-gray-800" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       Food & Dietary Options
                     </h4>
                     <div className="bg-green-50 p-4 rounded-lg space-y-2" style={{ fontFamily: 'Mulish, sans-serif' }}>

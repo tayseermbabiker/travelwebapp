@@ -918,24 +918,36 @@ export default function SoloFemaleTravelPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
-      <div className="max-w-5xl mx-auto px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-teal-50 font-sans pt-16 relative overflow-hidden">
+      {/* Gradient Mesh Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-teal-400/30 to-blue-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gradient-to-br from-pink-400/30 to-purple-500/30 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4 pt-8 pb-12 relative z-10">
 
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Solo Female Destinations
-          </h1>
-          <p className="text-2xl text-teal-600 font-semibold mb-4">
-            Destinations Where Women Thrive Alone
-          </p>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Travel Solo. Travel Safe. Travel Empowered.
-          </p>
-        </div>
+        <section className="relative pt-4 pb-8 px-4 mb-8">
+          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-10 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
+            <div className="relative z-10 text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-600 to-teal-600 bg-clip-text text-transparent">
+                Solo Female Destinations
+              </h1>
+              <p className="text-2xl md:text-3xl mb-4 text-gray-800 font-semibold">
+                Destinations Where Women Thrive Alone
+              </p>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Travel Solo. Travel Safe. Travel Empowered.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Introduction */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-12">
+        <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300">
           <p className="text-lg text-gray-700 mb-4">
             Solo female travel isn't about being fearless. It's about being informed, prepared, and choosing destinations where you can actually breathe.
           </p>
@@ -951,36 +963,36 @@ export default function SoloFemaleTravelPage() {
         </div>
 
         {/* How to Use This Guide */}
-        <div className="bg-teal-50 rounded-lg shadow-md p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Use This Guide</h2>
+        <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-teal-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>How to Use This Guide</h2>
           <p className="text-lg font-semibold text-gray-900 mb-4">Pick Your Priority:</p>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start">
-              <span className="text-teal-600 font-bold mr-3">•</span>
+              <span className="text-purple-600 font-bold mr-3">•</span>
               <span><strong>Safety:</strong> Non-negotiable safety rating</span>
             </li>
             <li className="flex items-start">
-              <span className="text-teal-600 font-bold mr-3">•</span>
+              <span className="text-purple-600 font-bold mr-3">•</span>
               <span><strong>Budget:</strong> Monthly cost that fits your income</span>
             </li>
             <li className="flex items-start">
-              <span className="text-teal-600 font-bold mr-3">•</span>
+              <span className="text-purple-600 font-bold mr-3">•</span>
               <span><strong>Community:</strong> How many other solo female travelers are there?</span>
             </li>
             <li className="flex items-start">
-              <span className="text-teal-600 font-bold mr-3">•</span>
+              <span className="text-purple-600 font-bold mr-3">•</span>
               <span><strong>Age Group:</strong> Different destinations suit different ages</span>
             </li>
             <li className="flex items-start">
-              <span className="text-teal-600 font-bold mr-3">•</span>
+              <span className="text-purple-600 font-bold mr-3">•</span>
               <span><strong>Vibe:</strong> Adventure, culture, relaxation, nightlife?</span>
             </li>
             <li className="flex items-start">
-              <span className="text-teal-600 font-bold mr-3">•</span>
+              <span className="text-purple-600 font-bold mr-3">•</span>
               <span><strong>Healthcare:</strong> Access to women's healthcare (critical)</span>
             </li>
             <li className="flex items-start">
-              <span className="text-teal-600 font-bold mr-3">•</span>
+              <span className="text-purple-600 font-bold mr-3">•</span>
               <span><strong>Acceptance:</strong> How welcoming are people to solo women?</span>
             </li>
           </ul>
@@ -990,16 +1002,16 @@ export default function SoloFemaleTravelPage() {
         </div>
 
         {/* Influencers Section */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Solo Female Travel Influencers</h2>
+        <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-teal-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>The Solo Female Travel Influencers</h2>
           <p className="text-gray-700 mb-6">
             These women have millions of followers and have visited 60+ countries alone. Here's what they prioritize:
           </p>
           <div className="space-y-6">
             {influencers.map((influencer, index) => (
-              <div key={index} className="border-l-4 border-teal-500 pl-4">
+              <div key={index} className="border-l-4 border-purple-500 pl-4">
                 <h3 className="text-xl font-bold text-gray-900">
-                  {influencer.name} <span className="text-teal-600">{influencer.handle}</span>
+                  {influencer.name} <span className="text-purple-600">{influencer.handle}</span>
                 </h3>
                 <p className="text-sm text-gray-600 mb-2">{influencer.followers}</p>
                 <p className="text-gray-700">{influencer.description}</p>
@@ -1007,7 +1019,7 @@ export default function SoloFemaleTravelPage() {
             ))}
           </div>
 
-          <div className="mt-8 bg-teal-50 rounded-lg p-6">
+          <div className="mt-8 backdrop-blur-lg bg-white/80 border border-white/60 rounded-lg p-6 shadow-lg">
             <h3 className="text-xl font-bold text-gray-900 mb-4">What All These Influencers Agree On:</h3>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start">
@@ -1036,33 +1048,36 @@ export default function SoloFemaleTravelPage() {
 
         {/* Destinations */}
         <div className="mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-purple-600 via-pink-600 to-teal-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             The 15 Best Destinations for Solo Female Travelers
           </h2>
 
           <div className="space-y-4">
             {destinations.map((destination, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div key={index} className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
                 <button
                   onClick={() => toggleDestination(index)}
-                  className="w-full px-6 py-5 flex items-center justify-between hover:bg-teal-50 transition-colors"
+                  className="w-full relative overflow-hidden bg-gradient-to-r from-purple-400/80 via-pink-400/80 to-teal-400/80 backdrop-blur-sm text-white px-6 py-5 flex items-center justify-between hover:from-purple-500/90 hover:via-pink-500/90 hover:to-teal-500/90 transition-all duration-300"
                 >
-                  <div className="flex items-center space-x-4">
-                    <span className="text-2xl font-bold text-teal-600">#{index + 1}</span>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
+                  <div className="flex items-center space-x-4 relative z-10">
+                    <span className="text-2xl font-bold drop-shadow-lg">#{index + 1}</span>
                     <div className="text-left">
-                      <h3 className="text-2xl font-bold text-gray-900">{destination.name}</h3>
-                      <p className="text-teal-600 font-semibold">Safety Rating: {destination.safetyRating}</p>
+                      <h3 className="text-2xl font-bold drop-shadow-lg">{destination.name}</h3>
+                      <p className="font-semibold opacity-90 drop-shadow">Safety Rating: {destination.safetyRating}</p>
                     </div>
                   </div>
-                  {expandedDestination === index ? (
-                    <ChevronUp className="text-teal-600 flex-shrink-0" size={24} />
-                  ) : (
-                    <ChevronDown className="text-teal-600 flex-shrink-0" size={24} />
-                  )}
+                  <div className="relative z-10">
+                    {expandedDestination === index ? (
+                      <ChevronUp className="flex-shrink-0 drop-shadow-lg" size={24} />
+                    ) : (
+                      <ChevronDown className="flex-shrink-0 drop-shadow-lg" size={24} />
+                    )}
+                  </div>
                 </button>
 
                 {expandedDestination === index && (
-                  <div className="px-6 py-6 border-t border-gray-200 bg-gray-50">
+                  <div className="px-6 py-6 backdrop-blur-sm bg-white/60">
 
                     {/* Safety Rating Breakdown */}
                     <div className="mb-6">

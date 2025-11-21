@@ -814,31 +814,40 @@ export default function DigitalNomadPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 via-white to-teal-50">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-blue-50 to-cyan-50 font-sans pt-16 relative overflow-hidden">
+      {/* Gradient Mesh Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-teal-400/30 to-blue-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-cyan-400/30 to-teal-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gradient-to-br from-blue-400/30 to-cyan-500/30 rounded-full blur-3xl"></div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-teal-600 to-teal-700 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Digital Nomad Destinations
-            </h1>
-            <p className="text-xl md:text-2xl mb-4 text-teal-100">
-              Work From Anywhere. Actually.
-            </p>
-            <p className="text-lg text-teal-100 max-w-3xl mx-auto">
-              The dream: a laptop, a WiFi signal, and your choice of where to be. The reality: not all destinations are built the same for remote work. This guide cuts through the noise with real data on visa length, internet reliability, cost of living, community size, and whether you can actually get work done.
-            </p>
+      <section className="relative py-12 px-4 mb-8">
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-10 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
+            <div className="relative z-10 text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                Digital Nomad Destinations
+              </h1>
+              <p className="text-2xl md:text-3xl mb-4 text-gray-800 font-semibold">
+                Work From Anywhere. Actually.
+              </p>
+              <p className="text-base text-gray-700 leading-relaxed" style={{lineHeight: '1.6'}}>
+                The dream: a laptop, a WiFi signal, and your choice of where to be. The reality: not all destinations are built the same for remote work. This guide cuts through the noise with real data on visa length, internet reliability, cost of living, community size, and whether you can actually get work done.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* How to Use This Guide */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">How to Use This Guide</h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700 mb-6">Pick Your Priority:</p>
+      <section className="relative py-12 px-4 mb-8">
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>How to Use This Guide</h2>
+            <p className="text-base text-gray-700 mb-6" style={{lineHeight: '1.6'}}>Pick Your Priority:</p>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="flex items-start space-x-3">
                 <DollarSign className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
@@ -883,7 +892,7 @@ export default function DigitalNomadPage() {
                 </div>
               </div>
             </div>
-            <p className="text-gray-700 mt-8">
+            <p className="text-base text-gray-700 mt-8" style={{lineHeight: '1.6'}}>
               Each destination includes exactly what you need to know: visa options with lengths, realistic monthly costs, internet speeds, coworking spaces with prices, where nomads actually live, and why people are moving there in 2025.
             </p>
           </div>
@@ -891,11 +900,11 @@ export default function DigitalNomadPage() {
       </section>
 
       {/* Influencers Section */}
-      <section className="py-16 bg-teal-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">The Digital Nomad Influencers & Their Picks</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+      <section className="relative py-12 px-4 mb-8">
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>The Digital Nomad Influencers & Their Picks</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-xl font-bold text-teal-600 mb-2">Pieter Levels (@levelsio)</h3>
               <p className="text-gray-700 mb-3">
                 Founder of Nomad List (the database literally built for this). Influenced millions of nomads. Founder of $3M+ ARR business from the road.
@@ -904,7 +913,7 @@ export default function DigitalNomadPage() {
                 <strong>Top destinations:</strong> Chiang Mai, Bangkok, Lisbon, Barcelona, Mexico City
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-xl font-bold text-teal-600 mb-2">Nomadic Matt (Matt Kepnes)</h3>
               <p className="text-gray-700 mb-3">
                 Budget-focused long-term traveler. Advocates for slow travel and affordability.
@@ -913,7 +922,7 @@ export default function DigitalNomadPage() {
                 <strong>Top destinations:</strong> Chiang Mai, Medellín, Lisbon, Budapest, Prague
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-xl font-bold text-teal-600 mb-2">Johnny FD</h3>
               <p className="text-gray-700 mb-3">
                 Lived in Chiang Mai 5+ years. Entrepreneur-focused.
@@ -922,7 +931,7 @@ export default function DigitalNomadPage() {
                 <strong>Top destinations:</strong> Bangkok, Da Nang, Manila, Southeast Asia
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-xl font-bold text-teal-600 mb-2">Kristin Wilson (@TravelingWithKristin)</h3>
               <p className="text-gray-700 mb-3">
                 Visa expert and YouTube creator. Focuses on visa-friendly destinations and community.
@@ -936,21 +945,22 @@ export default function DigitalNomadPage() {
       </section>
 
       {/* Destinations Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">The 15 Best Digital Nomad Destinations</h2>
-          <div className="max-w-5xl mx-auto space-y-4">
+      <section className="relative py-12 px-4 mb-8">
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>The 15 Best Digital Nomad Destinations</h2>
+          <div className="space-y-4">
             {destinations.map((destination, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
                 <button
                   onClick={() => toggleDestination(index)}
-                  className="w-full p-6 bg-white hover:bg-teal-50 transition-colors flex items-center justify-between text-left"
+                  className="w-full relative overflow-hidden bg-gradient-to-r from-teal-400/80 via-blue-400/80 to-cyan-400/80 backdrop-blur-sm text-white p-6 flex items-center justify-between text-left hover:from-teal-500/90 hover:via-blue-500/90 hover:to-cyan-500/90 transition-all duration-300"
                 >
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
+                  <div className="flex-1 relative z-10">
+                    <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">
                       {index + 1}. {destination.name}
                     </h3>
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                    <div className="flex flex-wrap gap-4 text-sm opacity-90 drop-shadow">
                       <span className="flex items-center gap-1">
                         <MapPin className="w-4 h-4" /> {destination.timezone}
                       </span>
@@ -965,17 +975,17 @@ export default function DigitalNomadPage() {
                       </span>
                     </div>
                   </div>
-                  <div className="ml-4">
+                  <div className="ml-4 relative z-10">
                     {expandedDestination === index ? (
-                      <ChevronUp className="w-6 h-6 text-teal-600" />
+                      <ChevronUp className="w-6 h-6 drop-shadow-lg" />
                     ) : (
-                      <ChevronDown className="w-6 h-6 text-teal-600" />
+                      <ChevronDown className="w-6 h-6 drop-shadow-lg" />
                     )}
                   </div>
                 </button>
 
                 {expandedDestination === index && (
-                  <div className="p-6 bg-gray-50 border-t border-gray-200">
+                  <div className="p-6 backdrop-blur-sm bg-white/60">
                     {/* Why Live Here */}
                     <div className="mb-6">
                       <h4 className="text-lg font-bold text-gray-800 mb-2">Why Remote Workers Live Here</h4>
@@ -1126,7 +1136,7 @@ export default function DigitalNomadPage() {
       {/* Critical Numbers Section */}
       <section className="py-16 bg-teal-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">The Critical Numbers: What Actually Matters</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800" style={{letterSpacing: '-0.02em'}}>The Critical Numbers: What Actually Matters</h2>
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold text-teal-600 mb-4">Best for Budget (Under $1,000/month)</h3>
@@ -1199,7 +1209,7 @@ export default function DigitalNomadPage() {
       {/* How to Pick Your Destination */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">How to Actually Pick Your Destination</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800" style={{letterSpacing: '-0.02em'}}>How to Actually Pick Your Destination</h2>
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="bg-teal-50 p-6 rounded-lg border border-teal-200">
               <h3 className="text-xl font-bold text-teal-700 mb-3">Step 1: Your Non-Negotiables</h3>
@@ -1246,7 +1256,7 @@ export default function DigitalNomadPage() {
       {/* FAQs Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">FAQs: What Digital Nomads Actually Ask</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800" style={{letterSpacing: '-0.02em'}}>FAQs: What Digital Nomads Actually Ask</h2>
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-bold text-gray-800 mb-2">How long can I realistically stay?</h3>

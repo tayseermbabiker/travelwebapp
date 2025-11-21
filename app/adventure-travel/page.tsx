@@ -552,36 +552,48 @@ export default function AdventureTravelPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white" style={{ fontFamily: "'Poppins', sans-serif" }}>
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 font-sans pt-16 relative overflow-hidden">
+      {/* Gradient Mesh Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-orange-400/30 to-red-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-yellow-400/30 to-orange-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gradient-to-br from-red-400/30 to-pink-500/30 rounded-full blur-3xl"></div>
+      </div>
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
-            Adventure Destinations
-          </h1>
-          <p className="text-xl md:text-2xl mb-4 opacity-95">
-            The World's Best Destinations for Thrill-Seekers
-          </p>
-          <p className="text-lg max-w-3xl mx-auto opacity-90" style={{ fontFamily: "'Mulish', sans-serif" }}>
-            Adventure isn't about recklessness. It's about managed risk. Discover 12 epic destinations with honest difficulty assessments, realistic costs, and expert guidance.
-          </p>
+      <section className="relative py-12 px-4 mb-8">
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-10 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
+            <div className="relative z-10 text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 bg-clip-text text-transparent">
+                Adventure Destinations
+              </h1>
+              <p className="text-xl md:text-2xl mb-4 text-gray-800">
+                The World's Best Destinations for Thrill-Seekers
+              </p>
+              <p className="text-base max-w-3xl mx-auto text-gray-700" style={{ lineHeight: '1.6' }}>
+                Adventure isn't about recklessness. It's about managed risk. Discover 12 epic destinations with honest difficulty assessments, realistic costs, and expert guidance.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="relative py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             Adventure Travel Has Changed
           </h2>
           <div className="prose max-w-none text-gray-700" style={{ fontFamily: "'Mulish', sans-serif" }}>
-            <p className="text-lg leading-relaxed mb-4">
+            <p className="text-base mb-4" style={{ lineHeight: '1.6' }}>
               It's no longer just extreme mountaineers and rock climbers. It's people of all fitness levels choosing destinations where they can challenge themselves safely—hiking glaciers, trekking to remote peaks, kayaking fjords, zip-lining through cloud forests, diving in pristine waters.
             </p>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-base mb-6" style={{ lineHeight: '1.6' }}>
               The key: knowing which destinations match your fitness level, what activities are actually doable, how much they cost, and when to go. This guide maps the world's best adventure destinations with honest difficulty assessments, realistic costs, actual outfitters, and what you actually need to prepare.
             </p>
-            <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-orange-500">
+            <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Pick Your Priority:</h3>
               <ul className="space-y-2 text-gray-700">
                 <li><strong>Fitness Level:</strong> Beginner? Moderate? Elite? Match activities to your current fitness.</li>
@@ -597,21 +609,21 @@ export default function AdventureTravelPage() {
       </section>
 
       {/* Adventure Travel Influencers Section */}
-      <section className="py-16 px-6 bg-gradient-to-r from-amber-500 to-amber-600">
+      <section className="relative py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             The Adventure Travel Influencers
           </h2>
-          <p className="text-center text-white text-lg mb-12 opacity-95" style={{ fontFamily: "'Mulish', sans-serif" }}>
+          <p className="text-center text-gray-700 text-base mb-12" style={{ fontFamily: "'Mulish', sans-serif", lineHeight: '1.6' }}>
             Follow these adventurers for inspiration, tips, and real experiences from around the world
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {influencers.map((influencer, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div key={index} className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{influencer.name}</h3>
                 <p className="text-orange-600 font-semibold mb-1">{influencer.handle}</p>
                 <p className="text-gray-600 text-sm mb-3">{influencer.followers}</p>
-                <p className="text-gray-700 mb-3" style={{ fontFamily: "'Mulish', sans-serif" }}>
+                <p className="text-gray-700 mb-3 text-base" style={{ fontFamily: "'Mulish', sans-serif", lineHeight: '1.6' }}>
                   {influencer.description}
                 </p>
                 <p className="text-sm text-gray-600 italic">
@@ -620,30 +632,30 @@ export default function AdventureTravelPage() {
               </div>
             ))}
           </div>
-          <div className="mt-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 text-white">
-            <h3 className="text-xl font-bold mb-3">What They All Prioritize:</h3>
-            <ul className="grid md:grid-cols-2 gap-3" style={{ fontFamily: "'Mulish', sans-serif" }}>
-              <li className="flex items-start">
+          <div className="mt-10 backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300">
+            <h3 className="text-xl font-bold mb-3 text-gray-900">What They All Prioritize:</h3>
+            <ul className="grid md:grid-cols-2 gap-3 text-base" style={{ fontFamily: "'Mulish', sans-serif", lineHeight: '1.6' }}>
+              <li className="flex items-start text-gray-700">
                 <span className="mr-2">✓</span>
                 <span>Real experiences over Instagram moments</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start text-gray-700">
                 <span className="mr-2">✓</span>
                 <span>Reputable guides and managed risk</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start text-gray-700">
                 <span className="mr-2">✓</span>
                 <span>Authentic local interactions</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start text-gray-700">
                 <span className="mr-2">✓</span>
                 <span>Challenging yourself safely</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start text-gray-700">
                 <span className="mr-2">✓</span>
                 <span>Community with other adventurers</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start text-gray-700">
                 <span className="mr-2">✓</span>
                 <span>Sustainable and responsible travel</span>
               </li>
@@ -653,49 +665,50 @@ export default function AdventureTravelPage() {
       </section>
 
       {/* Destinations Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="relative py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             The 12 Best Adventure Destinations
           </h2>
-          <p className="text-center text-gray-600 text-lg mb-12" style={{ fontFamily: "'Mulish', sans-serif" }}>
+          <p className="text-center text-gray-600 text-base mb-12" style={{ fontFamily: "'Mulish', sans-serif", lineHeight: '1.6' }}>
             Click on any destination to expand and see comprehensive details including costs, activities, safety, healthcare, guides, and packing lists
           </p>
           <div className="space-y-6">
             {destinations.map((destination, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div
-                  className="bg-gradient-to-r from-orange-50 to-amber-50 p-6 cursor-pointer flex justify-between items-start hover:from-orange-100 hover:to-amber-100 transition-colors"
+              <div key={index} className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                <button
+                  className="w-full relative overflow-hidden bg-gradient-to-r from-orange-400/80 via-red-400/80 to-yellow-400/80 backdrop-blur-sm text-white p-6 flex items-center justify-between hover:from-orange-500/90 hover:via-red-500/90 hover:to-yellow-500/90 transition-all duration-300"
                   onClick={() => toggleCard(index)}
                 >
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{destination.name}</h3>
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="flex-1 relative z-10">
+                    <h3 className="text-2xl font-bold text-white mb-2">{destination.name}</h3>
                     <div className="grid md:grid-cols-3 gap-3 text-sm">
                       <div>
-                        <span className="font-semibold text-gray-700">Type:</span>
-                        <span className="text-gray-600 ml-2">{destination.adventureType}</span>
+                        <span className="font-semibold text-white">Type:</span>
+                        <span className="text-white/90 ml-2">{destination.adventureType}</span>
                       </div>
                       <div>
-                        <span className="font-semibold text-gray-700">Difficulty:</span>
-                        <span className="text-gray-600 ml-2">{destination.difficulty}</span>
+                        <span className="font-semibold text-white">Difficulty:</span>
+                        <span className="text-white/90 ml-2">{destination.difficulty}</span>
                       </div>
                       <div>
-                        <span className="font-semibold text-gray-700">Monthly Cost:</span>
-                        <span className="text-orange-600 font-semibold ml-2">{destination.monthlyCost.total}</span>
+                        <span className="font-semibold text-white">Monthly Cost:</span>
+                        <span className="text-yellow-200 font-semibold ml-2">{destination.monthlyCost.total}</span>
                       </div>
                     </div>
                   </div>
-                  <button className="ml-4 text-orange-600 hover:text-orange-700 transition-colors">
+                  <div className="ml-4 text-white relative z-10">
                     {expandedCard === index ? <ChevronUp size={28} /> : <ChevronDown size={28} />}
-                  </button>
-                </div>
+                  </div>
+                </button>
 
                 {expandedCard === index && (
-                  <div className="p-6 bg-white border-t border-gray-200" style={{ fontFamily: "'Mulish', sans-serif" }}>
+                  <div className="p-6 bg-white/80 border-t border-white/60" style={{ fontFamily: "'Mulish', sans-serif" }}>
                     {/* Physical Fitness Required */}
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Physical Fitness Required</h4>
-                      <p className="text-gray-700 bg-blue-50 p-3 rounded">{destination.fitness}</p>
+                      <p className="text-gray-700 bg-blue-50 p-3 rounded text-base" style={{ lineHeight: '1.6' }}>{destination.fitness}</p>
                     </div>
 
                     {/* Monthly Cost Breakdown */}

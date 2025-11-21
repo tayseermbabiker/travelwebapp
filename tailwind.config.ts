@@ -22,6 +22,23 @@ const config: Config = {
           900: '#134e4a',
         },
       },
+      fontSize: {
+        // Body text (16px base)
+        base: ['16px', { lineHeight: '1.6', letterSpacing: '0' }],
+
+        // Info card text
+        'card-mobile': ['13px', { lineHeight: '1.5', letterSpacing: '0' }],
+        'card-desktop': ['14px', { lineHeight: '1.5', letterSpacing: '0' }],
+
+        // Section headings (h2)
+        '2xl': ['28px', { lineHeight: '1.25', letterSpacing: '-0.02em', fontWeight: '700' }],
+        '3xl': ['32px', { lineHeight: '1.3', letterSpacing: '-0.02em', fontWeight: '700' }],
+      },
+      spacing: {
+        // Info card heights
+        '18': '72px',  // Mobile card height (adjusted from 75px for better spacing)
+        '20': '80px',  // Desktop card height
+      },
     },
   },
   plugins: [],

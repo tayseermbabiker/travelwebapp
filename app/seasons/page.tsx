@@ -74,7 +74,7 @@ export default function SeasonsPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
 
             <div className="text-left relative z-10">
-              <h2 className="text-2xl font-bold mb-1 drop-shadow-lg">Winter Destinations (November-February)</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-1 drop-shadow-lg" style={{letterSpacing: '-0.02em', lineHeight: '1.25'}}>Winter Destinations (November-February)</h2>
               <p className="text-sm opacity-90 drop-shadow">Perfect weather, fewer crowds, shopping festivals</p>
             </div>
             {openSeason === 'winter' ? <ChevronUp className="w-6 h-6 drop-shadow-lg" /> : <ChevronDown className="w-6 h-6 drop-shadow-lg" />}
@@ -208,14 +208,16 @@ export default function SeasonsPage() {
                   </button>
                   {openDestination === 'winter-tulum' && (
                     <div className="p-6 bg-white space-y-4">
-                      <p className="text-gray-700 leading-relaxed">Tulum offers Caribbean beaches combined with cenotes, Mayan ruins, and a thriving wellness scene. It's where backpackers meet yoga enthusiasts.</p>
-                      <div className="bg-blue-50 rounded-lg p-4">
-                        <h5 className="font-semibold text-gray-800 mb-2">Why Winter?</h5>
-                        <p className="text-sm text-gray-700">December-February brings perfect Caribbean temperatures (22-27°C) without summer heat or hurricanes. Dry season means clear skies.</p>
+                      <p className="text-base text-gray-700 leading-relaxed" style={{lineHeight: '1.6'}}>Tulum offers Caribbean beaches combined with cenotes, Mayan ruins, and a thriving wellness scene. It's where backpackers meet yoga enthusiasts.</p>
+                      <div className="bg-blue-50 rounded-lg p-4 h-20 flex items-center">
+                        <div>
+                          <h5 className="font-semibold text-gray-800 mb-1">Why Winter?</h5>
+                          <p className="text-sm md:text-[14px] text-gray-700">December-February brings perfect Caribbean temperatures (22-27°C) without summer heat or hurricanes. Dry season means clear skies.</p>
+                        </div>
                       </div>
                       <div>
                         <h5 className="font-semibold text-gray-800 mb-2">What to Expect:</h5>
-                        <ul className="space-y-1 text-sm text-gray-700">
+                        <ul className="space-y-1 text-sm md:text-[14px] text-gray-700">
                           <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>White sand beaches with calm Caribbean waters</span></li>
                           <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Cenote swimming (unique freshwater pools)</span></li>
                           <li className="flex items-start gap-2"><span className="text-teal-600 font-bold">→</span><span>Mayan ruins overlooking the sea</span></li>
@@ -458,7 +460,7 @@ export default function SeasonsPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
 
             <div className="text-left relative z-10">
-              <h2 className="text-2xl font-bold mb-1 drop-shadow-lg">Spring Destinations (March-May)</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-1 drop-shadow-lg" style={{letterSpacing: '-0.02em', lineHeight: '1.25'}}>Spring Destinations (March-May)</h2>
               <p className="text-sm opacity-90 drop-shadow">Cherry blossoms, perfect weather, garden blooms</p>
             </div>
             {openSeason === 'spring' ? <ChevronUp className="w-6 h-6 drop-shadow-lg" /> : <ChevronDown className="w-6 h-6 drop-shadow-lg" />}
@@ -958,7 +960,7 @@ export default function SeasonsPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
 
             <div className="text-left relative z-10">
-              <h2 className="text-2xl font-bold mb-1 drop-shadow-lg">Summer Destinations (June-August)</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-1 drop-shadow-lg" style={{letterSpacing: '-0.02em', lineHeight: '1.25'}}>Summer Destinations (June-August)</h2>
               <p className="text-sm opacity-90 drop-shadow">Beach season, festivals, midnight sun</p>
             </div>
             {openSeason === 'summer' ? <ChevronUp className="w-6 h-6 drop-shadow-lg" /> : <ChevronDown className="w-6 h-6 drop-shadow-lg" />}
@@ -1446,7 +1448,7 @@ export default function SeasonsPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
 
             <div className="text-left relative z-10">
-              <h2 className="text-2xl font-bold mb-1 drop-shadow-lg">Fall Destinations (September-November)</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-1 drop-shadow-lg" style={{letterSpacing: '-0.02em', lineHeight: '1.25'}}>Fall Destinations (September-November)</h2>
               <p className="text-sm opacity-90 drop-shadow">Foliage, wine harvest, comfortable weather</p>
             </div>
             {openSeason === 'fall' ? <ChevronUp className="w-6 h-6 drop-shadow-lg" /> : <ChevronDown className="w-6 h-6 drop-shadow-lg" />}
