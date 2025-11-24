@@ -505,7 +505,7 @@ export default function FoodieDestinationsPage() {
       {/* Hero Section - Glassmorphism */}
       <section className="relative py-12 px-4 pt-20">
         <div className="container mx-auto max-w-6xl">
-          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-10 relative overflow-hidden">
+          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
 
             <div className="relative z-10 text-center">

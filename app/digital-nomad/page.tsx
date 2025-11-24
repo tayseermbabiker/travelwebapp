@@ -823,9 +823,9 @@ export default function DigitalNomadPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-12 px-4 mb-8">
+      <section className="relative py-8 px-4 mb-6">
         <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-10 relative overflow-hidden">
+          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
             <div className="relative z-10 text-center">
               <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">
@@ -843,7 +843,7 @@ export default function DigitalNomadPage() {
       </section>
 
       {/* How to Use This Guide */}
-      <section className="relative py-12 px-4 mb-8">
+      <section className="relative py-8 px-4 mb-6">
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>How to Use This Guide</h2>
@@ -900,7 +900,7 @@ export default function DigitalNomadPage() {
       </section>
 
       {/* Influencers Section */}
-      <section className="relative py-12 px-4 mb-8">
+      <section className="relative py-8 px-4 mb-6">
         <div className="container mx-auto max-w-5xl relative z-10">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>The Digital Nomad Influencers & Their Picks</h2>
           <div className="grid md:grid-cols-2 gap-4">
@@ -945,7 +945,7 @@ export default function DigitalNomadPage() {
       </section>
 
       {/* Destinations Section */}
-      <section className="relative py-12 px-4 mb-8">
+      <section className="relative py-8 px-4 mb-6">
         <div className="container mx-auto max-w-5xl relative z-10">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>The 15 Best Digital Nomad Destinations</h2>
           <div className="space-y-4">

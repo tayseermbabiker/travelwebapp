@@ -561,9 +561,9 @@ export default function AdventureTravelPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-12 px-4 mb-8">
+      <section className="relative py-8 px-4 mb-6">
         <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-10 relative overflow-hidden">
+          <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
             <div className="relative z-10 text-center">
               <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 bg-clip-text text-transparent">
