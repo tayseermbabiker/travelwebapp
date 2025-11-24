@@ -163,7 +163,7 @@ export default function Home() {
           <div className="mb-12 max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 drop-shadow-lg">Explore Our Travel Guides</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {/* Seasonal Destinations */}
+              {/* Destinations by Season */}
               <a
                 href="/seasons"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -171,11 +171,11 @@ export default function Home() {
                 <div className="mb-3 transition-transform group-hover:scale-110">
                   <Sparkles className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Seasonal Travel</h3>
+                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Destinations by Season</h3>
                 <p className="text-sm opacity-90 drop-shadow">Best destinations by season</p>
               </a>
 
-              {/* Digital Nomad */}
+              {/* Digital Nomad Destinations */}
               <a
                 href="/digital-nomad"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -183,11 +183,11 @@ export default function Home() {
                 <div className="mb-3 transition-transform group-hover:scale-110">
                   <Laptop className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Digital Nomad</h3>
-                <p className="text-sm opacity-90 drop-shadow">Work from anywhere</p>
+                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Digital Nomad Destinations</h3>
+                <p className="text-sm opacity-90 drop-shadow">Remote work destinations</p>
               </a>
 
-              {/* Solo Female */}
+              {/* Solo Female Destinations */}
               <a
                 href="/solo-female-travel"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -195,8 +195,8 @@ export default function Home() {
                 <div className="mb-3 transition-transform group-hover:scale-110">
                   <UserCheck className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Solo Female</h3>
-                <p className="text-sm opacity-90 drop-shadow">Safe destinations for women</p>
+                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Solo Female Destinations</h3>
+                <p className="text-sm opacity-90 drop-shadow">Safest destinations for women</p>
               </a>
 
               {/* Foodie Destinations */}
@@ -207,11 +207,11 @@ export default function Home() {
                 <div className="mb-3 transition-transform group-hover:scale-110">
                   <UtensilsCrossed className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Foodie Travel</h3>
-                <p className="text-sm opacity-90 drop-shadow">World's best food cities</p>
+                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Foodie Destinations</h3>
+                <p className="text-sm opacity-90 drop-shadow">World's top food cities</p>
               </a>
 
-              {/* Adventure Travel */}
+              {/* Adventure Destinations */}
               <a
                 href="/adventure-travel"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -219,11 +219,11 @@ export default function Home() {
                 <div className="mb-3 transition-transform group-hover:scale-110">
                   <Mountain className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Adventure</h3>
+                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Adventure Destinations</h3>
                 <p className="text-sm opacity-90 drop-shadow">Thrilling destinations</p>
               </a>
 
-              {/* Family Travel */}
+              {/* Family Destinations */}
               <a
                 href="/family-travel"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -231,11 +231,11 @@ export default function Home() {
                 <div className="mb-3 transition-transform group-hover:scale-110">
                   <Baby className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Family Travel</h3>
+                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Family Destinations</h3>
                 <p className="text-sm opacity-90 drop-shadow">Kid-friendly destinations</p>
               </a>
 
-              {/* Wellness */}
+              {/* Wellness Destinations */}
               <a
                 href="/wellness-retreats"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -243,11 +243,11 @@ export default function Home() {
                 <div className="mb-3 transition-transform group-hover:scale-110">
                   <Flower2 className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Wellness</h3>
-                <p className="text-sm opacity-90 drop-shadow">Healing retreats</p>
+                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Wellness Destinations</h3>
+                <p className="text-sm opacity-90 drop-shadow">Healing destinations</p>
               </a>
 
-              {/* Budget Travel */}
+              {/* Affordable Destinations */}
               <a
                 href="/budget-travel"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -255,8 +255,8 @@ export default function Home() {
                 <div className="mb-3 transition-transform group-hover:scale-110">
                   <Wallet className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Budget Travel</h3>
-                <p className="text-sm opacity-90 drop-shadow">Travel under $30/day</p>
+                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Affordable Destinations</h3>
+                <p className="text-sm opacity-90 drop-shadow">Budget travel under $30/day</p>
               </a>
             </div>
           </div>
