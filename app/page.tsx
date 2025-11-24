@@ -9,6 +9,7 @@ import InterestsSelector from '@/components/landing/InterestsSelector';
 import TripBasicsForm from '@/components/landing/TripBasicsForm';
 import Toast from '@/components/ui/Toast';
 import { CompanionType, InterestType, TripBasics, HotelTier, ExperienceRange } from '@/types';
+import { Sparkles, Laptop, UserCheck, UtensilsCrossed, Mountain, Baby, Flower2, Wallet } from 'lucide-react';
 
 export default function Home() {
   const router = useRouter();
@@ -167,7 +168,9 @@ export default function Home() {
                 href="/seasons"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="text-4xl mb-3">🌸</div>
+                <div className="mb-3 transition-transform group-hover:scale-110">
+                  <Sparkles className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Seasonal Travel</h3>
                 <p className="text-sm opacity-90 drop-shadow">Best destinations by season</p>
               </a>
@@ -177,7 +180,9 @@ export default function Home() {
                 href="/digital-nomad"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="text-4xl mb-3">💻</div>
+                <div className="mb-3 transition-transform group-hover:scale-110">
+                  <Laptop className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Digital Nomad</h3>
                 <p className="text-sm opacity-90 drop-shadow">Work from anywhere</p>
               </a>
@@ -187,7 +192,9 @@ export default function Home() {
                 href="/solo-female-travel"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="text-4xl mb-3">👩‍✈️</div>
+                <div className="mb-3 transition-transform group-hover:scale-110">
+                  <UserCheck className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Solo Female</h3>
                 <p className="text-sm opacity-90 drop-shadow">Safe destinations for women</p>
               </a>
@@ -197,7 +204,9 @@ export default function Home() {
                 href="/foodie-destinations"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="text-4xl mb-3">🍜</div>
+                <div className="mb-3 transition-transform group-hover:scale-110">
+                  <UtensilsCrossed className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Foodie Travel</h3>
                 <p className="text-sm opacity-90 drop-shadow">World's best food cities</p>
               </a>
@@ -207,7 +216,9 @@ export default function Home() {
                 href="/adventure-travel"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="text-4xl mb-3">🏔️</div>
+                <div className="mb-3 transition-transform group-hover:scale-110">
+                  <Mountain className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Adventure</h3>
                 <p className="text-sm opacity-90 drop-shadow">Thrilling destinations</p>
               </a>
@@ -217,7 +228,9 @@ export default function Home() {
                 href="/family-travel"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="text-4xl mb-3">👨‍👩‍👧‍👦</div>
+                <div className="mb-3 transition-transform group-hover:scale-110">
+                  <Baby className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Family Travel</h3>
                 <p className="text-sm opacity-90 drop-shadow">Kid-friendly destinations</p>
               </a>
@@ -227,7 +240,9 @@ export default function Home() {
                 href="/wellness-retreats"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="text-4xl mb-3">🧘</div>
+                <div className="mb-3 transition-transform group-hover:scale-110">
+                  <Flower2 className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Wellness</h3>
                 <p className="text-sm opacity-90 drop-shadow">Healing retreats</p>
               </a>
@@ -237,19 +252,25 @@ export default function Home() {
                 href="/budget-travel"
                 className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="text-4xl mb-3">💰</div>
+                <div className="mb-3 transition-transform group-hover:scale-110">
+                  <Wallet className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Budget Travel</h3>
                 <p className="text-sm opacity-90 drop-shadow">Travel under $30/day</p>
               </a>
             </div>
           </div>
 
-          {/* Scroll indicator */}
+          {/* Scroll indicator - Enhanced with glow effect */}
           <div className="animate-bounce mt-8">
-            <svg className="w-8 h-8 mx-auto text-white drop-shadow-lg" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-            <p className="text-sm mt-2 drop-shadow-md">Scroll to create your itinerary</p>
+            <div className="inline-block backdrop-blur-xl bg-white/20 border-2 border-white/50 rounded-full p-4 shadow-2xl">
+              <svg className="w-8 h-8 mx-auto text-white drop-shadow-2xl" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+            </div>
+            <p className="text-base md:text-lg mt-4 font-semibold drop-shadow-lg bg-gradient-to-r from-white via-teal-100 to-white bg-clip-text text-transparent animate-pulse">
+              Scroll to create your itinerary
+            </p>
           </div>
         </div>
       </section>
