@@ -162,101 +162,101 @@ export default function Home() {
           {/* Featured Travel Guides - Glassmorphism Cards */}
           <div className="mb-12 max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 drop-shadow-lg">Explore Our Travel Guides</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
               {/* Destinations by Season */}
               <a
                 href="/seasons"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="mb-3 transition-transform group-hover:scale-110">
-                  <Sparkles className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                  <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Destinations by Season</h3>
-                <p className="text-sm opacity-90 drop-shadow">Best destinations by season</p>
+                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Destinations by Season</h3>
+                <p className="text-xs md:text-sm opacity-90 drop-shadow">Best destinations by season</p>
               </a>
 
               {/* Digital Nomad Destinations */}
               <a
                 href="/digital-nomad"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="mb-3 transition-transform group-hover:scale-110">
-                  <Laptop className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                  <Laptop className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Digital Nomad Destinations</h3>
-                <p className="text-sm opacity-90 drop-shadow">Remote work destinations</p>
+                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Digital Nomad Destinations</h3>
+                <p className="text-xs md:text-sm opacity-90 drop-shadow">Remote work destinations</p>
               </a>
 
               {/* Solo Female Destinations */}
               <a
                 href="/solo-female-travel"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="mb-3 transition-transform group-hover:scale-110">
-                  <UserCheck className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                  <UserCheck className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Solo Female Destinations</h3>
-                <p className="text-sm opacity-90 drop-shadow">Safest destinations for women</p>
+                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Solo Female Destinations</h3>
+                <p className="text-xs md:text-sm opacity-90 drop-shadow">Safest destinations for women</p>
               </a>
 
               {/* Foodie Destinations */}
               <a
                 href="/foodie-destinations"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="mb-3 transition-transform group-hover:scale-110">
-                  <UtensilsCrossed className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                  <UtensilsCrossed className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Foodie Destinations</h3>
-                <p className="text-sm opacity-90 drop-shadow">World's top food cities</p>
+                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Foodie Destinations</h3>
+                <p className="text-xs md:text-sm opacity-90 drop-shadow">World's top food cities</p>
               </a>
 
               {/* Adventure Destinations */}
               <a
                 href="/adventure-travel"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="mb-3 transition-transform group-hover:scale-110">
-                  <Mountain className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                  <Mountain className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Adventure Destinations</h3>
-                <p className="text-sm opacity-90 drop-shadow">Thrilling destinations</p>
+                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Adventure Destinations</h3>
+                <p className="text-xs md:text-sm opacity-90 drop-shadow">Thrilling destinations</p>
               </a>
 
               {/* Family Destinations */}
               <a
                 href="/family-travel"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="mb-3 transition-transform group-hover:scale-110">
-                  <Baby className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                  <Baby className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Family Destinations</h3>
-                <p className="text-sm opacity-90 drop-shadow">Kid-friendly destinations</p>
+                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Family Destinations</h3>
+                <p className="text-xs md:text-sm opacity-90 drop-shadow">Kid-friendly destinations</p>
               </a>
 
               {/* Wellness Destinations */}
               <a
                 href="/wellness-retreats"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="mb-3 transition-transform group-hover:scale-110">
-                  <Flower2 className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                  <Flower2 className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Wellness Destinations</h3>
-                <p className="text-sm opacity-90 drop-shadow">Healing destinations</p>
+                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Wellness Destinations</h3>
+                <p className="text-xs md:text-sm opacity-90 drop-shadow">Healing destinations</p>
               </a>
 
               {/* Affordable Destinations */}
               <a
                 href="/budget-travel"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                <div className="mb-3 transition-transform group-hover:scale-110">
-                  <Wallet className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                  <Wallet className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-2 drop-shadow-lg">Affordable Destinations</h3>
-                <p className="text-sm opacity-90 drop-shadow">Budget travel under $30/day</p>
+                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Affordable Destinations</h3>
+                <p className="text-xs md:text-sm opacity-90 drop-shadow">Budget travel under $30/day</p>
               </a>
             </div>
           </div>
@@ -276,11 +276,11 @@ export default function Home() {
       </section>
 
       {/* SECTION 2: Form Page (same background continues) */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-4 py-12">
+      <section className="relative z-10 min-h-screen flex items-center justify-center px-3 sm:px-4 py-12">
         {/* Transparent/Tinted Form Container */}
-        <div className="w-full max-w-3xl">
+        <div className="w-full max-w-3xl overflow-hidden">
           <div
-            className="bg-gradient-to-br from-black/60 to-black/40 rounded-3xl shadow-2xl p-8 md:p-12"
+            className="bg-gradient-to-br from-black/60 to-black/40 rounded-3xl shadow-2xl p-4 sm:p-8 md:p-12 overflow-hidden"
             style={{
               backdropFilter: 'blur(12px)',
               WebkitBackdropFilter: 'blur(12px)',
@@ -301,17 +301,17 @@ export default function Home() {
             <div className="space-y-8">
 
               {/* Section 1: Trip Basics */}
-              <section className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
+              <section className="rounded-xl bg-white/10 p-4 sm:p-6 backdrop-blur-sm border border-white/20 overflow-hidden">
                 <TripBasicsForm data={tripBasics} onChange={setTripBasics} />
               </section>
 
               {/* Section 2: Companion Type */}
-              <section className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
+              <section className="rounded-xl bg-white/10 p-4 sm:p-6 backdrop-blur-sm border border-white/20 overflow-hidden">
                 <CompanionSelector selected={companionType} onSelect={setCompanionType} />
               </section>
 
               {/* Section 3: Travel Interests */}
-              <section className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
+              <section className="rounded-xl bg-white/10 p-4 sm:p-6 backdrop-blur-sm border border-white/20 overflow-hidden">
                 <InterestsSelector
                   selected={interests}
                   onToggle={toggleInterest}
@@ -320,7 +320,7 @@ export default function Home() {
               </section>
 
               {/* Section 4: Hotel Tier */}
-              <section className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
+              <section className="rounded-xl bg-white/10 p-4 sm:p-6 backdrop-blur-sm border border-white/20 overflow-hidden">
                 <HotelTierSelector
                   selected={tripBasics.hotelTier}
                   onSelect={(tier) => setTripBasics({ ...tripBasics, hotelTier: tier })}
@@ -328,7 +328,7 @@ export default function Home() {
               </section>
 
               {/* Section 5: Experience Range */}
-              <section className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
+              <section className="rounded-xl bg-white/10 p-4 sm:p-6 backdrop-blur-sm border border-white/20 overflow-hidden">
                 <ExperienceRangeSelector
                   selected={tripBasics.experienceRanges}
                   onToggle={toggleExperienceRange}
