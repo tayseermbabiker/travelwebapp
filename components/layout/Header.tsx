@@ -10,7 +10,6 @@ export default function Header() {
 
   const travelGuides = [
     { name: 'Destinations by Season', href: '/seasons', description: 'Best destinations by season' },
-    { name: 'World Festivals', href: '/festivals', description: 'Celebrate global festivals' },
     { name: 'Foodie Destinations', href: '/foodie-destinations', description: 'World\'s top food cities' },
     { name: 'Solo Female Destinations', href: '/solo-female-travel', description: 'Safest destinations for women' },
     { name: 'Digital Nomad Destinations', href: '/digital-nomad', description: 'Remote work destinations' },
@@ -18,6 +17,7 @@ export default function Header() {
     { name: 'Adventure Destinations', href: '/adventure-travel', description: 'Thrilling destinations' },
     { name: 'Wellness Destinations', href: '/wellness-retreats', description: 'Healing destinations' },
     { name: 'Affordable Destinations', href: '/budget-travel', description: 'Budget travel under $30/day' },
+    { name: 'World Festivals', href: '/festivals', description: 'Celebrate global festivals' },
   ];
 
   const navigationLinks = [
@@ -49,12 +49,12 @@ export default function Header() {
 
             {/* Travel Guides Dropdown */}
             <div
-              className="relative group"
+              className="relative"
               onMouseEnter={() => setGuidesDropdownOpen(true)}
               onMouseLeave={() => setGuidesDropdownOpen(false)}
             >
               <button
-                className="flex items-center gap-1 text-gray-700 hover:text-teal-600 font-medium transition py-2"
+                className="flex items-center gap-1 text-gray-700 hover:text-teal-600 font-medium transition"
               >
                 Travel Guides
                 <ChevronDown className={`w-4 h-4 transition-transform ${guidesDropdownOpen ? 'rotate-180' : ''}`} />
@@ -84,13 +84,6 @@ export default function Header() {
                 </div>
               )}
             </div>
-
-            <Link
-              href="/"
-              className="bg-teal-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-teal-600 transition"
-            >
-              Plan Trip
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
