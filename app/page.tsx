@@ -9,7 +9,7 @@ import InterestsSelector from '@/components/landing/InterestsSelector';
 import TripBasicsForm from '@/components/landing/TripBasicsForm';
 import Toast from '@/components/ui/Toast';
 import { CompanionType, InterestType, TripBasics, HotelTier, ExperienceRange } from '@/types';
-import { Sparkles, Laptop, UserCheck, UtensilsCrossed, Mountain, Baby, Flower2, Wallet } from 'lucide-react';
+import { Sparkles, Laptop, UserCheck, UtensilsCrossed, Mountain, Baby, Flower2, Wallet, PartyPopper } from 'lucide-react';
 
 export default function Home() {
   const router = useRouter();
@@ -173,6 +173,18 @@ export default function Home() {
                 </div>
                 <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Destinations by Season</h3>
                 <p className="text-xs md:text-sm opacity-90 drop-shadow">Best destinations by season</p>
+              </a>
+
+              {/* World Festivals */}
+              <a
+                href="/festivals"
+                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+              >
+                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                  <PartyPopper className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">World Festivals</h3>
+                <p className="text-xs md:text-sm opacity-90 drop-shadow">Celebrate global festivals</p>
               </a>
 
               {/* Digital Nomad Destinations */}

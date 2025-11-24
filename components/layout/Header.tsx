@@ -10,6 +10,7 @@ export default function Header() {
 
   const travelGuides = [
     { name: 'Destinations by Season', href: '/seasons', description: 'Best destinations by season' },
+    { name: 'World Festivals', href: '/festivals', description: 'Celebrate global festivals' },
     { name: 'Foodie Destinations', href: '/foodie-destinations', description: 'World\'s top food cities' },
     { name: 'Solo Female Destinations', href: '/solo-female-travel', description: 'Safest destinations for women' },
     { name: 'Digital Nomad Destinations', href: '/digital-nomad', description: 'Remote work destinations' },

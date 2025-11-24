@@ -85,7 +85,7 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
 
       {/* Date Range */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <label htmlFor="start-date" className="mb-2 block text-sm font-medium text-gray-200">
             Start Date
           </label>
@@ -95,11 +95,11 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
             value={formatDateForInput(data.dateRange.start)}
             onChange={(e) => handleStartDateChange(e.target.value)}
             min={today}
-            className="w-full rounded-lg border-2 border-white/30 bg-white/90 px-2 py-3 text-sm sm:px-4 sm:text-base text-gray-800 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
+            className="w-full max-w-full rounded-lg border-2 border-white/30 bg-white/90 px-1.5 py-2.5 text-xs sm:px-4 sm:py-3 sm:text-base text-gray-800 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
           />
         </div>
 
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <label htmlFor="end-date" className="mb-2 block text-sm font-medium text-gray-200">
             End Date
           </label>
@@ -109,7 +109,7 @@ export default function TripBasicsForm({ data, onChange }: TripBasicsFormProps) 
             value={formatDateForInput(data.dateRange.end)}
             onChange={(e) => handleEndDateChange(e.target.value)}
             min={formatDateForInput(data.dateRange.start) || today}
-            className="w-full rounded-lg border-2 border-white/30 bg-white/90 px-2 py-3 text-sm sm:px-4 sm:text-base text-gray-800 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
+            className="w-full max-w-full rounded-lg border-2 border-white/30 bg-white/90 px-1.5 py-2.5 text-xs sm:px-4 sm:py-3 sm:text-base text-gray-800 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
           />
           {totalDays > 0 && (
             <p className="mt-1 text-sm text-gray-200 drop-shadow">
