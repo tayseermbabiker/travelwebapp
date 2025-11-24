@@ -503,7 +503,7 @@ export default function FoodieDestinationsPage() {
       </div>
 
       {/* Hero Section - Glassmorphism */}
-      <section className="relative py-12 px-4 pt-20">
+      <section className="relative py-8 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
@@ -524,7 +524,7 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* Introduction */}
-      <section className="relative py-12 px-6">
+      <section className="relative py-6 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300">
             <p className="text-lg text-gray-700 mb-6">
@@ -544,7 +544,7 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* Explore by Cuisine Type */}
-      <section className="relative py-12 px-6">
+      <section className="relative py-6 px-4">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Explore by Cuisine Type</h2>
           <div className="grid md:grid-cols-3 gap-8">

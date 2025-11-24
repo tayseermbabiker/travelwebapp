@@ -929,7 +929,7 @@ export default function SoloFemaleTravelPage() {
       <div className="max-w-5xl mx-auto px-4 pt-8 pb-12 relative z-10">
 
         {/* Hero Section */}
-        <section className="relative pt-4 pb-8 px-4 mb-8">
+        <section className="relative py-8 px-4">
           <div className="backdrop-blur-xl bg-white/40 border border-white/50 rounded-3xl shadow-2xl p-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
             <div className="relative z-10 text-center">

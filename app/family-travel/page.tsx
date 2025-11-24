@@ -727,7 +727,7 @@ export default function FamilyTravelPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-8 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 md:p-12 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>

@@ -689,8 +689,8 @@ const BudgetTravelPage = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-6">
-        <div className="max-w-6xl mx-auto backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-2xl p-12">
+      <section className="relative py-8 px-4">
+        <div className="max-w-6xl mx-auto backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-2xl p-8">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Affordable Destinations</h1>
           <p className="text-2xl md:text-3xl mb-6 font-light text-gray-800">
             Travel Cheap. Travel Long. Travel Smart.

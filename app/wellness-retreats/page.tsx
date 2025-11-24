@@ -990,7 +990,7 @@ export default function WellnessRetreatsPage() {
       </div>
 
       {/* Hero Section */}
-      <div className="relative py-20 px-4">
+      <div className="relative py-8 px-4">
         <div className="max-w-6xl mx-auto text-center backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.02em' }}>
             Wellness Destinations
