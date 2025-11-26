@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
+import RelatedGuides from '@/components/pillar/RelatedGuides';
+import PillarCTA from '@/components/pillar/PillarCTA';
 
 export default function WellnessRetreatsPage() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -1416,6 +1418,14 @@ export default function WellnessRetreatsPage() {
           <p className="text-lg">
             This guide maps the best catalysts on the planet.
           </p>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gray-50 py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <PillarCTA guideName="wellness-retreats" />
+          <RelatedGuides currentPage="wellness-retreats" />
         </div>
       </div>
 

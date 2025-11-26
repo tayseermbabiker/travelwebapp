@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
+import RelatedGuides from '@/components/pillar/RelatedGuides';
+import PillarCTA from '@/components/pillar/PillarCTA';
 
 export default function AdventureTravelPage() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -1148,6 +1150,14 @@ export default function AdventureTravelPage() {
           <p className="mt-6 text-sm opacity-90">
             Generate personalized adventure itineraries in 60 seconds with AI-powered planning
           </p>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 px-6 bg-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <PillarCTA guideName="adventure-travel" />
+          <RelatedGuides currentPage="adventure-travel" />
         </div>
       </section>
 

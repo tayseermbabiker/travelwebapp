@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
+import RelatedGuides from '@/components/pillar/RelatedGuides'
+import PillarCTA from '@/components/pillar/PillarCTA'
 
 interface Destination {
   id: number
@@ -1268,6 +1270,12 @@ export default function FamilyTravelPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="max-w-5xl mx-auto px-6 py-12">
+        <PillarCTA guideName="family-travel" />
+        <RelatedGuides currentPage="family-travel" />
       </section>
 
       {/* Back to Home */}

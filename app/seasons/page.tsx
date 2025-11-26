@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import RelatedGuides from '@/components/pillar/RelatedGuides';
+import PillarCTA from '@/components/pillar/PillarCTA';
 
 export default function SeasonsPage() {
   const [openSeason, setOpenSeason] = useState<string | null>('winter');
@@ -1983,6 +1985,14 @@ export default function SeasonsPage() {
             Generate Your Perfect Itinerary
           </a>
         </section>
+
+        {/* CTA Section */}
+        <div className="mt-12">
+          <PillarCTA guideName="seasons" />
+        </div>
+
+        {/* Related Guides */}
+        <RelatedGuides currentPage="seasons" />
 
         {/* Back to Home */}
         <div className="mt-8 text-center">

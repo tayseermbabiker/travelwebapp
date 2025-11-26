@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { ChevronDown, ChevronUp, MapPin, DollarSign, Calendar, Utensils, Video, Globe } from 'lucide-react'
+import RelatedGuides from '@/components/pillar/RelatedGuides'
+import PillarCTA from '@/components/pillar/PillarCTA'
 
 export default function FoodieDestinationsPage() {
   const [expandedDestination, setExpandedDestination] = useState<number | null>(null)
@@ -1058,6 +1060,12 @@ export default function FoodieDestinationsPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <div className="container mx-auto px-6 py-12">
+        <PillarCTA guideName="foodie-destinations" />
+        <RelatedGuides currentPage="foodie-destinations" />
+      </div>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">

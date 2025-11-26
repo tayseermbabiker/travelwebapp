@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import RelatedGuides from '@/components/pillar/RelatedGuides';
+import PillarCTA from '@/components/pillar/PillarCTA';
 
 export default function SoloFemaleTravelPage() {
   const [expandedDestination, setExpandedDestination] = useState<number | null>(null);
@@ -1746,6 +1748,12 @@ export default function SoloFemaleTravelPage() {
             </p>
           </div>
         </div>
+
+        {/* CTA Section */}
+        <PillarCTA guideName="solo-female-travel" />
+
+        {/* Related Guides */}
+        <RelatedGuides currentPage="solo-female-travel" />
 
         {/* Footer */}
         <div className="mt-12 text-center text-gray-600 text-sm">

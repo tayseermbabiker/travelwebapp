@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { ChevronDown, ChevronUp, Wifi, DollarSign, Calendar, MapPin, Users, Shield, Sun } from 'lucide-react'
+import RelatedGuides from '@/components/pillar/RelatedGuides'
+import PillarCTA from '@/components/pillar/PillarCTA'
 
 export default function DigitalNomadPage() {
   const [expandedDestination, setExpandedDestination] = useState<number | null>(null)
@@ -1395,6 +1397,12 @@ export default function DigitalNomadPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <div className="container mx-auto px-6 py-12">
+        <PillarCTA guideName="digital-nomad" />
+        <RelatedGuides currentPage="digital-nomad" />
+      </div>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">

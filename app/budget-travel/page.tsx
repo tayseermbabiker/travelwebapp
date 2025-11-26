@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
+import RelatedGuides from '@/components/pillar/RelatedGuides';
+import PillarCTA from '@/components/pillar/PillarCTA';
 
 interface BudgetBreakdown {
   accommodation: string;
@@ -1133,6 +1135,14 @@ const BudgetTravelPage = () => {
           <p className="text-xl font-semibold">
             The world is cheaper than you think. You just have to be willing to slow down and find it.
           </p>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 px-6 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <PillarCTA guideName="budget-travel" />
+          <RelatedGuides currentPage="budget-travel" />
         </div>
       </section>
 
