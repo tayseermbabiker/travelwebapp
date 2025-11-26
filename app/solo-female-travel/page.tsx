@@ -12,6 +12,58 @@ export default function SoloFemaleTravelPage() {
 
   const destinations = [
     {
+      name: "United Arab Emirates (Dubai/Abu Dhabi)",
+      safetyRating: "99/100",
+      safetyBreakdown: {
+        street: 99,
+        transportation: 99,
+        nightlife: 98,
+        healthcare: 99,
+        tourist: 99
+      },
+      whyThisDestination: "The United Arab Emirates ranks as the world\'s number one destination for solo female travelers in 2025. Dubai and Abu Dhabi have exceptionally low crime rates, advanced infrastructure, and strong cultural respect for women. Special provisions include women-only metro cabins, female-driven taxis (Pink Taxis), and well-lit secure public spaces throughout. Women can explore safely at any hour of day or night. The multicultural community offers support and services in multiple languages. Law enforcement is highly effective. Dress modestly in public (cover shoulders and knees) and behave respectfully. These are legal requirements, not suggestions. For women seeking a confident, empowered solo travel experience, the UAE sets the global standard.",
+      monthlyCost: {
+        accommodation: "$1,200-$2,000 (hotel $80-$150/night, hostels limited)",
+        food: "$500-$800",
+        transportation: "$150 (metro efficient and cheap)",
+        activities: "$400-$600",
+        total: "$2,250-$3,400/month"
+      },
+      accommodations: [
+        "Rove Hotels: Modern, safe, central locations, affordable luxury",
+        "Premier Inn Dubai: Budget-friendly, safe, multiple locations",
+        "Five Palm Jumeirah: Luxury option, women-friendly, excellent service",
+        "Look for: Hotels near metro stations, verified reviews from solo women"
+      ],
+      transportation: {
+        bestOption: "Dubai Metro (women-only cabins available), taxis, Uber/Careem",
+        safety: "Exceptionally safe, women-only metro cars, Pink Taxis (female drivers)",
+        cost: "Metro pass $30-50/month, taxis affordable",
+        note: "Women-only metro cabins are pink-marked. Pink Taxis available for female passengers."
+      },
+      community: {
+        facebook: "Yes, active expat and solo female groups (50K+ members)",
+        meetups: "Regular brunches, ladies nights, networking events",
+        tours: "Desert safaris, city tours, cultural experiences",
+        size: "Very large, diverse international community"
+      },
+      cultural: {
+        dressCode: "Modest required (cover shoulders and knees in public, this is law)",
+        genderDynamics: "Strong cultural respect for women, zero tolerance for harassment",
+        acceptance: "Very welcoming to solo female travelers, multicultural environment",
+        nightlife: "Safe, upscale venues, ladies nights common (free entry/drinks for women)"
+      },
+      healthcare: {
+        quality: "World-class, state-of-the-art facilities",
+        access: "Excellent, English widely spoken, many international hospitals",
+        womensHealth: "Full access to healthcare, pharmacies everywhere",
+        cost: "Can be expensive, travel insurance recommended"
+      },
+      bestSeason: "October-April: Pleasant weather (20-30C). Avoid May-September (extreme heat 40C+).",
+      whyLoveIt: "The UAE sets the global standard for solo female safety. Women-only metro cars, female-driven taxis, zero tolerance for harassment, and 24/7 safety make it unmatched. The infrastructure is world-class. Ladies nights offer free entry and drinks at upscale venues. The multicultural environment means you will meet women from every country. Law enforcement is swift and effective. If safety is your top priority, the UAE is the answer.",
+      influencers: "Lexie Alford, many luxury travel influencers"
+    },
+    {
       name: "Iceland (Reykjavik)",
       safetyRating: "99/100",
       safetyBreakdown: {
@@ -71,7 +123,7 @@ export default function SoloFemaleTravelPage() {
         healthcare: 94,
         tourist: 98
       },
-      whyThisDestination: "Japan respects women. It's safe. It's organized. It's incredibly accessible solo. Women-only subway cars. Convenience stores everywhere. Respectful society. The culture is female-friendly (generally). Cost is moderate for developed country.",
+      whyThisDestination: "Japan has extremely low violent crime and remains one of the safest countries for solo female travelers. However, there are privacy concerns worth knowing. Issues like covert photography and groping on crowded trains (called chikan) are documented. Japan has responded with women-only train cars during rush hours and mandatory camera shutter sounds on all phones. Violent crime is virtually nonexistent, but stay aware of personal boundaries in packed public transport. Overall, Japan is excellent for solo female travel. Just stay alert in rush hour crowds.",
       monthlyCost: {
         accommodation: "$900-$1,200 (hostel dorm $40-$65/night)",
         food: "$500+ (restaurants cheap, quality high)",
@@ -1049,7 +1101,7 @@ export default function SoloFemaleTravelPage() {
         {/* Destinations */}
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-purple-600 via-pink-600 to-teal-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
-            The 15 Best Destinations for Solo Female Travelers
+            The 16 Best Destinations for Solo Female Travelers
           </h2>
 
           <div className="space-y-4">
@@ -1697,7 +1749,7 @@ export default function SoloFemaleTravelPage() {
 
         {/* Footer */}
         <div className="mt-12 text-center text-gray-600 text-sm">
-          <p>Last updated: 2025. This guide covers 15 solo female travel destinations with actual safety ratings, realistic costs, female community presence, and practical logistics based on experiences from millions of solo female travelers.</p>
+          <p>Last updated: 2025. This guide covers 16 solo female travel destinations with actual safety ratings, realistic costs, female community presence, and practical logistics based on experiences from millions of solo female travelers.</p>
         </div>
       </div>
     </div>

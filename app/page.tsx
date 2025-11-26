@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import CompanionSelector from '@/components/landing/CompanionSelector';
 import HotelTierSelector from '@/components/landing/HotelTierSelector';
@@ -8,8 +8,17 @@ import ExperienceRangeSelector from '@/components/landing/ExperienceRangeSelecto
 import InterestsSelector from '@/components/landing/InterestsSelector';
 import TripBasicsForm from '@/components/landing/TripBasicsForm';
 import Toast from '@/components/ui/Toast';
+import EmailCaptureModal from '@/components/ui/EmailCaptureModal';
 import { CompanionType, InterestType, TripBasics, HotelTier, ExperienceRange } from '@/types';
 import { Sparkles, Laptop, UserCheck, UtensilsCrossed, Mountain, Baby, Flower2, Wallet, PartyPopper } from 'lucide-react';
+import {
+  getUserData,
+  incrementGenerationCount,
+  requiresEmailForGeneration,
+  hasProvidedEmail,
+  buildTagsFromPreferences,
+  GateType,
+} from '@/lib/user-tracking';
 
 export default function Home() {
   const router = useRouter();
@@ -27,6 +36,16 @@ export default function Home() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generationError, setGenerationError] = useState<string | null>(null);
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' | 'warning' | 'info' } | null>(null);
+
+  // Email gate state
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [generationCount, setGenerationCount] = useState(0);
+
+  // Check generation count on mount
+  useEffect(() => {
+    const userData = getUserData();
+    setGenerationCount(userData.generationCount);
+  }, []);
 
   // Toggle interest selection
   const toggleInterest = (interest: InterestType) => {
@@ -74,14 +93,46 @@ export default function Home() {
     return Math.ceil(diff / (1000 * 60 * 60 * 24));
   };
 
-  const handleGenerateItinerary = async () => {
+  // Build tags for email capture
+  const buildCurrentTags = (): string[] => {
+    if (!companionType || !tripBasics.hotelTier) return [];
+    return buildTagsFromPreferences(
+      tripBasics.destination,
+      companionType,
+      tripBasics.hotelTier,
+      tripBasics.experienceRanges,
+      interests
+    );
+  };
+
+  // Handle generation button click
+  const handleGenerateClick = () => {
+    if (!isFormValid() || !companionType || !tripBasics.hotelTier || tripBasics.experienceRanges.length === 0) return;
+
+    // Check if email is required (4+ generations)
+    if (requiresEmailForGeneration()) {
+      setShowEmailModal(true);
+      return;
+    }
+
+    // Proceed with generation
+    performGeneration();
+  };
+
+  // Handle email modal success
+  const handleEmailSuccess = () => {
+    setShowEmailModal(false);
+    performGeneration();
+  };
+
+  const performGeneration = async () => {
     if (!isFormValid() || !companionType || !tripBasics.hotelTier || tripBasics.experienceRanges.length === 0) return;
 
     setIsGenerating(true);
     setGenerationError(null);
 
     try {
-      console.log('🚀 Starting itinerary generation...');
+      console.log('Starting itinerary generation...');
 
       const response = await fetch('/api/generate-itinerary', {
         method: 'POST',
@@ -109,7 +160,11 @@ export default function Home() {
         throw new Error(data.error || 'Failed to generate itinerary');
       }
 
-      console.log('✅ Itinerary generated successfully!', data);
+      console.log('Itinerary generated successfully!', data);
+
+      // Increment generation count
+      const newCount = incrementGenerationCount();
+      setGenerationCount(newCount);
 
       // Store the itinerary data in sessionStorage
       sessionStorage.setItem('latestItinerary', JSON.stringify(data.data));
@@ -388,7 +443,7 @@ export default function Home() {
                 </div>
 
                 <button
-                  onClick={handleGenerateItinerary}
+                  onClick={handleGenerateClick}
                   disabled={!isFormValid() || isGenerating}
                   className={`
                     w-full rounded-xl px-8 py-4 text-base font-semibold transition-all
@@ -469,6 +524,15 @@ export default function Home() {
           onClose={() => setToast(null)}
         />
       )}
+
+      {/* Email Capture Modal for Generation Limit */}
+      <EmailCaptureModal
+        isOpen={showEmailModal}
+        onClose={() => setShowEmailModal(false)}
+        onSuccess={handleEmailSuccess}
+        gateType="generation_limit"
+        tags={buildCurrentTags()}
+      />
     </main>
   );
 }
