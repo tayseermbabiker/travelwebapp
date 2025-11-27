@@ -1159,52 +1159,6 @@ export default function FamilyTravelPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="max-w-4xl mx-auto px-6 py-16">
-        <div className="bg-gradient-to-r from-pink-500 to-pink-600 text-white rounded-2xl shadow-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Plan Your Family Adventure
-          </h2>
-          <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            You've researched destinations. You've evaluated safety. You've considered activities and healthcare.
-            Now build your actual family itinerary with Wander's AI travel planning app.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 text-left">
-            <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              What Wander Does
-            </h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="text-pink-200 mr-2">•</span>
-                <span>Age-appropriate activities customized by kids' ages</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-pink-200 mr-2">•</span>
-                <span>Healthcare nearby - locates hospitals and pharmacies</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-pink-200 mr-2">•</span>
-                <span>Kid-friendly dining with kids' menus and dietary accommodations</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-pink-200 mr-2">•</span>
-                <span>Realistic timing accounting for naps, downtime, and travel time</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-pink-200 mr-2">•</span>
-                <span>Family logistics including car rentals and kid-specific tips</span>
-              </li>
-            </ul>
-          </div>
-          <a
-            href="/"
-            className="inline-block bg-teal-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-teal-600 transition-all transform hover:scale-105 shadow-lg"
-          >
-            Start Planning Your Family Trip
-          </a>
-        </div>
-      </section>
-
       {/* Reality Check Section */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">

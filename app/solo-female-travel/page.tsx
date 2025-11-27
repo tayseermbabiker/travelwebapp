@@ -1666,57 +1666,6 @@ export default function SoloFemaleTravelPage() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-teal-500 to-teal-600 rounded-lg shadow-xl p-8 mb-12 text-white">
-          <h2 className="text-3xl font-bold mb-4">Plan Your Solo Female Adventure with Wander</h2>
-          <p className="text-lg mb-4">
-            You've read about destinations. You've evaluated safety. You've considered community presence and healthcare.
-          </p>
-          <p className="text-lg mb-6">
-            Now build your actual trip.
-          </p>
-          <p className="text-lg mb-4">
-            Wander generates personalized itineraries for solo female travelers. Instead of hours researching neighborhood safety, women-friendly accommodations, solo female meetups, and logistics—get a custom plan tailored to your travel style.
-          </p>
-
-          <div className="bg-white/10 rounded-lg p-6 mb-6">
-            <h3 className="text-xl font-bold mb-3">What Wander Does:</h3>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="font-bold mr-3">1.</span>
-                <span><strong>Prioritizes safety</strong> – Recommends neighborhoods, transportation, accommodations</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-bold mr-3">2.</span>
-                <span><strong>Finds female community</strong> – Connects to Facebook groups, meetups, organized tours</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-bold mr-3">3.</span>
-                <span><strong>Healthcare integration</strong> – Locates hospitals, pharmacies, women's health resources</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-bold mr-3">4.</span>
-                <span><strong>Solo-specific logistics</strong> – Accommodation types, transit safety, meeting people</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-bold mr-3">5.</span>
-                <span><strong>Real-time updates</strong> – Current safety info, community events, traveler feedback</span>
-              </li>
-            </ul>
-          </div>
-
-          <p className="text-xl mb-6">
-            You could spend weeks researching. Or let Wander do the heavy lifting.
-          </p>
-
-          <a
-            href="https://wander.app"
-            className="inline-block bg-white text-teal-600 font-bold px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-colors"
-          >
-            Plan Your Solo Female Adventure →
-          </a>
-        </div>
-
         {/* Closing Section */}
         <div className="bg-white rounded-lg shadow-md p-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Real Truth About Solo Female Travel</h2>

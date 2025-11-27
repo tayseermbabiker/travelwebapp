@@ -1066,58 +1066,6 @@ const BudgetTravelPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-6 bg-gradient-to-r from-teal-500 to-teal-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Plan Your Budget Adventure with Wander</h2>
-          <p className="text-xl mb-8 leading-relaxed">
-            You have researched destinations. You have calculated realistic costs. You have learned strategies from influencers.
-            Now build your actual budget itinerary.
-          </p>
-          <p className="text-lg mb-8 leading-relaxed">
-            Wander generates personalized budget travel itineraries. Instead of hours coordinating
-            cheap accommodations, finding authentic street food, planning transport routes—get a custom budget plan tailored to your style.
-          </p>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-bold mb-4">What Wander Does:</h3>
-            <ul className="text-left space-y-3 max-w-2xl mx-auto">
-              <li className="flex items-start">
-                <span className="text-teal-200 mr-3 font-bold">1.</span>
-                <span><strong>Budget optimization</strong> – Recommends cheap destinations matching your timeline</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-teal-200 mr-3 font-bold">2.</span>
-                <span><strong>Accommodation finder</strong> – Connects to hostels, guesthouses, homestays</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-teal-200 mr-3 font-bold">3.</span>
-                <span><strong>Street food guide</strong> – Locates authentic cheap eats where locals eat</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-teal-200 mr-3 font-bold">4.</span>
-                <span><strong>Transport planning</strong> – Bus routes, timings, costs, how to book locally</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-teal-200 mr-3 font-bold">5.</span>
-                <span><strong>Cost tracking</strong> – Daily budget breakdowns by destination</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-teal-200 mr-3 font-bold">6.</span>
-                <span><strong>Itinerary optimization</strong> – Slow travel = cheaper weekly rates</span>
-              </li>
-            </ul>
-          </div>
-
-          <Link
-            href="/"
-            className="inline-block bg-white text-teal-600 px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-lg hover:shadow-xl"
-          >
-            Plan Your Budget Adventure →
-          </Link>
-        </div>
-      </section>
-
       {/* Final Truth Section */}
       <section className="py-16 px-6 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto text-center">

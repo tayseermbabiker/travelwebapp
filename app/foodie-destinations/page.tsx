@@ -981,60 +981,6 @@ export default function FoodieDestinationsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-teal-700 text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Plan Your Foodie Adventure with Wander</h2>
-            <p className="text-xl mb-4 text-teal-100">
-              You've read about the destinations. You've seen the hotels. You've learned what to eat.
-            </p>
-            <p className="text-lg mb-8 text-teal-100">
-              Now it's time to actually plan your trip.
-            </p>
-            <p className="text-lg mb-8 text-teal-100 max-w-3xl mx-auto">
-              Wander's AI travel planning app does something different: it generates personalized 60-second travel itineraries that prioritize food experiences. Instead of generic "Things to Do in Bangkok," Wander creates itineraries tailored to your food interests, budget, how many days you have, and whether you want fine dining, street food, or both.
-            </p>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg mb-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">What Wander Does:</h3>
-              <ul className="text-left space-y-3 text-teal-100">
-                <li className="flex items-start">
-                  <span className="mr-3">1.</span>
-                  <span><strong>Analyzes your preferences</strong> – Fine dining or street food? Which cuisines excite you? Budget?</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3">2.</span>
-                  <span><strong>Generates custom itineraries</strong> – Get a day-by-day plan focused on food experiences</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3">3.</span>
-                  <span><strong>Integrates real partnerships</strong> – Wander connects you with local cooking classes, restaurant reservations, and tours</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3">4.</span>
-                  <span><strong>Adapts in real-time</strong> – Change your mind? Get a new itinerary instantly.</span>
-                </li>
-              </ul>
-            </div>
-
-            <p className="text-xl mb-8 text-teal-100">
-              You could spend hours researching Bangkok food tours, reading reviews, coordinating with guides, booking restaurants.
-            </p>
-            <p className="text-xl mb-8 text-teal-100">
-              Or you could use Wander and get your plan done, leaving you more time to actually eat.
-            </p>
-
-            <a
-              href="https://wander.app"
-              className="inline-block bg-white text-teal-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-teal-50 transition-colors shadow-lg"
-            >
-              Plan Your Foodie Trip with Wander
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* The Truth About Food Travel */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">

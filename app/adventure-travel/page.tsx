@@ -1108,52 +1108,6 @@ export default function AdventureTravelPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Plan Your Adventure with Wander
-          </h2>
-          <p className="text-lg mb-4 opacity-95" style={{ fontFamily: "'Mulish', sans-serif" }}>
-            You've researched destinations. You've evaluated fitness levels. You've considered seasons and costs.
-          </p>
-          <p className="text-xl mb-8 font-semibold">
-            Now build your actual adventure itinerary.
-          </p>
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-bold mb-6">What Wander's AI Does For You:</h3>
-            <ul className="text-left max-w-2xl mx-auto space-y-4" style={{ fontFamily: "'Mulish', sans-serif" }}>
-              <li className="flex items-start">
-                <span className="text-teal-300 mr-3 text-2xl">✓</span>
-                <span><strong>Matches fitness level</strong> – Recommends activities you're actually ready for, not aspirational dreams</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-teal-300 mr-3 text-2xl">✓</span>
-                <span><strong>Connects guides & outfitters</strong> – Vetted, reputable companies with safety track records</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-teal-300 mr-3 text-2xl">✓</span>
-                <span><strong>Prioritizes safety</strong> – Locates hospitals, safety equipment, rescue access for every destination</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-teal-300 mr-3 text-2xl">✓</span>
-                <span><strong>Optimizes season timing</strong> – Ensures you go when weather and conditions are ideal</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-teal-300 mr-3 text-2xl">✓</span>
-                <span><strong>Handles adventure logistics</strong> – Realistic daily schedules, packing lists, training tips, permits</span>
-              </li>
-            </ul>
-          </div>
-          <button className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-10 rounded-lg text-lg transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
-            Plan Your Adventure Now
-          </button>
-          <p className="mt-6 text-sm opacity-90">
-            Generate personalized adventure itineraries tailored to your style
-          </p>
-        </div>
-      </section>
-
-      {/* CTA Section */}
       <section className="py-12 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
           <PillarCTA guideName="adventure-travel" />

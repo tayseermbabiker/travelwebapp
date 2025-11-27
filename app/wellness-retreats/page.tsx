@@ -1355,48 +1355,6 @@ export default function WellnessRetreatsPage() {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="bg-gradient-to-br from-emerald-600 to-teal-600 text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Plan Your Wellness Retreat with Wander
-          </h2>
-          <p className="text-xl mb-8 opacity-90" style={{ fontFamily: 'Mulish, sans-serif' }}>
-            You've researched destinations. You've evaluated wellness goals. You've considered seasons and costs. Now build your actual retreat itinerary.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              What Wander Does:
-            </h3>
-            <ul className="text-left max-w-2xl mx-auto space-y-3" style={{ fontFamily: 'Mulish, sans-serif' }}>
-              <li className="flex items-start">
-                <span className="text-yellow-300 mr-2">1.</span>
-                <span><strong>Goal-focused recommendations</strong> – Matches retreat type to your wellness needs</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-yellow-300 mr-2">2.</span>
-                <span><strong>Retreat finder</strong> – Connects to verified centers with real reviews</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-yellow-300 mr-2">3.</span>
-                <span><strong>Pre-retreat prep</strong> – Fitness baseline, dietary changes, meditation apps to start</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-yellow-300 mr-2">4.</span>
-                <span><strong>Timing strategy</strong> – Season, duration, follow-up plan for lasting results</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-yellow-300 mr-2">5.</span>
-                <span><strong>Integration planning</strong> – How to maintain wellness gains after retreat</span>
-              </li>
-            </ul>
-          </div>
-          <button className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Plan Your Wellness Retreat
-          </button>
-        </div>
-      </div>
-
       {/* The Real Wellness Truth */}
       <div className="max-w-4xl mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold mb-6 text-center text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>

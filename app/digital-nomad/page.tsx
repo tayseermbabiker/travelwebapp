@@ -1319,61 +1319,6 @@ export default function DigitalNomadPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-teal-700 text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Plan Your Digital Nomad Trip with Wander</h2>
-            <p className="text-xl mb-4 text-teal-100">
-              You've read about destinations. You've seen the numbers. You've evaluated timezones and visa options.
-            </p>
-            <p className="text-lg mb-8 text-teal-100">
-              Now build your actual itinerary.
-            </p>
-            <p className="text-lg mb-8 text-teal-100 max-w-3xl mx-auto">
-              Wander generates personalized travel itineraries for digital nomads. Instead of hours researching coworking spaces, neighborhoods, visa requirements, and local tips—get a custom plan tailored to your remote work lifestyle.
-            </p>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg mb-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">What Wander Does:</h3>
-              <ul className="text-left space-y-3 text-teal-100">
-                <li className="flex items-start">
-                  <span className="mr-3">1.</span>
-                  <span><strong>Analyzes your priorities</strong> – Budget? Timezone? Community size? Climate?</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3">2.</span>
-                  <span><strong>Generates custom itineraries</strong> – Where to stay, where to work, visa strategy, best neighborhoods</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3">3.</span>
-                  <span><strong>Integrates coworking spaces</strong> – Real options with pricing and access</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3">4.</span>
-                  <span><strong>Adapts for remote work</strong> – Includes reliable wifi locations, backup power, quiet zones</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3">5.</span>
-                  <span><strong>Includes community connectors</strong> – Facebook groups, meetup events, coworking community nights</span>
-                </li>
-              </ul>
-            </div>
-
-            <p className="text-xl mb-8 text-teal-100">
-              You could spend weeks researching. Or let Wander do the heavy lifting.
-            </p>
-
-            <a
-              href="https://wander.app"
-              className="inline-block bg-white text-teal-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-teal-50 transition-colors shadow-lg"
-            >
-              Plan Your Digital Nomad Adventure →
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* The Reality Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
