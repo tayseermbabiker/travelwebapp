@@ -1075,8 +1075,8 @@ const BudgetTravelPage = () => {
             Now build your actual budget itinerary.
           </p>
           <p className="text-lg mb-8 leading-relaxed">
-            Wander's AI travel planning app generates personalized 60-second budget travel itineraries. Instead of hours coordinating
-            cheap accommodations, finding authentic street food, planning transport routes—get a custom budget plan in 60 seconds.
+            Wander generates personalized budget travel itineraries. Instead of hours coordinating
+            cheap accommodations, finding authentic street food, planning transport routes—get a custom budget plan tailored to your style.
           </p>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8">

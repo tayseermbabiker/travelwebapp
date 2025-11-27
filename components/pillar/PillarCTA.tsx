@@ -62,7 +62,7 @@ export default function PillarCTA({ guideName, destination }: PillarCTAProps) {
               <h2 className="text-2xl font-bold">Ready to Plan Your Trip?</h2>
             </div>
             <p className="text-lg opacity-90">
-              Our AI builds a personalized itinerary in 60 seconds. Hotels, activities, restaurants, and budget - all tailored to your preferences.
+              Get a personalized itinerary with hotels, activities, restaurants, and budget breakdown - all tailored to how you love to travel.
             </p>
           </div>
           <Link

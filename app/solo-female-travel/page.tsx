@@ -1676,7 +1676,7 @@ export default function SoloFemaleTravelPage() {
             Now build your actual trip.
           </p>
           <p className="text-lg mb-4">
-            Wander's AI travel planning app generates personalized 60-second itineraries for solo female travelers. Instead of hours researching neighborhood safety, women-friendly accommodations, solo female meetups, and logistics—get a custom plan in 60 seconds.
+            Wander generates personalized itineraries for solo female travelers. Instead of hours researching neighborhood safety, women-friendly accommodations, solo female meetups, and logistics—get a custom plan tailored to your travel style.
           </p>
 
           <div className="bg-white/10 rounded-lg p-6 mb-6">
@@ -1706,7 +1706,7 @@ export default function SoloFemaleTravelPage() {
           </div>
 
           <p className="text-xl mb-6">
-            You could spend weeks researching. Or 60 seconds with Wander.
+            You could spend weeks researching. Or let Wander do the heavy lifting.
           </p>
 
           <a

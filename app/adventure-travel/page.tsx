@@ -1117,7 +1117,7 @@ export default function AdventureTravelPage() {
             You've researched destinations. You've evaluated fitness levels. You've considered seasons and costs.
           </p>
           <p className="text-xl mb-8 font-semibold">
-            Now build your actual adventure itinerary in 60 seconds.
+            Now build your actual adventure itinerary.
           </p>
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 mb-8">
             <h3 className="text-2xl font-bold mb-6">What Wander's AI Does For You:</h3>
@@ -1148,7 +1148,7 @@ export default function AdventureTravelPage() {
             Plan Your Adventure Now
           </button>
           <p className="mt-6 text-sm opacity-90">
-            Generate personalized adventure itineraries in 60 seconds with AI-powered planning
+            Generate personalized adventure itineraries tailored to your style
           </p>
         </div>
       </section>

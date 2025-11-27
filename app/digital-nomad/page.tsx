@@ -1331,7 +1331,7 @@ export default function DigitalNomadPage() {
               Now build your actual itinerary.
             </p>
             <p className="text-lg mb-8 text-teal-100 max-w-3xl mx-auto">
-              Wander's AI travel planning app generates personalized 60-second travel itineraries for digital nomads. Instead of hours researching coworking spaces, neighborhoods, visa requirements, and local tips—get a custom plan in 60 seconds.
+              Wander generates personalized travel itineraries for digital nomads. Instead of hours researching coworking spaces, neighborhoods, visa requirements, and local tips—get a custom plan tailored to your remote work lifestyle.
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg mb-8 max-w-2xl mx-auto">
@@ -1361,7 +1361,7 @@ export default function DigitalNomadPage() {
             </div>
 
             <p className="text-xl mb-8 text-teal-100">
-              You could spend weeks researching. Or 60 seconds with Wander.
+              You could spend weeks researching. Or let Wander do the heavy lifting.
             </p>
 
             <a

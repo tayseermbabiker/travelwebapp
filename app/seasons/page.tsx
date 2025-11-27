@@ -1971,22 +1971,6 @@ export default function SeasonsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl p-8 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to Plan Your Seasonal Adventure?
-          </h2>
-          <p className="text-lg mb-6 opacity-95">
-            Use Wander's travel planner to generate a personalized itinerary based on your chosen season, destination, travel style, and interests.
-          </p>
-          <a
-            href="/"
-            className="inline-block bg-white text-teal-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-lg"
-          >
-            Generate Your Perfect Itinerary
-          </a>
-        </section>
-
-        {/* CTA Section */}
         <div className="mt-12">
           <PillarCTA guideName="seasons" />
         </div>

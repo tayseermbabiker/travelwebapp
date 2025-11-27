@@ -1005,7 +1005,7 @@ export default function FoodieDestinationsPage() {
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3">2.</span>
-                  <span><strong>Generates custom itineraries</strong> – 60 seconds gets you a day-by-day plan focused on food experiences</span>
+                  <span><strong>Generates custom itineraries</strong> – Get a day-by-day plan focused on food experiences</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-3">3.</span>
@@ -1022,7 +1022,7 @@ export default function FoodieDestinationsPage() {
               You could spend hours researching Bangkok food tours, reading reviews, coordinating with guides, booking restaurants.
             </p>
             <p className="text-xl mb-8 text-teal-100">
-              Or you could use Wander and have your plan in 60 seconds, leaving you more time to actually eat.
+              Or you could use Wander and get your plan done, leaving you more time to actually eat.
             </p>
 
             <a

@@ -1,7 +1,7 @@
 {
   "name": "Wander - AI Travel Planner",
   "short_name": "Wander",
-  "description": "AI-powered adventure travel planning. Get personalized itineraries in 60 seconds.",
+  "description": "Adventure travel planning. Get personalized itineraries tailored to how you love to travel.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
