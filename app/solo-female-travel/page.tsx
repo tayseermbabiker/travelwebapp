@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import RelatedGuides from '@/components/pillar/RelatedGuides';
 import PillarCTA from '@/components/pillar/PillarCTA';
+import TableOfContents from '@/components/pillar/TableOfContents';
 
 export default function SoloFemaleTravelPage() {
   const [expandedDestination, setExpandedDestination] = useState<number | null>(null);
@@ -1000,8 +1001,29 @@ export default function SoloFemaleTravelPage() {
           </div>
         </section>
 
+        {/* Table of Contents */}
+        <TableOfContents
+          title="16 Destinations Ranked by Safety"
+          summary="The complete guide to solo female travel in 2025. Safety ratings, monthly costs, female communities, healthcare access, and cultural tips for each destination."
+          highlights={[
+            { label: 'Safest', value: 'UAE (99/100)' },
+            { label: 'Best Budget', value: 'Vietnam ($800/mo)' },
+            { label: 'Best Community', value: 'Portugal' },
+            { label: 'Total Destinations', value: '16' },
+          ]}
+          sections={[
+            { id: 'introduction', label: 'Introduction' },
+            { id: 'how-to-use', label: 'How to Use' },
+            { id: 'influencers', label: 'Expert Advice' },
+            { id: 'destinations', label: 'All 16 Destinations' },
+            { id: 'safety-tips', label: 'Safety Tips' },
+            { id: 'faqs', label: 'FAQs' },
+            { id: 'truth', label: 'Real Truth' },
+          ]}
+        />
+
         {/* Introduction */}
-        <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300">
+        <div id="introduction" className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300 scroll-mt-20">
           <p className="text-lg text-gray-700 mb-4">
             Solo female travel isn't about being fearless. It's about being informed, prepared, and choosing destinations where you can actually breathe.
           </p>
@@ -1017,7 +1039,7 @@ export default function SoloFemaleTravelPage() {
         </div>
 
         {/* How to Use This Guide */}
-        <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300">
+        <div id="how-to-use" className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300 scroll-mt-20">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-teal-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>How to Use This Guide</h2>
           <p className="text-lg font-semibold text-gray-900 mb-4">Pick Your Priority:</p>
           <ul className="space-y-3 text-gray-700">
@@ -1056,7 +1078,7 @@ export default function SoloFemaleTravelPage() {
         </div>
 
         {/* Influencers Section */}
-        <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300">
+        <div id="influencers" className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300 scroll-mt-20">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-teal-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>The Solo Female Travel Influencers</h2>
           <p className="text-gray-700 mb-6">
             These women have millions of followers and have visited 60+ countries alone. Here's what they prioritize:
@@ -1073,7 +1095,7 @@ export default function SoloFemaleTravelPage() {
             ))}
           </div>
 
-          <div className="mt-8 backdrop-blur-lg bg-white/80 border border-white/60 rounded-lg p-6 shadow-lg">
+          <div id="safety-tips" className="mt-8 backdrop-blur-lg bg-white/80 border border-white/60 rounded-lg p-6 shadow-lg scroll-mt-20">
             <h3 className="text-xl font-bold text-gray-900 mb-4">What All These Influencers Agree On:</h3>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start">
@@ -1101,7 +1123,7 @@ export default function SoloFemaleTravelPage() {
         </div>
 
         {/* Destinations */}
-        <div className="mb-12">
+        <div id="destinations" className="mb-12 scroll-mt-20">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-purple-600 via-pink-600 to-teal-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             The 16 Best Destinations for Solo Female Travelers
           </h2>
@@ -1591,7 +1613,7 @@ export default function SoloFemaleTravelPage() {
         </div>
 
         {/* FAQ Section */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-12">
+        <div id="faqs" className="bg-white rounded-lg shadow-md p-8 mb-12 scroll-mt-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Real Questions Solo Female Travelers Ask</h2>
 
           <div className="space-y-6">
@@ -1667,7 +1689,7 @@ export default function SoloFemaleTravelPage() {
         </div>
 
         {/* Closing Section */}
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div id="truth" className="bg-white rounded-lg shadow-md p-8 scroll-mt-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Real Truth About Solo Female Travel</h2>
 
           <div className="space-y-4 text-gray-700">

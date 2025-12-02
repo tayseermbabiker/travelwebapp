@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { ChevronDown, ChevronUp, MapPin, DollarSign, Calendar, Utensils, Video, Globe } from 'lucide-react'
 import RelatedGuides from '@/components/pillar/RelatedGuides'
 import PillarCTA from '@/components/pillar/PillarCTA'
+import TableOfContents from '@/components/pillar/TableOfContents'
 
 export default function FoodieDestinationsPage() {
   const [expandedDestination, setExpandedDestination] = useState<number | null>(null)
@@ -525,8 +526,32 @@ export default function FoodieDestinationsPage() {
         </div>
       </section>
 
+      {/* Table of Contents */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <TableOfContents
+            title="12 Foodie Destinations"
+            summary="The complete guide to food travel in 2025. Discover where to eat based on famous food YouTubers' recommendations, cuisine types, and culinary experiences from street food to Michelin stars."
+            highlights={[
+              { label: 'Best Street Food', value: 'Bangkok' },
+              { label: 'Most Michelin Stars', value: 'Tokyo (169)' },
+              { label: 'Best Value', value: 'Vietnam ($3/meal)' },
+              { label: 'Total Destinations', value: '12' },
+            ]}
+            sections={[
+              { id: 'introduction', label: 'Introduction' },
+              { id: 'cuisines', label: 'By Cuisine Type' },
+              { id: 'experiences', label: 'By Experience' },
+              { id: 'youtubers', label: 'By YouTuber' },
+              { id: 'destinations', label: 'All 12 Destinations' },
+              { id: 'truth', label: 'Real Truth' },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* Introduction */}
-      <section className="relative py-6 px-4">
+      <section id="introduction" className="relative py-6 px-4 scroll-mt-20">
         <div className="container mx-auto max-w-4xl">
           <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300">
             <p className="text-lg text-gray-700 mb-6">
@@ -546,7 +571,7 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* Explore by Cuisine Type */}
-      <section className="relative py-6 px-4">
+      <section id="cuisines" className="relative py-6 px-4 scroll-mt-20">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Explore by Cuisine Type</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -582,7 +607,7 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* Explore by Food Experience */}
-      <section className="relative py-12 px-4">
+      <section id="experiences" className="relative py-12 px-4 scroll-mt-20">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Explore by Food Experience</h2>
           <div className="grid md:grid-cols-2 gap-4">
@@ -611,7 +636,7 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* Famous Food YouTubers */}
-      <section className="relative py-12 px-4">
+      <section id="youtubers" className="relative py-12 px-4 scroll-mt-20">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Explore by Famous Food YouTuber</h2>
           <div className="space-y-4">
@@ -653,7 +678,7 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* The 12 Destinations */}
-      <section className="relative py-12 px-4">
+      <section id="destinations" className="relative py-12 px-4 scroll-mt-20">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>The 12 Global Foodie Destinations</h2>
           <div className="space-y-4">
@@ -982,7 +1007,7 @@ export default function FoodieDestinationsPage() {
       </section>
 
       {/* The Truth About Food Travel */}
-      <section className="py-16 bg-white">
+      <section id="truth" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">The Truth About Food Travel</h2>

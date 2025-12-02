@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
 import RelatedGuides from '@/components/pillar/RelatedGuides'
 import PillarCTA from '@/components/pillar/PillarCTA'
+import TableOfContents from '@/components/pillar/TableOfContents'
 
 interface Destination {
   id: number
@@ -746,8 +747,31 @@ export default function FamilyTravelPage() {
         </div>
       </section>
 
+      {/* Table of Contents */}
+      <section className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <TableOfContents
+            title="12 Family-Friendly Destinations"
+            summary="The complete guide to traveling with kids in 2025. Safety ratings, healthcare access, kid-friendly activities, and real family costs for destinations where children are truly welcomed."
+            highlights={[
+              { label: 'Safest', value: 'Japan & Singapore' },
+              { label: 'Best Budget', value: 'Thailand ($3K/mo)' },
+              { label: 'Best for Toddlers', value: 'Portugal' },
+              { label: 'Total Destinations', value: '12' },
+            ]}
+            sections={[
+              { id: 'introduction', label: 'Introduction' },
+              { id: 'influencers', label: 'Expert Advice' },
+              { id: 'destinations', label: 'All 12 Destinations' },
+              { id: 'faqs', label: 'FAQs' },
+              { id: 'reality', label: 'Reality Check' },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* Introduction Section */}
-      <section className="relative max-w-6xl mx-auto px-6 py-16">
+      <section id="introduction" className="relative max-w-6xl mx-auto px-6 py-16 scroll-mt-20">
         <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 md:p-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             How to Use This Guide
@@ -815,7 +839,7 @@ export default function FamilyTravelPage() {
       </section>
 
       {/* Family Travel Influencers Section */}
-      <section className="relative py-16 px-6">
+      <section id="influencers" className="relative py-16 px-6 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
@@ -878,7 +902,7 @@ export default function FamilyTravelPage() {
       </section>
 
       {/* Destinations Section */}
-      <section className="relative max-w-6xl mx-auto px-6 py-16">
+      <section id="destinations" className="relative max-w-6xl mx-auto px-6 py-16 scroll-mt-20">
         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
           The 12 Best Family-Friendly Destinations
         </h2>
@@ -1082,7 +1106,7 @@ export default function FamilyTravelPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-gradient-to-r from-purple-500 to-purple-600 text-white py-16 px-6">
+      <section id="faqs" className="bg-gradient-to-r from-purple-500 to-purple-600 text-white py-16 px-6 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Family Travel Questions Answered
@@ -1160,7 +1184,7 @@ export default function FamilyTravelPage() {
       </section>
 
       {/* Reality Check Section */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
+      <section id="reality" className="max-w-6xl mx-auto px-6 py-16 scroll-mt-20">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Reality Check: Honest Family Travel Truth

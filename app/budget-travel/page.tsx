@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import RelatedGuides from '@/components/pillar/RelatedGuides';
 import PillarCTA from '@/components/pillar/PillarCTA';
+import TableOfContents from '@/components/pillar/TableOfContents';
 
 interface BudgetBreakdown {
   accommodation: string;
@@ -705,8 +706,33 @@ const BudgetTravelPage = () => {
         </div>
       </section>
 
+      {/* Table of Contents */}
+      <section className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <TableOfContents
+            title="12 Destinations Under $30/Day"
+            summary="The complete guide to budget travel in 2025. Real costs, honest strategies, and what to realistically expect from the world's cheapest destinations."
+            highlights={[
+              { label: 'Cheapest', value: 'Vietnam ($15/day)' },
+              { label: 'Best Food', value: 'Thailand & Vietnam' },
+              { label: 'Easiest Start', value: 'Thailand' },
+              { label: 'Total Destinations', value: '12' },
+            ]}
+            sections={[
+              { id: 'introduction', label: 'Introduction' },
+              { id: 'how-to-use', label: 'How to Use' },
+              { id: 'influencers', label: 'Expert Advice' },
+              { id: 'destinations', label: 'All 12 Destinations' },
+              { id: 'faqs', label: 'FAQs' },
+              { id: 'realities', label: 'Budget Realities' },
+              { id: 'truth', label: 'Real Truth' },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* Introduction Section */}
-      <section className="relative py-16 px-6">
+      <section id="introduction" className="relative py-16 px-6 scroll-mt-20">
         <div className="max-w-6xl mx-auto backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-10">
           <div className="prose max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -722,7 +748,7 @@ const BudgetTravelPage = () => {
               strategies, and what to realistically expect.
             </p>
 
-            <div className="backdrop-blur-md bg-amber-50/70 border-l-4 border-amber-500 p-6 mb-8 rounded-lg">
+            <div id="how-to-use" className="backdrop-blur-md bg-amber-50/70 border-l-4 border-amber-500 p-6 mb-8 rounded-lg scroll-mt-20">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">How to Use This Guide</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -750,7 +776,7 @@ const BudgetTravelPage = () => {
       </section>
 
       {/* Budget Travel Influencers Section */}
-      <section className="relative py-16 px-6">
+      <section id="influencers" className="relative py-16 px-6 scroll-mt-20">
         <div className="max-w-6xl mx-auto backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-10">
           <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Budget Travel Influencers</h2>
 
@@ -780,7 +806,7 @@ const BudgetTravelPage = () => {
       </section>
 
       {/* Destinations Section */}
-      <section className="relative py-16 px-6">
+      <section id="destinations" className="relative py-16 px-6 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             The 12 Best Budget Destinations Under $30/Day
@@ -969,7 +995,7 @@ const BudgetTravelPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-16 px-6">
+      <section id="faqs" className="relative py-16 px-6 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             Frequently Asked Questions
@@ -987,7 +1013,7 @@ const BudgetTravelPage = () => {
       </section>
 
       {/* Budget Travel Realities */}
-      <section className="relative py-16 px-6">
+      <section id="realities" className="relative py-16 px-6 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>Budget Travel Realities</h2>
 
@@ -1067,7 +1093,7 @@ const BudgetTravelPage = () => {
       </section>
 
       {/* Final Truth Section */}
-      <section className="py-16 px-6 bg-gray-900 text-white">
+      <section id="truth" className="py-16 px-6 bg-gray-900 text-white scroll-mt-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">The Real Budget Travel Truth</h2>
           <p className="text-xl mb-6 leading-relaxed">

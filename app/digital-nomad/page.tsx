@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { ChevronDown, ChevronUp, Wifi, DollarSign, Calendar, MapPin, Users, Shield, Sun } from 'lucide-react'
 import RelatedGuides from '@/components/pillar/RelatedGuides'
 import PillarCTA from '@/components/pillar/PillarCTA'
+import TableOfContents from '@/components/pillar/TableOfContents'
 
 export default function DigitalNomadPage() {
   const [expandedDestination, setExpandedDestination] = useState<number | null>(null)
@@ -844,8 +845,32 @@ export default function DigitalNomadPage() {
         </div>
       </section>
 
+      {/* Table of Contents */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <TableOfContents
+            title="12 Digital Nomad Destinations"
+            summary="The complete guide to remote work destinations in 2025. Real data on visa options, internet speeds, cost of living, community size, and whether you can actually get work done."
+            highlights={[
+              { label: 'Best Budget', value: 'Chiang Mai ($800/mo)' },
+              { label: 'Best Visa', value: 'Portugal (2yr)' },
+              { label: 'Best Community', value: 'Lisbon & Bali' },
+              { label: 'Total Destinations', value: '12' },
+            ]}
+            sections={[
+              { id: 'introduction', label: 'How to Use' },
+              { id: 'influencers', label: 'Expert Advice' },
+              { id: 'destinations', label: 'All 12 Destinations' },
+              { id: 'numbers', label: 'Critical Numbers' },
+              { id: 'faqs', label: 'FAQs' },
+              { id: 'reality', label: 'Reality Check' },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* How to Use This Guide */}
-      <section className="relative py-8 px-4 mb-6">
+      <section id="introduction" className="relative py-8 px-4 mb-6 scroll-mt-20">
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>How to Use This Guide</h2>
@@ -902,7 +927,7 @@ export default function DigitalNomadPage() {
       </section>
 
       {/* Influencers Section */}
-      <section className="relative py-8 px-4 mb-6">
+      <section id="influencers" className="relative py-8 px-4 mb-6 scroll-mt-20">
         <div className="container mx-auto max-w-5xl relative z-10">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>The Digital Nomad Influencers & Their Picks</h2>
           <div className="grid md:grid-cols-2 gap-4">
@@ -947,7 +972,7 @@ export default function DigitalNomadPage() {
       </section>
 
       {/* Destinations Section */}
-      <section className="relative py-8 px-4 mb-6">
+      <section id="destinations" className="relative py-8 px-4 mb-6 scroll-mt-20">
         <div className="container mx-auto max-w-5xl relative z-10">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>The 15 Best Digital Nomad Destinations</h2>
           <div className="space-y-4">
@@ -1136,7 +1161,7 @@ export default function DigitalNomadPage() {
       </section>
 
       {/* Critical Numbers Section */}
-      <section className="py-16 bg-teal-50">
+      <section id="numbers" className="py-16 bg-teal-50 scroll-mt-20">
         <div className="container mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800" style={{letterSpacing: '-0.02em'}}>The Critical Numbers: What Actually Matters</h2>
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
@@ -1256,7 +1281,7 @@ export default function DigitalNomadPage() {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-16 bg-gray-50">
+      <section id="faqs" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800" style={{letterSpacing: '-0.02em'}}>FAQs: What Digital Nomads Actually Ask</h2>
           <div className="max-w-4xl mx-auto space-y-6">
@@ -1320,7 +1345,7 @@ export default function DigitalNomadPage() {
       </section>
 
       {/* The Reality Section */}
-      <section className="py-16 bg-white">
+      <section id="reality" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6 text-gray-800">The Reality of Location Independence</h2>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import RelatedGuides from '@/components/pillar/RelatedGuides';
 import PillarCTA from '@/components/pillar/PillarCTA';
+import TableOfContents from '@/components/pillar/TableOfContents';
 
 export default function SeasonsPage() {
   const [openSeason, setOpenSeason] = useState<string | null>('winter');
@@ -50,6 +51,29 @@ export default function SeasonsPage() {
         </div>
       </section>
 
+      {/* Table of Contents */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <TableOfContents
+            title="32 Destinations by Season"
+            summary="The complete guide to year-round travel in 2025. 8 destinations for each season with optimal timing, weather conditions, costs, and what makes each destination special during that time of year."
+            highlights={[
+              { label: 'Winter Escape', value: 'Dubai & Bali' },
+              { label: 'Spring Blooms', value: 'Japan & Netherlands' },
+              { label: 'Summer Sun', value: 'Greece & Croatia' },
+              { label: 'Fall Colors', value: 'New England & Japan' },
+            ]}
+            sections={[
+              { id: 'winter', label: 'Winter (Dec-Feb)' },
+              { id: 'spring', label: 'Spring (Mar-May)' },
+              { id: 'summer', label: 'Summer (Jun-Aug)' },
+              { id: 'fall', label: 'Fall (Sep-Nov)' },
+              { id: 'faqs', label: 'FAQs' },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* Main Content */}
       <div className="container mx-auto max-w-6xl px-4 pb-8 pt-4">
 
@@ -67,7 +91,7 @@ export default function SeasonsPage() {
         </section>
 
         {/* WINTER SECTION */}
-        <section className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <section id="winter" className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300 scroll-mt-20">
           <button
             onClick={() => toggleSeason('winter')}
             className="w-full relative overflow-hidden bg-gradient-to-r from-blue-400/80 via-blue-500/80 to-cyan-500/80 backdrop-blur-sm text-white p-6 flex items-center justify-between hover:from-blue-500/90 hover:via-blue-600/90 hover:to-cyan-600/90 transition-all duration-300"
@@ -453,7 +477,7 @@ export default function SeasonsPage() {
         </section>
 
         {/* SPRING SECTION */}
-        <section className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <section id="spring" className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300 scroll-mt-20">
           <button
             onClick={() => toggleSeason('spring')}
             className="w-full relative overflow-hidden bg-gradient-to-r from-green-400/80 via-green-500/80 to-emerald-500/80 backdrop-blur-sm text-white p-6 flex items-center justify-between hover:from-green-500/90 hover:via-green-600/90 hover:to-emerald-600/90 transition-all duration-300"
@@ -953,7 +977,7 @@ export default function SeasonsPage() {
         </section>
 
         {/* SUMMER SECTION */}
-        <section className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <section id="summer" className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300 scroll-mt-20">
           <button
             onClick={() => toggleSeason('summer')}
             className="w-full relative overflow-hidden bg-gradient-to-r from-orange-400/80 via-orange-500/80 to-yellow-500/80 backdrop-blur-sm text-white p-6 flex items-center justify-between hover:from-orange-500/90 hover:via-orange-600/90 hover:to-yellow-600/90 transition-all duration-300"
@@ -1441,7 +1465,7 @@ export default function SeasonsPage() {
         </section>
 
         {/* FALL SECTION */}
-        <section className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <section id="fall" className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300 scroll-mt-20">
           <button
             onClick={() => toggleSeason('fall')}
             className="w-full relative overflow-hidden bg-gradient-to-r from-amber-400/80 via-amber-500/80 to-orange-500/80 backdrop-blur-sm text-white p-6 flex items-center justify-between hover:from-amber-500/90 hover:via-amber-600/90 hover:to-orange-600/90 transition-all duration-300"
@@ -1932,7 +1956,7 @@ export default function SeasonsPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="bg-white rounded-2xl shadow-md p-8 mb-8">
+        <section id="faqs" className="bg-white rounded-2xl shadow-md p-8 mb-8 scroll-mt-20">
           <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
             Frequently Asked Questions
           </h2>

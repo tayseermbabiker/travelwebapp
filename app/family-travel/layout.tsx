@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Best Family Travel Destinations 2025 | Kid-Friendly Vacation Guide | Wander',
@@ -28,10 +29,48 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = generateArticleSchema({
+  headline: 'Best Family Travel Destinations 2025 - Kid-Friendly Guide',
+  description: 'Top family-friendly travel destinations with activities, safety ratings, and costs for traveling with kids.',
+  datePublished: '2025-01-01',
+  dateModified: '2025-01-01',
+  author: 'Wander',
+  url: '/family-travel',
+});
+
+const faqSchema = generateFAQSchema({
+  questions: [
+    {
+      question: 'What are the best destinations for traveling with kids?',
+      answer: 'Japan and Singapore top the list for safety and kid-friendliness. Thailand offers great value for families. Portugal and Spain are excellent European options with beaches and culture.',
+    },
+    {
+      question: 'How much does family travel cost?',
+      answer: 'Budget destinations like Thailand cost around $3,000/month for a family of 4. Mid-range destinations like Portugal $4,500-6,000/month. Premium destinations like Japan $6,000-8,000/month.',
+    },
+    {
+      question: 'What age is best to travel with kids?',
+      answer: 'Any age works with proper planning. Under 2 is easier (free flights, flexible schedules). Ages 5-12 are ideal for engaging activities. Teens can handle longer trips and more adventure.',
+    },
+  ],
+});
+
+const breadcrumbSchema = generateBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: '/' },
+    { name: 'Family Travel', url: '/family-travel' },
+  ],
+});
+
 export default function FamilyTravelLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={[articleSchema, faqSchema, breadcrumbSchema]} />
+      {children}
+    </>
+  );
 }

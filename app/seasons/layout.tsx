@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Best Travel Destinations by Season 2025 | When to Visit Guide | Wander',
@@ -28,10 +29,48 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = generateArticleSchema({
+  headline: 'Best Travel Destinations by Season 2025 - Complete Guide',
+  description: '32 destinations across Winter, Spring, Summer, and Fall with weather, costs, crowds, and insider tips.',
+  datePublished: '2025-01-01',
+  dateModified: '2025-01-01',
+  author: 'Wander',
+  url: '/seasons',
+});
+
+const faqSchema = generateFAQSchema({
+  questions: [
+    {
+      question: 'What is the best season to travel?',
+      answer: 'It depends on your destination and preferences. Winter is perfect for Dubai and Bali. Spring for Japan (cherry blossoms) and Netherlands (tulips). Summer for Greece and Croatia. Fall for New England foliage and Japan.',
+    },
+    {
+      question: 'When should I book my seasonal trip?',
+      answer: 'Ideal is 6-8 weeks in advance. Summer trips: book March-April. Fall trips: book June-July. Winter trips: book August-September. Spring trips: book January-February.',
+    },
+    {
+      question: 'Is it cheaper to travel in off-season?',
+      answer: 'Yes, significantly. Off-season typically means 30-50% lower accommodation prices, fewer crowds, and easier reservations. Shoulder seasons offer the best balance of good weather and lower costs.',
+    },
+  ],
+});
+
+const breadcrumbSchema = generateBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: '/' },
+    { name: 'Destinations by Season', url: '/seasons' },
+  ],
+});
+
 export default function SeasonsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={[articleSchema, faqSchema, breadcrumbSchema]} />
+      {children}
+    </>
+  );
 }

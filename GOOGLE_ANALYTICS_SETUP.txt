@@ -1,0 +1,163 @@
+====================================================
+GOOGLE ANALYTICS SETUP GUIDE FOR WANDER
+====================================================
+
+WHAT IS THIS?
+-------------
+Google Analytics (GA4) tracks who visits your website, what pages they view,
+how long they stay, and where they come from. This data helps you understand
+your audience and improve your site.
+
+The setup has 2 parts:
+1. Creating a Google Analytics account (done on Google's website)
+2. Adding your unique tracking ID to your project (explained below)
+
+
+STEP 1: CREATE A GOOGLE ANALYTICS ACCOUNT
+-----------------------------------------
+1. Go to: https://analytics.google.com/
+
+2. Sign in with your Google account
+
+3. Click "Start measuring" (or "Create Account" if you already have GA)
+
+4. Fill in the account details:
+   - Account name: "Wander" (or whatever you want to call it)
+   - Click Next
+
+5. Create a Property:
+   - Property name: "Wander Website"
+   - Select your timezone and currency
+   - Click Next
+
+6. Fill in business details:
+   - Industry: Travel
+   - Business size: Small
+   - Click Next
+
+7. Select your goals (choose what matters to you):
+   - Generate leads
+   - Drive online sales
+   - etc.
+   - Click Create
+
+8. Accept the terms of service
+
+9. Set up a Web Data Stream:
+   - Click "Web"
+   - Enter your website URL: https://travelwebapp-pied.vercel.app
+   - Stream name: "Wander Web"
+   - Click "Create stream"
+
+10. IMPORTANT - Copy your Measurement ID:
+    - You'll see something like: G-XXXXXXXXXX
+    - This is your unique tracking code
+    - Copy it!
+
+
+STEP 2: ADD THE TRACKING ID TO YOUR PROJECT
+-------------------------------------------
+Your project has a file called ".env.local" in the root folder.
+This file stores secret/private settings that shouldn't be shared publicly.
+
+Option A: If .env.local already exists
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Open the file: C:\Users\LENOVO\Desktop\New folder\Projects\Travelwebapp\wander\.env.local
+
+2. Add this line at the bottom (replace G-XXXXXXXXXX with YOUR actual ID):
+
+   NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+
+3. Save the file
+
+
+Option B: If .env.local doesn't exist
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Create a new file called ".env.local" in:
+   C:\Users\LENOVO\Desktop\New folder\Projects\Travelwebapp\wander\
+
+2. Copy everything from ".env.example" into it
+
+3. Add this line (replace G-XXXXXXXXXX with YOUR actual ID):
+
+   NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+
+4. Save the file
+
+
+STEP 3: DEPLOY TO VERCEL
+------------------------
+If you're using Vercel for hosting, you also need to add the variable there:
+
+1. Go to: https://vercel.com/dashboard
+
+2. Click on your "wander" project
+
+3. Go to "Settings" tab
+
+4. Click "Environment Variables" in the left sidebar
+
+5. Add a new variable:
+   - Name: NEXT_PUBLIC_GA_MEASUREMENT_ID
+   - Value: G-XXXXXXXXXX (your actual ID)
+   - Environment: Production (and Preview if you want)
+
+6. Click "Save"
+
+7. Redeploy your site (or it will apply on next deployment)
+
+
+HOW TO VERIFY IT'S WORKING
+--------------------------
+1. After deploying, visit your live website
+
+2. Go back to Google Analytics
+
+3. Click "Reports" in the left sidebar
+
+4. Click "Realtime"
+
+5. You should see yourself as an active user!
+
+Note: Regular reports take 24-48 hours to populate with data.
+
+
+WHAT DATA WILL YOU SEE?
+-----------------------
+Once set up, Google Analytics shows you:
+
+- How many people visit your site
+- Which pages are most popular
+- Where visitors come from (Google, social media, direct)
+- What countries/cities your visitors are in
+- What devices they use (mobile, desktop)
+- How long they stay on your site
+- Conversion tracking (if you set up goals)
+
+
+TROUBLESHOOTING
+---------------
+Q: I added the ID but don't see any data
+A: Wait 24-48 hours. Also check that:
+   - The ID starts with "G-" (not "UA-" which is old)
+   - You restarted your development server after adding the env variable
+   - You redeployed to Vercel after adding the variable there
+
+Q: Where do I find my Measurement ID again?
+A: Google Analytics > Admin (gear icon) > Data Streams > Click your stream > Measurement ID
+
+Q: Is this free?
+A: Yes, Google Analytics is completely free.
+
+
+PRIVACY NOTE
+------------
+If you're collecting data from EU visitors, you should:
+1. Add a cookie consent banner to your site
+2. Only load analytics after user consents
+3. Mention analytics in your Privacy Policy
+
+This is already mentioned in your /privacy page but you may want to add
+a cookie consent popup for full GDPR compliance.
+
+====================================================

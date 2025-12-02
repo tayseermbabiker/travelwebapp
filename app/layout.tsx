@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Mulish } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -75,6 +76,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-72x72.png" />
       </head>
       <body className={`${poppins.variable} ${mulish.variable} font-sans`} style={{ fontFamily: 'var(--font-poppins), var(--font-mulish), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+        <GoogleAnalytics />
         <Header />
         {children}
       </body>

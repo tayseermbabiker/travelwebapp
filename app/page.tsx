@@ -201,149 +201,20 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
-      {/* SECTION 1: Hero Landing Page */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-4 py-20">
-        <div className="text-center text-white max-w-6xl w-full">
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight drop-shadow-2xl mb-6">
+      {/* SECTION 1: Hero + Form (Above the Fold) */}
+      <section className="relative z-10 min-h-screen flex flex-col items-center justify-start px-3 sm:px-4 pt-8 pb-12">
+        {/* Compact Hero */}
+        <div className="text-center text-white w-full mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight drop-shadow-2xl mb-3">
             WANDER
           </h1>
-          <p className="text-2xl md:text-4xl font-light drop-shadow-lg mb-4">
-            Discover Your Next Adventure
-          </p>
-          <p className="text-lg md:text-xl opacity-90 drop-shadow-md mb-12">
+          <p className="text-xl md:text-2xl font-light drop-shadow-lg mb-2">
             Your Perfect Trip, Perfectly Planned
           </p>
-
-          {/* Featured Travel Guides - Glassmorphism Cards */}
-          <div className="mb-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 drop-shadow-lg">Explore Our Travel Guides</h2>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-              {/* Destinations by Season */}
-              <a
-                href="/seasons"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
-                  <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Destinations by Season</h3>
-                <p className="text-xs md:text-sm opacity-90 drop-shadow">Best destinations by season</p>
-              </a>
-
-              {/* Digital Nomad Destinations */}
-              <a
-                href="/digital-nomad"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
-                  <Laptop className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Digital Nomad Destinations</h3>
-                <p className="text-xs md:text-sm opacity-90 drop-shadow">Remote work destinations</p>
-              </a>
-
-              {/* Solo Female Destinations */}
-              <a
-                href="/solo-female-travel"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
-                  <UserCheck className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Solo Female Destinations</h3>
-                <p className="text-xs md:text-sm opacity-90 drop-shadow">Safest destinations for women</p>
-              </a>
-
-              {/* Foodie Destinations */}
-              <a
-                href="/foodie-destinations"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
-                  <UtensilsCrossed className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Foodie Destinations</h3>
-                <p className="text-xs md:text-sm opacity-90 drop-shadow">World's top food cities</p>
-              </a>
-
-              {/* Adventure Destinations */}
-              <a
-                href="/adventure-travel"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
-                  <Mountain className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Adventure Destinations</h3>
-                <p className="text-xs md:text-sm opacity-90 drop-shadow">Thrilling destinations</p>
-              </a>
-
-              {/* Family Destinations */}
-              <a
-                href="/family-travel"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
-                  <Baby className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Family Destinations</h3>
-                <p className="text-xs md:text-sm opacity-90 drop-shadow">Kid-friendly destinations</p>
-              </a>
-
-              {/* Wellness Destinations */}
-              <a
-                href="/wellness-retreats"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
-                  <Flower2 className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Wellness Destinations</h3>
-                <p className="text-xs md:text-sm opacity-90 drop-shadow">Healing destinations</p>
-              </a>
-
-              {/* Affordable Destinations */}
-              <a
-                href="/budget-travel"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
-                  <Wallet className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">Affordable Destinations</h3>
-                <p className="text-xs md:text-sm opacity-90 drop-shadow">Budget travel under $30/day</p>
-              </a>
-
-              {/* World Festivals */}
-              <a
-                href="/festivals"
-                className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-3 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
-                  <PartyPopper className="w-7 h-7 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg">World Festivals</h3>
-                <p className="text-xs md:text-sm opacity-90 drop-shadow">Celebrate global festivals</p>
-              </a>
-            </div>
-          </div>
-
-          {/* Scroll indicator - Enhanced with glow effect */}
-          <div className="animate-bounce mt-8">
-            <div className="inline-block backdrop-blur-xl bg-white/20 border-2 border-white/50 rounded-full p-4 shadow-2xl">
-              <svg className="w-8 h-8 mx-auto text-white drop-shadow-2xl" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" viewBox="0 0 24 24" stroke="currentColor">
-                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-            </div>
-            <p className="text-base md:text-lg mt-4 font-semibold drop-shadow-lg bg-gradient-to-r from-white via-teal-100 to-white bg-clip-text text-transparent animate-pulse">
-              Scroll to create your itinerary
-            </p>
-          </div>
+          <p className="text-sm md:text-base opacity-80 drop-shadow-md">
+            Get a personalized itinerary with hotels, activities, and budget breakdown
+          </p>
         </div>
-      </section>
-
-      {/* SECTION 2: Form Page (same background continues) */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-3 sm:px-4 py-12">
         {/* Transparent/Tinted Form Container */}
         <div className="w-full max-w-3xl overflow-hidden">
           <div
@@ -512,6 +383,125 @@ export default function Home() {
                 <p>© 2025 Wander. All rights reserved.</p>
               </footer>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2: Travel Guides */}
+      <section className="relative z-10 px-4 py-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center text-white mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 drop-shadow-lg">Explore Our Travel Guides</h2>
+            <p className="text-lg opacity-90 drop-shadow">In-depth guides for every type of traveler</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4">
+            {/* Destinations by Season */}
+            <a
+              href="/seasons"
+              className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-4 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+            >
+              <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg text-white">Destinations by Season</h3>
+              <p className="text-xs md:text-sm opacity-90 drop-shadow text-white/80">32 destinations for every season</p>
+            </a>
+
+            {/* Digital Nomad Destinations */}
+            <a
+              href="/digital-nomad"
+              className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-4 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+            >
+              <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                <Laptop className="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg text-white">Digital Nomad</h3>
+              <p className="text-xs md:text-sm opacity-90 drop-shadow text-white/80">Work remotely from paradise</p>
+            </a>
+
+            {/* Solo Female Destinations */}
+            <a
+              href="/solo-female-travel"
+              className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-4 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+            >
+              <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                <UserCheck className="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg text-white">Solo Female Travel</h3>
+              <p className="text-xs md:text-sm opacity-90 drop-shadow text-white/80">16 safest destinations rated</p>
+            </a>
+
+            {/* Foodie Destinations */}
+            <a
+              href="/foodie-destinations"
+              className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-4 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+            >
+              <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                <UtensilsCrossed className="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg text-white">Foodie Destinations</h3>
+              <p className="text-xs md:text-sm opacity-90 drop-shadow text-white/80">World's top food cities</p>
+            </a>
+
+            {/* Adventure Destinations */}
+            <a
+              href="/adventure-travel"
+              className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-4 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+            >
+              <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                <Mountain className="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg text-white">Adventure Travel</h3>
+              <p className="text-xs md:text-sm opacity-90 drop-shadow text-white/80">Thrilling destinations</p>
+            </a>
+
+            {/* Family Destinations */}
+            <a
+              href="/family-travel"
+              className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-4 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+            >
+              <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                <Baby className="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg text-white">Family Travel</h3>
+              <p className="text-xs md:text-sm opacity-90 drop-shadow text-white/80">Kid-friendly adventures</p>
+            </a>
+
+            {/* Wellness Destinations */}
+            <a
+              href="/wellness-retreats"
+              className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-4 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+            >
+              <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                <Flower2 className="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg text-white">Wellness Retreats</h3>
+              <p className="text-xs md:text-sm opacity-90 drop-shadow text-white/80">Healing & rejuvenation</p>
+            </a>
+
+            {/* Affordable Destinations */}
+            <a
+              href="/budget-travel"
+              className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-4 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+            >
+              <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                <Wallet className="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg text-white">Budget Travel</h3>
+              <p className="text-xs md:text-sm opacity-90 drop-shadow text-white/80">Under $30/day destinations</p>
+            </a>
+
+            {/* World Festivals */}
+            <a
+              href="/festivals"
+              className="group backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl p-4 md:p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+            >
+              <div className="mb-2 md:mb-3 transition-transform group-hover:scale-110">
+                <PartyPopper className="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-lg" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-2 drop-shadow-lg text-white">World Festivals</h3>
+              <p className="text-xs md:text-sm opacity-90 drop-shadow text-white/80">Celebrate globally</p>
+            </a>
           </div>
         </div>
       </section>

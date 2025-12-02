@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import RelatedGuides from '@/components/pillar/RelatedGuides';
 import PillarCTA from '@/components/pillar/PillarCTA';
+import TableOfContents from '@/components/pillar/TableOfContents';
 
 export default function AdventureTravelPage() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -582,8 +583,32 @@ export default function AdventureTravelPage() {
         </div>
       </section>
 
+      {/* Table of Contents */}
+      <section className="py-8 px-4">
+        <div className="max-w-5xl mx-auto">
+          <TableOfContents
+            title="12 Adventure Destinations"
+            summary="The complete guide to adventure travel in 2025. Honest difficulty assessments, fitness requirements, realistic costs, actual outfitters, and what you need to prepare for each destination."
+            highlights={[
+              { label: 'Best Beginner', value: 'Costa Rica' },
+              { label: 'Ultimate Challenge', value: 'Everest Base Camp' },
+              { label: 'Best Value', value: 'Patagonia' },
+              { label: 'Total Destinations', value: '12' },
+            ]}
+            sections={[
+              { id: 'introduction', label: 'Introduction' },
+              { id: 'influencers', label: 'Expert Advice' },
+              { id: 'destinations', label: 'All 12 Destinations' },
+              { id: 'faqs', label: 'FAQs' },
+              { id: 'fitness', label: 'Fitness Requirements' },
+              { id: 'truth', label: 'Real Truth' },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* Introduction Section */}
-      <section className="relative py-16 px-6">
+      <section id="introduction" className="relative py-16 px-6 scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             Adventure Travel Has Changed
@@ -611,7 +636,7 @@ export default function AdventureTravelPage() {
       </section>
 
       {/* Adventure Travel Influencers Section */}
-      <section className="relative py-16 px-6">
+      <section id="influencers" className="relative py-16 px-6 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             The Adventure Travel Influencers
@@ -667,7 +692,7 @@ export default function AdventureTravelPage() {
       </section>
 
       {/* Destinations Section */}
-      <section className="relative py-16 px-6">
+      <section id="destinations" className="relative py-16 px-6 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
             The 12 Best Adventure Destinations
@@ -858,7 +883,7 @@ export default function AdventureTravelPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section id="faqs" className="py-16 px-6 bg-gray-50 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             Real Adventurer Questions Answered
@@ -959,7 +984,7 @@ export default function AdventureTravelPage() {
       </section>
 
       {/* Fitness Requirements Section */}
-      <section className="py-16 px-6 bg-gradient-to-r from-amber-500 to-amber-600">
+      <section id="fitness" className="py-16 px-6 bg-gradient-to-r from-amber-500 to-amber-600 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
             Honest Fitness Requirements
@@ -1061,7 +1086,7 @@ export default function AdventureTravelPage() {
       </section>
 
       {/* The Real Adventure Truth Section */}
-      <section className="py-16 px-6 bg-gray-900 text-white">
+      <section id="truth" className="py-16 px-6 bg-gray-900 text-white scroll-mt-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">The Real Adventure Truth</h2>
           <div className="prose max-w-none text-gray-300" style={{ fontFamily: "'Mulish', sans-serif" }}>

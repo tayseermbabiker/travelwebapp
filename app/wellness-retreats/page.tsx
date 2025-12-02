@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import RelatedGuides from '@/components/pillar/RelatedGuides';
 import PillarCTA from '@/components/pillar/PillarCTA';
+import TableOfContents from '@/components/pillar/TableOfContents';
 
 export default function WellnessRetreatsPage() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -1006,8 +1007,31 @@ export default function WellnessRetreatsPage() {
         </div>
       </div>
 
+      {/* Table of Contents */}
+      <div className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <TableOfContents
+            title="12 Wellness Retreat Destinations"
+            summary="The complete guide to wellness travel in 2025. From yoga retreats in Bali to longevity clinics in Switzerland - authentic experiences, real costs, and what transformation actually looks like."
+            highlights={[
+              { label: 'Best Value', value: 'Bali ($50-200/day)' },
+              { label: 'Best Yoga', value: 'India (Rishikesh)' },
+              { label: 'Best Luxury', value: 'Switzerland' },
+              { label: 'Total Destinations', value: '12' },
+            ]}
+            sections={[
+              { id: 'introduction', label: 'Introduction' },
+              { id: 'influencers', label: 'Expert Advice' },
+              { id: 'destinations', label: 'All 12 Destinations' },
+              { id: 'faqs', label: 'FAQs' },
+              { id: 'truth', label: 'Real Truth' },
+            ]}
+          />
+        </div>
+      </div>
+
       {/* Introduction Section */}
-      <div className="max-w-6xl mx-auto px-4 py-16 relative">
+      <div id="introduction" className="max-w-6xl mx-auto px-4 py-16 relative scroll-mt-20">
         <div className="prose prose-lg max-w-none backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.02em' }}>
             Wellness Travel Isn't a Luxury. It's an Investment in You.
@@ -1038,7 +1062,7 @@ export default function WellnessRetreatsPage() {
       </div>
 
       {/* Wellness Travel Influencers Section */}
-      <div className="py-16 px-4 relative">
+      <div id="influencers" className="py-16 px-4 relative scroll-mt-20">
         <div className="max-w-6xl mx-auto backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.02em' }}>
             The Wellness Travel Influencers
@@ -1079,7 +1103,7 @@ export default function WellnessRetreatsPage() {
       </div>
 
       {/* Destinations Section */}
-      <div className="max-w-6xl mx-auto px-4 py-16 relative">
+      <div id="destinations" className="max-w-6xl mx-auto px-4 py-16 relative scroll-mt-20">
         <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.02em' }}>
           The 12 Best Wellness Retreat Destinations
         </h2>
@@ -1335,7 +1359,7 @@ export default function WellnessRetreatsPage() {
       </div>
 
       {/* FAQ Section */}
-      <div className="bg-gray-50 py-16 px-4">
+      <div id="faqs" className="bg-gray-50 py-16 px-4 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Real Wellness Retreat Questions
@@ -1356,7 +1380,7 @@ export default function WellnessRetreatsPage() {
       </div>
 
       {/* The Real Wellness Truth */}
-      <div className="max-w-4xl mx-auto px-4 py-16">
+      <div id="truth" className="max-w-4xl mx-auto px-4 py-16 scroll-mt-20">
         <h2 className="text-4xl font-bold mb-6 text-center text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
           The Real Wellness Truth
         </h2>
