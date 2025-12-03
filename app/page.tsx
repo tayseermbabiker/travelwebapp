@@ -356,7 +356,7 @@ export default function Home() {
                 <div className="mt-6 pt-6 border-t border-white/20">
                   <p className="text-sm mb-3 opacity-90">Love planning trips? Share Roamovo with your friends!</p>
                   <a
-                    href={`https://wa.me/?text=${encodeURIComponent('Check out Roamovo - Plan your perfect trip! ' + (typeof window !== 'undefined' ? window.location.href : 'https://travelwebapp-pied.vercel.app'))}`}
+                    href={`https://wa.me/?text=${encodeURIComponent('Check out Roamovo - Plan your perfect trip! ' + (typeof window !== 'undefined' ? window.location.href : 'https://roamovo.com'))}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all hover:scale-105 shadow-lg"

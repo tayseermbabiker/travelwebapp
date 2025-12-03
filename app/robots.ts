@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://travelwebapp-pied.vercel.app';
+  const baseUrl = 'https://roamovo.com';
 
   return {
     rules: [
