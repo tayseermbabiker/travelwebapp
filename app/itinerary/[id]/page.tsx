@@ -117,20 +117,29 @@ export default function ItineraryPage() {
     };
   }) || [];
 
-  // Extract hotel from first day's accommodation
-  const hotel = itinerary.days?.[0]?.accommodation?.hotel ? {
+  // Extract hotel options from first day (new format) or legacy single hotel
+  const hotelOptions = itinerary.days?.[0]?.hotelOptions?.map((h: any) => ({
+    ...h,
+    id: h.hotelId,
+    amenities: h.features || [],
+    location: { address: h.location || 'Location TBD' },
+  })) || [];
+
+  // Fallback to legacy single hotel format
+  const legacyHotel = itinerary.days?.[0]?.accommodation?.hotel ? {
     ...itinerary.days[0].accommodation.hotel,
     id: itinerary.days[0].accommodation.hotel.hotelId,
-    name: itinerary.days[0].accommodation.hotel.name,
-    stars: itinerary.days[0].accommodation.hotel.stars,
-    pricePerNight: itinerary.days[0].accommodation.hotel.pricePerNight,
-    rating: itinerary.days[0].accommodation.hotel.rating,
+    tier: 'better' as const,
+    recommended: true,
     amenities: itinerary.days[0].accommodation.hotel.features || [],
     why: itinerary.days[0].accommodation.hotel.why || null,
     location: {
       address: itinerary.days[0].accommodation.hotel.location || 'Dubai',
     },
   } : null;
+
+  // Use new format if available, otherwise fallback to legacy
+  const hotels = hotelOptions.length > 0 ? hotelOptions : (legacyHotel ? [legacyHotel] : []);
 
   return (
     <main className="min-h-screen bg-gray-50 font-sans" style={{ fontFamily: 'var(--font-poppins), var(--font-mulish), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
@@ -171,13 +180,25 @@ export default function ItineraryPage() {
           )}
         </section>
 
-        {/* Hotel Recommendation */}
-        {hotel && (
+        {/* Hotel Options */}
+        {hotels.length > 0 && (
           <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Your Hotel
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+              {hotels.length > 1 ? 'Choose Your Hotel' : 'Your Hotel'}
             </h2>
-            <HotelCard hotel={hotel} totalNights={transformedDays.length} />
+            {hotels.length > 1 && (
+              <p className="text-gray-600 mb-4">Compare options and pick what suits you best</p>
+            )}
+            <div className={`grid gap-4 ${hotels.length > 1 ? 'md:grid-cols-3' : ''}`}>
+              {hotels.map((hotel: any, index: number) => (
+                <HotelCard
+                  key={hotel.id || index}
+                  hotel={hotel}
+                  totalNights={transformedDays.length}
+                  showTier={hotels.length > 1}
+                />
+              ))}
+            </div>
           </section>
         )}
 

@@ -259,13 +259,22 @@ MEAL PLANNING:
 - Match food interests (foodies get cooking classes, food tours, best restaurants)
 - Include cuisine variety (local specialties + international options)
 
-HOTEL SELECTION:
+HOTEL SELECTION (PROVIDE 3 OPTIONS):
+- Generate exactly 3 hotel options for users to compare:
+  1. "good" - Best value option within their tier (lowest price, still quality)
+  2. "better" - Recommended balanced choice (best value-for-money)
+  3. "best" - Premium option within their tier (highest quality/amenities)
 - Stay in same hotel all nights if possible (avoid packing/unpacking)
 - Choose based on companion type: romantic for couples, family-friendly for families, social for friends/solo, business-class for business
-- Match budget category: budget (<$80/night), midscale ($80-150), upscale ($150-300), luxury ($300+)
+- Match budget category based on hotelTier:
+  * budget: $40-80/night range
+  * comfort: $80-150/night range
+  * premium: $150-300/night range
+  * luxury: $300-600/night range
 - Location matters: central area, near metro/transport, walking distance to attractions
-- Minimum rating: 7.5/10, higher for upscale budgets
+- Minimum rating: 7.0/10 for good, 7.5/10 for better, 8.0/10 for best
 - Include specific amenities relevant to companion type
+- Mark one as "recommended": true (usually the "better" option)
 
 PRACTICAL CONSIDERATIONS:
 - Check realistic operating hours (9 AM - 10 PM typical)
@@ -344,19 +353,42 @@ OUTPUT FORMAT (valid JSON only):
           "tips": "Book sunset time slot (6-7 PM) for magical views. Arrive 30 min early. Bring phone/camera."
         }
       },
-      "accommodation": {
-        "hotel": {
+      "hotelOptions": [
+        {
+          "tier": "good",
+          "hotelId": "ibis-dubai-mall",
+          "name": "ibis Dubai Mall of the Emirates",
+          "stars": 3,
+          "pricePerNight": 95,
+          "features": ["Free WiFi", "Pool", "Metro Access"],
+          "location": "Al Barsha, 5 min walk to Mall of Emirates",
+          "rating": 7.4,
+          "why": "Great value, direct metro access to Downtown"
+        },
+        {
+          "tier": "better",
+          "recommended": true,
           "hotelId": "hampton-inn-downtown",
           "name": "Hampton Inn Dubai Downtown",
-          "stars": 3,
+          "stars": 4,
           "pricePerNight": 145,
-          "bookingUrl": "/api/book/hampton-inn-downtown",
-          "features": ["Free WiFi", "Rooftop Pool", "Breakfast Included", "Gym", "City Views"],
+          "features": ["Free WiFi", "Rooftop Pool", "Breakfast", "Gym", "City Views"],
           "location": "Downtown Dubai, 10 min walk to Dubai Mall",
           "rating": 8.7,
-          "why": "Perfect location for couples - romantic city views, walking distance to Burj Khalifa, great value with breakfast included"
+          "why": "Best value - walking distance to Burj Khalifa, breakfast included"
+        },
+        {
+          "tier": "best",
+          "hotelId": "address-downtown",
+          "name": "Address Downtown",
+          "stars": 5,
+          "pricePerNight": 280,
+          "features": ["Spa", "Fine Dining", "Burj View", "Butler Service"],
+          "location": "Downtown Dubai, connected to Dubai Mall",
+          "rating": 9.2,
+          "why": "Premium experience with iconic Burj Khalifa views"
         }
-      },
+      ],
       "dailyTotal": {
         "activities": 120,
         "food": 25,

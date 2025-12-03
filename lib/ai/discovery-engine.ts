@@ -46,6 +46,20 @@ export interface TimeSlot {
   restaurant?: Restaurant;
 }
 
+export interface HotelOption {
+  tier: 'good' | 'better' | 'best';
+  recommended?: boolean;
+  hotelId: string;
+  name: string;
+  stars: number;
+  pricePerNight: number;
+  bookingUrl?: string;
+  features: string[];
+  location: string;
+  rating: number;
+  why: string;
+}
+
 export interface ItineraryDay {
   day: number;
   date: string;
@@ -58,7 +72,9 @@ export interface ItineraryDay {
   lunch: TimeSlot;
   afternoon: TimeSlot;
   evening: TimeSlot;
-  accommodation: {
+  hotelOptions?: HotelOption[]; // NEW: 3 hotel options
+  // Legacy support for old format
+  accommodation?: {
     hotel: {
       hotelId: string;
       name: string;
