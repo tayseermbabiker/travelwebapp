@@ -24,7 +24,7 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
         <h1 className="mb-4 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-          WANDER
+          ROAMOVO
         </h1>
 
         <p className="mb-2 text-xl font-light sm:text-2xl md:text-3xl">

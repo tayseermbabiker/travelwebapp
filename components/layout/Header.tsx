@@ -32,7 +32,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-teal-600 hover:text-teal-700 transition">
-            WANDER
+            ROAMOVO
           </Link>
 
           {/* Desktop Navigation */}

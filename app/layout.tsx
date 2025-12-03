@@ -55,6 +55,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="ALj3_Ao0F-yndRHYGPvnwGKRYgttDhmKDZ7RpBFOZBc" />
+
         {/* PWA Meta Tags */}
         <meta name="application-name" content="Roamovo" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
