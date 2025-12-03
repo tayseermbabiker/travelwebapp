@@ -1,5 +1,7 @@
 'use client';
 
+import { Star, MapPin, ExternalLink } from 'lucide-react';
+
 interface Hotel {
   id: string;
   name: string;
@@ -7,14 +9,11 @@ interface Hotel {
   pricePerNight: number;
   rating: number;
   reviewCount?: number;
-  imageUrl?: string;
   amenities: string[];
   location: {
     address: string;
-    lat?: number;
-    lng?: number;
   };
-  affiliateLinks?: any;
+  why?: string;
 }
 
 interface HotelCardProps {
@@ -22,96 +21,92 @@ interface HotelCardProps {
   totalNights: number;
 }
 
+function StarRating({ stars }: { stars: number }) {
+  return (
+    <div className="flex items-center gap-0.5">
+      {[...Array(5)].map((_, i) => (
+        <Star
+          key={i}
+          className={`w-3.5 h-3.5 ${i < stars ? 'text-amber-400 fill-amber-400' : 'text-gray-300'}`}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function HotelCard({ hotel, totalNights }: HotelCardProps) {
   const totalCost = hotel.pricePerNight * totalNights;
 
-  const handleBookNow = () => {
-    if (hotel.affiliateLinks && hotel.affiliateLinks.booking) {
-      // Use affiliate proxy for security and analytics
-      const proxyUrl = `/api/affiliate-redirect?hotel=${hotel.id}&provider=booking`;
-      window.open(proxyUrl, '_blank');
-    }
+  const handleSearch = () => {
+    const query = encodeURIComponent(`${hotel.name} ${hotel.location?.address || ''}`);
+    window.open(`https://www.google.com/search?q=${query}+book+hotel`, '_blank');
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-      {/* Hotel Image Placeholder */}
-      <div className="relative h-48 sm:h-64 bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center">
-        <div className="text-white text-center">
-          <p className="text-lg font-semibold">Hotel Image</p>
-        </div>
-        {/* Rating Badge */}
-        <div className="absolute top-4 right-4 bg-white rounded-lg px-3 py-2 shadow-lg">
-          <div className="flex items-center gap-1">
-            <span className="font-bold text-gray-800">{hotel.rating}</span>
-            <span className="text-xs text-gray-600">/10</span>
+    <div className="bg-white rounded-xl shadow-md border border-gray-100 p-5">
+      {/* Header Row */}
+      <div className="flex items-start justify-between gap-4 mb-4">
+        <div className="flex-1">
+          <div className="flex items-center gap-2 mb-1">
+            <StarRating stars={hotel.stars} />
+            <span className="text-xs text-gray-500">{hotel.stars}-star</span>
           </div>
-          {hotel.reviewCount && (
-            <p className="text-xs text-gray-600 text-center mt-1">
-              {hotel.reviewCount.toLocaleString()} reviews
-            </p>
-          )}
+          <h3 className="text-xl font-bold text-gray-800">{hotel.name}</h3>
+          <div className="flex items-center gap-1.5 text-gray-500 mt-1">
+            <MapPin className="w-3.5 h-3.5" />
+            <span className="text-sm">{hotel.location?.address || 'Location TBD'}</span>
+          </div>
+        </div>
+
+        {/* Rating Badge */}
+        <div className="text-center bg-teal-500 text-white px-3 py-2 rounded-lg">
+          <div className="text-xl font-bold">{hotel.rating}</div>
+          <div className="text-xs opacity-80">/10</div>
         </div>
       </div>
 
-      {/* Hotel Details */}
-      <div className="p-6">
-        {/* Hotel Name & Stars */}
-        <div className="mb-3">
-          <h3 className="text-2xl font-bold text-gray-800 mb-1">
-            {hotel.name}
-          </h3>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">
-              {hotel.stars}-Star Hotel
+      {/* Why This Hotel */}
+      {hotel.why && (
+        <div className="bg-teal-50 rounded-lg p-3 mb-4 border-l-4 border-teal-500">
+          <p className="text-sm text-teal-800">
+            <span className="font-semibold">Why this hotel: </span>
+            {hotel.why}
+          </p>
+        </div>
+      )}
+
+      {/* Amenities - Compact */}
+      {hotel.amenities && hotel.amenities.length > 0 && (
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {hotel.amenities.slice(0, 5).map((amenity, index) => (
+            <span
+              key={index}
+              className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
+            >
+              {amenity}
             </span>
+          ))}
+        </div>
+      )}
+
+      {/* Pricing Row */}
+      <div className="flex items-center justify-between pt-3 border-t border-gray-100">
+        <div className="flex items-baseline gap-3">
+          <div>
+            <span className="text-2xl font-bold text-gray-800">${hotel.pricePerNight}</span>
+            <span className="text-sm text-gray-500">/night</span>
+          </div>
+          <div className="text-sm text-gray-500">
+            = <span className="font-semibold text-teal-600">${totalCost.toLocaleString()}</span> for {totalNights} nights
           </div>
         </div>
 
-        {/* Location */}
-        <div className="mb-4 text-gray-600">
-          <p className="text-sm">{hotel.location.address}</p>
-        </div>
-
-        {/* Amenities */}
-        <div className="mb-4">
-          <h4 className="text-sm font-semibold text-gray-800 mb-2">Amenities</h4>
-          <div className="flex flex-wrap gap-2">
-            {hotel.amenities.map((amenity, index) => (
-              <span
-                key={index}
-                className="bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-xs font-medium capitalize"
-              >
-                {amenity}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Pricing */}
-        <div className="bg-gray-50 rounded-xl p-4 mb-4">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-gray-600">Price per night</span>
-            <span className="text-xl font-bold text-gray-800">
-              ${hotel.pricePerNight}
-            </span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-sm text-gray-600">
-              Total for {totalNights} {totalNights === 1 ? 'night' : 'nights'}
-            </span>
-            <span className="text-2xl font-bold text-teal-600">
-              ${totalCost.toLocaleString()}
-            </span>
-          </div>
-        </div>
-
-        {/* Book Now Button */}
         <button
-          onClick={handleBookNow}
-          className="w-full bg-teal-500 text-white py-3 rounded-xl font-semibold hover:bg-teal-600 transition"
+          onClick={handleSearch}
+          className="flex items-center gap-1.5 text-teal-600 hover:text-teal-700 text-sm font-medium"
         >
-          Book Now
+          Search & Book
+          <ExternalLink className="w-4 h-4" />
         </button>
       </div>
     </div>

@@ -126,6 +126,7 @@ export default function ItineraryPage() {
     pricePerNight: itinerary.days[0].accommodation.hotel.pricePerNight,
     rating: itinerary.days[0].accommodation.hotel.rating,
     amenities: itinerary.days[0].accommodation.hotel.features || [],
+    why: itinerary.days[0].accommodation.hotel.why || null,
     location: {
       address: itinerary.days[0].accommodation.hotel.location || 'Dubai',
     },
