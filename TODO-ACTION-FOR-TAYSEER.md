@@ -86,5 +86,5 @@ Create automation workflows in Brevo:
 - [ ] Enter email on 4th generation - should unlock unlimited
 - [ ] Click Download PDF - should require email
 - [ ] Click WhatsApp Share - should require email
-- [ ] Check localStorage for `wander_user_data` - should have email and tags
+- [ ] Check localStorage for `roamovo_user_data` - should have email and tags
 - [ ] Check Brevo dashboard - contact should appear with attributes

@@ -584,7 +584,7 @@ export default function FestivalsPage() {
         <div className="mt-8 backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6">
           <h3 className="font-bold text-gray-800 mb-3">Safety Disclaimer</h3>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Safety ratings are based on aggregated data from multiple sources including government travel advisories, community feedback, and recent traveler reviews. Individual experiences may vary. Always check current government travel advisories, research recent traveler reviews, and trust your instincts. Wander is not liable for incidents during travel.
+            Safety ratings are based on aggregated data from multiple sources including government travel advisories, community feedback, and recent traveler reviews. Individual experiences may vary. Always check current government travel advisories, research recent traveler reviews, and trust your instincts. Roamovo is not liable for incidents during travel.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed mt-3">
             <strong>Sources:</strong> UN Women Safety Index, US State Department, UK Foreign Office, Numbeo Crime Index, Solo Female Travelers community feedback.

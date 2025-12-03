@@ -13,7 +13,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-800 mb-3">Acceptance of Terms</h2>
             <p className="leading-relaxed">
-              By accessing and using Wander's travel planning service, you accept and agree to be bound
+              By accessing and using Roamovo's travel planning service, you accept and agree to be bound
               by these Terms of Service. If you do not agree to these terms, please do not use our service.
             </p>
           </section>
@@ -21,7 +21,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-800 mb-3">Service Description</h2>
             <p className="leading-relaxed">
-              Wander provides personalized travel itinerary planning services. We generate recommendations
+              Roamovo provides personalized travel itinerary planning services. We generate recommendations
               based on your preferences, but we do not directly provide travel services, accommodations,
               or activities. All bookings are made through third-party providers.
             </p>
@@ -52,7 +52,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-800 mb-3">Disclaimer of Warranties</h2>
             <p className="leading-relaxed">
-              Wander provides itinerary recommendations "as is" without warranties of any kind. We do not
+              Roamovo provides itinerary recommendations "as is" without warranties of any kind. We do not
               guarantee the accuracy, completeness, or reliability of any travel information. Travel
               conditions, prices, availability, and regulations may change without notice.
             </p>
@@ -61,7 +61,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-800 mb-3">Limitation of Liability</h2>
             <p className="leading-relaxed">
-              Wander is not responsible for any damages, losses, or issues arising from your use of our
+              Roamovo is not responsible for any damages, losses, or issues arising from your use of our
               service or from bookings made through third-party providers. This includes but is not limited
               to travel delays, cancellations, accommodation issues, or personal injury.
             </p>
@@ -79,7 +79,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-800 mb-3">Intellectual Property</h2>
             <p className="leading-relaxed">
-              All content, features, and functionality of Wander are owned by us and are protected by
+              All content, features, and functionality of Roamovo are owned by us and are protected by
               copyright, trademark, and other intellectual property laws. You may not copy, modify,
               or distribute our content without permission.
             </p>

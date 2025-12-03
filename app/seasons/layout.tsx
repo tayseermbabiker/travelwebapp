@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Travel Destinations by Season 2025 | When to Visit Guide | Wander',
+  title: 'Best Travel Destinations by Season 2025 | When to Visit Guide | Roamovo',
   description: 'Discover the perfect destinations for every season. Our complete guide covers 32 destinations across Winter, Spring, Summer, and Fall with weather, costs, crowds, and insider tips.',
   keywords: ['best time to travel', 'seasonal travel guide', 'when to visit', 'travel by season', 'winter destinations', 'summer travel', 'spring break destinations', 'fall foliage travel'],
   openGraph: {
-    title: 'Best Travel Destinations by Season 2025 | Wander',
+    title: 'Best Travel Destinations by Season 2025 | Roamovo',
     description: 'Find your perfect destination based on the season. 32 destinations with weather data, costs, and crowd levels.',
     type: 'article',
     url: '/seasons',
@@ -34,7 +34,7 @@ const articleSchema = generateArticleSchema({
   description: '32 destinations across Winter, Spring, Summer, and Fall with weather, costs, crowds, and insider tips.',
   datePublished: '2025-01-01',
   dateModified: '2025-01-01',
-  author: 'Wander',
+  author: 'Roamovo',
   url: '/seasons',
 });
 

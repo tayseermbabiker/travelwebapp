@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Adventure Travel Destinations 2025 | Outdoor & Extreme Sports Guide | Wander',
+  title: 'Best Adventure Travel Destinations 2025 | Outdoor & Extreme Sports Guide | Roamovo',
   description: 'Top adventure travel destinations for thrill-seekers. Hiking, diving, climbing, safaris, and extreme sports. Find your next adrenaline rush with difficulty levels, costs, and safety tips.',
   keywords: ['adventure travel', 'adventure destinations', 'extreme sports travel', 'hiking destinations', 'diving spots', 'outdoor adventure', 'thrill-seeking travel'],
   openGraph: {
-    title: 'Best Adventure Travel Destinations 2025 | Wander',
+    title: 'Best Adventure Travel Destinations 2025 | Roamovo',
     description: 'Top adventure destinations for hiking, diving, climbing, and extreme sports.',
     type: 'article',
     url: '/adventure-travel',
@@ -34,7 +34,7 @@ const articleSchema = generateArticleSchema({
   description: 'Top adventure destinations for hiking, diving, climbing, and extreme sports with difficulty levels and costs.',
   datePublished: '2025-01-01',
   dateModified: '2025-01-01',
-  author: 'Wander',
+  author: 'Roamovo',
   url: '/adventure-travel',
 });
 

@@ -39,9 +39,9 @@ export default function PillarCTA({ guideName, destination }: PillarCTAProps) {
       if (response.ok) {
         setIsSuccess(true);
         // Store in localStorage
-        const userData = JSON.parse(localStorage.getItem('wander_user_data') || '{}');
+        const userData = JSON.parse(localStorage.getItem('roamovo_user_data') || '{}');
         userData.email = email;
-        localStorage.setItem('wander_user_data', JSON.stringify(userData));
+        localStorage.setItem('roamovo_user_data', JSON.stringify(userData));
       }
     } catch (err) {
       // Still mark as success for UX

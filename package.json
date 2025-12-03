@@ -1,7 +1,7 @@
 {
-  "name": "wander",
+  "name": "roamovo",
   "version": "1.0.0",
-  "description": "Wander - AI-Powered Adventure Travel Planning PWA",
+  "description": "Roamovo - AI-Powered Adventure Travel Planning PWA",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

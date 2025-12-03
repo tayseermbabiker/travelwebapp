@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Digital Nomad Destinations 2025 | Remote Work Cities Guide | Wander',
+  title: 'Best Digital Nomad Destinations 2025 | Remote Work Cities Guide | Roamovo',
   description: 'Top destinations for digital nomads and remote workers in 2025. Compare WiFi speeds, coworking spaces, cost of living, visa options, and nomad communities worldwide.',
   keywords: ['digital nomad destinations', 'remote work cities', 'best places for remote work', 'digital nomad visa', 'coworking spaces', 'work from anywhere', 'nomad community'],
   openGraph: {
-    title: 'Best Digital Nomad Destinations 2025 | Wander',
+    title: 'Best Digital Nomad Destinations 2025 | Roamovo',
     description: 'Top cities for remote workers with WiFi speeds, costs, visas, and nomad communities.',
     type: 'article',
     url: '/digital-nomad',
@@ -34,7 +34,7 @@ const articleSchema = generateArticleSchema({
   description: 'Top destinations for digital nomads with WiFi speeds, coworking spaces, cost of living, and visa options.',
   datePublished: '2025-01-01',
   dateModified: '2025-01-01',
-  author: 'Wander',
+  author: 'Roamovo',
   url: '/digital-nomad',
 });
 

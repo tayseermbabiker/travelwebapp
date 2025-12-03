@@ -1,6 +1,6 @@
 {
-  "name": "Wander - AI Travel Planner",
-  "short_name": "Wander",
+  "name": "Roamovo - AI Travel Planner",
+  "short_name": "Roamovo",
   "description": "Adventure travel planning. Get personalized itineraries tailored to how you love to travel.",
   "start_url": "/",
   "display": "standalone",

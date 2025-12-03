@@ -250,7 +250,7 @@ export default function ItineraryPage() {
 
         {/* Footer */}
         <footer className="text-center text-sm text-gray-600 py-8">
-          <p>Your personalized itinerary by Wander</p>
+          <p>Your personalized itinerary by Roamovo</p>
           <p className="mt-1 text-xs">Generated on {new Date(itineraryData.generatedAt).toLocaleDateString()}</p>
         </footer>
       </div>

@@ -138,7 +138,7 @@ Afternoon: ${day.afternoon?.activity?.name || 'Free time'}
 Evening: ${day.evening?.activity?.name || day.evening?.restaurant?.name || 'Free time'}
 `).join('\n')}
 
-Planned with Wander - AI Travel Planner
+Planned with Roamovo - AI Travel Planner
 wander.travel
     `.trim();
 
@@ -167,7 +167,7 @@ Afternoon: ${day.afternoon?.activity?.name || 'Free time'}
 Evening: ${day.evening?.activity?.name || day.evening?.restaurant?.name || 'Free time'}
 `).join('\n')}
 
-Planned with Wander - AI Travel Planner
+Planned with Roamovo - AI Travel Planner
     `.trim();
 
     try {

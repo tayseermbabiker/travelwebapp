@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best World Festivals 2025 | Cultural Events & Celebrations Guide | Wander',
+  title: 'Best World Festivals 2025 | Cultural Events & Celebrations Guide | Roamovo',
   description: 'Discover the world\'s best festivals and cultural celebrations. From cherry blossoms in Japan to Carnival in Rio. Includes dates, costs, safety ratings, and solo female travel tips.',
   keywords: ['world festivals', 'cultural festivals', 'best festivals 2025', 'festival travel', 'cultural events', 'international celebrations', 'festival guide'],
   openGraph: {
-    title: 'Best World Festivals 2025 | Wander',
+    title: 'Best World Festivals 2025 | Roamovo',
     description: 'World\'s best festivals and cultural celebrations with dates, costs, and safety tips.',
     type: 'article',
     url: '/festivals',

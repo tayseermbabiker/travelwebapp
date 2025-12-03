@@ -206,7 +206,7 @@ export default function Home() {
         {/* Compact Hero */}
         <div className="text-center text-white w-full mb-8">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight drop-shadow-2xl mb-3">
-            WANDER
+            ROAMOVO
           </h1>
           <p className="text-xl md:text-2xl font-light drop-shadow-lg mb-2">
             Your Perfect Trip, Perfectly Planned
@@ -354,9 +354,9 @@ export default function Home() {
 
                 {/* WhatsApp Share Button */}
                 <div className="mt-6 pt-6 border-t border-white/20">
-                  <p className="text-sm mb-3 opacity-90">Love planning trips? Share Wander with your friends!</p>
+                  <p className="text-sm mb-3 opacity-90">Love planning trips? Share Roamovo with your friends!</p>
                   <a
-                    href={`https://wa.me/?text=${encodeURIComponent('Check out Wander - Plan your perfect trip! ' + (typeof window !== 'undefined' ? window.location.href : 'https://travelwebapp-pied.vercel.app'))}`}
+                    href={`https://wa.me/?text=${encodeURIComponent('Check out Roamovo - Plan your perfect trip! ' + (typeof window !== 'undefined' ? window.location.href : 'https://travelwebapp-pied.vercel.app'))}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all hover:scale-105 shadow-lg"
@@ -380,7 +380,7 @@ export default function Home() {
                   <span>•</span>
                   <a href="/terms" className="hover:text-white transition">Terms of Service</a>
                 </div>
-                <p>© 2025 Wander. All rights reserved.</p>
+                <p>© 2025 Roamovo. All rights reserved.</p>
               </footer>
             </div>
           </div>

@@ -8,7 +8,7 @@ export interface UserData {
   lastGeneration: string | null;
 }
 
-const STORAGE_KEY = 'wander_user_data';
+const STORAGE_KEY = 'roamovo_user_data';
 
 // Get user data from localStorage
 export function getUserData(): UserData {

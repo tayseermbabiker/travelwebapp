@@ -4,7 +4,7 @@ export default function AboutPage() {
       <div className="container mx-auto max-w-4xl px-4 py-12">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">About Wander</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">About Roamovo</h1>
           <p className="text-lg text-gray-600">
             Your Perfect Trip, Perfectly Planned
           </p>
@@ -15,7 +15,7 @@ export default function AboutPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-800 mb-3">Who We Are</h2>
             <p className="text-gray-700 leading-relaxed">
-              Wander is a modern travel planning platform that helps travelers create personalized
+              Roamovo is a modern travel planning platform that helps travelers create personalized
               itineraries tailored to their preferences, interests, and travel style. We believe
               that every journey should be unique and memorable.
             </p>

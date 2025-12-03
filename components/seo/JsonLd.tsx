@@ -33,22 +33,22 @@ export function generateArticleSchema(article: ArticleSchema): object {
     author: {
       '@type': 'Organization',
       name: article.author,
-      url: 'https://travelwebapp-pied.vercel.app',
+      url: 'https://roamovo.com',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Wander',
-      url: 'https://travelwebapp-pied.vercel.app',
+      name: 'Roamovo',
+      url: 'https://roamovo.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://travelwebapp-pied.vercel.app/icon-512x512.png',
+        url: 'https://roamovo.com/icon-512x512.png',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://travelwebapp-pied.vercel.app${article.url}`,
+      '@id': `https://roamovo.com${article.url}`,
     },
-    image: article.image || 'https://travelwebapp-pied.vercel.app/og-default.jpg',
+    image: article.image || 'https://roamovo.com/og-default.jpg',
   };
 }
 
@@ -75,7 +75,7 @@ export function generateBreadcrumbSchema(breadcrumb: BreadcrumbSchema): object {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://travelwebapp-pied.vercel.app${item.url}`,
+      item: `https://roamovo.com${item.url}`,
     })),
   };
 }

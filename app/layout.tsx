@@ -20,21 +20,21 @@ const mulish = Mulish({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
-  title: "Wander - AI-Powered Adventure Travel Planning",
+  title: "Roamovo - AI-Powered Adventure Travel Planning",
   description: "Discover your perfect adventure. Get personalized travel itineraries with flights, hotels, and activities tailored to how you love to travel.",
   keywords: ["travel planning", "AI travel", "itinerary generator", "Dubai travel", "adventure travel"],
-  authors: [{ name: "Wander" }],
+  authors: [{ name: "Roamovo" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    title: "Wander - AI Travel Planner",
+    title: "Roamovo - AI Travel Planner",
     description: "Plan your perfect adventure with personalized travel itineraries",
-    siteName: "Wander",
+    siteName: "Roamovo",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wander - AI Travel Planner",
+    title: "Roamovo - AI Travel Planner",
     description: "Plan your perfect adventure with personalized itineraries",
   },
   robots: {
@@ -56,10 +56,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* PWA Meta Tags */}
-        <meta name="application-name" content="Wander" />
+        <meta name="application-name" content="Roamovo" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Wander" />
+        <meta name="apple-mobile-web-app-title" content="Roamovo" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#14b8a6" />

@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Budget Travel Destinations 2025 | Cheap Travel Under $30/Day | Wander',
+  title: 'Best Budget Travel Destinations 2025 | Cheap Travel Under $30/Day | Roamovo',
   description: 'Discover affordable travel destinations where you can live well on under $30/day. Budget backpacker guide with accommodation, food, transport costs, and money-saving tips.',
   keywords: ['budget travel', 'cheap travel destinations', 'affordable travel', 'backpacker destinations', 'travel on a budget', 'cheap countries to visit', 'budget backpacking'],
   openGraph: {
-    title: 'Best Budget Travel Destinations 2025 | Wander',
+    title: 'Best Budget Travel Destinations 2025 | Roamovo',
     description: 'Affordable destinations under $30/day. Budget travel guide with real costs.',
     type: 'article',
     url: '/budget-travel',
@@ -34,7 +34,7 @@ const articleSchema = generateArticleSchema({
   description: 'Discover affordable travel destinations where you can live well on under $30/day with real costs and tips.',
   datePublished: '2025-01-01',
   dateModified: '2025-01-01',
-  author: 'Wander',
+  author: 'Roamovo',
   url: '/budget-travel',
 });
 

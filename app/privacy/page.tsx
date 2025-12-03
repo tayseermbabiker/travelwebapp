@@ -13,7 +13,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-800 mb-3">Introduction</h2>
             <p className="leading-relaxed">
-              Wander ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
+              Roamovo ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
               explains how we collect, use, and safeguard your information when you use our travel planning
               service.
             </p>
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-800 mb-3">Information We Collect</h2>
             <p className="leading-relaxed mb-3">
-              When you use Wander, we may collect the following information:
+              When you use Roamovo, we may collect the following information:
             </p>
             <ul className="space-y-2">
               <li className="flex items-start gap-2">

@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Solo Female Travel Destinations 2025 | Safety Ratings & Guide | Wander',
+  title: 'Best Solo Female Travel Destinations 2025 | Safety Ratings & Guide | Roamovo',
   description: 'Discover the 16 safest destinations for solo female travelers in 2025. Complete guide with safety ratings, costs, female communities, healthcare access, and real tips from women who travel alone.',
   keywords: ['solo female travel', 'safest countries for women', 'women traveling alone', 'solo female destinations', 'female travel safety', 'women solo travel guide'],
   openGraph: {
-    title: 'Best Solo Female Travel Destinations 2025 | Wander',
+    title: 'Best Solo Female Travel Destinations 2025 | Roamovo',
     description: '16 safest destinations for solo female travelers with safety ratings, costs, and community tips.',
     type: 'article',
     url: '/solo-female-travel',
@@ -34,7 +34,7 @@ const articleSchema = generateArticleSchema({
   description: 'Discover the 16 safest destinations for solo female travelers in 2025 with safety ratings, costs, and community tips.',
   datePublished: '2025-01-01',
   dateModified: '2025-01-01',
-  author: 'Wander',
+  author: 'Roamovo',
   url: '/solo-female-travel',
 });
 
