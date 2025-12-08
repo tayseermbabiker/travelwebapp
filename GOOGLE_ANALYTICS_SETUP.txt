@@ -54,6 +54,8 @@ STEP 1: CREATE A GOOGLE ANALYTICS ACCOUNT
     - This is your unique tracking code
     - Copy it!
 
+    YOUR MEASUREMENT ID: G-1SVQGJ8KYR
+
 
 STEP 2: ADD THE TRACKING ID TO YOUR PROJECT
 -------------------------------------------
