@@ -4,8 +4,15 @@ import withPWA from 'next-pwa';
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
   },
+  // Acknowledge webpack config from next-pwa (required for Next.js 16+)
+  turbopack: {},
 };
 
 // PWA configuration
