@@ -10,7 +10,7 @@ import TripBasicsForm from '@/components/landing/TripBasicsForm';
 import Toast from '@/components/ui/Toast';
 import EmailCaptureModal from '@/components/ui/EmailCaptureModal';
 import { CompanionType, InterestType, TripBasics, HotelTier, ExperienceRange } from '@/types';
-import { Sparkles, Laptop, UserCheck, UtensilsCrossed, Mountain, Baby, Flower2, Wallet, PartyPopper } from 'lucide-react';
+import { Sparkles, Laptop, UserCheck, UtensilsCrossed, Mountain, Baby, Flower2, Wallet, PartyPopper, ChevronDown } from 'lucide-react';
 import {
   getUserData,
   incrementGenerationCount,
@@ -40,6 +40,9 @@ export default function Home() {
   // Email gate state
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [generationCount, setGenerationCount] = useState(0);
+
+  // Guides dropdown state
+  const [showMoreGuides, setShowMoreGuides] = useState(false);
 
   // Check generation count on mount
   useEffect(() => {
@@ -215,6 +218,76 @@ export default function Home() {
             Get a personalized itinerary with hotels, activities, and budget breakdown
           </p>
         </div>
+
+        {/* Featured Travel Guides - Above the Form */}
+        <div className="w-full max-w-3xl mb-6">
+          <p className="text-white/90 text-sm text-center mb-3 drop-shadow">
+            Not sure where to go? Explore our guides
+          </p>
+          <div className="flex flex-col items-center gap-3">
+            {/* Featured Guides - Always Visible */}
+            <div className="flex flex-wrap justify-center gap-3 w-full">
+              <a
+                href="/foodie-destinations"
+                className="flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl px-4 py-3 hover:bg-white/30 transition-all hover:scale-105 group"
+              >
+                <UtensilsCrossed className="w-5 h-5 text-white" strokeWidth={1.5} />
+                <span className="text-white font-medium text-sm">Foodie Destinations</span>
+              </a>
+              <a
+                href="/seasons"
+                className="flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl px-4 py-3 hover:bg-white/30 transition-all hover:scale-105 group"
+              >
+                <Sparkles className="w-5 h-5 text-white" strokeWidth={1.5} />
+                <span className="text-white font-medium text-sm">Destinations by Season</span>
+              </a>
+            </div>
+
+            {/* Show More Button */}
+            <button
+              onClick={() => setShowMoreGuides(!showMoreGuides)}
+              className="flex items-center gap-1 text-white/80 hover:text-white text-sm transition-colors"
+            >
+              <span>{showMoreGuides ? 'Show less' : '+7 more guides'}</span>
+              <ChevronDown className={`w-4 h-4 transition-transform ${showMoreGuides ? 'rotate-180' : ''}`} />
+            </button>
+
+            {/* Expanded Guides Dropdown */}
+            {showMoreGuides && (
+              <div className="flex flex-wrap justify-center gap-3 w-full animate-in fade-in slide-in-from-top-2 duration-200">
+                <a href="/solo-female-travel" className="flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5 hover:bg-white/25 transition-all text-sm">
+                  <UserCheck className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  <span className="text-white">Solo Female Travel</span>
+                </a>
+                <a href="/digital-nomad" className="flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5 hover:bg-white/25 transition-all text-sm">
+                  <Laptop className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  <span className="text-white">Digital Nomad</span>
+                </a>
+                <a href="/adventure-travel" className="flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5 hover:bg-white/25 transition-all text-sm">
+                  <Mountain className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  <span className="text-white">Adventure Travel</span>
+                </a>
+                <a href="/family-travel" className="flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5 hover:bg-white/25 transition-all text-sm">
+                  <Baby className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  <span className="text-white">Family Travel</span>
+                </a>
+                <a href="/wellness-retreats" className="flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5 hover:bg-white/25 transition-all text-sm">
+                  <Flower2 className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  <span className="text-white">Wellness Retreats</span>
+                </a>
+                <a href="/budget-travel" className="flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5 hover:bg-white/25 transition-all text-sm">
+                  <Wallet className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  <span className="text-white">Budget Travel</span>
+                </a>
+                <a href="/festivals" className="flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5 hover:bg-white/25 transition-all text-sm">
+                  <PartyPopper className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  <span className="text-white">World Festivals</span>
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+
         {/* Transparent/Tinted Form Container */}
         <div className="w-full max-w-3xl overflow-hidden">
           <div
