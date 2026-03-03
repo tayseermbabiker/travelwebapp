@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Wellness Travel Destinations | Spa & Retreat Guide | Roamovo',
-  description: 'Top wellness and spa destinations for relaxation and rejuvenation. Yoga retreats, meditation centers, thermal spas, and holistic healing destinations with costs and programs.',
+  title: '10 Best Wellness Retreats for Every Budget | Roamovo',
+  description: 'Discover the top-rated spas, yoga retreats, and detox centers worldwide — from luxury to affordable hidden gems. Costs, programs, and honest reviews.',
   keywords: ['wellness travel', 'spa destinations', 'yoga retreats', 'meditation retreats', 'wellness retreats', 'health tourism', 'healing destinations'],
   openGraph: {
-    title: 'Best Wellness Travel Destinations | Roamovo',
-    description: 'Top spa and wellness destinations. Yoga, meditation, and healing retreats.',
+    title: '10 Best Wellness Retreats for Every Budget',
+    description: 'Top-rated spas, yoga retreats, and detox centers — from luxury to affordable hidden gems.',
     type: 'article',
     url: '/wellness-retreats',
     images: [
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Wellness Travel Destinations',
-    description: 'Top spa and wellness destinations for relaxation and healing.',
+    title: '10 Best Wellness Retreats for Every Budget',
+    description: 'Top-rated spas, yoga retreats, and detox centers — from luxury to affordable hidden gems.',
   },
   alternates: {
     canonical: '/wellness-retreats',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Wellness Travel Destinations - Spa & Retreat Guide',
+  headline: '10 Best Wellness Retreats for Every Budget',
   description: 'Top wellness destinations for yoga, meditation, spa retreats, and holistic healing experiences.',
   datePublished: '2026-03-03',
   dateModified: '2026-03-03',

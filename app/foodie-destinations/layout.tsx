@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Foodie Travel Destinations | Culinary Travel Guide | Roamovo',
-  description: 'Discover the world\'s best food destinations for culinary travelers. From street food to Michelin stars, explore top foodie cities with local dishes, food tours, and insider tips.',
+  title: '15 Best Foodie Cities (Ranked by Cost & Quality) | Roamovo',
+  description: 'Tired of tourist traps? We ranked the best culinary cities by cost, quality, and local experience. See where to eat, what to budget, and expert local picks.',
   keywords: ['food travel', 'culinary destinations', 'foodie travel', 'best food cities', 'street food destinations', 'food tourism', 'culinary tourism'],
   openGraph: {
-    title: 'Best Foodie Travel Destinations | Roamovo',
-    description: 'World\'s best food destinations. Street food, local cuisine, and culinary experiences.',
+    title: '15 Best Foodie Cities (Ranked by Cost & Quality)',
+    description: 'We ranked the best culinary cities by cost, quality, and local experience. See where to eat and what to budget.',
     type: 'article',
     url: '/foodie-destinations',
     images: [
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Foodie Travel Destinations',
-    description: 'World\'s best food destinations. Street food to Michelin stars.',
+    title: '15 Best Foodie Cities (Ranked by Cost & Quality)',
+    description: 'We ranked the best culinary cities by cost, quality, and local experience.',
   },
   alternates: {
     canonical: '/foodie-destinations',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Foodie Travel Destinations - Culinary Travel Guide',
+  headline: '15 Best Foodie Cities Ranked by Cost and Quality',
   description: 'Discover the world\'s best food destinations from street food to Michelin stars with local dishes and insider tips.',
   datePublished: '2026-03-03',
   dateModified: '2026-03-03',

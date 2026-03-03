@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Adventure Travel Destinations | Outdoor & Extreme Sports Guide | Roamovo',
-  description: 'Top adventure travel destinations for thrill-seekers. Hiking, diving, climbing, safaris, and extreme sports. Find your next adrenaline rush with difficulty levels, costs, and safety tips.',
+  title: '14 Epic Adventure Travel Spots for Thrill-Seekers | Roamovo',
+  description: 'Beyond the hiking trail. Discover extreme sports, remote treks, and outdoor bucket-list destinations for the true adrenaline junkie. Difficulty levels and costs included.',
   keywords: ['adventure travel', 'adventure destinations', 'extreme sports travel', 'hiking destinations', 'diving spots', 'outdoor adventure', 'thrill-seeking travel'],
   openGraph: {
-    title: 'Best Adventure Travel Destinations | Roamovo',
-    description: 'Top adventure destinations for hiking, diving, climbing, and extreme sports.',
+    title: '14 Epic Adventure Travel Spots for Thrill-Seekers',
+    description: 'Extreme sports, remote treks, and outdoor bucket-list destinations with difficulty levels and costs.',
     type: 'article',
     url: '/adventure-travel',
     images: [
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Adventure Travel Destinations',
-    description: 'Top adventure destinations. Hiking, diving, climbing, and extreme sports.',
+    title: '14 Epic Adventure Travel Spots for Thrill-Seekers',
+    description: 'Extreme sports, remote treks, and outdoor bucket-list destinations with difficulty levels and costs.',
   },
   alternates: {
     canonical: '/adventure-travel',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Adventure Travel Destinations - Extreme Sports Guide',
+  headline: '14 Epic Adventure Travel Spots for Thrill-Seekers',
   description: 'Top adventure destinations for hiking, diving, climbing, and extreme sports with difficulty levels and costs.',
   datePublished: '2026-03-03',
   dateModified: '2026-03-03',

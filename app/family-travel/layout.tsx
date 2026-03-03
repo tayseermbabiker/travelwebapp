@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Family Travel Destinations | Kid-Friendly Vacation Guide | Roamovo',
-  description: 'Top family-friendly travel destinations for. Theme parks, beaches, educational trips, and adventures safe for kids of all ages. Includes family costs, activities, and accommodation tips.',
+  title: 'Kid-Friendly Travel: Best Destinations for All Ages | Roamovo',
+  description: 'From toddler-proof resorts to teen-approved adventures. Compare flight times, amenities, and family budgets for your next getaway.',
   keywords: ['family travel', 'kid-friendly destinations', 'family vacation spots', 'travel with kids', 'family-friendly holidays', 'best family vacations'],
   openGraph: {
-    title: 'Best Family Travel Destinations | Roamovo',
-    description: 'Top family-friendly destinations. Theme parks, beaches, and kid-safe adventures.',
+    title: 'Kid-Friendly Travel: Best Destinations for All Ages',
+    description: 'From toddler-proof resorts to teen-approved adventures. Compare amenities and family budgets.',
     type: 'article',
     url: '/family-travel',
     images: [
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Family Travel Destinations',
-    description: 'Top family-friendly destinations with kids activities and safety tips.',
+    title: 'Kid-Friendly Travel: Best Destinations for All Ages',
+    description: 'From toddler-proof resorts to teen-approved adventures. Compare amenities and family budgets.',
   },
   alternates: {
     canonical: '/family-travel',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Family Travel Destinations - Kid-Friendly Guide',
+  headline: 'Kid-Friendly Travel: Best Destinations for All Ages',
   description: 'Top family-friendly travel destinations with activities, safety ratings, and costs for traveling with kids.',
   datePublished: '2026-03-03',
   dateModified: '2026-03-03',

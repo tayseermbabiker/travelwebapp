@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Travel Destinations by Season | When to Visit Guide | Roamovo',
-  description: 'Discover the perfect destinations for every season. Our complete guide covers 32 destinations across Winter, Spring, Summer, and Fall with weather, costs, crowds, and insider tips.',
+  title: 'Where to Travel Now: Best Destinations by Month | Roamovo',
+  description: 'Stop guessing the weather. Use our seasonal guide to find peak experiences and off-season bargains for every month of the year.',
   keywords: ['best time to travel', 'seasonal travel guide', 'when to visit', 'travel by season', 'winter destinations', 'summer travel', 'spring break destinations', 'fall foliage travel'],
   openGraph: {
-    title: 'Best Travel Destinations by Season | Roamovo',
-    description: 'Find your perfect destination based on the season. 32 destinations with weather data, costs, and crowd levels.',
+    title: 'Where to Travel Now: Best Destinations by Month',
+    description: 'Stop guessing the weather. Find peak experiences and off-season bargains for every month.',
     type: 'article',
     url: '/seasons',
     images: [
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Travel Destinations by Season',
-    description: 'Find your perfect destination based on the season. Complete guide with 32 destinations.',
+    title: 'Where to Travel Now: Best Destinations by Month',
+    description: 'Stop guessing the weather. Find peak experiences and off-season bargains for every month.',
   },
   alternates: {
     canonical: '/seasons',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Travel Destinations by Season - Complete Guide',
+  headline: 'Where to Travel Now: Best Destinations by Month',
   description: '32 destinations across Winter, Spring, Summer, and Fall with weather, costs, crowds, and insider tips.',
   datePublished: '2026-03-03',
   dateModified: '2026-03-03',

@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Budget Travel Destinations | Cheap Travel Under $30/Day | Roamovo',
-  description: 'Discover affordable travel destinations where you can live well on under $30/day. Budget backpacker guide with accommodation, food, transport costs, and money-saving tips.',
+  title: 'Travel Under $30/Day: 12 Top Budget Destinations | Roamovo',
+  description: 'Proof that you can see the world on a shoestring. See the cheapest cities where your dollar goes the furthest — with real daily cost breakdowns.',
   keywords: ['budget travel', 'cheap travel destinations', 'affordable travel', 'backpacker destinations', 'travel on a budget', 'cheap countries to visit', 'budget backpacking'],
   openGraph: {
-    title: 'Best Budget Travel Destinations | Roamovo',
-    description: 'Affordable destinations under $30/day. Budget travel guide with real costs.',
+    title: 'Travel Under $30/Day: 12 Top Budget Destinations',
+    description: 'The cheapest cities where your dollar goes the furthest — with real daily cost breakdowns.',
     type: 'article',
     url: '/budget-travel',
     images: [
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Budget Travel Destinations',
-    description: 'Affordable destinations under $30/day with real costs and tips.',
+    title: 'Travel Under $30/Day: 12 Top Budget Destinations',
+    description: 'The cheapest cities where your dollar goes the furthest — with real daily cost breakdowns.',
   },
   alternates: {
     canonical: '/budget-travel',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Budget Travel Destinations - Under $30/Day Guide',
+  headline: 'Travel Under $30/Day: 12 Top Budget Destinations',
   description: 'Discover affordable travel destinations where you can live well on under $30/day with real costs and tips.',
   datePublished: '2026-03-03',
   dateModified: '2026-03-03',
