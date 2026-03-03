@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Adventure Travel Destinations 2025 | Outdoor & Extreme Sports Guide | Roamovo',
+  title: 'Best Adventure Travel Destinations | Outdoor & Extreme Sports Guide | Roamovo',
   description: 'Top adventure travel destinations for thrill-seekers. Hiking, diving, climbing, safaris, and extreme sports. Find your next adrenaline rush with difficulty levels, costs, and safety tips.',
   keywords: ['adventure travel', 'adventure destinations', 'extreme sports travel', 'hiking destinations', 'diving spots', 'outdoor adventure', 'thrill-seeking travel'],
   openGraph: {
-    title: 'Best Adventure Travel Destinations 2025 | Roamovo',
+    title: 'Best Adventure Travel Destinations | Roamovo',
     description: 'Top adventure destinations for hiking, diving, climbing, and extreme sports.',
     type: 'article',
     url: '/adventure-travel',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Adventure Travel Destinations 2025',
+    title: 'Best Adventure Travel Destinations',
     description: 'Top adventure destinations. Hiking, diving, climbing, and extreme sports.',
   },
   alternates: {
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Adventure Travel Destinations 2025 - Extreme Sports Guide',
+  headline: 'Best Adventure Travel Destinations - Extreme Sports Guide',
   description: 'Top adventure destinations for hiking, diving, climbing, and extreme sports with difficulty levels and costs.',
-  datePublished: '2025-01-01',
-  dateModified: '2025-01-01',
+  datePublished: '2026-03-03',
+  dateModified: '2026-03-03',
   author: 'Roamovo',
   url: '/adventure-travel',
 });

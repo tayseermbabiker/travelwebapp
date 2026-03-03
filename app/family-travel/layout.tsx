@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Family Travel Destinations 2025 | Kid-Friendly Vacation Guide | Roamovo',
-  description: 'Top family-friendly travel destinations for 2025. Theme parks, beaches, educational trips, and adventures safe for kids of all ages. Includes family costs, activities, and accommodation tips.',
+  title: 'Best Family Travel Destinations | Kid-Friendly Vacation Guide | Roamovo',
+  description: 'Top family-friendly travel destinations for. Theme parks, beaches, educational trips, and adventures safe for kids of all ages. Includes family costs, activities, and accommodation tips.',
   keywords: ['family travel', 'kid-friendly destinations', 'family vacation spots', 'travel with kids', 'family-friendly holidays', 'best family vacations'],
   openGraph: {
-    title: 'Best Family Travel Destinations 2025 | Roamovo',
+    title: 'Best Family Travel Destinations | Roamovo',
     description: 'Top family-friendly destinations. Theme parks, beaches, and kid-safe adventures.',
     type: 'article',
     url: '/family-travel',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Family Travel Destinations 2025',
+    title: 'Best Family Travel Destinations',
     description: 'Top family-friendly destinations with kids activities and safety tips.',
   },
   alternates: {
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Family Travel Destinations 2025 - Kid-Friendly Guide',
+  headline: 'Best Family Travel Destinations - Kid-Friendly Guide',
   description: 'Top family-friendly travel destinations with activities, safety ratings, and costs for traveling with kids.',
-  datePublished: '2025-01-01',
-  dateModified: '2025-01-01',
+  datePublished: '2026-03-03',
+  dateModified: '2026-03-03',
   author: 'Roamovo',
   url: '/family-travel',
 });

@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Wellness Travel Destinations 2025 | Spa & Retreat Guide | Roamovo',
+  title: 'Best Wellness Travel Destinations | Spa & Retreat Guide | Roamovo',
   description: 'Top wellness and spa destinations for relaxation and rejuvenation. Yoga retreats, meditation centers, thermal spas, and holistic healing destinations with costs and programs.',
   keywords: ['wellness travel', 'spa destinations', 'yoga retreats', 'meditation retreats', 'wellness retreats', 'health tourism', 'healing destinations'],
   openGraph: {
-    title: 'Best Wellness Travel Destinations 2025 | Roamovo',
+    title: 'Best Wellness Travel Destinations | Roamovo',
     description: 'Top spa and wellness destinations. Yoga, meditation, and healing retreats.',
     type: 'article',
     url: '/wellness-retreats',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Wellness Travel Destinations 2025',
+    title: 'Best Wellness Travel Destinations',
     description: 'Top spa and wellness destinations for relaxation and healing.',
   },
   alternates: {
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Wellness Travel Destinations 2025 - Spa & Retreat Guide',
+  headline: 'Best Wellness Travel Destinations - Spa & Retreat Guide',
   description: 'Top wellness destinations for yoga, meditation, spa retreats, and holistic healing experiences.',
-  datePublished: '2025-01-01',
-  dateModified: '2025-01-01',
+  datePublished: '2026-03-03',
+  dateModified: '2026-03-03',
   author: 'Roamovo',
   url: '/wellness-retreats',
 });

@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Solo Female Travel Destinations 2025 | Safety Ratings & Guide | Roamovo',
-  description: 'Discover the 16 safest destinations for solo female travelers in 2025. Complete guide with safety ratings, costs, female communities, healthcare access, and real tips from women who travel alone.',
+  title: 'Best Solo Female Travel Destinations | Safety Ratings & Guide | Roamovo',
+  description: 'Discover the 16 safest destinations for solo female travelers. Complete guide with safety ratings, costs, female communities, healthcare access, and real tips from women who travel alone.',
   keywords: ['solo female travel', 'safest countries for women', 'women traveling alone', 'solo female destinations', 'female travel safety', 'women solo travel guide'],
   openGraph: {
-    title: 'Best Solo Female Travel Destinations 2025 | Roamovo',
+    title: 'Best Solo Female Travel Destinations | Roamovo',
     description: '16 safest destinations for solo female travelers with safety ratings, costs, and community tips.',
     type: 'article',
     url: '/solo-female-travel',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Solo Female Travel Destinations 2025',
+    title: 'Best Solo Female Travel Destinations',
     description: '16 safest destinations for women traveling alone. Safety ratings, costs, and tips.',
   },
   alternates: {
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Solo Female Travel Destinations 2025 - Complete Safety Guide',
-  description: 'Discover the 16 safest destinations for solo female travelers in 2025 with safety ratings, costs, and community tips.',
-  datePublished: '2025-01-01',
-  dateModified: '2025-01-01',
+  headline: 'Best Solo Female Travel Destinations - Complete Safety Guide',
+  description: 'Discover the 16 safest destinations for solo female travelers with safety ratings, costs, and community tips.',
+  datePublished: '2026-03-03',
+  dateModified: '2026-03-03',
   author: 'Roamovo',
   url: '/solo-female-travel',
 });

@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Foodie Travel Destinations 2025 | Culinary Travel Guide | Roamovo',
+  title: 'Best Foodie Travel Destinations | Culinary Travel Guide | Roamovo',
   description: 'Discover the world\'s best food destinations for culinary travelers. From street food to Michelin stars, explore top foodie cities with local dishes, food tours, and insider tips.',
   keywords: ['food travel', 'culinary destinations', 'foodie travel', 'best food cities', 'street food destinations', 'food tourism', 'culinary tourism'],
   openGraph: {
-    title: 'Best Foodie Travel Destinations 2025 | Roamovo',
+    title: 'Best Foodie Travel Destinations | Roamovo',
     description: 'World\'s best food destinations. Street food, local cuisine, and culinary experiences.',
     type: 'article',
     url: '/foodie-destinations',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Foodie Travel Destinations 2025',
+    title: 'Best Foodie Travel Destinations',
     description: 'World\'s best food destinations. Street food to Michelin stars.',
   },
   alternates: {
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Foodie Travel Destinations 2025 - Culinary Travel Guide',
+  headline: 'Best Foodie Travel Destinations - Culinary Travel Guide',
   description: 'Discover the world\'s best food destinations from street food to Michelin stars with local dishes and insider tips.',
-  datePublished: '2025-01-01',
-  dateModified: '2025-01-01',
+  datePublished: '2026-03-03',
+  dateModified: '2026-03-03',
   author: 'Roamovo',
   url: '/foodie-destinations',
 });

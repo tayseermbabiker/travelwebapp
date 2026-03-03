@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import JsonLd, { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Best Digital Nomad Destinations 2025 | Remote Work Cities Guide | Roamovo',
-  description: 'Top destinations for digital nomads and remote workers in 2025. Compare WiFi speeds, coworking spaces, cost of living, visa options, and nomad communities worldwide.',
+  title: 'Best Digital Nomad Destinations | Remote Work Cities Guide | Roamovo',
+  description: 'Top destinations for digital nomads and remote workers. Compare WiFi speeds, coworking spaces, cost of living, visa options, and nomad communities worldwide.',
   keywords: ['digital nomad destinations', 'remote work cities', 'best places for remote work', 'digital nomad visa', 'coworking spaces', 'work from anywhere', 'nomad community'],
   openGraph: {
-    title: 'Best Digital Nomad Destinations 2025 | Roamovo',
+    title: 'Best Digital Nomad Destinations | Roamovo',
     description: 'Top cities for remote workers with WiFi speeds, costs, visas, and nomad communities.',
     type: 'article',
     url: '/digital-nomad',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Digital Nomad Destinations 2025',
+    title: 'Best Digital Nomad Destinations',
     description: 'Top cities for remote workers. WiFi, costs, visas, and communities compared.',
   },
   alternates: {
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: 'Best Digital Nomad Destinations 2025 - Remote Work Guide',
+  headline: 'Best Digital Nomad Destinations - Remote Work Guide',
   description: 'Top destinations for digital nomads with WiFi speeds, coworking spaces, cost of living, and visa options.',
-  datePublished: '2025-01-01',
-  dateModified: '2025-01-01',
+  datePublished: '2026-03-03',
+  dateModified: '2026-03-03',
   author: 'Roamovo',
   url: '/digital-nomad',
 });
