@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import RelatedGuides from '@/components/pillar/RelatedGuides';
 import PillarCTA from '@/components/pillar/PillarCTA';
+import CreatorInsights from '@/components/pillar/CreatorInsights'
 import TableOfContents from '@/components/pillar/TableOfContents';
 
 export default function WellnessRetreatsPage() {
@@ -1406,7 +1407,8 @@ export default function WellnessRetreatsPage() {
       {/* CTA Section */}
       <div className="bg-gray-50 py-12 px-4">
         <div className="max-w-5xl mx-auto">
-          <PillarCTA guideName="wellness-retreats" />
+          <CreatorInsights page="wellness-retreats" />
+        <PillarCTA guideName="wellness-retreats" />
           <RelatedGuides currentPage="wellness-retreats" />
         </div>
       </div>

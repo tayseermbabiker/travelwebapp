@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import RelatedGuides from '@/components/pillar/RelatedGuides';
 import PillarCTA from '@/components/pillar/PillarCTA';
+import CreatorInsights from '@/components/pillar/CreatorInsights'
 import TableOfContents from '@/components/pillar/TableOfContents';
 
 export default function SeasonsPage() {
@@ -1996,7 +1997,8 @@ export default function SeasonsPage() {
 
         {/* CTA Section */}
         <div className="mt-12">
-          <PillarCTA guideName="seasons" />
+          <CreatorInsights page="seasons" />
+        <PillarCTA guideName="seasons" />
         </div>
 
         {/* Related Guides */}

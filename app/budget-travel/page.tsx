@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import RelatedGuides from '@/components/pillar/RelatedGuides';
 import PillarCTA from '@/components/pillar/PillarCTA';
+import CreatorInsights from '@/components/pillar/CreatorInsights'
 import TableOfContents from '@/components/pillar/TableOfContents';
 
 interface BudgetBreakdown {
@@ -1115,7 +1116,8 @@ const BudgetTravelPage = () => {
       {/* CTA Section */}
       <section className="py-12 px-6 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <PillarCTA guideName="budget-travel" />
+          <CreatorInsights page="budget-travel" />
+        <PillarCTA guideName="budget-travel" />
           <RelatedGuides currentPage="budget-travel" />
         </div>
       </section>

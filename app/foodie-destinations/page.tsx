@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { ChevronDown, ChevronUp, MapPin, DollarSign, Calendar, Utensils, Video, Globe } from 'lucide-react'
 import RelatedGuides from '@/components/pillar/RelatedGuides'
 import PillarCTA from '@/components/pillar/PillarCTA'
+import CreatorInsights from '@/components/pillar/CreatorInsights'
 import TableOfContents from '@/components/pillar/TableOfContents'
 
 export default function FoodieDestinationsPage() {
@@ -1034,6 +1035,7 @@ export default function FoodieDestinationsPage() {
 
       {/* CTA Section */}
       <div className="container mx-auto px-6 py-12">
+        <CreatorInsights page="foodie-destinations" />
         <PillarCTA guideName="foodie-destinations" />
         <RelatedGuides currentPage="foodie-destinations" />
       </div>

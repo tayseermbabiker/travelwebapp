@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import RelatedGuides from '@/components/pillar/RelatedGuides';
 import PillarCTA from '@/components/pillar/PillarCTA';
+import CreatorInsights from '@/components/pillar/CreatorInsights'
 import TableOfContents from '@/components/pillar/TableOfContents';
 
 export default function SoloFemaleTravelPage() {
@@ -1721,6 +1722,7 @@ export default function SoloFemaleTravelPage() {
         </div>
 
         {/* CTA Section */}
+        <CreatorInsights page="solo-female-travel" />
         <PillarCTA guideName="solo-female-travel" />
 
         {/* Related Guides */}

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, Calendar, MapPin, DollarSign, Users, Shield, AlertTriangle, CheckCircle } from 'lucide-react';
 import RelatedGuides from '@/components/pillar/RelatedGuides';
 import PillarCTA from '@/components/pillar/PillarCTA';
+import CreatorInsights from '@/components/pillar/CreatorInsights'
 
 interface Festival {
   id: string;
@@ -593,7 +594,8 @@ export default function FestivalsPage() {
 
         {/* CTA Section */}
         <div className="mt-12">
-          <PillarCTA guideName="festivals" />
+          <CreatorInsights page="festivals" />
+        <PillarCTA guideName="festivals" />
           <RelatedGuides currentPage="festivals" />
         </div>
 

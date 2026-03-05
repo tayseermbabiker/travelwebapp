@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
 import RelatedGuides from '@/components/pillar/RelatedGuides'
 import PillarCTA from '@/components/pillar/PillarCTA'
+import CreatorInsights from '@/components/pillar/CreatorInsights'
 import TableOfContents from '@/components/pillar/TableOfContents'
 
 interface Destination {
@@ -1252,6 +1253,7 @@ export default function FamilyTravelPage() {
 
       {/* CTA Section */}
       <section className="max-w-5xl mx-auto px-6 py-12">
+        <CreatorInsights page="family-travel" />
         <PillarCTA guideName="family-travel" />
         <RelatedGuides currentPage="family-travel" />
       </section>
