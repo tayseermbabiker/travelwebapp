@@ -851,7 +851,7 @@ export default function DigitalNomadPage() {
         <div className="container mx-auto max-w-4xl">
           <TableOfContents
             title="12 Digital Nomad Destinations"
-            summary="The complete guide to remote work destinations in 2025. Real data on visa options, internet speeds, cost of living, community size, and whether you can actually get work done."
+            summary="The complete guide to remote work destinations. Real data on visa options, internet speeds, cost of living, community size, and whether you can actually get work done."
             highlights={[
               { label: 'Best Budget', value: 'Chiang Mai ($800/mo)' },
               { label: 'Best Visa', value: 'Portugal (2yr)' },
@@ -867,6 +867,58 @@ export default function DigitalNomadPage() {
               { id: 'reality', label: 'Reality Check' },
             ]}
           />
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6 md:p-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 bg-gradient-to-r from-teal-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>15 Nomad Cities at a Glance</h2>
+            <p className="text-center text-gray-500 text-sm mb-6">Sorted by monthly budget (lowest first)</p>
+            <div className="overflow-x-auto -mx-2">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b-2 border-teal-200">
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">City</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Monthly Cost</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Internet</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Community</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Safety</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Nomad Visa?</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {[
+                    { city: 'Bali, Indonesia', cost: '$700-$1,000', internet: '50-150 Mbps', community: 'Very Large', safety: '80', visa: 'Yes (E33G)' },
+                    { city: 'Hanoi, Vietnam', cost: '$700-$1,000', internet: '100-200 Mbps', community: 'Small-Medium', safety: '81', visa: 'Proposed' },
+                    { city: 'Chiang Mai, Thailand', cost: '$800-$1,000', internet: '150-300 Mbps', community: 'Very Large', safety: '85', visa: 'LTR / Elite' },
+                    { city: 'Da Nang, Vietnam', cost: '$800-$1,200', internet: '100-200 Mbps', community: 'Small-Medium', safety: '83', visa: 'Proposed' },
+                    { city: 'Buenos Aires, Argentina', cost: '$800-$1,200', internet: '200-300 Mbps', community: 'Medium-Large', safety: '79', visa: 'Yes' },
+                    { city: 'Penang, Malaysia', cost: '$900-$1,300', internet: '100-200 Mbps', community: 'Small-Medium', safety: '85', visa: 'MM2H' },
+                    { city: 'Medellin, Colombia', cost: '$1,000-$1,400', internet: '150-250 Mbps', community: 'Medium-Large', safety: '82', visa: 'Yes (V Visa)' },
+                    { city: 'Mexico City, Mexico', cost: '$1,200-$1,600', internet: '200-300 Mbps', community: 'Large', safety: '75', visa: 'Proposed' },
+                    { city: 'Prague, Czech Republic', cost: '$1,200-$1,600', internet: '300-500 Mbps', community: 'Medium', safety: '89', visa: 'Yes' },
+                    { city: 'Tallinn, Estonia', cost: '$1,200-$1,600', internet: '300-1000 Mbps', community: 'Small-Medium', safety: '91', visa: 'Yes + E-Residency' },
+                    { city: 'Lisbon, Portugal', cost: '$1,400-$1,800', internet: '200-300 Mbps', community: 'Large', safety: '88', visa: 'Yes (D8)' },
+                    { city: 'Split, Croatia', cost: '$1,400-$1,800', internet: '300+ Mbps', community: 'Small', safety: '88', visa: 'Yes' },
+                    { city: 'Barcelona, Spain', cost: '$1,800-$2,200', internet: '300+ Mbps', community: 'Large', safety: '87', visa: 'Yes' },
+                    { city: 'Tokyo, Japan', cost: '$2,000-$3,000', internet: '1 Gbps+', community: 'Small', safety: '95', visa: 'Yes (6mo)' },
+                    { city: 'Dubai, UAE', cost: '$2,200-$2,800', internet: '500+ Mbps', community: 'Medium', safety: '94', visa: 'Yes (1yr)' },
+                  ].map((row, i) => (
+                    <tr key={i} className="hover:bg-teal-50/50 transition-colors">
+                      <td className="py-2.5 px-3 font-medium text-gray-800 whitespace-nowrap">{row.city}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.cost}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.internet}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.community}</td>
+                      <td className="py-2.5 px-3 text-gray-700">{row.safety}/100</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.visa}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
 
