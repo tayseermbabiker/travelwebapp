@@ -936,6 +936,39 @@ export default function FoodieDestinationsPage() {
         </div>
       </section>
 
+
+      {/* The Truth About Food Travel */}
+      <section id="truth" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">The Truth About Food Travel</h2>
+            <div className="space-y-6 text-lg text-gray-700">
+              <p>
+                Food isn't just about taste. It's about connection.
+              </p>
+              <p>
+                It's the street vendor who's been making the same dish for 30 years, passing technique to the next generation. It's the grandmother in a Bangkok apartment cooking pad krapow for Mark Wiens. It's the chef at Maido in Lima, respecting both Japanese technique and Peruvian ingredients, creating something entirely new.
+              </p>
+              <p>
+                When you eat food in these places, you're not just tasting flavors. You're tasting history, culture, love, and community.
+              </p>
+              <p>
+                This guide maps where those experiences live. The rest is up to you.
+              </p>
+              <p className="text-xl font-semibold text-center text-gray-800 mt-8">
+                Get eating.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <div className="container mx-auto px-6 py-12">
+
+        <CreatorInsights page="foodie-destinations" />
+        <PillarCTA guideName="foodie-destinations" />
+
       {/* FAQs */}
       <section className="relative py-12 px-4">
         <div className="container mx-auto max-w-4xl">
@@ -1006,37 +1039,6 @@ export default function FoodieDestinationsPage() {
           </div>
         </div>
       </section>
-
-      {/* The Truth About Food Travel */}
-      <section id="truth" className="py-16 bg-white scroll-mt-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">The Truth About Food Travel</h2>
-            <div className="space-y-6 text-lg text-gray-700">
-              <p>
-                Food isn't just about taste. It's about connection.
-              </p>
-              <p>
-                It's the street vendor who's been making the same dish for 30 years, passing technique to the next generation. It's the grandmother in a Bangkok apartment cooking pad krapow for Mark Wiens. It's the chef at Maido in Lima, respecting both Japanese technique and Peruvian ingredients, creating something entirely new.
-              </p>
-              <p>
-                When you eat food in these places, you're not just tasting flavors. You're tasting history, culture, love, and community.
-              </p>
-              <p>
-                This guide maps where those experiences live. The rest is up to you.
-              </p>
-              <p className="text-xl font-semibold text-center text-gray-800 mt-8">
-                Get eating.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <div className="container mx-auto px-6 py-12">
-        <CreatorInsights page="foodie-destinations" />
-        <PillarCTA guideName="foodie-destinations" />
         <RelatedGuides currentPage="foodie-destinations" />
       </div>
 

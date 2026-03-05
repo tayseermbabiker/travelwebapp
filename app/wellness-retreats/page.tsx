@@ -1359,26 +1359,6 @@ export default function WellnessRetreatsPage() {
         </div>
       </div>
 
-      {/* FAQ Section */}
-      <div id="faqs" className="bg-gray-50 py-16 px-4 scroll-mt-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Real Wellness Retreat Questions
-          </h2>
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-bold mb-3 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  {faq.question}
-                </h3>
-                <p className="text-gray-700" style={{ fontFamily: 'Mulish, sans-serif' }}>
-                  {faq.answer}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* The Real Wellness Truth */}
       <div id="truth" className="max-w-4xl mx-auto px-4 py-16 scroll-mt-20">
@@ -1409,6 +1389,27 @@ export default function WellnessRetreatsPage() {
         <div className="max-w-5xl mx-auto">
           <CreatorInsights page="wellness-retreats" />
         <PillarCTA guideName="wellness-retreats" />
+
+      {/* FAQ Section */}
+      <div id="faqs" className="bg-gray-50 py-16 px-4 scroll-mt-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            Real Wellness Retreat Questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-bold mb-3 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  {faq.question}
+                </h3>
+                <p className="text-gray-700" style={{ fontFamily: 'Mulish, sans-serif' }}>
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
           <RelatedGuides currentPage="wellness-retreats" />
         </div>
       </div>

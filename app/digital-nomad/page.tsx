@@ -1281,6 +1281,37 @@ export default function DigitalNomadPage() {
         </div>
       </section>
 
+
+      {/* The Reality Section */}
+      <section id="reality" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6 text-gray-800">The Reality of Location Independence</h2>
+            <p className="text-lg text-gray-700 mb-4">
+              Location independence isn't about paradise every day. Some days you'll be lonely. Some wifi will fail. Some neighborhoods won't feel like home.
+            </p>
+            <p className="text-lg text-gray-700 mb-4">
+              But here's the real benefit: if something isn't working (wrong timezone, too lonely, weather terrible), you move. You have options. The next destination is always possible.
+            </p>
+            <p className="text-lg text-gray-700 mb-4">
+              That's the digital nomad advantage.
+            </p>
+            <p className="text-lg text-gray-700 mb-4">
+              This guide maps where the best combinations of infrastructure, affordability, community, and visa flexibility exist. The rest is up to you.
+            </p>
+            <p className="text-lg font-semibold text-gray-800">
+              Start with a destination that matches your needs. Expect 2-4 weeks to truly settle. If it works, stay. If it doesn't, move. That flexibility is the whole point.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <div className="container mx-auto px-6 py-12">
+
+        <CreatorInsights page="digital-nomad" />
+        <PillarCTA guideName="digital-nomad" />
+
       {/* FAQs Section */}
       <section id="faqs" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-6">
@@ -1344,35 +1375,6 @@ export default function DigitalNomadPage() {
           </div>
         </div>
       </section>
-
-      {/* The Reality Section */}
-      <section id="reality" className="py-16 bg-white scroll-mt-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6 text-gray-800">The Reality of Location Independence</h2>
-            <p className="text-lg text-gray-700 mb-4">
-              Location independence isn't about paradise every day. Some days you'll be lonely. Some wifi will fail. Some neighborhoods won't feel like home.
-            </p>
-            <p className="text-lg text-gray-700 mb-4">
-              But here's the real benefit: if something isn't working (wrong timezone, too lonely, weather terrible), you move. You have options. The next destination is always possible.
-            </p>
-            <p className="text-lg text-gray-700 mb-4">
-              That's the digital nomad advantage.
-            </p>
-            <p className="text-lg text-gray-700 mb-4">
-              This guide maps where the best combinations of infrastructure, affordability, community, and visa flexibility exist. The rest is up to you.
-            </p>
-            <p className="text-lg font-semibold text-gray-800">
-              Start with a destination that matches your needs. Expect 2-4 weeks to truly settle. If it works, stay. If it doesn't, move. That flexibility is the whole point.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <div className="container mx-auto px-6 py-12">
-        <CreatorInsights page="digital-nomad" />
-        <PillarCTA guideName="digital-nomad" />
         <RelatedGuides currentPage="digital-nomad" />
       </div>
 

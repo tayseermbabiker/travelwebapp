@@ -65,7 +65,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "October-April: Pleasant weather (20-30C). Avoid May-September (extreme heat 40C+).",
       whyLoveIt: "The UAE sets the global standard for solo female safety. Women-only metro cars, female-driven taxis, zero tolerance for harassment, and 24/7 safety make it unmatched. The infrastructure is world-class. Ladies nights offer free entry and drinks at upscale venues. The multicultural environment means you will meet women from every country. Law enforcement is swift and effective. If safety is your top priority, the UAE is the answer.",
-      influencers: "Lexie Alford, many luxury travel influencers"
     },
     {
       name: "Iceland (Reykjavik)",
@@ -115,7 +114,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "May-September: Midnight sun, perfect weather, best hiking conditions. Winter: Dark but stunning (Northern lights), fewer tourists",
       whyLoveIt: "Safety is absolute. Empowerment is real. Nature is unmatched. You can be completely alone (literally on volcanic landscapes) and still be in a developed, safe country. Zero street harassment. Zero judgment. Perfect.",
-      influencers: "Kristin Addis, Young Adventuress"
     },
     {
       name: "Japan (Tokyo/Kyoto)",
@@ -166,7 +164,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "March-May (Spring): Cherry blossoms, perfect weather, crowds manageable. September-November (Autumn): Clear skies, comfortable, fewer tourists",
       whyLoveIt: "It's safe. The transit system is built for women. Everything is clean and organized. You can navigate as a non-Japanese speaker. No street harassment. The culture respects solo female travelers. Food is incredible. Technology makes everything easy. It feels like a developed country but costs less than Europe.",
-      influencers: "Girl vs Globe (Sabina Trojanova), Alexa West"
     },
     {
       name: "Switzerland (Zurich/Lucerne)",
@@ -217,7 +214,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "May-June & September-October: Perfect weather (15-22°C), hiking ideal, fewer tourists",
       whyLoveIt: "It's the safest place on Earth. You can walk alone at 2 AM with zero concern. The infrastructure is perfect. The scenery is insane. The only downside is cost. But if you have budget, Switzerland is unbeatable for solo female safety.",
-      influencers: "Adventurous Kate"
     },
     {
       name: "Singapore",
@@ -268,7 +264,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "February-April: Dry season, events, comfortable",
       whyLoveIt: "It's safe, modern, and efficient. You can navigate solo easily. Food is incredible. Cost is reasonable for developed city. The culture is respectful. Strict laws mean safety. English is spoken everywhere. It's a perfect introduction to Asia for women hesitant about solo travel.",
-      influencers: "Lexie Alford"
     },
     {
       name: "Denmark (Copenhagen)",
@@ -319,7 +314,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "May-September: Long days, pleasant weather (15-22°C), outdoor café culture",
       whyLoveIt: "It's Scandinavian safety and equality. It's bikeable. The culture is female-friendly. There's a strong social scene. Cost is affordable for Northern Europe. The design culture is inspiring. Women solo travel here without second thought.",
-      influencers: "Girl vs Globe (Sabina Trojanova)"
     },
     {
       name: "Portugal (Lisbon/Porto)",
@@ -371,7 +365,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "March-May & September-October: Perfect weather (18-24°C), fewer tourists, ideal for exploring",
       whyLoveIt: "Affordable Europe with incredible food, wine, and culture. Strong digital nomad and solo female community. Safe neighborhoods. Friendly locals. Beautiful architecture. Easy to meet people. Perfect stepping stone for first-time solo female travelers in Europe.",
-      influencers: "Kristin Addis, Alyssa Ramos"
     },
     {
       name: "Ireland (Dublin/Cork)",
@@ -423,7 +416,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "May-September: Warmest weather (15-20°C), longest days, greenest landscapes. Be prepared for rain year-round.",
       whyLoveIt: "English-speaking removes anxiety. Irish people are genuinely friendly and chatty. Pub culture makes meeting people easy. Safe cities. Beautiful countryside. Rich literary and cultural history. Solo women feel welcomed and included.",
-      influencers: "Adventurous Kate, Young Adventuress"
     },
     {
       name: "New Zealand (Auckland/Christchurch)",
@@ -475,7 +467,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "November-March (Summer): Warmest weather (20-25°C), best for hiking and beaches. December-February busiest. Shoulder seasons (Oct-Nov, Mar-Apr) ideal.",
       whyLoveIt: "Incredibly safe for solo women. Adventure culture is inclusive. Stunning landscapes (mountains, lakes, beaches). Easy to meet other travelers. English-speaking. Supportive community. Perfect infrastructure for solo exploration. Kiwis are friendly and helpful.",
-      influencers: "Young Adventuress (Liz Carlson), Kristin Addis"
     },
     {
       name: "South Korea (Seoul)",
@@ -527,7 +518,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "Spring (March-May): Cherry blossoms, mild weather (10-20°C). Fall (September-November): Beautiful foliage, comfortable temperatures. Avoid summer (humid).",
       whyLoveIt: "Incredibly safe for solo women. Modern infrastructure. Affordable for a developed country. Delicious and cheap food. Excellent public transit. K-beauty and fashion culture. Nightlife is vibrant and safe. Tech-forward (Wi-Fi everywhere). Easy to navigate despite language barrier.",
-      influencers: "Lexie Alford, Sabina Trojanova"
     },
     {
       name: "Canada (Vancouver/Toronto)",
@@ -579,7 +569,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "May-September: Best weather (15-25°C), outdoor activities peak. Vancouver milder year-round. Toronto has cold winters but beautiful summer.",
       whyLoveIt: "English-speaking removes barriers. Extremely safe and welcoming. Multicultural and inclusive. Access to incredible nature (mountains, lakes, forests). Established solo female community. Familiar Western culture. Easy to meet people. High quality of life. Perfect for outdoor enthusiasts.",
-      influencers: "Kristin Addis, Adventurous Kate"
     },
     {
       name: "Slovenia (Ljubljana)",
@@ -631,7 +620,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "May-September: Warmest weather (18-28°C), best for outdoor activities and lake swimming. Ljubljana has great Christmas markets in winter.",
       whyLoveIt: "Affordable European destination with high safety. Beautiful architecture and nature. Incredibly walkable. Friendly locals. Less touristy than Western Europe. Easy base for exploring Balkans. Growing digital nomad scene. Perfect for budget-conscious solo women.",
-      influencers: "Alyssa Ramos, Kristin Addis"
     },
     {
       name: "Rwanda (Kigali)",
@@ -683,7 +671,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "June-September & December-February: Dry seasons, best for gorilla trekking and hiking. Avoid April-May (heavy rains).",
       whyLoveIt: "One of Africa's safest countries. Unique cultural experience. Gorilla trekking is life-changing. Clean and organized (plastic bags banned). English widely spoken. Welcoming to solo women. Affordable. Strong female leadership culturally. Off-the-beaten-path adventure.",
-      influencers: "Lexie Alford, My Life's A Travel Movie (Alyssa Ramos)"
     },
     {
       name: "Norway (Oslo/Bergen)",
@@ -735,7 +722,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "May-September: Warmest weather (12-20°C), midnight sun (June-July), best hiking. Winter (December-March) for Northern Lights but very cold.",
       whyLoveIt: "Absolute safety. Stunning natural beauty (fjords, mountains, midnight sun). Extreme gender equality. Zero harassment. Perfect for solo women who love nature. Excellent infrastructure. English widely spoken. Empowering solo travel experience.",
-      influencers: "Young Adventuress (Liz Carlson), Kristin Addis"
     },
     {
       name: "Sweden (Stockholm)",
@@ -787,7 +773,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "May-September: Best weather (15-23°C), long days, archipelago season. Midsummer (June) is magical. Winter is dark but cozy (fika culture).",
       whyLoveIt: "Safe and progressive. Beautiful city spread across islands. Design and cultural scene. Archipelago access (thousands of islands to explore). Gender equality is real. English widely spoken. Great public transit. Perfect for solo women seeking culture, nature, and safety.",
-      influencers: "Girl vs Globe (Sabina Trojanova)"
     },
     {
       name: "Thailand (Bangkok/Chiang Mai)",
@@ -839,7 +824,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "November-February: Cool season (20-30°C), dry, best weather. Avoid April-May (hottest), June-October (rainy but manageable).",
       whyLoveIt: "Incredibly affordable. Massive solo female community makes meeting people easy. Delicious food. Beautiful beaches and temples. Strong infrastructure. Great for digital nomads. Easy to navigate. Coworking spaces everywhere. Social scene is vibrant.",
-      influencers: "Kristin Addis, Alexa West, Alyssa Ramos"
     },
     {
       name: "Vietnam (Hanoi/Ho Chi Minh City)",
@@ -891,7 +875,6 @@ export default function SoloFemaleTravelPage() {
       },
       bestSeason: "February-April & August-October: Best weather varies by region. North (Hanoi): September-November. South (HCMC): December-April. Avoid Tet holiday (crowds, closures).",
       whyLoveIt: "Extremely affordable. Rich culture and history. Amazing food. Beautiful landscapes (Ha Long Bay, rice terraces). Growing digital nomad scene. Social hostel culture. Easy to meet other travelers. Great for long-term budget travel.",
-      influencers: "Kristin Addis, Alexa West"
     }
   ];
 
@@ -1318,13 +1301,6 @@ export default function SoloFemaleTravelPage() {
                       <h4 className="text-xl font-bold text-gray-900 mb-3">Why Solo Female Travelers Love It</h4>
                       <p className="text-gray-700">{destination.whyLoveIt}</p>
                     </div>
-
-                    {/* Influencer Recommendations */}
-                    <div className="bg-teal-50 p-4 rounded-lg">
-                      <p className="text-gray-700">
-                        <strong className="text-gray-900">Influencer Recommendations:</strong> {destination.influencers}
-                      </p>
-                    </div>
                   </div>
                 )}
               </div>
@@ -1613,6 +1589,43 @@ export default function SoloFemaleTravelPage() {
           </div>
         </div>
 
+
+        {/* Closing Section */}
+        <div id="truth" className="bg-white rounded-lg shadow-md p-8 scroll-mt-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Real Truth About Solo Female Travel</h2>
+
+          <div className="space-y-4 text-gray-700">
+            <p>
+              Solo female travel isn't brave. It's not reckless. It's not unusual anymore.
+            </p>
+            <p>
+              85%+ of solo travelers are now women. The communities exist everywhere. The apps exist. The hostels exist. The route is well-worn.
+            </p>
+            <p>
+              What's real: You'll be nervous before you leave. You'll second-guess yourself. You might experience harassment (in some places). You might get scammed. You might feel lonely sometimes.
+            </p>
+            <p>
+              But you'll also feel powerful. You'll solve problems. You'll make friends across continents. You'll eat alone at restaurants without concern. You'll hike to summits solo. You'll discover who you are without someone else there to influence it.
+            </p>
+            <p className="font-bold text-gray-900 text-lg">
+              That transformation is real.
+            </p>
+            <p>
+              This guide maps the safest, most supportive places to have that experience.
+            </p>
+            <p>
+              Start with a destination that matches your comfort level. If Iceland feels too expensive, start with Portugal. If you're not ready for Southeast Asia, start with Japan. If you want affordable, start with Vietnam (with caution and smart choices).
+            </p>
+            <p className="font-bold text-gray-900 text-lg">
+              The destination matters less than the decision to go.
+            </p>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <CreatorInsights page="solo-female-travel" />
+        <PillarCTA guideName="solo-female-travel" />
+
         {/* FAQ Section */}
         <div id="faqs" className="bg-white rounded-lg shadow-md p-8 mb-12 scroll-mt-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Real Questions Solo Female Travelers Ask</h2>
@@ -1688,42 +1701,6 @@ export default function SoloFemaleTravelPage() {
             </div>
           </div>
         </div>
-
-        {/* Closing Section */}
-        <div id="truth" className="bg-white rounded-lg shadow-md p-8 scroll-mt-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Real Truth About Solo Female Travel</h2>
-
-          <div className="space-y-4 text-gray-700">
-            <p>
-              Solo female travel isn't brave. It's not reckless. It's not unusual anymore.
-            </p>
-            <p>
-              85%+ of solo travelers are now women. The communities exist everywhere. The apps exist. The hostels exist. The route is well-worn.
-            </p>
-            <p>
-              What's real: You'll be nervous before you leave. You'll second-guess yourself. You might experience harassment (in some places). You might get scammed. You might feel lonely sometimes.
-            </p>
-            <p>
-              But you'll also feel powerful. You'll solve problems. You'll make friends across continents. You'll eat alone at restaurants without concern. You'll hike to summits solo. You'll discover who you are without someone else there to influence it.
-            </p>
-            <p className="font-bold text-gray-900 text-lg">
-              That transformation is real.
-            </p>
-            <p>
-              This guide maps the safest, most supportive places to have that experience.
-            </p>
-            <p>
-              Start with a destination that matches your comfort level. If Iceland feels too expensive, start with Portugal. If you're not ready for Southeast Asia, start with Japan. If you want affordable, start with Vietnam (with caution and smart choices).
-            </p>
-            <p className="font-bold text-gray-900 text-lg">
-              The destination matters less than the decision to go.
-            </p>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <CreatorInsights page="solo-female-travel" />
-        <PillarCTA guideName="solo-female-travel" />
 
         {/* Related Guides */}
         <RelatedGuides currentPage="solo-female-travel" />

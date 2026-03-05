@@ -1956,6 +1956,11 @@ export default function SeasonsPage() {
           )}
         </section>
 
+
+        {/* CTA Section */}
+        <div className="mt-12">
+          <CreatorInsights page="seasons" />
+          <PillarCTA guideName="seasons" />
         {/* FAQ Section */}
         <section id="faqs" className="bg-white rounded-2xl shadow-md p-8 mb-8 scroll-mt-20">
           <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
@@ -1995,14 +2000,8 @@ export default function SeasonsPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <div className="mt-12">
-          <CreatorInsights page="seasons" />
-        <PillarCTA guideName="seasons" />
+          <RelatedGuides currentPage="seasons" />
         </div>
-
-        {/* Related Guides */}
-        <RelatedGuides currentPage="seasons" />
 
         {/* Back to Home */}
         <div className="mt-8 text-center">

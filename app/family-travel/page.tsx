@@ -1106,6 +1106,80 @@ export default function FamilyTravelPage() {
         </div>
       </section>
 
+
+      {/* Reality Check Section */}
+      <section id="reality" className="max-w-6xl mx-auto px-6 py-16 scroll-mt-20">
+        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            Reality Check: Honest Family Travel Truth
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold text-green-600 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                What Actually Works
+              </h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>Families with flexible expectations have the best time</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>One main activity per day is enough</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>Kids remember experiences more than hotel stars</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>Downtime is crucial (siesta culture is real)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>Local playgrounds are often better than paid attractions</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-red-600 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                What Doesn't Work
+              </h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">✗</span>
+                  <span>Packed itineraries (kids get overwhelmed)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">✗</span>
+                  <span>Traveling sick (one sick kid = whole trip affected)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">✗</span>
+                  <span>Luxury expectations (things break, kids spill, it happens)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">✗</span>
+                  <span>Expecting kids to behave like adults (they won't)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">✗</span>
+                  <span>Underbudgeting meals and activities</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="max-w-5xl mx-auto px-6 py-12">
+
+        <CreatorInsights page="family-travel" />
+        <PillarCTA guideName="family-travel" />
+
       {/* FAQ Section */}
       <section id="faqs" className="bg-gradient-to-r from-purple-500 to-purple-600 text-white py-16 px-6 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
@@ -1183,78 +1257,6 @@ export default function FamilyTravelPage() {
           </div>
         </div>
       </section>
-
-      {/* Reality Check Section */}
-      <section id="reality" className="max-w-6xl mx-auto px-6 py-16 scroll-mt-20">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Reality Check: Honest Family Travel Truth
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-green-600 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                What Actually Works
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Families with flexible expectations have the best time</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>One main activity per day is enough</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Kids remember experiences more than hotel stars</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Downtime is crucial (siesta culture is real)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Local playgrounds are often better than paid attractions</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-red-600 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                What Doesn't Work
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">✗</span>
-                  <span>Packed itineraries (kids get overwhelmed)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">✗</span>
-                  <span>Traveling sick (one sick kid = whole trip affected)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">✗</span>
-                  <span>Luxury expectations (things break, kids spill, it happens)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">✗</span>
-                  <span>Expecting kids to behave like adults (they won't)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">✗</span>
-                  <span>Underbudgeting meals and activities</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
-        <CreatorInsights page="family-travel" />
-        <PillarCTA guideName="family-travel" />
         <RelatedGuides currentPage="family-travel" />
       </section>
 

@@ -995,23 +995,6 @@ const BudgetTravelPage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faqs" className="relative py-16 px-6 scroll-mt-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
-            Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{faq.question}</h3>
-                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Budget Travel Realities */}
       <section id="realities" className="relative py-16 px-6 scroll-mt-20">
@@ -1116,8 +1099,27 @@ const BudgetTravelPage = () => {
       {/* CTA Section */}
       <section className="py-12 px-6 bg-gray-50">
         <div className="max-w-5xl mx-auto">
+
           <CreatorInsights page="budget-travel" />
         <PillarCTA guideName="budget-travel" />
+
+      {/* FAQ Section */}
+      <section id="faqs" className="relative py-16 px-6 scroll-mt-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
           <RelatedGuides currentPage="budget-travel" />
         </div>
       </section>

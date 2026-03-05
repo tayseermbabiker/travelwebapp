@@ -883,41 +883,6 @@ export default function AdventureTravelPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faqs" className="py-16 px-6 bg-gray-50 scroll-mt-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Real Adventurer Questions Answered
-          </h2>
-          <p className="text-center text-gray-600 mb-12" style={{ fontFamily: "'Mulish', sans-serif" }}>
-            Everything you need to know before planning your adventure. Click to expand each question.
-          </p>
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                <button
-                  className="w-full flex justify-between items-center p-5 text-left hover:bg-gray-50 transition-colors"
-                  onClick={() => toggleFaq(index)}
-                >
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
-                  {expandedFaq === index ? (
-                    <ChevronUp className="text-orange-600 flex-shrink-0" size={24} />
-                  ) : (
-                    <ChevronDown className="text-orange-600 flex-shrink-0" size={24} />
-                  )}
-                </button>
-                {expandedFaq === index && (
-                  <div className="px-5 pb-5 border-t border-gray-100">
-                    <p className="text-gray-700 leading-relaxed pt-4" style={{ fontFamily: "'Mulish', sans-serif" }}>
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Activity Type Table */}
       <section className="py-16 px-6 bg-white">
@@ -1136,8 +1101,45 @@ export default function AdventureTravelPage() {
       {/* CTA Section */}
       <section className="py-12 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
+
           <CreatorInsights page="adventure-travel" />
         <PillarCTA guideName="adventure-travel" />
+
+      {/* FAQ Section */}
+      <section id="faqs" className="py-16 px-6 bg-gray-50 scroll-mt-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+            Real Adventurer Questions Answered
+          </h2>
+          <p className="text-center text-gray-600 mb-12" style={{ fontFamily: "'Mulish', sans-serif" }}>
+            Everything you need to know before planning your adventure. Click to expand each question.
+          </p>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <button
+                  className="w-full flex justify-between items-center p-5 text-left hover:bg-gray-50 transition-colors"
+                  onClick={() => toggleFaq(index)}
+                >
+                  <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
+                  {expandedFaq === index ? (
+                    <ChevronUp className="text-orange-600 flex-shrink-0" size={24} />
+                  ) : (
+                    <ChevronDown className="text-orange-600 flex-shrink-0" size={24} />
+                  )}
+                </button>
+                {expandedFaq === index && (
+                  <div className="px-5 pb-5 border-t border-gray-100">
+                    <p className="text-gray-700 leading-relaxed pt-4" style={{ fontFamily: "'Mulish', sans-serif" }}>
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
           <RelatedGuides currentPage="adventure-travel" />
         </div>
       </section>
