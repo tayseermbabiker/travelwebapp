@@ -589,7 +589,7 @@ export default function AdventureTravelPage() {
         <div className="max-w-5xl mx-auto">
           <TableOfContents
             title="12 Adventure Destinations"
-            summary="The complete guide to adventure travel in 2025. Honest difficulty assessments, fitness requirements, realistic costs, actual outfitters, and what you need to prepare for each destination."
+            summary="The complete guide to adventure travel. Honest difficulty assessments, fitness requirements, realistic costs, actual outfitters, and what you need to prepare for each destination."
             highlights={[
               { label: 'Best Beginner', value: 'Costa Rica' },
               { label: 'Ultimate Challenge', value: 'Everest Base Camp' },
@@ -597,14 +597,189 @@ export default function AdventureTravelPage() {
               { label: 'Total Destinations', value: '12' },
             ]}
             sections={[
+              { id: 'fitness', label: 'Fitness Requirements' },
               { id: 'introduction', label: 'Introduction' },
               { id: 'influencers', label: 'Expert Advice' },
               { id: 'destinations', label: 'All 12 Destinations' },
               { id: 'faqs', label: 'FAQs' },
-              { id: 'fitness', label: 'Fitness Requirements' },
               { id: 'truth', label: 'Real Truth' },
             ]}
           />
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-8 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6 md:p-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>12 Adventure Destinations at a Glance</h2>
+            <p className="text-center text-gray-500 text-sm mb-6">Sorted by monthly cost (lowest first)</p>
+            <div className="overflow-x-auto -mx-2">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b-2 border-orange-200">
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Destination</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Type</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Monthly Cost</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Difficulty</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Fitness</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {[
+                    { dest: 'Vietnam', type: 'Motorbike, Trekking', cost: '$900-$1,400', diff: 'Beginner-Intermediate', fit: 'Low-Moderate' },
+                    { dest: 'Morocco', type: 'Desert, Trekking', cost: '$1,200-$1,800', diff: 'Beginner-Intermediate', fit: 'Low-Moderate' },
+                    { dest: 'Peru', type: 'Trekking, Wildlife', cost: '$1,500-$2,200', diff: 'Beginner-Advanced', fit: 'Low-High' },
+                    { dest: 'Jordan', type: 'Desert, Rock Climbing', cost: '$1,800-$2,300', diff: 'Beginner-Intermediate', fit: 'Low-Moderate' },
+                    { dest: 'Costa Rica', type: 'Multi-Sport', cost: '$2,000', diff: 'Beginner-Intermediate', fit: 'Low-Moderate' },
+                    { dest: 'Nepal', type: 'Mountaineering', cost: '$2,100-$5,200', diff: 'Intermediate-Extreme', fit: 'Moderate-Elite' },
+                    { dest: 'Patagonia', type: 'Hiking, Mountaineering', cost: '$2,300', diff: 'Beginner-Advanced', fit: 'Moderate-High' },
+                    { dest: 'Tanzania', type: 'Kilimanjaro, Safari', cost: '$2,500-$4,200', diff: 'Intermediate-Advanced', fit: 'Moderate-High' },
+                    { dest: 'Canada (Rockies)', type: 'Hiking, Wildlife', cost: '$2,600-$3,600', diff: 'Beginner-Advanced', fit: 'Low-High' },
+                    { dest: 'New Zealand', type: 'Multi-Sport', cost: '$2,700', diff: 'Beginner-Advanced', fit: 'Low-High' },
+                    { dest: 'Iceland', type: 'Glacier, Volcano', cost: '$2,950', diff: 'Beginner-Intermediate', fit: 'Moderate' },
+                    { dest: 'Norway', type: 'Fjords, Climbing', cost: '$3,100', diff: 'Intermediate-Advanced', fit: 'Moderate-High' },
+                  ].map((row, i) => (
+                    <tr key={i} className="hover:bg-orange-50/50 transition-colors">
+                      <td className="py-2.5 px-3 font-medium text-gray-800 whitespace-nowrap">{row.dest}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.type}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.cost}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.diff}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.fit}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Top Picks */}
+      <section className="py-8 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="backdrop-blur-lg bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+              <span className="text-3xl mb-2 block">🌿</span>
+              <p className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-1">Best Beginner</p>
+              <h3 className="text-xl font-bold text-gray-900">Costa Rica</h3>
+              <p className="text-sm text-gray-600 mt-1">$2,000/mo &middot; Low fitness &middot; Multi-sport paradise</p>
+            </div>
+            <div className="backdrop-blur-lg bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+              <span className="text-3xl mb-2 block">💎</span>
+              <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Best Value</p>
+              <h3 className="text-xl font-bold text-gray-900">Patagonia</h3>
+              <p className="text-sm text-gray-600 mt-1">$2,300/mo &middot; World-class hiking &middot; Stunning scenery</p>
+            </div>
+            <div className="backdrop-blur-lg bg-gradient-to-br from-red-50 to-orange-50 border border-red-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+              <span className="text-3xl mb-2 block">🏔️</span>
+              <p className="text-xs font-semibold text-red-700 uppercase tracking-wide mb-1">Ultimate Challenge</p>
+              <h3 className="text-xl font-bold text-gray-900">Everest Base Camp</h3>
+              <p className="text-sm text-gray-600 mt-1">$2,100-$5,200/mo &middot; Elite fitness &middot; Life-changing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fitness Requirements Section */}
+      <section id="fitness" className="py-16 px-6 bg-gradient-to-r from-amber-500 to-amber-600 scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+            Honest Fitness Requirements
+          </h2>
+          <p className="text-center text-white text-lg mb-12 opacity-95" style={{ fontFamily: "'Mulish', sans-serif" }}>
+            Match your current fitness level to appropriate activities. Be honest with yourself - safety depends on it.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-lg p-6 shadow-lg">
+              <h3 className="text-2xl font-bold text-orange-600 mb-3">Beginner</h3>
+              <p className="text-gray-600 text-sm mb-4 font-semibold">No experience needed</p>
+              <ul className="space-y-2 text-gray-700" style={{ fontFamily: "'Mulish', sans-serif" }}>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Easy day hikes (Costa Rica, Greece, Morocco)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Zip-lining, bungee jumping (New Zealand, Costa Rica)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Wildlife safaris (Costa Rica, Tanzania)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Guided glacier walks (Iceland)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-lg">
+              <h3 className="text-2xl font-bold text-orange-600 mb-3">Moderate</h3>
+              <p className="text-gray-600 text-sm mb-4 font-semibold">Some hiking/trekking experience helpful</p>
+              <ul className="space-y-2 text-gray-700" style={{ fontFamily: "'Mulish', sans-serif" }}>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Multi-day treks (Patagonia W Trek, Annapurna Circuit)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Moderate alpine hikes (Norway Trolltunga)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Kayaking, white-water rafting (Costa Rica, New Zealand)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Motorbike adventures (Vietnam Ha Giang Loop)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-lg">
+              <h3 className="text-2xl font-bold text-orange-600 mb-3">High</h3>
+              <p className="text-gray-600 text-sm mb-4 font-semibold">Training required (2-6 months)</p>
+              <ul className="space-y-2 text-gray-700" style={{ fontFamily: "'Mulish', sans-serif" }}>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>EBC Trek + high altitude (Nepal, Peru)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Technical climbs (Island Peak, Mera Peak)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Extreme hiking (Full Patagonia Circuit)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Kilimanjaro summit attempts</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-lg">
+              <h3 className="text-2xl font-bold text-orange-600 mb-3">Elite</h3>
+              <p className="text-gray-600 text-sm mb-4 font-semibold">Professional training required</p>
+              <ul className="space-y-2 text-gray-700" style={{ fontFamily: "'Mulish', sans-serif" }}>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Peak summits (Everest, Denali)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Ice climbing (Norwegian ice, Patagonian ice)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Extreme mountaineering expeditions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">✓</span>
+                  <span>Technical alpine climbing</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -945,108 +1120,6 @@ export default function AdventureTravelPage() {
                 </tr>
               </tbody>
             </table>
-          </div>
-        </div>
-      </section>
-
-      {/* Fitness Requirements Section */}
-      <section id="fitness" className="py-16 px-6 bg-gradient-to-r from-amber-500 to-amber-600 scroll-mt-20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-            Honest Fitness Requirements
-          </h2>
-          <p className="text-center text-white text-lg mb-12 opacity-95" style={{ fontFamily: "'Mulish', sans-serif" }}>
-            Match your current fitness level to appropriate activities. Be honest with yourself - safety depends on it.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-orange-600 mb-3">Beginner</h3>
-              <p className="text-gray-600 text-sm mb-4 font-semibold">No experience needed</p>
-              <ul className="space-y-2 text-gray-700" style={{ fontFamily: "'Mulish', sans-serif" }}>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Easy day hikes (Costa Rica, Greece, Morocco)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Zip-lining, bungee jumping (New Zealand, Costa Rica)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Wildlife safaris (Costa Rica, Tanzania)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Guided glacier walks (Iceland)</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-orange-600 mb-3">Moderate</h3>
-              <p className="text-gray-600 text-sm mb-4 font-semibold">Some hiking/trekking experience helpful</p>
-              <ul className="space-y-2 text-gray-700" style={{ fontFamily: "'Mulish', sans-serif" }}>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Multi-day treks (Patagonia W Trek, Annapurna Circuit)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Moderate alpine hikes (Norway Trolltunga)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Kayaking, white-water rafting (Costa Rica, New Zealand)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Motorbike adventures (Vietnam Ha Giang Loop)</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-orange-600 mb-3">High</h3>
-              <p className="text-gray-600 text-sm mb-4 font-semibold">Training required (2-6 months)</p>
-              <ul className="space-y-2 text-gray-700" style={{ fontFamily: "'Mulish', sans-serif" }}>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>EBC Trek + high altitude (Nepal, Peru)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Technical climbs (Island Peak, Mera Peak)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Extreme hiking (Full Patagonia Circuit)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Kilimanjaro summit attempts</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-orange-600 mb-3">Elite</h3>
-              <p className="text-gray-600 text-sm mb-4 font-semibold">Professional training required</p>
-              <ul className="space-y-2 text-gray-700" style={{ fontFamily: "'Mulish', sans-serif" }}>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Peak summits (Everest, Denali)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Ice climbing (Norwegian ice, Patagonian ice)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Extreme mountaineering expeditions</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2">✓</span>
-                  <span>Technical alpine climbing</span>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
