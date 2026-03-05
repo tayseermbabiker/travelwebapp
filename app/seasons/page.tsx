@@ -45,7 +45,7 @@ export default function SeasonsPage() {
                 Complete Year-Round Travel Guide
               </p>
               <p className="text-lg text-center max-w-3xl mx-auto text-gray-700 leading-relaxed">
-                Travel timing isn't about luck—it's about strategy. The same destination transforms completely depending on when you visit. Choose your season below to discover 8 exceptional destinations perfect for that time of year.
+                Dubai in summer is scorching; in winter, it's paradise. Cherry blossoms bloom for weeks in Kyoto; miss them and you've missed spring. Paris crowds triple in July; visit in October and you'll actually enjoy it.
               </p>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function SeasonsPage() {
         <div className="container mx-auto max-w-6xl">
           <TableOfContents
             title="32 Destinations by Season"
-            summary="The complete guide to year-round travel in 2025. 8 destinations for each season with optimal timing, weather conditions, costs, and what makes each destination special during that time of year."
+            summary="The complete guide to year-round travel. 8 destinations for each season with optimal timing, weather conditions, costs, and what makes each destination special during that time of year."
             highlights={[
               { label: 'Winter Escape', value: 'Dubai & Bali' },
               { label: 'Spring Blooms', value: 'Japan & Netherlands' },
@@ -77,19 +77,6 @@ export default function SeasonsPage() {
 
       {/* Main Content */}
       <div className="container mx-auto max-w-6xl px-4 pb-8 pt-4">
-
-        {/* Introduction */}
-        <section className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
-            Choose Your Season. Find Your Perfect Destination.
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Dubai in summer is scorching; in winter, it's paradise. Cherry blossoms bloom for weeks in Kyoto; miss them and you've missed spring. Paris crowds triple in July; visit in October and you'll actually enjoy it.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            This guide maps every season, revealing the <strong>best destinations to visit when</strong>—complete with weather, events, what to pack, where to stay, and why each season matters for each destination.
-          </p>
-        </section>
 
         {/* WINTER SECTION */}
         <section id="winter" className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300 scroll-mt-20">
