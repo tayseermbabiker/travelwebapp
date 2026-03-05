@@ -1,0 +1,37 @@
+name: Scrape YouTube Vlogs
+
+on:
+  schedule:
+    # Every Monday at 3AM UTC
+    - cron: '0 3 * * 1'
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Scrape YouTube vlogs
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node scrapers/youtube-vlogs.js
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet lib/database/youtube-vlogs.json && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add lib/database/youtube-vlogs.json
+          git commit -m "Update YouTube vlogs data (automated weekly scrape)"
+          git push
