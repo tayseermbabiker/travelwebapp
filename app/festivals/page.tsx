@@ -456,6 +456,28 @@ export default function FestivalsPage() {
       {/* Main Content */}
       <div className="container mx-auto max-w-6xl px-4 pb-8 pt-4">
 
+        {/* Top Picks */}
+        <div className="grid md:grid-cols-3 gap-4 mb-8">
+          <div className="backdrop-blur-lg bg-gradient-to-br from-pink-50 to-rose-50 border border-pink-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+            <span className="text-3xl mb-2 block">🌸</span>
+            <p className="text-xs font-semibold text-pink-700 uppercase tracking-wide mb-1">Most Iconic</p>
+            <h3 className="text-xl font-bold text-gray-900">Cherry Blossom (Japan)</h3>
+            <p className="text-sm text-gray-600 mt-1">March-April &middot; Budget-friendly &middot; Nature</p>
+          </div>
+          <div className="backdrop-blur-lg bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+            <span className="text-3xl mb-2 block">🪔</span>
+            <p className="text-xs font-semibold text-orange-700 uppercase tracking-wide mb-1">Most Vibrant</p>
+            <h3 className="text-xl font-bold text-gray-900">Diwali (India)</h3>
+            <p className="text-sm text-gray-600 mt-1">Oct-Nov &middot; Budget-friendly &middot; Culture</p>
+          </div>
+          <div className="backdrop-blur-lg bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+            <span className="text-3xl mb-2 block">💦</span>
+            <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Most Fun</p>
+            <h3 className="text-xl font-bold text-gray-900">Songkran (Thailand)</h3>
+            <p className="text-sm text-gray-600 mt-1">April 13-16 &middot; Budget-friendly &middot; Culture</p>
+          </div>
+        </div>
+
         {/* Quick Glance Table */}
         <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6 md:p-8 mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>19 Festivals at a Glance</h2>
