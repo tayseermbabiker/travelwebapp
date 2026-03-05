@@ -551,6 +551,40 @@ export default function FoodieDestinationsPage() {
         </div>
       </section>
 
+
+      {/* Quick Comparison */}
+      <section className="py-4 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6 overflow-x-auto">
+            <h2 className="text-xl font-bold text-gray-800 mb-4">12 Best Foodie Cities at a Glance</h2>
+            <table className="w-full text-sm">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="text-left p-2 font-semibold text-gray-800">City</th>
+                  <th className="text-left p-2 font-semibold text-gray-800">Best For</th>
+                  <th className="text-left p-2 font-semibold text-gray-800">Daily Food Cost</th>
+                  <th className="text-left p-2 font-semibold text-gray-800">Signature Dish</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-700">
+                <tr className="border-b"><td className="p-2 font-medium">Tokyo</td><td className="p-2">Precision & Michelin dining</td><td className="p-2">$50-$150</td><td className="p-2">Omakase Sushi</td></tr>
+                <tr className="border-b bg-gray-50"><td className="p-2 font-medium">Bangkok</td><td className="p-2">Street food capital</td><td className="p-2">$2-$8</td><td className="p-2">Pad Krapow</td></tr>
+                <tr className="border-b"><td className="p-2 font-medium">Lima</td><td className="p-2">Innovative fusion</td><td className="p-2">$15-$40</td><td className="p-2">Ceviche</td></tr>
+                <tr className="border-b bg-gray-50"><td className="p-2 font-medium">Mexico City</td><td className="p-2">Taco culture & variety</td><td className="p-2">$10-$30</td><td className="p-2">Tacos al Pastor</td></tr>
+                <tr className="border-b"><td className="p-2 font-medium">Istanbul</td><td className="p-2">East-meets-West fusion</td><td className="p-2">$15-$35</td><td className="p-2">Kebab & Baklava</td></tr>
+                <tr className="border-b bg-gray-50"><td className="p-2 font-medium">Paris</td><td className="p-2">Fine dining & pastry</td><td className="p-2">$40-$100+</td><td className="p-2">Croissant & Bistro</td></tr>
+                <tr className="border-b"><td className="p-2 font-medium">Oaxaca</td><td className="p-2">Indigenous Mexican cuisine</td><td className="p-2">$8-$25</td><td className="p-2">Mole Negro</td></tr>
+                <tr className="border-b bg-gray-50"><td className="p-2 font-medium">Barcelona</td><td className="p-2">Tapas & markets</td><td className="p-2">$30-$60</td><td className="p-2">Patatas Bravas</td></tr>
+                <tr className="border-b"><td className="p-2 font-medium">Naples</td><td className="p-2">Original pizza & pasta</td><td className="p-2">$20-$45</td><td className="p-2">Margherita Pizza</td></tr>
+                <tr className="border-b bg-gray-50"><td className="p-2 font-medium">Hanoi</td><td className="p-2">Pho & street food</td><td className="p-2">$5-$15</td><td className="p-2">Pho Bo</td></tr>
+                <tr className="border-b"><td className="p-2 font-medium">Singapore</td><td className="p-2">Hawker center melting pot</td><td className="p-2">$10-$50</td><td className="p-2">Hainanese Chicken Rice</td></tr>
+                <tr><td className="p-2 font-medium">New York</td><td className="p-2">Global diversity</td><td className="p-2">$20-$80</td><td className="p-2">Dollar Slice & Bagels</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* Introduction */}
       <section id="introduction" className="relative py-6 px-4 scroll-mt-20">
         <div className="container mx-auto max-w-4xl">
