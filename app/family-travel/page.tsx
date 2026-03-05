@@ -753,7 +753,7 @@ export default function FamilyTravelPage() {
         <div className="max-w-6xl mx-auto">
           <TableOfContents
             title="12 Family-Friendly Destinations"
-            summary="The complete guide to traveling with kids in 2025. Safety ratings, healthcare access, kid-friendly activities, and real family costs for destinations where children are truly welcomed."
+            summary="The complete guide to traveling with kids. Safety ratings, healthcare access, kid-friendly activities, and real family costs for destinations where children are truly welcomed."
             highlights={[
               { label: 'Safest', value: 'Japan & Singapore' },
               { label: 'Best Budget', value: 'Thailand ($3K/mo)' },
@@ -768,6 +768,77 @@ export default function FamilyTravelPage() {
               { id: 'reality', label: 'Reality Check' },
             ]}
           />
+        </div>
+      </section>
+
+      {/* Top Picks for Families */}
+      <section className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="backdrop-blur-lg bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+              <span className="text-3xl mb-2 block">🛡️</span>
+              <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Safest</p>
+              <h3 className="text-xl font-bold text-gray-900">Japan &amp; Singapore</h3>
+              <p className="text-sm text-gray-600 mt-1">98-99/100 safety &middot; World-class healthcare</p>
+            </div>
+            <div className="backdrop-blur-lg bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+              <span className="text-3xl mb-2 block">💰</span>
+              <p className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-1">Best Budget</p>
+              <h3 className="text-xl font-bold text-gray-900">Thailand</h3>
+              <p className="text-sm text-gray-600 mt-1">$2,400/mo &middot; All ages &middot; Kid-friendly culture</p>
+            </div>
+            <div className="backdrop-blur-lg bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+              <span className="text-3xl mb-2 block">👶</span>
+              <p className="text-xs font-semibold text-purple-700 uppercase tracking-wide mb-1">Best for Toddlers</p>
+              <h3 className="text-xl font-bold text-gray-900">Portugal</h3>
+              <p className="text-sm text-gray-600 mt-1">$3,250/mo &middot; Calm beaches &middot; Family culture</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6 md:p-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>12 Family Destinations at a Glance</h2>
+            <p className="text-center text-gray-500 text-sm mb-6">Sorted by monthly cost (lowest first)</p>
+            <div className="overflow-x-auto -mx-2">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b-2 border-purple-200">
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Destination</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Monthly Cost</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Safety</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Best Ages</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {[
+                    { dest: 'Thailand', cost: '$2,400', safety: '91/100', ages: 'All ages (babies to teens)' },
+                    { dest: 'Costa Rica', cost: '$3,000', safety: '90/100', ages: 'Toddlers & young kids (2-10)' },
+                    { dest: 'Croatia', cost: '$3,100', safety: '93/100', ages: 'Mixed ages (kids to teens)' },
+                    { dest: 'Portugal', cost: '$3,250', safety: '95/100', ages: 'Mixed ages (babies to teens)' },
+                    { dest: 'Japan', cost: '$3,620', safety: '98/100', ages: 'All ages (babies to teens)' },
+                    { dest: 'Dubai, UAE', cost: '$3,800', safety: '99/100', ages: 'All ages (babies to teens)' },
+                    { dest: 'New Zealand', cost: '$3,800', safety: '96/100', ages: 'Adventure families (8-17)' },
+                    { dest: 'Canada', cost: '$3,900', safety: '95/100', ages: 'Active families (5-17)' },
+                    { dest: 'Denmark', cost: '$4,000', safety: '96/100', ages: 'Young kids (3-12)' },
+                    { dest: 'Iceland', cost: '$4,200', safety: '97/100', ages: 'Kids to teens (5-17)' },
+                    { dest: 'Australia', cost: '$4,300', safety: '94/100', ages: 'All ages (active families)' },
+                    { dest: 'Singapore', cost: '$4,500', safety: '99/100', ages: 'All ages (babies to teens)' },
+                  ].map((row, i) => (
+                    <tr key={i} className="hover:bg-purple-50/50 transition-colors">
+                      <td className="py-2.5 px-3 font-medium text-gray-800 whitespace-nowrap">{row.dest}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.cost}</td>
+                      <td className="py-2.5 px-3 text-gray-700">{row.safety}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.ages}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
 
