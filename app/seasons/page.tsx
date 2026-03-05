@@ -78,6 +78,27 @@ export default function SeasonsPage() {
       {/* Main Content */}
       <div className="container mx-auto max-w-6xl px-4 pb-8 pt-4">
 
+
+        {/* Top Picks by Season */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+          <a href="#winter" className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-4 hover:shadow-md transition-all">
+            <h3 className="font-bold text-blue-800 text-sm mb-1">Winter</h3>
+            <p className="text-xs text-blue-600">Dubai, Bali, Maldives</p>
+          </a>
+          <a href="#spring" className="bg-gradient-to-br from-pink-50 to-pink-100 border border-pink-200 rounded-xl p-4 hover:shadow-md transition-all">
+            <h3 className="font-bold text-pink-800 text-sm mb-1">Spring</h3>
+            <p className="text-xs text-pink-600">Japan, Amsterdam, Santorini</p>
+          </a>
+          <a href="#summer" className="bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-4 hover:shadow-md transition-all">
+            <h3 className="font-bold text-amber-800 text-sm mb-1">Summer</h3>
+            <p className="text-xs text-amber-600">Bali, Santorini, Dubrovnik</p>
+          </a>
+          <a href="#fall" className="bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 rounded-xl p-4 hover:shadow-md transition-all">
+            <h3 className="font-bold text-orange-800 text-sm mb-1">Fall</h3>
+            <p className="text-xs text-orange-600">New England, Tuscany, Kyoto</p>
+          </a>
+        </div>
+
         {/* WINTER SECTION */}
         <section id="winter" className="backdrop-blur-lg bg-white/50 border border-white/60 rounded-2xl shadow-xl mb-6 overflow-hidden hover:shadow-2xl transition-all duration-300 scroll-mt-20">
           <button
