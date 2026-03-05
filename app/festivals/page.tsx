@@ -456,6 +456,54 @@ export default function FestivalsPage() {
       {/* Main Content */}
       <div className="container mx-auto max-w-6xl px-4 pb-8 pt-4">
 
+        {/* Quick Glance Table */}
+        <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>19 Festivals at a Glance</h2>
+          <p className="text-center text-gray-500 text-sm mb-6">Sorted by month (January to December)</p>
+          <div className="overflow-x-auto -mx-2">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-purple-200">
+                  <th className="text-left py-3 px-3 font-semibold text-gray-700">Festival</th>
+                  <th className="text-left py-3 px-3 font-semibold text-gray-700">Location</th>
+                  <th className="text-left py-3 px-3 font-semibold text-gray-700">When</th>
+                  <th className="text-left py-3 px-3 font-semibold text-gray-700">Budget</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { name: 'Harbin Ice Festival', loc: 'China', when: 'Jan-Feb', budget: 'Moderate' },
+                  { name: 'Lunar New Year', loc: 'Singapore/Taipei/HK', when: 'Jan-Feb', budget: 'Varies' },
+                  { name: 'Venice Carnival', loc: 'Italy', when: 'February', budget: 'High' },
+                  { name: 'Dubai Food Festival', loc: 'UAE', when: 'Feb-Mar', budget: 'Moderate' },
+                  { name: 'Holi', loc: 'India', when: 'March', budget: 'Budget' },
+                  { name: 'Cherry Blossom', loc: 'Japan', when: 'Mar-Apr', budget: 'Budget' },
+                  { name: 'Tulip Season', loc: 'Netherlands', when: 'Mar-May', budget: 'Moderate' },
+                  { name: 'Semana Santa', loc: 'Spain', when: 'Mar-Apr', budget: 'Budget' },
+                  { name: 'Songkran', loc: 'Thailand', when: 'April 13-16', budget: 'Budget' },
+                  { name: 'Pingxi Lanterns', loc: 'Taiwan', when: 'Feb (Lunar)', budget: 'Budget' },
+                  { name: 'San Fermin', loc: 'Spain', when: 'July 6-14', budget: 'Moderate' },
+                  { name: 'Gion Matsuri', loc: 'Japan', when: 'July', budget: 'Budget' },
+                  { name: 'Naadam Festival', loc: 'Mongolia', when: 'July 11-15', budget: 'Moderate' },
+                  { name: 'Edinburgh Fringe', loc: 'Scotland', when: 'August', budget: 'Moderate' },
+                  { name: 'La Tomatina', loc: 'Spain', when: 'Late Aug', budget: 'Moderate' },
+                  { name: 'Albuquerque Balloon', loc: 'USA', when: 'October', budget: 'Budget' },
+                  { name: 'Autumn Foliage', loc: 'Japan', when: 'Oct-Nov', budget: 'Moderate' },
+                  { name: 'Diwali', loc: 'India', when: 'Oct-Nov', budget: 'Budget' },
+                  { name: 'Dia de los Muertos', loc: 'Mexico', when: 'Oct 31-Nov 2', budget: 'Budget' },
+                ].map((row, i) => (
+                  <tr key={i} className="hover:bg-purple-50/50 transition-colors">
+                    <td className="py-2.5 px-3 font-medium text-gray-800 whitespace-nowrap">{row.name}</td>
+                    <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.loc}</td>
+                    <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.when}</td>
+                    <td className="py-2.5 px-3 text-gray-700">{row.budget}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         {/* Category Filter */}
         <section className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-800 mb-4">Filter by Category</h2>

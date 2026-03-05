@@ -1013,7 +1013,7 @@ export default function WellnessRetreatsPage() {
         <div className="max-w-6xl mx-auto">
           <TableOfContents
             title="12 Wellness Retreat Destinations"
-            summary="The complete guide to wellness travel in 2025. From yoga retreats in Bali to longevity clinics in Switzerland - authentic experiences, real costs, and what transformation actually looks like."
+            summary="The complete guide to wellness travel. From yoga retreats in Bali to longevity clinics in Switzerland - authentic experiences, real costs, and what transformation actually looks like."
             highlights={[
               { label: 'Best Value', value: 'Bali ($50-200/day)' },
               { label: 'Best Yoga', value: 'India (Rishikesh)' },
@@ -1028,6 +1028,71 @@ export default function WellnessRetreatsPage() {
               { id: 'truth', label: 'Real Truth' },
             ]}
           />
+        </div>
+      </div>
+
+      {/* Top Picks */}
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="backdrop-blur-lg bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+            <span className="text-3xl mb-2 block">💎</span>
+            <p className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-1">Best Value</p>
+            <h3 className="text-xl font-bold text-gray-900">Bali</h3>
+            <p className="text-sm text-gray-600 mt-1">$450-$750/mo budget &middot; Yoga &amp; meditation</p>
+          </div>
+          <div className="backdrop-blur-lg bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+            <span className="text-3xl mb-2 block">🧘</span>
+            <p className="text-xs font-semibold text-orange-700 uppercase tracking-wide mb-1">Best Yoga</p>
+            <h3 className="text-xl font-bold text-gray-900">India (Rishikesh)</h3>
+            <p className="text-sm text-gray-600 mt-1">$300-$600/mo &middot; Birthplace of yoga</p>
+          </div>
+          <div className="backdrop-blur-lg bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+            <span className="text-3xl mb-2 block">✨</span>
+            <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Best Luxury</p>
+            <h3 className="text-xl font-bold text-gray-900">Switzerland</h3>
+            <p className="text-sm text-gray-600 mt-1">$5,000-$8,000/mo &middot; Clinical longevity</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Comparison Table */}
+      <div className="max-w-6xl mx-auto px-4 pb-8">
+        <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6 md:p-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>12 Wellness Destinations at a Glance</h2>
+          <p className="text-center text-gray-500 text-sm mb-6">Sorted by budget cost (lowest first)</p>
+          <div className="overflow-x-auto -mx-2">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-emerald-200">
+                  <th className="text-left py-3 px-3 font-semibold text-gray-700">Destination</th>
+                  <th className="text-left py-3 px-3 font-semibold text-gray-700">Focus</th>
+                  <th className="text-left py-3 px-3 font-semibold text-gray-700">Budget/mo</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { dest: 'India (Rishikesh)', focus: 'Yoga, Ayurveda, Ashram', cost: '$300-$600' },
+                  { dest: 'Bali, Indonesia', focus: 'Yoga, Meditation, Spa', cost: '$450-$750' },
+                  { dest: 'Sri Lanka', focus: 'Ayurveda, Beach Wellness', cost: '$800-$1,500' },
+                  { dest: 'Thailand', focus: 'Spa, Detox, Yoga', cost: '$900-$1,500' },
+                  { dest: 'Peru (Sacred Valley)', focus: 'Spiritual, Shamanic', cost: '$1,000-$2,000' },
+                  { dest: 'Costa Rica', focus: 'Eco-Wellness, Fitness', cost: '$1,200-$2,500' },
+                  { dest: 'Portugal (Algarve)', focus: 'Yoga, Detox, Wine Country', cost: '$1,500-$2,500' },
+                  { dest: 'Mexico (Tulum)', focus: 'Yoga, Mayan Healing', cost: '$2,000-$3,500' },
+                  { dest: 'Spain (Ibiza)', focus: 'Holistic, Sound Healing', cost: '$2,000-$3,500' },
+                  { dest: 'Greece (Santorini)', focus: 'Transformational, Spa', cost: '$2,500-$4,000' },
+                  { dest: 'USA (Sedona)', focus: 'Spiritual, Energy Vortex', cost: '$2,500-$4,000' },
+                  { dest: 'Switzerland', focus: 'Clinical, Longevity', cost: '$5,000-$8,000' },
+                ].map((row, i) => (
+                  <tr key={i} className="hover:bg-emerald-50/50 transition-colors">
+                    <td className="py-2.5 px-3 font-medium text-gray-800 whitespace-nowrap">{row.dest}</td>
+                    <td className="py-2.5 px-3 text-gray-700">{row.focus}</td>
+                    <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.cost}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 

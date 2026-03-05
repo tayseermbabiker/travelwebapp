@@ -988,7 +988,7 @@ export default function SoloFemaleTravelPage() {
         {/* Table of Contents */}
         <TableOfContents
           title="16 Destinations Ranked by Safety"
-          summary="The complete guide to solo female travel in 2025. Safety ratings, monthly costs, female communities, healthcare access, and cultural tips for each destination."
+          summary="The complete guide to solo female travel. Safety ratings, monthly costs, female communities, healthcare access, and cultural tips for each destination."
           highlights={[
             { label: 'Safest', value: 'UAE (99/100)' },
             { label: 'Best Budget', value: 'Vietnam ($800/mo)' },
@@ -1005,6 +1005,72 @@ export default function SoloFemaleTravelPage() {
             { id: 'truth', label: 'Real Truth' },
           ]}
         />
+
+        {/* Top Picks */}
+        <div className="grid md:grid-cols-3 gap-4 mb-8">
+          <div className="backdrop-blur-lg bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+            <span className="text-3xl mb-2 block">🛡️</span>
+            <p className="text-xs font-semibold text-purple-700 uppercase tracking-wide mb-1">Safest</p>
+            <h3 className="text-xl font-bold text-gray-900">UAE (Dubai)</h3>
+            <p className="text-sm text-gray-600 mt-1">99/100 &middot; Women-only metro &middot; Pink Taxis</p>
+          </div>
+          <div className="backdrop-blur-lg bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+            <span className="text-3xl mb-2 block">💰</span>
+            <p className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-1">Best Budget</p>
+            <h3 className="text-xl font-bold text-gray-900">Vietnam</h3>
+            <p className="text-sm text-gray-600 mt-1">$600-$900/mo &middot; 87/100 safety &middot; Friendly locals</p>
+          </div>
+          <div className="backdrop-blur-lg bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+            <span className="text-3xl mb-2 block">👩‍👩‍👧</span>
+            <p className="text-xs font-semibold text-teal-700 uppercase tracking-wide mb-1">Best Community</p>
+            <h3 className="text-xl font-bold text-gray-900">Portugal</h3>
+            <p className="text-sm text-gray-600 mt-1">$1,200-$1,600/mo &middot; 94/100 &middot; Active groups</p>
+          </div>
+        </div>
+
+        {/* Comparison Table */}
+        <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 bg-gradient-to-r from-purple-600 via-pink-600 to-teal-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>16 Solo Female Destinations at a Glance</h2>
+          <p className="text-center text-gray-500 text-sm mb-6">Sorted by monthly cost (lowest first)</p>
+          <div className="overflow-x-auto -mx-2">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-purple-200">
+                  <th className="text-left py-3 px-3 font-semibold text-gray-700">Destination</th>
+                  <th className="text-left py-3 px-3 font-semibold text-gray-700">Monthly Cost</th>
+                  <th className="text-left py-3 px-3 font-semibold text-gray-700">Safety</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { dest: 'Vietnam', cost: '$600-$900', safety: '87/100' },
+                  { dest: 'Thailand', cost: '$700-$1,000', safety: '88/100' },
+                  { dest: 'Rwanda', cost: '$1,000-$1,300', safety: '91/100' },
+                  { dest: 'Slovenia', cost: '$1,000-$1,200', safety: '94/100' },
+                  { dest: 'Portugal', cost: '$1,200-$1,600', safety: '94/100' },
+                  { dest: 'South Korea', cost: '$1,200-$1,600', safety: '95/100' },
+                  { dest: 'Denmark', cost: '$1,320-$1,620', safety: '96/100' },
+                  { dest: 'Ireland', cost: '$1,400-$1,800', safety: '93/100' },
+                  { dest: 'Sweden', cost: '$1,600-$2,000', safety: '96/100' },
+                  { dest: 'Singapore', cost: '$1,800-$2,000', safety: '98/100' },
+                  { dest: 'Canada', cost: '$1,800-$2,400', safety: '94/100' },
+                  { dest: 'New Zealand', cost: '$1,800-$2,400', safety: '95/100' },
+                  { dest: 'Japan', cost: '$2,100-$2,600', safety: '96/100' },
+                  { dest: 'Switzerland', cost: '$2,100-$2,600+', safety: '97/100' },
+                  { dest: 'UAE (Dubai)', cost: '$2,250-$3,400', safety: '99/100' },
+                  { dest: 'Iceland', cost: '$2,650', safety: '99/100' },
+                  { dest: 'Norway', cost: '$2,200-$2,750', safety: '97/100' },
+                ].map((row, i) => (
+                  <tr key={i} className="hover:bg-purple-50/50 transition-colors">
+                    <td className="py-2.5 px-3 font-medium text-gray-800 whitespace-nowrap">{row.dest}</td>
+                    <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.cost}</td>
+                    <td className="py-2.5 px-3 text-gray-700">{row.safety}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
 
         {/* Introduction */}
         <div id="introduction" className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-8 mb-8 hover:shadow-2xl transition-all duration-300 scroll-mt-20">

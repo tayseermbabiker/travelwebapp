@@ -712,7 +712,7 @@ const BudgetTravelPage = () => {
         <div className="max-w-6xl mx-auto">
           <TableOfContents
             title="12 Destinations Under $30/Day"
-            summary="The complete guide to budget travel in 2025. Real costs, honest strategies, and what to realistically expect from the world's cheapest destinations."
+            summary="The complete guide to budget travel. Real costs, honest strategies, and what to realistically expect from the world's cheapest destinations."
             highlights={[
               { label: 'Cheapest', value: 'Vietnam ($15/day)' },
               { label: 'Best Food', value: 'Thailand & Vietnam' },
@@ -729,6 +729,77 @@ const BudgetTravelPage = () => {
               { id: 'truth', label: 'Real Truth' },
             ]}
           />
+        </div>
+      </section>
+
+      {/* Top Picks */}
+      <section className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="backdrop-blur-lg bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+              <span className="text-3xl mb-2 block">🏆</span>
+              <p className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-1">Cheapest</p>
+              <h3 className="text-xl font-bold text-gray-900">India</h3>
+              <p className="text-sm text-gray-600 mt-1">$10-$15/day &middot; $300-$450/mo</p>
+            </div>
+            <div className="backdrop-blur-lg bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+              <span className="text-3xl mb-2 block">🍜</span>
+              <p className="text-xs font-semibold text-orange-700 uppercase tracking-wide mb-1">Best Food</p>
+              <h3 className="text-xl font-bold text-gray-900">Vietnam &amp; Thailand</h3>
+              <p className="text-sm text-gray-600 mt-1">$15-$25/day &middot; World-class street food</p>
+            </div>
+            <div className="backdrop-blur-lg bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-all">
+              <span className="text-3xl mb-2 block">🚀</span>
+              <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Easiest Start</p>
+              <h3 className="text-xl font-bold text-gray-900">Thailand</h3>
+              <p className="text-sm text-gray-600 mt-1">$20-$25/day &middot; Great infrastructure</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="backdrop-blur-lg bg-white/60 border border-white/60 rounded-2xl shadow-xl p-6 md:p-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text text-transparent" style={{letterSpacing: '-0.02em'}}>12 Budget Destinations at a Glance</h2>
+            <p className="text-center text-gray-500 text-sm mb-6">Sorted by daily cost (lowest first)</p>
+            <div className="overflow-x-auto -mx-2">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b-2 border-orange-200">
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Destination</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Key Cities</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Daily Cost</th>
+                    <th className="text-left py-3 px-3 font-semibold text-gray-700">Monthly</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {[
+                    { dest: 'India', cities: 'Rajasthan, Kerala, Goa', daily: '$10-$15', monthly: '$300-$450' },
+                    { dest: 'Vietnam', cities: 'Hanoi, Hoi An, HCMC', daily: '$15', monthly: '$450' },
+                    { dest: 'Laos', cities: 'Luang Prabang, Vang Vieng', daily: '$15-$20', monthly: '$450-$600' },
+                    { dest: 'Cambodia', cities: 'Siem Reap, Phnom Penh', daily: '$15-$20', monthly: '$450-$600' },
+                    { dest: 'Bolivia', cities: 'La Paz, Salar de Uyuni', daily: '$15-$20', monthly: '$450-$600' },
+                    { dest: 'Georgia', cities: 'Tbilisi, Kazbegi', daily: '$15-$20', monthly: '$450-$600' },
+                    { dest: 'Thailand', cities: 'Bangkok, Chiang Mai', daily: '$20-$25', monthly: '$600-$750' },
+                    { dest: 'Indonesia', cities: 'Java, Bali, Lombok', daily: '$20-$25', monthly: '$600-$750' },
+                    { dest: 'Guatemala', cities: 'Antigua, Lake Atitlan', daily: '$20-$25', monthly: '$600-$750' },
+                    { dest: 'Albania', cities: 'Tirana, Riviera', daily: '$20-$25', monthly: '$600-$750' },
+                    { dest: 'Colombia', cities: 'Medellin, Cartagena', daily: '$20-$30', monthly: '$600-$900' },
+                    { dest: 'Bulgaria', cities: 'Sofia, Plovdiv', daily: '$25-$30', monthly: '$750-$900' },
+                  ].map((row, i) => (
+                    <tr key={i} className="hover:bg-orange-50/50 transition-colors">
+                      <td className="py-2.5 px-3 font-medium text-gray-800 whitespace-nowrap">{row.dest}</td>
+                      <td className="py-2.5 px-3 text-gray-700">{row.cities}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.daily}</td>
+                      <td className="py-2.5 px-3 text-gray-700 whitespace-nowrap">{row.monthly}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
 
