@@ -47,7 +47,7 @@ function timeAgo(dateStr: string): string {
 }
 
 export default function CreatorInsights({ page }: CreatorInsightsProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
   const [showAll, setShowAll] = useState(false);
 
   const pageData = (vlogData.pages as Record<string, PageData>)[page];
